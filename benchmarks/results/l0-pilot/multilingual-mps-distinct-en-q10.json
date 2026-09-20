@@ -1,0 +1,402 @@
+{
+  "contended": true,
+  "contended_reason": "harness development; goldens worker active",
+  "device": "mps",
+  "diagnostics": {
+    "n_tokens": 3289,
+    "option_counts": [
+      4,
+      4,
+      2,
+      4,
+      4,
+      2,
+      2,
+      10,
+      2,
+      4
+    ],
+    "padded_batch_shape": [
+      10,
+      374
+    ],
+    "sequence_lengths": [
+      331,
+      331,
+      318,
+      325,
+      307,
+      325,
+      322,
+      338,
+      318,
+      374
+    ],
+    "state_tokens": [
+      {
+        "full_tokens": 283,
+        "kept_tokens": 283,
+        "truncated": false
+      },
+      {
+        "full_tokens": 283,
+        "kept_tokens": 283,
+        "truncated": false
+      },
+      {
+        "full_tokens": 283,
+        "kept_tokens": 283,
+        "truncated": false
+      },
+      {
+        "full_tokens": 283,
+        "kept_tokens": 283,
+        "truncated": false
+      },
+      {
+        "full_tokens": 283,
+        "kept_tokens": 283,
+        "truncated": false
+      },
+      {
+        "full_tokens": 283,
+        "kept_tokens": 283,
+        "truncated": false
+      },
+      {
+        "full_tokens": 283,
+        "kept_tokens": 283,
+        "truncated": false
+      },
+      {
+        "full_tokens": 283,
+        "kept_tokens": 283,
+        "truncated": false
+      },
+      {
+        "full_tokens": 283,
+        "kept_tokens": 283,
+        "truncated": false
+      },
+      {
+        "full_tokens": 283,
+        "kept_tokens": 283,
+        "truncated": false
+      }
+    ],
+    "truncated": false
+  },
+  "e2e_ms": [
+    397.5525420391932,
+    393.8310829689726,
+    406.8725419929251
+  ],
+  "fixture": "distinct-en-q10",
+  "host_after": {
+    "loadavg": [
+      19.0341796875,
+      16.65576171875,
+      15.490234375
+    ],
+    "pmset_therm": "Note: No thermal warning level has been recorded\nNote: No performance warning level has been recorded\nNote: No CPU power status has been recorded",
+    "time": 1789861079.252666
+  },
+  "host_before": {
+    "loadavg": [
+      19.94189453125,
+      16.74658203125,
+      15.50830078125
+    ],
+    "pmset_therm": "Note: No thermal warning level has been recorded\nNote: No performance warning level has been recorded\nNote: No CPU power status has been recorded",
+    "time": 1789861073.6063411
+  },
+  "model_ms": [
+    389.8495000321418,
+    415.4029169585556,
+    419.67262502294034
+  ],
+  "mps_memory_after_reps": {
+    "current_allocated_memory": 1296087808,
+    "driver_allocated_memory": 2453389312
+  },
+  "mps_memory_after_warmup": {
+    "current_allocated_memory": 1296087808,
+    "driver_allocated_memory": 2453389312
+  },
+  "n_questions": 10,
+  "preprocess_ms": [
+    8.889334043487906,
+    8.73983302153647,
+    7.7408329816535115
+  ],
+  "profile": "multilingual",
+  "reps": 3,
+  "result": {
+    "answers": {
+      "bug_report": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.975,
+        "noul": 0.975,
+        "type": "noul"
+      },
+      "churn_risk": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.4718,
+        "legend": {
+          "0": "unlikely",
+          "1": "possible",
+          "2": "likely",
+          "3": "very likely"
+        },
+        "probabilities": {
+          "0": 0.0236,
+          "1": 0.7826,
+          "2": 0.0903,
+          "3": 0.1036
+        },
+        "score": 1.2737,
+        "type": "score"
+      },
+      "department": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "choice": "billing",
+        "confidence": 1.0,
+        "probabilities": {
+          "billing": 1.0,
+          "engineering": 0.0,
+          "sales": 0.0,
+          "success": 0.0
+        },
+        "type": "choice"
+      },
+      "duplicate_charge": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.9924,
+        "noul": 0.9924,
+        "type": "noul"
+      },
+      "language": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "choice": "en",
+        "confidence": 0.0137,
+        "probabilities": {
+          "ar": 0.0923,
+          "de": 0.0869,
+          "en": 0.1812,
+          "es": 0.0889,
+          "fr": 0.0879,
+          "hi": 0.0881,
+          "ja": 0.0863,
+          "ko": 0.09,
+          "pt": 0.1045,
+          "zh": 0.094
+        },
+        "type": "choice"
+      },
+      "needs_human": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.5141,
+        "noul": 0.4859,
+        "type": "noul"
+      },
+      "next_action": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "choice": "refund",
+        "confidence": 0.767,
+        "probabilities": {
+          "apology_and_credit": 0.0087,
+          "close": 0.0346,
+          "escalate_engineering": 0.027,
+          "refund": 0.9297
+        },
+        "type": "choice"
+      },
+      "refund_requested": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.8765,
+        "noul": 0.1235,
+        "type": "noul"
+      },
+      "sentiment": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "choice": "frustrated",
+        "confidence": 0.4804,
+        "probabilities": {
+          "angry": 0.2731,
+          "frustrated": 0.6965,
+          "neutral": 0.0283,
+          "positive": 0.0022
+        },
+        "type": "choice"
+      },
+      "urgency": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.3238,
+        "legend": {
+          "0": "can wait a week",
+          "1": "should be handled within a few days",
+          "2": "same day",
+          "3": "immediate escalation"
+        },
+        "probabilities": {
+          "0": 0.0081,
+          "1": 0.4421,
+          "2": 0.4803,
+          "3": 0.0696
+        },
+        "score": 1.6114,
+        "type": "score"
+      }
+    },
+    "model": "laya-rl-agent",
+    "usage": {
+      "input_tokens": 3289,
+      "output_tokens": 0
+    }
+  },
+  "results_identical": true,
+  "ru_maxrss": 4050075648,
+  "schema_version": 1,
+  "timing": {
+    "e2e": {
+      "sample_timestamps": [
+        1789861077.265185,
+        1789861077.662747,
+        1789861078.056588
+      ],
+      "samples_ms": [
+        397.5525420391932,
+        393.8310829689726,
+        406.8725419929251
+      ],
+      "stats": {
+        "max_ms": 406.8725419929251,
+        "mean_ms": 399.41872233369696,
+        "min_ms": 393.8310829689726,
+        "ms_per_question": 39.75525420391932,
+        "n": 3,
+        "p50_ms": 397.5525420391932,
+        "p95_ms": 405.9405419975519,
+        "p99_ms": 406.68614199385047,
+        "questions_per_sec": 25.15390782990928,
+        "requests_per_sec": 2.515390782990928,
+        "std_ms": 5.485245970604755
+      },
+      "warmup_ms": [
+        395.437250030227
+      ]
+    },
+    "model": {
+      "sample_timestamps": [
+        1789861074.0912929,
+        1789861074.481172,
+        1789861074.896606
+      ],
+      "samples_ms": [
+        389.8495000321418,
+        415.4029169585556,
+        419.67262502294034
+      ],
+      "stats": {
+        "max_ms": 419.67262502294034,
+        "mean_ms": 408.30834733787924,
+        "min_ms": 389.8495000321418,
+        "ms_per_question": 41.54029169585556,
+        "n": 3,
+        "p50_ms": 415.4029169585556,
+        "p95_ms": 419.24565421650186,
+        "p99_ms": 419.58723086165264,
+        "questions_per_sec": 24.073013432877968,
+        "requests_per_sec": 2.4073013432877968,
+        "std_ms": 13.16825436750991
+      },
+      "warmup_ms": [
+        400.769375031814
+      ]
+    },
+    "preprocess": {
+      "sample_timestamps": [
+        1789861073.665108,
+        1789861073.6739998,
+        1789861073.6827462
+      ],
+      "samples_ms": [
+        8.889334043487906,
+        8.73983302153647,
+        7.7408329816535115
+      ],
+      "stats": {
+        "max_ms": 8.889334043487906,
+        "mean_ms": 8.456666682225963,
+        "min_ms": 7.7408329816535115,
+        "ms_per_question": 0.873983302153647,
+        "n": 3,
+        "p50_ms": 8.73983302153647,
+        "p95_ms": 8.874383941292763,
+        "p99_ms": 8.886344023048878,
+        "questions_per_sec": 1144.186619510723,
+        "requests_per_sec": 114.4186619510723,
+        "std_ms": 0.5098372642635216
+      },
+      "warmup_ms": [
+        6.818166002631187
+      ]
+    },
+    "transfer": {
+      "included_in_model_ms": false,
+      "sample_timestamps": [
+        1789861075.701495,
+        1789861076.090682,
+        1789861076.47784
+      ],
+      "samples_ms": [
+        0.6282919785007834,
+        0.921958009712398,
+        0.7489999989047647
+      ],
+      "stats": {
+        "max_ms": 0.921958009712398,
+        "mean_ms": 0.7664166623726487,
+        "min_ms": 0.6282919785007834,
+        "ms_per_question": 0.07489999989047647,
+        "n": 3,
+        "p50_ms": 0.7489999989047647,
+        "p95_ms": 0.9046622086316347,
+        "p99_ms": 0.9184988494962454,
+        "questions_per_sec": 13351.134865984826,
+        "requests_per_sec": 1335.1134865984827,
+        "std_ms": 0.12051954086830455
+      },
+      "warmup_ms": [
+        0.7017080206423998
+      ]
+    }
+  },
+  "transfer_ms": [
+    0.6282919785007834,
+    0.921958009712398,
+    0.7489999989047647
+  ],
+  "wall_clock_seconds": 5.636188457952812,
+  "warmup": 1
+}

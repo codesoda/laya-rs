@@ -1,0 +1,7 @@
+{
+  "request": null,
+  "response": null,
+  "result": null,
+  "error": null,
+  "observation": "The pinned @ai-sdk/typesafe-ai provider exposes evaluationModel only; it has no models-list method or route."
+}

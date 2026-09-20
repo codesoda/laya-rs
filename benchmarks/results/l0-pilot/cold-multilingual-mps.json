@@ -1,0 +1,28 @@
+{
+  "created_at": 1789861256.746145,
+  "device": "mps",
+  "fixture": "plan-example",
+  "iterations": [
+    {
+      "actual_device": "mps",
+      "agent_constructed_ms": 47175.09954201523,
+      "first_call_stage_ms": 555.8551249559969,
+      "first_complete_ms": 47730.95466697123,
+      "import_stage_ms": 1056.5528339939192,
+      "imports_done_ms": 1056.5528339939192,
+      "iteration": 1,
+      "load_stage_ms": 46118.54670802131,
+      "page_cache": "cold/unknown on first iteration",
+      "ru_maxrss": 4344709120,
+      "runtime_stdout": "",
+      "second_call_stage_ms": 96.42908303067088,
+      "second_complete_ms": 47827.3837500019,
+      "wall_process_ms": 49585.06212499924
+    }
+  ],
+  "n": 1,
+  "page_cache_note": "The first iteration is not classified; subsequent iterations are noted as warm. The OS page cache was not purged.",
+  "profile": "multilingual",
+  "run_id": "l0-pilot",
+  "schema_version": 1
+}

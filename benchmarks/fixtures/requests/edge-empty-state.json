@@ -1,0 +1,19 @@
+{
+  "id": "edge-empty-state",
+  "source": "laya-rs authored",
+  "state": "",
+  "questions": {
+    "q": {
+      "type": "noul",
+      "instructions": "Is there any content?"
+    },
+    "c": {
+      "type": "choice",
+      "instructions": "",
+      "criteria": [
+        "a",
+        "b"
+      ]
+    }
+  }
+}

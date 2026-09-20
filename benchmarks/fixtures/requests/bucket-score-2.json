@@ -1,0 +1,15 @@
+{
+  "id": "bucket-score-2",
+  "source": "laya-rs authored",
+  "state": "The customer reports a late delivery and asks for a discount.",
+  "questions": {
+    "q": {
+      "type": "score",
+      "instructions": "Severity?",
+      "criteria": [
+        "low",
+        "high"
+      ]
+    }
+  }
+}

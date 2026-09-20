@@ -1,15 +1,55 @@
 # Progress
 
-## Planning bootstrap
+Contract: [docs/plans/initial-build.md](plans/initial-build.md). Lead: Fable. Workers: Sol (`openai-codex/gpt-5.6-sol`), Luna (`openai-codex/gpt-5.6-luna`).
 
-- Created `docs/plans/initial-build.md` before implementation.
-- Grounded architecture and benchmarks in pinned Laya main/research sources and HF manifests; no Laya weights downloaded or benchmarks run in this repository.
-- Verified native Jev `/v1/systemone` and `/v1/models` schemas against pinned official JS SDK source, plus the AI SDK adapter and its different base-URL convention.
-- Added the user's explicit requirement for native Apple M-series Metal libraries; CPU and CoreML are not undisclosed substitutes for the Metal gate.
-- Recorded Python-first baselines, exact native parity, inline CLI, resident HTTP, standalone release packaging, local performance criteria and honest blocked outcomes.
-- A read-only architecture review identified four issues: inconsistent illustrative confidence values, underspecified speed acceptance, ambiguous truncation language, and the unsupported-Python-MPS comparison case. All were addressed in the plan and implementation prompt.
-- Created `docs/plans/implementation-prompt.md` for a Fable-led implementation session with Sol/Luna workers.
+Host for all local measurements: Apple M3 Pro (11 CPU cores, 14 GPU cores, Metal 4), 18 GB unified memory, macOS 26.2 (25C56), low power mode off.
 
-Validation at this stage is documentation/source-contract validation only. No Cargo workspace exists; Rust fmt/clippy/test and runtime/benchmark claims are not applicable yet.
+## Gate status
 
-Next: a new implementation session starts L0 (pinned Python baselines and compatibility fixtures), then follows reviewed gates L1–L5. Do not start from an assumed ONNX/Metal export or claim existing release binaries.
+| Gate | Status | Notes |
+| --- | --- | --- |
+| L0 — baseline and compatibility contract | in progress | see checklist below |
+| L1 — backend/export/distribution feasibility | not started | |
+| L2 — Rust core and inline CLI | not started | |
+| L3 — warm HTTP and client compatibility | not started | |
+| L4 — same-machine benchmark and optimization | not started | |
+| L5 — releases and documentation | not started | |
+
+## L0 checklist
+
+- [x] Pinned upstream sources fetched; runtime equality between reviewed revisions re-verified (`git diff 6a58191..28d43ad -- laya/` is empty — verified by Fable)
+- [x] Locked Python environment (`python/uv.lock`)
+- [x] Pinned hub assets fetched into project cache; `manifests/sources.json` with SHA-256, sizes, licenses
+- [x] Bundle-vs-standalone checkpoint parity recorded
+- [x] Host/environment capture (`uv run laya-env`)
+- [x] CPU and MPS load/smoke for english, multilingual, typed-decisions with explicit fallback detection — all six succeed without fallback
+- [x] Preprocessing + tensor + logits + native-output goldens (CPU FP32 and MPS) for all profiles, 29 fixtures each
+- [x] MPS-vs-CPU reproducibility deltas → frozen parity tolerances (`benchmarks/goldens/tolerances.json`)
+- [x] Published latency harness reconstructed; distinct/ragged workloads defined (`benchmarks/fixtures/requests/`)
+- [x] Harness pilot (contended, harness validation only)
+- [ ] **Idle-host baseline measurements (CPU, MPS) with raw samples — blocked on an uncontended host window** (`benchmarks/README.md` has the commands)
+- [ ] Idle-host cold start / load measurements
+- [x] Benchmark manifest freezing primary acceptance (`benchmarks/manifest.json`: multilingual distinct Q=1/Q=10, Rust Metal vs Python MPS, fp32)
+- [x] Pinned SDK request/response/error fixtures (`compat/`, `schemas/`)
+- [x] `docs/RESULTS.md`, `docs/COMPAT.md` written; milestone committed and pushed
+
+### L0 decisions recorded by Fable
+
+- Python `head_max_len` is a soft budget (upstream re-truncates rather than erroring); Rust must reproduce this exactly. Only sequences whose options cannot fit `max_len` error.
+- Single-option choice is unsupported upstream (`RuntimeError` from `topk(2)`). Native mode will return an explicit unsupported-capability error. Jev-adapter behaviour is decided at L3 with client evidence (`docs/COMPAT.md` open question 1).
+- Upstream `_fix_tokenizer_config` made no change to bundled configs; Rust loads the pristine `tokenizer_config.json` and must still treat a list-valued `extra_special_tokens` as loadable if a standalone-repo layout is ever pointed at.
+- The primary performance acceptance is frozen in `benchmarks/manifest.json` before any Rust code exists. Amendments require a dated entry.
+
+### Remaining L0 workload estimate
+
+Idle-host baseline: ~30 min per profile on MPS and ~70 min per profile on CPU for `published+distinct+extended` (upper bounds from the contended pilot), plus 3 cold-start iterations per profile/device. Total ≈ 5 h of wall time if all three profiles are run on both devices; the multilingual and english passes are the priority and can be run first (~3.5 h).
+
+## Architecture facts verified by Fable from pinned sources (for L1)
+
+- `laya/` runtime identical between `6a58191` (main) and `28d43ad` (research).
+- Encoder configs (`encoder/config.json`): ModernBERT `local_attention` 128, `global_attn_every_n_layers` 3, `norm_bias` false, `hidden_activation` gelu, `attention_bias`/`mlp_bias` false. English: 28 layers, d=1024, 16 heads, FFN 2624, RoPE theta 160000 (global) / 10000 (local), vocab 50368, pad 50283, cls 50281, sep 50282. Multilingual (mmBERT-base): 22 layers, d=768, 12 heads, FFN 1152, RoPE theta 160000 for both layer types, vocab 256000, pad 0.
+- Head (`common.py::DecisionModel`): `nn.TransformerEncoderLayer(d, d//64, 4d, dropout=0.1, batch_first=True, norm_first=True)` — activation is PyTorch's default **ReLU**; scorer `LayerNorm → Linear(d,d) → GELU → Linear(d,1)`; `act_head Linear(d+4,256) → GELU → Linear(256,n_act)` with `n_act = len(act_costs)+1 = 2`. Padded option logits masked with `-1e4`. Entropy features use `k = marker_mask.sum().clamp(min=2)`, `p.topk(2)`.
+- `rl_agent_config.json`: english `max_len` 512 / `head_max_len` 192, temps `[1.6369, 1.2514, 1.9834]` + per-bucket map; multilingual 1024/256, temps all `1.0`, empty bucket map; typed-decisions 1024/256, temps `[1.0148, 1.0374, 1.0575]` + same bucket map as english. `amp_dtype` is `bf16` in all configs but CPU/MPS run FP32 with autocast disabled (`agent.py`).
+- Native output: `{"model": "laya-rl-agent", "answers": ..., "usage": {"input_tokens": sum(attention_mask), "output_tokens": 0}}`; four-decimal rounding; noul true probability is index 1; `action.act_probability` = softmax(act)[0].
+- `_to_internal`: choice list criteria → `{c: None}`; non-string instructions → `json.dumps(ins)` (ASCII-escaped); state → `json.dumps(state, ensure_ascii=False)`; criterion structured values → `json.dumps(value, ensure_ascii=False, separators=(", ", ": "), default=str)`.
+- `_fix_tokenizer_config` rewrites `tokenizer/tokenizer_config.json` in the model directory at load time.

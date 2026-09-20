@@ -1,0 +1,15 @@
+{
+  "id": "edge-single-option",
+  "source": "laya-rs authored",
+  "expect_error": "record actual behaviour (topk(2) on k=1)",
+  "state": "x",
+  "questions": {
+    "one": {
+      "type": "choice",
+      "instructions": "Only one.",
+      "criteria": [
+        "only"
+      ]
+    }
+  }
+}

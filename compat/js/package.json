@@ -1,0 +1,17 @@
+{
+  "name": "laya-rs-compat-fixtures",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test test/capture-fixtures.test.mjs"
+  },
+  "engines": {
+    "node": ">=24.15.0"
+  },
+  "dependencies": {
+    "@ai-sdk/typesafe-ai": "3.0.4",
+    "@typesafe-ai/sdk": "0.6.0",
+    "ai": "7.0.107",
+    "zod": "4.1.8"
+  }
+}

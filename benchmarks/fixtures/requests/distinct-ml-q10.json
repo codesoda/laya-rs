@@ -1,0 +1,123 @@
+{
+  "id": "distinct-ml-q10",
+  "source": "laya-rs authored (es-MX)",
+  "state": {
+    "ticket_id": "T-48377",
+    "channel": "chat",
+    "customer": {
+      "name": "Sofía Álvarez",
+      "plan": "Equipo",
+      "país": "MX"
+    },
+    "messages": [
+      {
+        "from": "customer",
+        "text": "Hola, me cobraron dos veces la suscripción de mayo (dos cargos de $899 MXN). Además la exportación a CSV sigue fallando con error 500 desde hace una semana y nadie me ha respondido. Si esto no se resuelve hoy cancelo la cuenta. Necesito el reembolso del cargo duplicado."
+      },
+      {
+        "from": "agent",
+        "text": "Lamento mucho la situación, Sofía. Reviso ahora mismo los cargos y el estado del reporte de exportación."
+      },
+      {
+        "from": "customer",
+        "text": "Gracias, pero es la tercera vez este año. ¿Pueden darme una fecha concreta para el arreglo?"
+      }
+    ],
+    "prior_tickets": [
+      {
+        "id": "T-48010",
+        "tema": "exportación CSV error 500",
+        "estado": "abierto",
+        "días": 7
+      }
+    ]
+  },
+  "questions": {
+    "departamento": {
+      "type": "choice",
+      "instructions": "¿Qué equipo debe atender primero este ticket?",
+      "criteria": {
+        "facturación": "pagos, facturas y reembolsos",
+        "ingeniería": "errores y fallos del producto",
+        "éxito_cliente": "gestión de cuenta y retención",
+        "ventas": "planes y precios"
+      }
+    },
+    "urgencia": {
+      "type": "score",
+      "instructions": "¿Qué tan urgente es este ticket?",
+      "criteria": [
+        "puede esperar una semana",
+        "en unos días",
+        "el mismo día",
+        "escalación inmediata"
+      ]
+    },
+    "reembolso": {
+      "type": "noul",
+      "instructions": "¿La clienta pide explícitamente un reembolso?"
+    },
+    "riesgo_cancelación": {
+      "type": "score",
+      "instructions": "¿Qué probabilidad hay de que la clienta cancele?",
+      "criteria": [
+        "baja",
+        "media",
+        "alta",
+        "muy alta"
+      ]
+    },
+    "tono": {
+      "type": "choice",
+      "instructions": "¿Cuál es el tono general de la clienta?",
+      "criteria": [
+        "enojada",
+        "frustrada",
+        "neutral",
+        "positiva"
+      ]
+    },
+    "cargo_duplicado": {
+      "type": "noul",
+      "instructions": "¿Hay un cargo duplicado?",
+      "criteria": {
+        "true": "se cobró más de una vez el mismo concepto",
+        "false": "no se describe un cargo duplicado"
+      }
+    },
+    "requiere_humano": {
+      "type": "noul",
+      "instructions": "¿Este ticket necesita un agente humano y no una respuesta automática?"
+    },
+    "idioma": {
+      "type": "choice",
+      "instructions": "Which language is the customer writing in?",
+      "criteria": {
+        "en": "English",
+        "fr": "French",
+        "de": "German",
+        "es": "Spanish",
+        "pt": "Portuguese",
+        "hi": "Hindi",
+        "ja": "Japanese",
+        "ko": "Korean",
+        "ar": "Arabic",
+        "zh": "Chinese"
+      }
+    },
+    "reporte_de_error": {
+      "type": "noul",
+      "instructions": "¿El mensaje reporta un defecto de software?"
+    },
+    "siguiente_acción": {
+      "type": "choice",
+      "instructions": "¿Cuál es la mejor siguiente acción del agente?",
+      "criteria": {
+        "reembolsar": "emitir el reembolso del cargo duplicado",
+        "escalar_ingeniería": "escalar el error de exportación con fecha comprometida",
+        "crédito": "disculparse y añadir crédito a la cuenta",
+        "cerrar": null
+      }
+    }
+  }
+}

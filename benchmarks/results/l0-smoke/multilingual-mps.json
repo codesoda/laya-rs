@@ -1,0 +1,107 @@
+{
+  "actual_device": "mps",
+  "env": {
+    "executable": "/Users/chrisraethke/projects/laya-rs/python/.venv/bin/python3",
+    "host": {
+      "chip": "Apple M3 Pro",
+      "cores": {
+        "efficiency": 6,
+        "logical": 11,
+        "performance": 5,
+        "physical": 11
+      },
+      "machine": "arm64",
+      "macos_version": "26.2",
+      "os": "Darwin",
+      "power_mode": {
+        "lowpowermode": 0,
+        "matching_lines": [
+          "lowpowermode         0"
+        ],
+        "raw_available": true
+      },
+      "ram_bytes": 19327352832
+    },
+    "laya": {
+      "git_sha": "6a5819129eb220570792e417e49723d697efd76f",
+      "version": "0.3.3"
+    },
+    "timestamp": "2026-09-19T23:18:40.951041Z",
+    "torch": {
+      "interop_thread_count": 11,
+      "mps": {
+        "device_name": "Apple M3 Pro",
+        "is_available": true,
+        "is_built": true
+      },
+      "thread_count": 5
+    },
+    "versions": {
+      "huggingface_hub": "1.32.0",
+      "laya": "0.3.3",
+      "numpy": "2.5.3",
+      "python": "3.12.7",
+      "safetensors": "0.8.0",
+      "tokenizers": "0.23.2",
+      "torch": "2.14.0",
+      "transformers": "5.17.0"
+    }
+  },
+  "error": null,
+  "fallback_detected": false,
+  "first_call_seconds": 1.170625542057678,
+  "load_seconds": 44.16289362497628,
+  "profile": "multilingual",
+  "reference_compile": false,
+  "requested_device": "mps",
+  "result": {
+    "answers": {
+      "department": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "choice": "billing",
+        "confidence": 0.9999,
+        "probabilities": {
+          "billing": 1.0,
+          "support": 0.0
+        },
+        "type": "choice"
+      },
+      "refund": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.9748,
+        "noul": 0.9748,
+        "type": "noul"
+      },
+      "urgency": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.2118,
+        "legend": {
+          "0": "low",
+          "1": "medium",
+          "2": "high"
+        },
+        "probabilities": {
+          "0": 0.1162,
+          "1": 0.23,
+          "2": 0.6538
+        },
+        "score": 1.5376,
+        "type": "score"
+      }
+    },
+    "model": "laya-rl-agent",
+    "usage": {
+      "input_tokens": 124,
+      "output_tokens": 0
+    }
+  },
+  "runtime_stdout": "",
+  "second_call_seconds": 0.03917008300777525,
+  "traceback": null
+}

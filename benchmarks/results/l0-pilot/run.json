@@ -1,0 +1,69 @@
+{
+  "autocast": false,
+  "contended": true,
+  "contended_reason": "harness development; goldens worker active",
+  "device": "cpu",
+  "dtype": "float32",
+  "env": {
+    "executable": "/Users/chrisraethke/projects/laya-rs/python/.venv/bin/python3",
+    "host": {
+      "chip": "Apple M3 Pro",
+      "cores": {
+        "efficiency": 6,
+        "logical": 11,
+        "performance": 5,
+        "physical": 11
+      },
+      "machine": "arm64",
+      "macos_version": "26.2",
+      "os": "Darwin",
+      "power_mode": {
+        "lowpowermode": 0,
+        "matching_lines": [
+          "lowpowermode         0"
+        ],
+        "raw_available": true
+      },
+      "ram_bytes": 19327352832
+    },
+    "laya": {
+      "expected_git_sha": "6a5819129eb220570792e417e49723d697efd76f",
+      "git_sha": "6a5819129eb220570792e417e49723d697efd76f",
+      "version": "0.3.3"
+    },
+    "timestamp": "2026-09-19T23:38:06.743069Z",
+    "torch": {
+      "interop_thread_count": 11,
+      "mps": {
+        "device_name": "Apple M3 Pro",
+        "is_available": true,
+        "is_built": true
+      },
+      "thread_count": 5
+    },
+    "versions": {
+      "huggingface_hub": "1.32.0",
+      "laya": "0.3.3",
+      "numpy": "2.5.3",
+      "python": "3.12.7",
+      "safetensors": "0.8.0",
+      "tokenizers": "0.23.2",
+      "torch": "2.14.0",
+      "transformers": "5.17.0"
+    }
+  },
+  "finished_at": 1789861143.1882482,
+  "interrupted": false,
+  "label": null,
+  "profile": "multilingual",
+  "reps": 3,
+  "requested_threads": null,
+  "run_id": "l0-pilot",
+  "schema_version": 1,
+  "started_at": 1789861085.382863,
+  "torch_threads": 5,
+  "warmup": 1,
+  "workload": [
+    "distinct-ml-q1"
+  ]
+}

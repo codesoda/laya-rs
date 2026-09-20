@@ -1,0 +1,70 @@
+{
+  "request": {
+    "method": "POST",
+    "path": "/v1/systemone",
+    "headers": {
+      "accept": "*/*",
+      "accept-encoding": "gzip, deflate",
+      "accept-language": "*",
+      "authorization": "Bearer dummy-local-key",
+      "connection": "keep-alive",
+      "content-length": "406",
+      "content-type": "application/json",
+      "host": "<local-mock>",
+      "sec-fetch-mode": "cors",
+      "user-agent": "ai-sdk/typesafe-ai/3.0.4 ai-sdk/provider-utils/5.0.45 runtime/node.js/24"
+    },
+    "rawBody": "{\"model\":\"jev-latest\",\"state\":{\"body\":\"I was charged twice. Please refund.\"},\"questions\":{\"department\":{\"type\":\"choice\",\"instructions\":\"Which team should handle this?\",\"criteria\":{\"billing\":\"Payments and refunds\",\"support\":\"Other support\"}},\"urgency\":{\"type\":\"score\",\"instructions\":\"How urgent is this?\",\"criteria\":[\"low\",\"medium\",\"high\"]},\"refund\":{\"type\":\"noul\",\"instructions\":\"Is a refund requested?\"}}}",
+    "body": {
+      "model": "jev-latest",
+      "state": {
+        "body": "I was charged twice. Please refund."
+      },
+      "questions": {
+        "department": {
+          "type": "choice",
+          "instructions": "Which team should handle this?",
+          "criteria": {
+            "billing": "Payments and refunds",
+            "support": "Other support"
+          }
+        },
+        "urgency": {
+          "type": "score",
+          "instructions": "How urgent is this?",
+          "criteria": [
+            "low",
+            "medium",
+            "high"
+          ]
+        },
+        "refund": {
+          "type": "noul",
+          "instructions": "Is a refund requested?"
+        }
+      }
+    }
+  },
+  "response": {
+    "status": 413,
+    "body": {
+      "error_type": "payload_too_large"
+    }
+  },
+  "result": null,
+  "error": {
+    "className": "APICallError",
+    "message": "payload_too_large",
+    "status": 413,
+    "retryAfterMs": null,
+    "retryAfterRead": false,
+    "responseHeaders": {
+      "connection": "keep-alive",
+      "content-type": "application/json",
+      "date": "<runtime-date>",
+      "keep-alive": "timeout=5",
+      "transfer-encoding": "chunked"
+    },
+    "retryAfterHeaderVisible": false
+  }
+}

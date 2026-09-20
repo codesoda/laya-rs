@@ -1,0 +1,942 @@
+{
+  "meta": {
+    "fixture_id": "plan-example",
+    "profile": "typed-decisions",
+    "device": "mps",
+    "dtype": "float32",
+    "versions": {
+      "torch": "2.14.0",
+      "transformers": "5.17.0",
+      "tokenizers": "0.23.2"
+    },
+    "laya_sha": "6a5819129eb220570792e417e49723d697efd76f",
+    "weights_sha256": "4fa56de72383a9d3efa9cfa78955733c81b9fc8067a587ca4beb82c78107a24e",
+    "max_len": 1024,
+    "head_max_len": 256,
+    "tokenizer_special": {
+      "cls": {
+        "id": 50281,
+        "string": "[CLS]"
+      },
+      "sep": {
+        "id": 50282,
+        "string": "[SEP]"
+      },
+      "mask": {
+        "id": 50284,
+        "string": "[MASK]"
+      },
+      "pad": {
+        "id": 50283,
+        "string": "[PAD]"
+      }
+    },
+    "timestamp": "2026-09-20T00:35:02.562622Z"
+  },
+  "source": "docs/plans/initial-build.md §8",
+  "expect_error": null,
+  "state_text": "{\"body\": \"I was charged twice. Please refund.\"}",
+  "serialized": {
+    "department": {
+      "internal": {
+        "t": "choice",
+        "ins": "Which team should handle this?",
+        "crit": {
+          "billing": "Payments and refunds",
+          "support": "Other support"
+        }
+      },
+      "rendered_options": [
+        "billing: Payments and refunds",
+        "support: Other support"
+      ],
+      "head_text": "choice question: Which team should handle this?",
+      "option_texts": [
+        " billing: Payments and refunds",
+        " support: Other support"
+      ],
+      "state_text_ref": "$.state_text"
+    },
+    "urgency": {
+      "internal": {
+        "t": "score",
+        "ins": "How urgent is this?",
+        "crit": [
+          "low",
+          "medium",
+          "high"
+        ]
+      },
+      "rendered_options": [
+        "level 0: low",
+        "level 1: medium",
+        "level 2: high"
+      ],
+      "head_text": "score question: How urgent is this?",
+      "option_texts": [
+        " level 0: low",
+        " level 1: medium",
+        " level 2: high"
+      ],
+      "state_text_ref": "$.state_text"
+    },
+    "refund": {
+      "internal": {
+        "t": "noul",
+        "ins": "Is a refund requested?",
+        "crit": null
+      },
+      "rendered_options": [
+        "false: no, the statement does not hold",
+        "true: yes, the statement holds"
+      ],
+      "head_text": "noul question: Is a refund requested?",
+      "option_texts": [
+        " false: no, the statement does not hold",
+        " true: yes, the statement holds"
+      ],
+      "state_text_ref": "$.state_text"
+    }
+  },
+  "tokens": {
+    "department": {
+      "head_ids_full": [
+        22122,
+        1953,
+        27,
+        6758,
+        2285,
+        943,
+        6016,
+        436,
+        32
+      ],
+      "head_ids_kept": [
+        22122,
+        1953,
+        27,
+        6758,
+        2285,
+        943,
+        6016,
+        436,
+        32
+      ],
+      "option_ids_full": [
+        [
+          33484,
+          27,
+          12286,
+          942,
+          285,
+          1275,
+          41748
+        ],
+        [
+          1329,
+          27,
+          5131,
+          1329
+        ]
+      ],
+      "option_ids_kept": [
+        [
+          50284,
+          33484,
+          27,
+          12286,
+          942,
+          285,
+          1275,
+          41748
+        ],
+        [
+          50284,
+          1329,
+          27,
+          5131,
+          1329
+        ]
+      ],
+      "opt_budget_initial": 243,
+      "retruncated": false,
+      "per": null,
+      "state_ids_full_len": 13,
+      "state_ids_kept_len": 13,
+      "room": 998,
+      "ids": [
+        50281,
+        22122,
+        1953,
+        27,
+        6758,
+        2285,
+        943,
+        6016,
+        436,
+        32,
+        50282,
+        50284,
+        33484,
+        27,
+        12286,
+        942,
+        285,
+        1275,
+        41748,
+        50284,
+        1329,
+        27,
+        5131,
+        1329,
+        50282,
+        9819,
+        2915,
+        1381,
+        346,
+        42,
+        369,
+        6636,
+        7019,
+        15,
+        7764,
+        23005,
+        449,
+        94,
+        50282
+      ],
+      "markers": [
+        11,
+        19
+      ],
+      "truncated_state_tokens": 0,
+      "sequence_len": 39,
+      "hit_max_len": false
+    },
+    "urgency": {
+      "head_ids_full": [
+        18891,
+        1953,
+        27,
+        1359,
+        21007,
+        310,
+        436,
+        32
+      ],
+      "head_ids_kept": [
+        18891,
+        1953,
+        27,
+        1359,
+        21007,
+        310,
+        436,
+        32
+      ],
+      "option_ids_full": [
+        [
+          1268,
+          470,
+          27,
+          1698
+        ],
+        [
+          1268,
+          337,
+          27,
+          4646
+        ],
+        [
+          1268,
+          374,
+          27,
+          1029
+        ]
+      ],
+      "option_ids_kept": [
+        [
+          50284,
+          1268,
+          470,
+          27,
+          1698
+        ],
+        [
+          50284,
+          1268,
+          337,
+          27,
+          4646
+        ],
+        [
+          50284,
+          1268,
+          374,
+          27,
+          1029
+        ]
+      ],
+      "opt_budget_initial": 241,
+      "retruncated": false,
+      "per": null,
+      "state_ids_full_len": 13,
+      "state_ids_kept_len": 13,
+      "room": 997,
+      "ids": [
+        50281,
+        18891,
+        1953,
+        27,
+        1359,
+        21007,
+        310,
+        436,
+        32,
+        50282,
+        50284,
+        1268,
+        470,
+        27,
+        1698,
+        50284,
+        1268,
+        337,
+        27,
+        4646,
+        50284,
+        1268,
+        374,
+        27,
+        1029,
+        50282,
+        9819,
+        2915,
+        1381,
+        346,
+        42,
+        369,
+        6636,
+        7019,
+        15,
+        7764,
+        23005,
+        449,
+        94,
+        50282
+      ],
+      "markers": [
+        10,
+        15,
+        20
+      ],
+      "truncated_state_tokens": 0,
+      "sequence_len": 40,
+      "hit_max_len": false
+    },
+    "refund": {
+      "head_ids_full": [
+        79,
+        3941,
+        1953,
+        27,
+        1680,
+        247,
+        23005,
+        9521,
+        32
+      ],
+      "head_ids_kept": [
+        79,
+        3941,
+        1953,
+        27,
+        1680,
+        247,
+        23005,
+        9521,
+        32
+      ],
+      "option_ids_full": [
+        [
+          3221,
+          27,
+          642,
+          13,
+          253,
+          3908,
+          1057,
+          417,
+          2186
+        ],
+        [
+          2032,
+          27,
+          4754,
+          13,
+          253,
+          3908,
+          6556
+        ]
+      ],
+      "option_ids_kept": [
+        [
+          50284,
+          3221,
+          27,
+          642,
+          13,
+          253,
+          3908,
+          1057,
+          417,
+          2186
+        ],
+        [
+          50284,
+          2032,
+          27,
+          4754,
+          13,
+          253,
+          3908,
+          6556
+        ]
+      ],
+      "opt_budget_initial": 238,
+      "retruncated": false,
+      "per": null,
+      "state_ids_full_len": 13,
+      "state_ids_kept_len": 13,
+      "room": 993,
+      "ids": [
+        50281,
+        79,
+        3941,
+        1953,
+        27,
+        1680,
+        247,
+        23005,
+        9521,
+        32,
+        50282,
+        50284,
+        3221,
+        27,
+        642,
+        13,
+        253,
+        3908,
+        1057,
+        417,
+        2186,
+        50284,
+        2032,
+        27,
+        4754,
+        13,
+        253,
+        3908,
+        6556,
+        50282,
+        9819,
+        2915,
+        1381,
+        346,
+        42,
+        369,
+        6636,
+        7019,
+        15,
+        7764,
+        23005,
+        449,
+        94,
+        50282
+      ],
+      "markers": [
+        11,
+        21
+      ],
+      "truncated_state_tokens": 0,
+      "sequence_len": 44,
+      "hit_max_len": false
+    }
+  },
+  "batch": {
+    "input_ids": [
+      [
+        50281,
+        22122,
+        1953,
+        27,
+        6758,
+        2285,
+        943,
+        6016,
+        436,
+        32,
+        50282,
+        50284,
+        33484,
+        27,
+        12286,
+        942,
+        285,
+        1275,
+        41748,
+        50284,
+        1329,
+        27,
+        5131,
+        1329,
+        50282,
+        9819,
+        2915,
+        1381,
+        346,
+        42,
+        369,
+        6636,
+        7019,
+        15,
+        7764,
+        23005,
+        449,
+        94,
+        50282,
+        50283,
+        50283,
+        50283,
+        50283,
+        50283
+      ],
+      [
+        50281,
+        18891,
+        1953,
+        27,
+        1359,
+        21007,
+        310,
+        436,
+        32,
+        50282,
+        50284,
+        1268,
+        470,
+        27,
+        1698,
+        50284,
+        1268,
+        337,
+        27,
+        4646,
+        50284,
+        1268,
+        374,
+        27,
+        1029,
+        50282,
+        9819,
+        2915,
+        1381,
+        346,
+        42,
+        369,
+        6636,
+        7019,
+        15,
+        7764,
+        23005,
+        449,
+        94,
+        50282,
+        50283,
+        50283,
+        50283,
+        50283
+      ],
+      [
+        50281,
+        79,
+        3941,
+        1953,
+        27,
+        1680,
+        247,
+        23005,
+        9521,
+        32,
+        50282,
+        50284,
+        3221,
+        27,
+        642,
+        13,
+        253,
+        3908,
+        1057,
+        417,
+        2186,
+        50284,
+        2032,
+        27,
+        4754,
+        13,
+        253,
+        3908,
+        6556,
+        50282,
+        9819,
+        2915,
+        1381,
+        346,
+        42,
+        369,
+        6636,
+        7019,
+        15,
+        7764,
+        23005,
+        449,
+        94,
+        50282
+      ]
+    ],
+    "attention_mask": [
+      [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    ],
+    "marker_pos": [
+      [
+        11,
+        19,
+        0
+      ],
+      [
+        10,
+        15,
+        20
+      ],
+      [
+        11,
+        21,
+        0
+      ]
+    ],
+    "marker_mask": [
+      [
+        true,
+        true,
+        false
+      ],
+      [
+        true,
+        true,
+        true
+      ],
+      [
+        true,
+        true,
+        false
+      ]
+    ],
+    "qtype": [
+      0,
+      1,
+      2
+    ],
+    "pad_id": 50283,
+    "n_tokens": 123
+  },
+  "model": {
+    "department": {
+      "option_logits_raw": [
+        2.3147735595703125,
+        -1.0429487228393555
+      ],
+      "option_logits_masked_full": [
+        2.3147735595703125,
+        -1.0429487228393555,
+        -10000.0
+      ],
+      "act_logits": [
+        4888.923828125,
+        -3995.72412109375
+      ],
+      "act_probs": [
+        1.0,
+        0.0
+      ],
+      "temperature": 1.9063563346862793,
+      "temp_bucket": "choice:2",
+      "probs_unrounded": [
+        0.8533761501312256,
+        0.14662384986877441
+      ],
+      "confidence_unrounded": 0.398673415184021,
+      "expected_score_unrounded": null,
+      "argmax_index": 0
+    },
+    "urgency": {
+      "option_logits_raw": [
+        -1.9731595516204834,
+        -0.34309273958206177,
+        1.933986783027649
+      ],
+      "option_logits_masked_full": [
+        -1.9731595516204834,
+        -0.34309273958206177,
+        1.933986783027649
+      ],
+      "act_logits": [
+        4401.736328125,
+        -3600.6025390625
+      ],
+      "act_probs": [
+        1.0,
+        0.0
+      ],
+      "temperature": 1.2514300346374512,
+      "temp_bucket": "score:3-5",
+      "probs_unrounded": [
+        0.03653138130903244,
+        0.1343885213136673,
+        0.8290801644325256
+      ],
+      "confidence_unrounded": 0.5029860734939575,
+      "expected_score_unrounded": 1.7925488501787186,
+      "argmax_index": 2
+    },
+    "refund": {
+      "option_logits_raw": [
+        -2.264486789703369,
+        0.3081418573856354
+      ],
+      "option_logits_masked_full": [
+        -2.264486789703369,
+        0.3081418573856354,
+        -10000.0
+      ],
+      "act_logits": [
+        4674.34765625,
+        -3827.6318359375
+      ],
+      "act_probs": [
+        1.0,
+        0.0
+      ],
+      "temperature": 1.983399510383606,
+      "temp_bucket": "noul:2",
+      "probs_unrounded": [
+        0.2146567851305008,
+        0.7853431701660156
+      ],
+      "confidence_unrounded": 0.24970966577529907,
+      "expected_score_unrounded": null,
+      "argmax_index": 1
+    }
+  },
+  "native_result": {
+    "model": "laya-rl-agent",
+    "answers": {
+      "department": {
+        "type": "choice",
+        "choice": "billing",
+        "probabilities": {
+          "billing": 0.8534,
+          "support": 0.1466
+        },
+        "confidence": 0.3987,
+        "action": {
+          "act_probability": 1.0
+        }
+      },
+      "urgency": {
+        "type": "score",
+        "score": 1.7925,
+        "legend": {
+          "0": "low",
+          "1": "medium",
+          "2": "high"
+        },
+        "probabilities": {
+          "0": 0.0365,
+          "1": 0.1344,
+          "2": 0.8291
+        },
+        "confidence": 0.503,
+        "action": {
+          "act_probability": 1.0
+        }
+      },
+      "refund": {
+        "type": "noul",
+        "noul": 0.7853,
+        "confidence": 0.7853,
+        "action": {
+          "act_probability": 1.0
+        }
+      }
+    },
+    "usage": {
+      "input_tokens": 123,
+      "output_tokens": 0
+    }
+  },
+  "instrumented_matches_native": true,
+  "error": null,
+  "determinism": {
+    "device": "mps",
+    "bitwise_identical": true,
+    "max_abs_diff": 0.0
+  },
+  "hidden_states_npz": "plan-example.npz",
+  "hidden_cls_shape": [
+    3,
+    1024
+  ],
+  "hidden_markers_shape": [
+    3,
+    3,
+    1024
+  ]
+}

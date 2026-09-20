@@ -1,0 +1,33 @@
+{
+  "id": "edge-head-overflow",
+  "source": "laya-rs authored",
+  "state": "Customer asks which option applies.",
+  "questions": {
+    "many_long": {
+      "type": "choice",
+      "instructions": "Select the best option. Select the best option. Select the best option. Select the best option. Select the best option. Select the best option. Select the best option. Select the best option. Select the best option. Select the best option. Select the best option. Select the best option. Select the best option. Select the best option. Select the best option. Select the best option. Select the best option. Select the best option. Select the best option. Select the best option. Select the best option. Select the best option. Select the best option. Select the best option. Select the best option. Select the best option. Select the best option. Select the best option. Select the best option. Select the best option. ",
+      "criteria": {
+        "opt00": "Option number 0: a fairly long description that consumes many tokens of head budget a fairly long description that consumes many tokens of head budget ",
+        "opt01": "Option number 1: a fairly long description that consumes many tokens of head budget a fairly long description that consumes many tokens of head budget ",
+        "opt02": "Option number 2: a fairly long description that consumes many tokens of head budget a fairly long description that consumes many tokens of head budget ",
+        "opt03": "Option number 3: a fairly long description that consumes many tokens of head budget a fairly long description that consumes many tokens of head budget ",
+        "opt04": "Option number 4: a fairly long description that consumes many tokens of head budget a fairly long description that consumes many tokens of head budget ",
+        "opt05": "Option number 5: a fairly long description that consumes many tokens of head budget a fairly long description that consumes many tokens of head budget ",
+        "opt06": "Option number 6: a fairly long description that consumes many tokens of head budget a fairly long description that consumes many tokens of head budget ",
+        "opt07": "Option number 7: a fairly long description that consumes many tokens of head budget a fairly long description that consumes many tokens of head budget ",
+        "opt08": "Option number 8: a fairly long description that consumes many tokens of head budget a fairly long description that consumes many tokens of head budget ",
+        "opt09": "Option number 9: a fairly long description that consumes many tokens of head budget a fairly long description that consumes many tokens of head budget ",
+        "opt10": "Option number 10: a fairly long description that consumes many tokens of head budget a fairly long description that consumes many tokens of head budget ",
+        "opt11": "Option number 11: a fairly long description that consumes many tokens of head budget a fairly long description that consumes many tokens of head budget ",
+        "opt12": "Option number 12: a fairly long description that consumes many tokens of head budget a fairly long description that consumes many tokens of head budget ",
+        "opt13": "Option number 13: a fairly long description that consumes many tokens of head budget a fairly long description that consumes many tokens of head budget ",
+        "opt14": "Option number 14: a fairly long description that consumes many tokens of head budget a fairly long description that consumes many tokens of head budget ",
+        "opt15": "Option number 15: a fairly long description that consumes many tokens of head budget a fairly long description that consumes many tokens of head budget ",
+        "opt16": "Option number 16: a fairly long description that consumes many tokens of head budget a fairly long description that consumes many tokens of head budget ",
+        "opt17": "Option number 17: a fairly long description that consumes many tokens of head budget a fairly long description that consumes many tokens of head budget ",
+        "opt18": "Option number 18: a fairly long description that consumes many tokens of head budget a fairly long description that consumes many tokens of head budget ",
+        "opt19": "Option number 19: a fairly long description that consumes many tokens of head budget a fairly long description that consumes many tokens of head budget "
+      }
+    }
+  }
+}

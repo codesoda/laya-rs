@@ -1,0 +1,106 @@
+{
+  "id": "edge-serialization",
+  "source": "laya-rs authored",
+  "state": {
+    "z_last": "first key inserted",
+    "a_first": "second key inserted",
+    "float": 1.0,
+    "small": 1e-05,
+    "neg_zero": -0.0,
+    "big": 1e+21,
+    "sum": 0.30000000000000004,
+    "int": 7,
+    "bool": true,
+    "none": null,
+    "unicode": "café ünïcode 日本語 🙂",
+    "escapes": "tab\tnewline\nquote\"backslash\\slash/",
+    "nested": {
+      "list": [
+        1,
+        2.5,
+        "three",
+        [
+          4,
+          {
+            "five": 5
+          }
+        ]
+      ]
+    },
+    "mask_literal": "contains [MASK] and <mask> tokens",
+    "empty_str": "",
+    "empty_list": [],
+    "empty_obj": {}
+  },
+  "questions": {
+    "desc_none": {
+      "type": "choice",
+      "instructions": "Pick one.",
+      "criteria": {
+        "a": null,
+        "b": "",
+        "c": 0,
+        "d": false,
+        "e": 1.5,
+        "f": {
+          "x": [
+            1,
+            "y"
+          ]
+        },
+        "g": [
+          "l",
+          "m"
+        ],
+        "h": "plain"
+      }
+    },
+    "ins_dict": {
+      "type": "noul",
+      "instructions": {
+        "q": "Is café mentioned?",
+        "n": 1,
+        "u": "日本"
+      }
+    },
+    "ins_list": {
+      "type": "score",
+      "instructions": [
+        "level of",
+        "unicode: ü"
+      ],
+      "criteria": [
+        {
+          "lvl": 0
+        },
+        "one",
+        null,
+        2.0
+      ]
+    },
+    "ins_mask": {
+      "type": "noul",
+      "instructions": "Does [MASK] appear? Or <mask>?",
+      "criteria": {
+        "true": "yes [MASK]",
+        "false": "no <mask>"
+      }
+    },
+    "noul_desc_empty": {
+      "type": "noul",
+      "instructions": "Empty descriptions.",
+      "criteria": {
+        "true": "",
+        "false": null
+      }
+    },
+    "choice_list": {
+      "type": "choice",
+      "instructions": "List criteria.",
+      "criteria": [
+        "x",
+        "y"
+      ]
+    }
+  }
+}

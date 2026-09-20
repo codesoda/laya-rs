@@ -1,0 +1,64 @@
+{
+  "request": {
+    "method": "POST",
+    "path": "/v1/systemone",
+    "headers": {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate",
+      "accept-language": "*",
+      "authorization": "Bearer dummy-local-key",
+      "connection": "keep-alive",
+      "content-length": "406",
+      "content-type": "application/json",
+      "host": "<local-mock>",
+      "sec-fetch-mode": "cors",
+      "user-agent": "typesafe-sdk/0.6.0",
+      "x-typesafe-runtime": "node/24.15.0 (darwin; arm64)",
+      "x-typesafe-sdk": "typesafe-sdk/0.6.0"
+    },
+    "rawBody": "{\"model\":\"jev-latest\",\"state\":{\"body\":\"I was charged twice. Please refund.\"},\"questions\":{\"department\":{\"type\":\"choice\",\"instructions\":\"Which team should handle this?\",\"criteria\":{\"billing\":\"Payments and refunds\",\"support\":\"Other support\"}},\"urgency\":{\"type\":\"score\",\"instructions\":\"How urgent is this?\",\"criteria\":[\"low\",\"medium\",\"high\"]},\"refund\":{\"type\":\"noul\",\"instructions\":\"Is a refund requested?\"}}}",
+    "body": {
+      "model": "jev-latest",
+      "state": {
+        "body": "I was charged twice. Please refund."
+      },
+      "questions": {
+        "department": {
+          "type": "choice",
+          "instructions": "Which team should handle this?",
+          "criteria": {
+            "billing": "Payments and refunds",
+            "support": "Other support"
+          }
+        },
+        "urgency": {
+          "type": "score",
+          "instructions": "How urgent is this?",
+          "criteria": [
+            "low",
+            "medium",
+            "high"
+          ]
+        },
+        "refund": {
+          "type": "noul",
+          "instructions": "Is a refund requested?"
+        }
+      }
+    }
+  },
+  "response": {
+    "status": 401,
+    "body": {
+      "error": "unauthorized"
+    }
+  },
+  "result": null,
+  "error": {
+    "className": "AuthenticationError",
+    "message": "401 unauthorized",
+    "status": 401,
+    "retryAfterMs": null,
+    "retryAfterRead": false
+  }
+}

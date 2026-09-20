@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "frozen_at_gate": "L0",
+  "frozen_by": "Fable",
+  "status": "frozen before any Rust inference timing exists; amendments require a dated entry in `amendments` with the reason, recorded before Rust timings are inspected",
+  "host": {
+    "chip": "Apple M3 Pro",
+    "cpu_cores": {"performance": 5, "efficiency": 6, "logical": 11},
+    "gpu_cores": 14,
+    "metal": "Metal 4",
+    "ram_bytes": 19327352832,
+    "macos": "26.2 (25C56)",
+    "power_mode": "lowpowermode=0, on mains power required for measured runs"
+  },
+  "python_baseline": {
+    "python": "3.12.7",
+    "torch": "2.14.0",
+    "transformers": "5.17.0",
+    "tokenizers": "0.23.2",
+    "numpy": "2.5.3",
+    "laya": "0.3.3 @ 6a5819129eb220570792e417e49723d697efd76f",
+    "dtype": "float32 on cpu and mps (upstream agent.py forces fp32 and disables autocast off CUDA)",
+    "torch_threads_default": 5,
+    "weights": "manifests/sources.json (bundled hub c5d78730f3493e4fe16d61507ef4b78eef7318cf)"
+  },
+  "primary_acceptance": {
+    "profile": "multilingual",
+    "workloads": ["distinct-ml-q1", "distinct-ml-q10"],
+    "request_fixtures": "benchmarks/fixtures/requests/<id>.json (byte-identical for Python and Rust)",
+    "baseline_runtime": "pinned Python, device mps, float32, complete network incl. action head",
+    "candidate_runtime": "laya-rs, backend metal, float32 (a separate fp16/bf16 configuration is a distinct measured profile, never the same-precision claim)",
+    "metric": "e2e_ms = one complete system_one-equivalent request: preprocessing + device transfer + synchronized model forward + postprocessing + result construction; excludes load, warmup, routing and HTTP; device synchronized immediately before and after each timed call",
+    "targets": {
+      "median_speedup_min": 1.10,
+      "p95_regression_max_fraction": 0.05,
+      "parity": "all frozen tolerance gates in benchmarks/goldens/tolerances.json pass for the same weights",
+      "repeatability": "at least 3 independent alternating-order runs (Python/Rust, Rust/Python, Python/Rust), >= 100 measured samples per workload per runtime after >= 3 warmups, bootstrap (10000 resamples, seed 0) 95% CI of the ratio of medians (python_p50 / rust_p50) must have lower bound > 1.0 in addition to the 1.10x point estimate"
+    },
+    "historical_comparison_minimum": "3 warmups / 20 reps as in the upstream harness; reported separately, not sufficient for the primary claim",
+    "secondary_reported_separately": {
+      "english": ["distinct-en-q1", "distinct-en-q10", "distinct-en-q21", "distinct-en-q50"],
+      "typed-decisions": ["distinct-en-q1", "distinct-en-q10"],
+      "published_reproduction": ["published-latency-q1", "published-latency-q5", "published-latency-q10", "published-latency-q50"],
+      "stress": ["nonlatin-mixed-q6", "ragged-q12", "bucket-choice-20", "bucket-choice-2", "edge-long-state", "edge-head-overflow"],
+      "cpu": "Python CPU vs Rust CPU on the same fixtures, reported as a separate table",
+      "regression_flag": "> 5% p50 regression on any matched secondary workload must be adjudicated by Fable before any broad performance claim"
+    },
+    "reporting": [
+      "per-request latency p50/p95/mean/std with raw samples retained",
+      "ms/question and questions/sec labelled as amortized, never as latency",
+      "cold process start, load, first-call, preprocessing-only, model-only, e2e and (L3+) warm loopback HTTP as separate rows",
+      "peak RSS and MPS/Metal allocated memory",
+      "contended/thermal/interrupted samples reported, never discarded silently"
+    ],
+    "prohibited": [
+      "dropping the action head",
+      "changing precision, context or head budgets versus the pinned config",
+      "deduplicating repeated questions without disclosure (published workload is duplicate-heavy by design)",
+      "comparing Rust Metal to Python CPU and calling it an accelerator speedup",
+      "using any M3 Pro number as evidence against the published T4 figures"
+    ]
+  },
+  "published_t4_reference": {
+    "source": "NandhaKishorM/laya@28d43add7e47ce502489c9433310d55276c64e0f research/results/t4_colab_benchmark.json",
+    "environment": "Tesla T4, torch 2.11.0+cu128, transformers 5.17.0, laya>=0.1.6 unpinned, fp16 autocast, one repeated ticket, alternating 3-option choice / noul",
+    "english_p50_p95_ms": {"1": [39.5, 44.8], "5": [84.5, 86.0], "10": [158.6, 160.1], "50": [771.3, 806.7]},
+    "multilingual_p50_p95_ms": {"1": [32.8, 38.8], "5": [40.1, 43.5], "10": [72.3, 74.4], "50": [337.4, 693.7]},
+    "status": "unverified locally; no T4 available; any claim against these numbers requires a matched T4 run"
+  },
+  "amendments": []
+}

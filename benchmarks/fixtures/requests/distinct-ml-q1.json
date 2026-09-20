@@ -1,0 +1,47 @@
+{
+  "id": "distinct-ml-q1",
+  "source": "laya-rs authored (es-MX)",
+  "state": {
+    "ticket_id": "T-48377",
+    "channel": "chat",
+    "customer": {
+      "name": "Sofía Álvarez",
+      "plan": "Equipo",
+      "país": "MX"
+    },
+    "messages": [
+      {
+        "from": "customer",
+        "text": "Hola, me cobraron dos veces la suscripción de mayo (dos cargos de $899 MXN). Además la exportación a CSV sigue fallando con error 500 desde hace una semana y nadie me ha respondido. Si esto no se resuelve hoy cancelo la cuenta. Necesito el reembolso del cargo duplicado."
+      },
+      {
+        "from": "agent",
+        "text": "Lamento mucho la situación, Sofía. Reviso ahora mismo los cargos y el estado del reporte de exportación."
+      },
+      {
+        "from": "customer",
+        "text": "Gracias, pero es la tercera vez este año. ¿Pueden darme una fecha concreta para el arreglo?"
+      }
+    ],
+    "prior_tickets": [
+      {
+        "id": "T-48010",
+        "tema": "exportación CSV error 500",
+        "estado": "abierto",
+        "días": 7
+      }
+    ]
+  },
+  "questions": {
+    "departamento": {
+      "type": "choice",
+      "instructions": "¿Qué equipo debe atender primero este ticket?",
+      "criteria": {
+        "facturación": "pagos, facturas y reembolsos",
+        "ingeniería": "errores y fallos del producto",
+        "éxito_cliente": "gestión de cuenta y retención",
+        "ventas": "planes y precios"
+      }
+    }
+  }
+}

@@ -1,0 +1,114 @@
+{
+  "profile": "english",
+  "a": "/Users/chrisraethke/projects/laya-rs/benchmarks/goldens/english/cpu",
+  "b": "/Users/chrisraethke/projects/laya-rs/benchmarks/goldens/english/mps",
+  "fixture_count": 29,
+  "compared_success_count": 28,
+  "error_records": [
+    {
+      "fixture": "edge-single-option",
+      "a": {
+        "type": "RuntimeError",
+        "message": "selected index k out of range"
+      },
+      "b": {
+        "type": "RuntimeError",
+        "message": "selected index k out of range"
+      },
+      "equal": true
+    }
+  ],
+  "exact": {
+    "input_ids": {
+      "exact": true,
+      "mismatched_fixtures": []
+    },
+    "attention_mask": {
+      "exact": true,
+      "mismatched_fixtures": []
+    },
+    "marker_pos": {
+      "exact": true,
+      "mismatched_fixtures": []
+    },
+    "marker_mask": {
+      "exact": true,
+      "mismatched_fixtures": []
+    },
+    "qtype": {
+      "exact": true,
+      "mismatched_fixtures": []
+    },
+    "question_ids": {
+      "exact": true,
+      "mismatched_fixtures": []
+    },
+    "question_markers": {
+      "exact": true,
+      "mismatched_fixtures": []
+    }
+  },
+  "metrics": {
+    "option_logits_raw": {
+      "count": 838,
+      "max_abs_diff": 8.7738037109375e-05,
+      "mean_abs_diff": 4.079112858647094e-06,
+      "rmse": 7.171471701731491e-06
+    },
+    "act_logits": {
+      "count": 406,
+      "max_abs_diff": 0.011962890625,
+      "mean_abs_diff": 0.0018851745304802956,
+      "rmse": 0.0026570096694105896
+    },
+    "probs_unrounded": {
+      "count": 838,
+      "max_abs_diff": 5.27501106262207e-06,
+      "mean_abs_diff": 3.88949807598679e-07,
+      "rmse": 7.527241746019517e-07
+    },
+    "expected_score": {
+      "count": 24,
+      "max_abs_diff": 7.152557373046875e-06,
+      "mean_abs_diff": 1.7723068594932556e-06,
+      "rmse": 2.5493813060495593e-06
+    },
+    "act_probs": {
+      "count": 406,
+      "max_abs_diff": 0.0,
+      "mean_abs_diff": 0.0,
+      "rmse": 0.0
+    },
+    "argmax": {
+      "matches": 203,
+      "count": 203,
+      "agreement_rate": 1.0
+    }
+  },
+  "native_result_rounded_differences": {
+    "count": 3,
+    "items": [
+      {
+        "fixture": "bucket-choice-20",
+        "qid": "q",
+        "field": "probabilities.class_0",
+        "a": 0.1688,
+        "b": 0.1687
+      },
+      {
+        "fixture": "distinct-en-q50",
+        "qid": "detractor",
+        "field": "noul",
+        "a": 0.2831,
+        "b": 0.2832
+      },
+      {
+        "fixture": "distinct-en-q50",
+        "qid": "detractor",
+        "field": "confidence",
+        "a": 0.7169,
+        "b": 0.7168
+      }
+    ]
+  }
+}

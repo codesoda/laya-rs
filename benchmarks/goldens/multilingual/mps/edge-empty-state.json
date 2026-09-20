@@ -1,0 +1,521 @@
+{
+  "meta": {
+    "fixture_id": "edge-empty-state",
+    "profile": "multilingual",
+    "device": "mps",
+    "dtype": "float32",
+    "versions": {
+      "torch": "2.14.0",
+      "transformers": "5.17.0",
+      "tokenizers": "0.23.2"
+    },
+    "laya_sha": "6a5819129eb220570792e417e49723d697efd76f",
+    "weights_sha256": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+    "max_len": 1024,
+    "head_max_len": 256,
+    "tokenizer_special": {
+      "cls": {
+        "id": 2,
+        "string": "<bos>"
+      },
+      "sep": {
+        "id": 1,
+        "string": "<eos>"
+      },
+      "mask": {
+        "id": 4,
+        "string": "<mask>"
+      },
+      "pad": {
+        "id": 0,
+        "string": "<pad>"
+      }
+    },
+    "timestamp": "2026-09-20T00:33:40.278237Z"
+  },
+  "source": "laya-rs authored",
+  "expect_error": null,
+  "state_text": "",
+  "serialized": {
+    "q": {
+      "internal": {
+        "t": "noul",
+        "ins": "Is there any content?",
+        "crit": null
+      },
+      "rendered_options": [
+        "false: no, the statement does not hold",
+        "true: yes, the statement holds"
+      ],
+      "head_text": "noul question: Is there any content?",
+      "option_texts": [
+        " false: no, the statement does not hold",
+        " true: yes, the statement holds"
+      ],
+      "state_text_ref": "$.state_text"
+    },
+    "c": {
+      "internal": {
+        "t": "choice",
+        "ins": "",
+        "crit": {
+          "a": null,
+          "b": null
+        }
+      },
+      "rendered_options": [
+        "a",
+        "b"
+      ],
+      "head_text": "choice question: ",
+      "option_texts": [
+        " a",
+        " b"
+      ],
+      "state_text_ref": "$.state_text"
+    }
+  },
+  "tokens": {
+    "q": {
+      "head_ids_full": [
+        552,
+        6311,
+        2872,
+        235292,
+        2125,
+        1104,
+        1089,
+        3381,
+        235336
+      ],
+      "head_ids_kept": [
+        552,
+        6311,
+        2872,
+        235292,
+        2125,
+        1104,
+        1089,
+        3381,
+        235336
+      ],
+      "option_ids_full": [
+        [
+          1566,
+          235292,
+          793,
+          235269,
+          573,
+          6218,
+          1721,
+          780,
+          3385
+        ],
+        [
+          1382,
+          235292,
+          7778,
+          235269,
+          573,
+          6218,
+          12723
+        ]
+      ],
+      "option_ids_kept": [
+        [
+          4,
+          1566,
+          235292,
+          793,
+          235269,
+          573,
+          6218,
+          1721,
+          780,
+          3385
+        ],
+        [
+          4,
+          1382,
+          235292,
+          7778,
+          235269,
+          573,
+          6218,
+          12723
+        ]
+      ],
+      "opt_budget_initial": 238,
+      "retruncated": false,
+      "per": null,
+      "state_ids_full_len": 0,
+      "state_ids_kept_len": 0,
+      "room": 993,
+      "ids": [
+        2,
+        552,
+        6311,
+        2872,
+        235292,
+        2125,
+        1104,
+        1089,
+        3381,
+        235336,
+        1,
+        4,
+        1566,
+        235292,
+        793,
+        235269,
+        573,
+        6218,
+        1721,
+        780,
+        3385,
+        4,
+        1382,
+        235292,
+        7778,
+        235269,
+        573,
+        6218,
+        12723,
+        1,
+        1
+      ],
+      "markers": [
+        11,
+        21
+      ],
+      "truncated_state_tokens": 0,
+      "sequence_len": 31,
+      "hit_max_len": false
+    },
+    "c": {
+      "head_ids_full": [
+        6241,
+        2872,
+        235292,
+        235248
+      ],
+      "head_ids_kept": [
+        6241,
+        2872,
+        235292,
+        235248
+      ],
+      "option_ids_full": [
+        [
+          476
+        ],
+        [
+          518
+        ]
+      ],
+      "option_ids_kept": [
+        [
+          4,
+          476
+        ],
+        [
+          4,
+          518
+        ]
+      ],
+      "opt_budget_initial": 252,
+      "retruncated": false,
+      "per": null,
+      "state_ids_full_len": 0,
+      "state_ids_kept_len": 0,
+      "room": 1012,
+      "ids": [
+        2,
+        6241,
+        2872,
+        235292,
+        235248,
+        1,
+        4,
+        476,
+        4,
+        518,
+        1,
+        1
+      ],
+      "markers": [
+        6,
+        8
+      ],
+      "truncated_state_tokens": 0,
+      "sequence_len": 12,
+      "hit_max_len": false
+    }
+  },
+  "batch": {
+    "input_ids": [
+      [
+        2,
+        552,
+        6311,
+        2872,
+        235292,
+        2125,
+        1104,
+        1089,
+        3381,
+        235336,
+        1,
+        4,
+        1566,
+        235292,
+        793,
+        235269,
+        573,
+        6218,
+        1721,
+        780,
+        3385,
+        4,
+        1382,
+        235292,
+        7778,
+        235269,
+        573,
+        6218,
+        12723,
+        1,
+        1
+      ],
+      [
+        2,
+        6241,
+        2872,
+        235292,
+        235248,
+        1,
+        4,
+        476,
+        4,
+        518,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "attention_mask": [
+      [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "marker_pos": [
+      [
+        11,
+        21
+      ],
+      [
+        6,
+        8
+      ]
+    ],
+    "marker_mask": [
+      [
+        true,
+        true
+      ],
+      [
+        true,
+        true
+      ]
+    ],
+    "qtype": [
+      2,
+      0
+    ],
+    "pad_id": 0,
+    "n_tokens": 43
+  },
+  "model": {
+    "q": {
+      "option_logits_raw": [
+        4.653643608093262,
+        -0.2734907269477844
+      ],
+      "option_logits_masked_full": [
+        4.653643608093262,
+        -0.2734907269477844
+      ],
+      "act_logits": [
+        1459.152099609375,
+        -1730.458984375
+      ],
+      "act_probs": [
+        1.0,
+        0.0
+      ],
+      "temperature": 1.0,
+      "temp_bucket": "noul:2",
+      "probs_unrounded": [
+        0.9928049445152283,
+        0.007195095997303724
+      ],
+      "confidence_unrounded": 0.9384369254112244,
+      "expected_score_unrounded": null,
+      "argmax_index": 0
+    },
+    "c": {
+      "option_logits_raw": [
+        -0.7926627993583679,
+        -1.5439841747283936
+      ],
+      "option_logits_masked_full": [
+        -0.7926627993583679,
+        -1.5439841747283936
+      ],
+      "act_logits": [
+        1400.6727294921875,
+        -1665.675537109375
+      ],
+      "act_probs": [
+        1.0,
+        0.0
+      ],
+      "temperature": 1.0,
+      "temp_bucket": "choice:2",
+      "probs_unrounded": [
+        0.6794665455818176,
+        0.3205334544181824
+      ],
+      "confidence_unrounded": 0.09503930807113647,
+      "expected_score_unrounded": null,
+      "argmax_index": 0
+    }
+  },
+  "native_result": {
+    "model": "laya-rl-agent",
+    "answers": {
+      "q": {
+        "type": "noul",
+        "noul": 0.0072,
+        "confidence": 0.9928,
+        "action": {
+          "act_probability": 1.0
+        }
+      },
+      "c": {
+        "type": "choice",
+        "choice": "a",
+        "probabilities": {
+          "a": 0.6795,
+          "b": 0.3205
+        },
+        "confidence": 0.095,
+        "action": {
+          "act_probability": 1.0
+        }
+      }
+    },
+    "usage": {
+      "input_tokens": 43,
+      "output_tokens": 0
+    }
+  },
+  "instrumented_matches_native": true,
+  "error": null,
+  "determinism": {
+    "device": "mps",
+    "bitwise_identical": true,
+    "max_abs_diff": 0.0
+  },
+  "hidden_states_npz": "edge-empty-state.npz",
+  "hidden_cls_shape": [
+    2,
+    768
+  ],
+  "hidden_markers_shape": [
+    2,
+    2,
+    768
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "profile": "multilingual",
+  "a": "/Users/chrisraethke/projects/laya-rs/benchmarks/goldens/multilingual/cpu",
+  "b": "/Users/chrisraethke/projects/laya-rs/benchmarks/goldens/multilingual/mps",
+  "fixture_count": 29,
+  "compared_success_count": 28,
+  "error_records": [
+    {
+      "fixture": "edge-single-option",
+      "a": {
+        "type": "RuntimeError",
+        "message": "selected index k out of range"
+      },
+      "b": {
+        "type": "RuntimeError",
+        "message": "selected index k out of range"
+      },
+      "equal": true
+    }
+  ],
+  "exact": {
+    "input_ids": {
+      "exact": true,
+      "mismatched_fixtures": []
+    },
+    "attention_mask": {
+      "exact": true,
+      "mismatched_fixtures": []
+    },
+    "marker_pos": {
+      "exact": true,
+      "mismatched_fixtures": []
+    },
+    "marker_mask": {
+      "exact": true,
+      "mismatched_fixtures": []
+    },
+    "qtype": {
+      "exact": true,
+      "mismatched_fixtures": []
+    },
+    "question_ids": {
+      "exact": true,
+      "mismatched_fixtures": []
+    },
+    "question_markers": {
+      "exact": true,
+      "mismatched_fixtures": []
+    }
+  },
+  "metrics": {
+    "option_logits_raw": {
+      "count": 838,
+      "max_abs_diff": 4.38690185546875e-05,
+      "mean_abs_diff": 2.6743672343597778e-06,
+      "rmse": 4.819639648367118e-06
+    },
+    "act_logits": {
+      "count": 406,
+      "max_abs_diff": 0.01708984375,
+      "mean_abs_diff": 0.0007276112222906404,
+      "rmse": 0.002035102443384683
+    },
+    "probs_unrounded": {
+      "count": 838,
+      "max_abs_diff": 6.079673767089844e-06,
+      "mean_abs_diff": 2.3916263064904994e-07,
+      "rmse": 6.224336501278147e-07
+    },
+    "expected_score": {
+      "count": 24,
+      "max_abs_diff": 3.635883331298828e-06,
+      "mean_abs_diff": 9.567787249883015e-07,
+      "rmse": 1.2989943578647107e-06
+    },
+    "act_probs": {
+      "count": 406,
+      "max_abs_diff": 0.0,
+      "mean_abs_diff": 0.0,
+      "rmse": 0.0
+    },
+    "argmax": {
+      "matches": 203,
+      "count": 203,
+      "agreement_rate": 1.0
+    }
+  },
+  "native_result_rounded_differences": {
+    "count": 2,
+    "items": [
+      {
+        "fixture": "distinct-en-q50",
+        "qid": "response_sla_hours",
+        "field": "probabilities.0",
+        "a": 0.1741,
+        "b": 0.1742
+      },
+      {
+        "fixture": "edge-serialization",
+        "qid": "choice_list",
+        "field": "confidence",
+        "a": 0.549,
+        "b": 0.5491
+      }
+    ]
+  }
+}

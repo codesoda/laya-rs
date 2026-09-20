@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://laya-rs.dev/schemas/error-response.schema.json",
+  "title": "TypeSafe error response",
+  "description": "Derived from the Vercel TypeSafe adapter error schema at vercel/ai 20dd00abba618d5a516e0fee40ccd3e18a2bd1fb packages/typesafe-ai/src/typesafe-ai-evaluation-api.ts:34-51. The native SDK additionally parses string bodies and validation arrays; see compat/js/vendor-notes/native-errors-retry.md.",
+  "type": "object",
+  "properties": {
+    "message": { "type": ["string", "null"] },
+    "detail": {},
+    "error": {
+      "anyOf": [
+        { "type": "string" },
+        { "type": "object", "properties": { "message": { "type": ["string", "null"] } }, "additionalProperties": true },
+        { "type": "null" }
+      ]
+    },
+    "error_type": { "type": ["string", "null"] }
+  },
+  "additionalProperties": true
+}

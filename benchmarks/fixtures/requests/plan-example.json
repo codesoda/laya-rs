@@ -1,0 +1,30 @@
+{
+  "id": "plan-example",
+  "source": "docs/plans/initial-build.md §8",
+  "state": {
+    "body": "I was charged twice. Please refund."
+  },
+  "questions": {
+    "department": {
+      "type": "choice",
+      "instructions": "Which team should handle this?",
+      "criteria": {
+        "billing": "Payments and refunds",
+        "support": "Other support"
+      }
+    },
+    "urgency": {
+      "type": "score",
+      "instructions": "How urgent is this?",
+      "criteria": [
+        "low",
+        "medium",
+        "high"
+      ]
+    },
+    "refund": {
+      "type": "noul",
+      "instructions": "Is a refund requested?"
+    }
+  }
+}

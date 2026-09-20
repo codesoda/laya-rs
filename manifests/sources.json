@@ -1,0 +1,734 @@
+{
+  "bundle_parity": {
+    "multilingual": {
+      "bundled_revision": "c5d78730f3493e4fe16d61507ef4b78eef7318cf",
+      "download_policy": "Standalone weights were not downloaded; parity uses immutable Hub Git/LFS OIDs.",
+      "files": {
+        "encoder/config.json": {
+          "bundled_bytes": 1938,
+          "bundled_git_oid": "0de0e2d30638873790cf962def52e2acf4db3eef",
+          "bundled_sha256": "83f6916d13ef0f556ac461f28308dc2bffa7ebeadee8ec9e2db5812020ea5bb4",
+          "identical": true,
+          "standalone_bytes": 1938,
+          "standalone_git_oid": "0de0e2d30638873790cf962def52e2acf4db3eef",
+          "standalone_sha256": "83f6916d13ef0f556ac461f28308dc2bffa7ebeadee8ec9e2db5812020ea5bb4"
+        },
+        "model.safetensors": {
+          "bundled_bytes": 643835514,
+          "bundled_git_oid": "b99c8bea239c53f6f6bce734557dc6c403fa6b3e",
+          "bundled_sha256": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+          "identical": true,
+          "standalone_bytes": 643835514,
+          "standalone_git_oid": "b99c8bea239c53f6f6bce734557dc6c403fa6b3e",
+          "standalone_sha256": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204"
+        },
+        "rl_agent_config.json": {
+          "bundled_bytes": 472,
+          "bundled_git_oid": "00e35f88bb731bb9126a914666ab1cdac8a204c8",
+          "bundled_sha256": "25061739243b617ad88d1219ba6f8a9c86c5881ca28df024fa2d9b3b2fcc30c6",
+          "identical": true,
+          "standalone_bytes": 472,
+          "standalone_git_oid": "00e35f88bb731bb9126a914666ab1cdac8a204c8",
+          "standalone_sha256": "25061739243b617ad88d1219ba6f8a9c86c5881ca28df024fa2d9b3b2fcc30c6"
+        },
+        "tokenizer/tokenizer.json": {
+          "bundled_bytes": 34363188,
+          "bundled_git_oid": "56d765858ed38eaabd35cd90759cbb1f89b0baa4",
+          "bundled_sha256": "609d8f4c067cd3950f88594c5a802616cea245823836ef5848ee4fc40aab5b6f",
+          "identical": true,
+          "standalone_bytes": 34363188,
+          "standalone_git_oid": "56d765858ed38eaabd35cd90759cbb1f89b0baa4",
+          "standalone_sha256": "609d8f4c067cd3950f88594c5a802616cea245823836ef5848ee4fc40aab5b6f"
+        },
+        "tokenizer/tokenizer_config.json": {
+          "bundled_bytes": 524,
+          "bundled_git_oid": "c255ac0c8cb34a37d066cd0dafe313fd769d27ae",
+          "bundled_sha256": "6c6b2d8e3c84ce0e671c129cd6b374b235d6f9863042a5836358d00a89bbb5a1",
+          "identical": false,
+          "standalone_bytes": 502,
+          "standalone_git_oid": "eea1ed61121530d74c1722dc2aab6ec917a75909",
+          "standalone_sha256": "424b69444bf7b5809dc2cd2e36d0bd71b8055124dd24274d6db3c655d38205e7"
+        }
+      },
+      "standalone_revision": "052592a15d198d9ad47da779604259b10b47b7aa",
+      "summary": "model.safetensors, encoder config, tokenizer.json, and rl_agent_config.json are Git-OID-identical; tokenizer_config.json differs (bundled 524 bytes, standalone 502 bytes)."
+    },
+    "typed-decisions": {
+      "bundled_revision": "c5d78730f3493e4fe16d61507ef4b78eef7318cf",
+      "download_policy": "Standalone weights were not downloaded; parity uses immutable Hub Git/LFS OIDs.",
+      "files": {
+        "encoder/config.json": {
+          "bundled_bytes": 2084,
+          "bundled_git_oid": "d4be4829750fb04c0aa8b9897c3ea827f76c0109",
+          "bundled_sha256": "5268d24ad3b77c8151de5dcb0762ba4391619aad9ab0bda33e36fb083cfeae6d",
+          "identical": true,
+          "standalone_bytes": 2084,
+          "standalone_git_oid": "d4be4829750fb04c0aa8b9897c3ea827f76c0109",
+          "standalone_sha256": "5268d24ad3b77c8151de5dcb0762ba4391619aad9ab0bda33e36fb083cfeae6d"
+        },
+        "model.safetensors": {
+          "bundled_bytes": 842609220,
+          "bundled_git_oid": "3fb9c9678050815e76d0c847115919d7871ace3e",
+          "bundled_sha256": "4fa56de72383a9d3efa9cfa78955733c81b9fc8067a587ca4beb82c78107a24e",
+          "identical": true,
+          "standalone_bytes": 842609220,
+          "standalone_git_oid": "3fb9c9678050815e76d0c847115919d7871ace3e",
+          "standalone_sha256": "4fa56de72383a9d3efa9cfa78955733c81b9fc8067a587ca4beb82c78107a24e"
+        },
+        "rl_agent_config.json": {
+          "bundled_bytes": 847,
+          "bundled_git_oid": "5f0e1d5f2366fe8ba2ff330dffaeed53b469e97e",
+          "bundled_sha256": "ebf0cd524d92342a6be5e48e9fca3d7c2babfb5a56ccd79d2171ef5d8c7f7be8",
+          "identical": true,
+          "standalone_bytes": 847,
+          "standalone_git_oid": "5f0e1d5f2366fe8ba2ff330dffaeed53b469e97e",
+          "standalone_sha256": "ebf0cd524d92342a6be5e48e9fca3d7c2babfb5a56ccd79d2171ef5d8c7f7be8"
+        },
+        "tokenizer/tokenizer.json": {
+          "bundled_bytes": 3583228,
+          "bundled_git_oid": "2f4d8583e507b7466d2490e2d6c045647a822698",
+          "bundled_sha256": "6c8aaa9a542084f2457eab775d4eeb51f92a70c0fd9de28d5edb0ddec3c08d30",
+          "identical": true,
+          "standalone_bytes": 3583228,
+          "standalone_git_oid": "2f4d8583e507b7466d2490e2d6c045647a822698",
+          "standalone_sha256": "6c8aaa9a542084f2457eab775d4eeb51f92a70c0fd9de28d5edb0ddec3c08d30"
+        },
+        "tokenizer/tokenizer_config.json": {
+          "bundled_bytes": 337,
+          "bundled_git_oid": "ed1ffabc2ce11120754705709569e365e46da71a",
+          "bundled_sha256": "08d4cf3ac4dca381759441b85b91a6d40e688471dcd33d15d6649eb0a9a854d1",
+          "identical": true,
+          "standalone_bytes": 337,
+          "standalone_git_oid": "ed1ffabc2ce11120754705709569e365e46da71a",
+          "standalone_sha256": "08d4cf3ac4dca381759441b85b91a6d40e688471dcd33d15d6649eb0a9a854d1"
+        }
+      },
+      "standalone_revision": "f9ab0b228f0fc0f14d873dbc99038f135c2da1b2",
+      "summary": "All five required model files are Git-OID-identical."
+    }
+  },
+  "generated_at": "2026-09-19T23:23:55.662914Z",
+  "profiles": {
+    "english": {
+      "directory": ".cache/laya/hub/convaiinnovations--laya/c5d78730f3493e4fe16d61507ef4b78eef7318cf/english",
+      "facts": {
+        "head_max_len": 192,
+        "max_len": 512,
+        "temperature": [
+          1.6369030475616455,
+          1.2514300346374512,
+          1.983399510383606
+        ],
+        "temperature_by_options": {
+          "choice:11+": 0.10058280825614929,
+          "choice:2": 1.9063563346862793,
+          "choice:3-5": 1.7601518630981445,
+          "choice:6-10": 1.0000158548355103,
+          "noul:2": 1.983399510383606,
+          "score:3-5": 1.2514300346374512
+        }
+      },
+      "files": {
+        "encoder/config.json": {
+          "bytes": 2083,
+          "path": "encoder/config.json",
+          "sha256": "bf3ab80598fdccf414855a2ce80f22859e4492d06ca8a62ddd1cfb63972f8979",
+          "source_path": "encoder/config.json"
+        },
+        "model.safetensors": {
+          "bytes": 842609210,
+          "path": "model.safetensors",
+          "sha256": "891102d372688fc2a094dac56a384bc537b87c63f21f9f3dac0be2b7cbc8d86c",
+          "source_path": "model.safetensors"
+        },
+        "rl_agent_config.json": {
+          "bytes": 745,
+          "path": "rl_agent_config.json",
+          "sha256": "ae287b56bbcf5f8c4f4541ae9dfd00c914c4c48b940b8398c3058af37ba92bbd",
+          "source_path": "rl_agent_config.json"
+        },
+        "tokenizer/tokenizer.json": {
+          "bytes": 3583228,
+          "path": "tokenizer/tokenizer.json",
+          "sha256": "6c8aaa9a542084f2457eab775d4eeb51f92a70c0fd9de28d5edb0ddec3c08d30",
+          "source_path": "tokenizer/tokenizer.json"
+        },
+        "tokenizer/tokenizer_config.json": {
+          "bytes": 308,
+          "path": "tokenizer/tokenizer_config.json",
+          "sha256": "50044de60daaa73df97d262e15a40d4faf0160e7d742df64b377877a1320dd12",
+          "source_path": "tokenizer/tokenizer_config.json"
+        },
+        "tokenizer/tokenizer_config.upstream.json": {
+          "bytes": 308,
+          "path": "tokenizer/tokenizer_config.upstream.json",
+          "sha256": "50044de60daaa73df97d262e15a40d4faf0160e7d742df64b377877a1320dd12",
+          "source_path": "tokenizer/tokenizer_config.json"
+        }
+      },
+      "rl_agent_config": {
+        "act_costs": {
+          "escalate": 0.5
+        },
+        "amp_dtype": "bf16",
+        "cost_wrong_act": 3.0,
+        "encoder": "answerdotai/ModernBERT-large",
+        "head_layers": 2,
+        "head_max_len": 192,
+        "max_len": 512,
+        "max_prefixes": 6,
+        "model_name": "rl-agent",
+        "temperature": [
+          1.6369030475616455,
+          1.2514300346374512,
+          1.983399510383606
+        ],
+        "temperature_by_options": {
+          "choice:11+": 0.10058280825614929,
+          "choice:2": 1.9063563346862793,
+          "choice:3-5": 1.7601518630981445,
+          "choice:6-10": 1.0000158548355103,
+          "noul:2": 1.983399510383606,
+          "score:3-5": 1.2514300346374512
+        },
+        "training": {
+          "epochs_completed": 1,
+          "fine_tuned_from_checkpoint": true,
+          "hours": 1.96,
+          "updates": 7313,
+          "world_size": 1
+        }
+      },
+      "source_subfolder": null,
+      "tokenizer_config_patch": {
+        "changed": false,
+        "observed_after_agent_load": true,
+        "observed_at": "2026-09-19T23:23:55.659889Z",
+        "patched": {
+          "bytes": 308,
+          "path": "tokenizer/tokenizer_config.json",
+          "sha256": "50044de60daaa73df97d262e15a40d4faf0160e7d742df64b377877a1320dd12"
+        },
+        "summary": {
+          "added_keys": [],
+          "changed_keys": [],
+          "removed_keys": []
+        },
+        "unified_diff": "",
+        "upstream": {
+          "bytes": 308,
+          "path": "tokenizer/tokenizer_config.upstream.json",
+          "sha256": "50044de60daaa73df97d262e15a40d4faf0160e7d742df64b377877a1320dd12"
+        }
+      }
+    },
+    "multilingual": {
+      "directory": ".cache/laya/hub/convaiinnovations--laya/c5d78730f3493e4fe16d61507ef4b78eef7318cf/multilingual",
+      "facts": {
+        "head_max_len": 256,
+        "max_len": 1024,
+        "temperature": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "temperature_by_options": {}
+      },
+      "files": {
+        "encoder/config.json": {
+          "bytes": 1938,
+          "path": "encoder/config.json",
+          "sha256": "83f6916d13ef0f556ac461f28308dc2bffa7ebeadee8ec9e2db5812020ea5bb4",
+          "source_path": "multilingual/encoder/config.json"
+        },
+        "model.safetensors": {
+          "bytes": 643835514,
+          "path": "model.safetensors",
+          "sha256": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+          "source_path": "multilingual/model.safetensors"
+        },
+        "rl_agent_config.json": {
+          "bytes": 472,
+          "path": "rl_agent_config.json",
+          "sha256": "25061739243b617ad88d1219ba6f8a9c86c5881ca28df024fa2d9b3b2fcc30c6",
+          "source_path": "multilingual/rl_agent_config.json"
+        },
+        "tokenizer/tokenizer.json": {
+          "bytes": 34363188,
+          "path": "tokenizer/tokenizer.json",
+          "sha256": "609d8f4c067cd3950f88594c5a802616cea245823836ef5848ee4fc40aab5b6f",
+          "source_path": "multilingual/tokenizer/tokenizer.json"
+        },
+        "tokenizer/tokenizer_config.json": {
+          "bytes": 524,
+          "path": "tokenizer/tokenizer_config.json",
+          "sha256": "6c6b2d8e3c84ce0e671c129cd6b374b235d6f9863042a5836358d00a89bbb5a1",
+          "source_path": "multilingual/tokenizer/tokenizer_config.json"
+        },
+        "tokenizer/tokenizer_config.upstream.json": {
+          "bytes": 524,
+          "path": "tokenizer/tokenizer_config.upstream.json",
+          "sha256": "6c6b2d8e3c84ce0e671c129cd6b374b235d6f9863042a5836358d00a89bbb5a1",
+          "source_path": "multilingual/tokenizer/tokenizer_config.json"
+        }
+      },
+      "rl_agent_config": {
+        "act_costs": {
+          "escalate": 0.5
+        },
+        "amp_dtype": "bf16",
+        "cost_wrong_act": 3.0,
+        "encoder": "jhu-clsp/mmBERT-base",
+        "head_layers": 2,
+        "head_max_len": 256,
+        "max_len": 1024,
+        "max_prefixes": 6,
+        "model_name": "rl-agent",
+        "temperature": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "temperature_by_options": {},
+        "training": {
+          "epochs_completed": 4,
+          "fine_tuned_from_checkpoint": false,
+          "hours": 4.97,
+          "updates": 15987,
+          "world_size": 1
+        }
+      },
+      "source_subfolder": "multilingual",
+      "tokenizer_config_patch": {
+        "changed": false,
+        "observed_after_agent_load": true,
+        "observed_at": "2026-09-19T23:23:55.661779Z",
+        "patched": {
+          "bytes": 524,
+          "path": "tokenizer/tokenizer_config.json",
+          "sha256": "6c6b2d8e3c84ce0e671c129cd6b374b235d6f9863042a5836358d00a89bbb5a1"
+        },
+        "summary": {
+          "added_keys": [],
+          "changed_keys": [],
+          "removed_keys": []
+        },
+        "unified_diff": "",
+        "upstream": {
+          "bytes": 524,
+          "path": "tokenizer/tokenizer_config.upstream.json",
+          "sha256": "6c6b2d8e3c84ce0e671c129cd6b374b235d6f9863042a5836358d00a89bbb5a1"
+        }
+      }
+    },
+    "typed-decisions": {
+      "directory": ".cache/laya/hub/convaiinnovations--laya/c5d78730f3493e4fe16d61507ef4b78eef7318cf/typed-decisions",
+      "facts": {
+        "head_max_len": 256,
+        "max_len": 1024,
+        "temperature": [
+          1.0148024559020996,
+          1.0374259948730469,
+          1.0575125217437744
+        ],
+        "temperature_by_options": {
+          "choice:11+": 0.10058280825614929,
+          "choice:2": 1.9063563346862793,
+          "choice:3-5": 1.7601518630981445,
+          "choice:6-10": 1.0000158548355103,
+          "noul:2": 1.983399510383606,
+          "score:3-5": 1.2514300346374512
+        }
+      },
+      "files": {
+        "encoder/config.json": {
+          "bytes": 2084,
+          "path": "encoder/config.json",
+          "sha256": "5268d24ad3b77c8151de5dcb0762ba4391619aad9ab0bda33e36fb083cfeae6d",
+          "source_path": "typed-decisions/encoder/config.json"
+        },
+        "model.safetensors": {
+          "bytes": 842609220,
+          "path": "model.safetensors",
+          "sha256": "4fa56de72383a9d3efa9cfa78955733c81b9fc8067a587ca4beb82c78107a24e",
+          "source_path": "typed-decisions/model.safetensors"
+        },
+        "rl_agent_config.json": {
+          "bytes": 847,
+          "path": "rl_agent_config.json",
+          "sha256": "ebf0cd524d92342a6be5e48e9fca3d7c2babfb5a56ccd79d2171ef5d8c7f7be8",
+          "source_path": "typed-decisions/rl_agent_config.json"
+        },
+        "tokenizer/tokenizer.json": {
+          "bytes": 3583228,
+          "path": "tokenizer/tokenizer.json",
+          "sha256": "6c8aaa9a542084f2457eab775d4eeb51f92a70c0fd9de28d5edb0ddec3c08d30",
+          "source_path": "typed-decisions/tokenizer/tokenizer.json"
+        },
+        "tokenizer/tokenizer_config.json": {
+          "bytes": 337,
+          "path": "tokenizer/tokenizer_config.json",
+          "sha256": "08d4cf3ac4dca381759441b85b91a6d40e688471dcd33d15d6649eb0a9a854d1",
+          "source_path": "typed-decisions/tokenizer/tokenizer_config.json"
+        },
+        "tokenizer/tokenizer_config.upstream.json": {
+          "bytes": 337,
+          "path": "tokenizer/tokenizer_config.upstream.json",
+          "sha256": "08d4cf3ac4dca381759441b85b91a6d40e688471dcd33d15d6649eb0a9a854d1",
+          "source_path": "typed-decisions/tokenizer/tokenizer_config.json"
+        }
+      },
+      "rl_agent_config": {
+        "act_costs": {
+          "escalate": 0.5
+        },
+        "amp_dtype": "bf16",
+        "cost_wrong_act": 3.0,
+        "encoder": "answerdotai/ModernBERT-large",
+        "fine_tuned": true,
+        "gradient_checkpointing": true,
+        "head_layers": 2,
+        "head_max_len": 256,
+        "max_len": 1024,
+        "max_prefixes": 6,
+        "max_tokens_per_batch": 4096,
+        "model_name": "laya-typed-decisions",
+        "temperature": [
+          1.0148024559020996,
+          1.0374259948730469,
+          1.0575125217437744
+        ],
+        "temperature_by_options": {
+          "choice:11+": 0.10058280825614929,
+          "choice:2": 1.9063563346862793,
+          "choice:3-5": 1.7601518630981445,
+          "choice:6-10": 1.0000158548355103,
+          "noul:2": 1.983399510383606,
+          "score:3-5": 1.2514300346374512
+        },
+        "training": {
+          "epochs_completed": 1,
+          "fine_tuned_from_checkpoint": true,
+          "hours": 1.96,
+          "updates": 7313,
+          "world_size": 1
+        }
+      },
+      "source_subfolder": "typed-decisions",
+      "tokenizer_config_patch": {
+        "changed": false,
+        "observed_after_agent_load": true,
+        "observed_at": "2026-09-19T23:23:55.662827Z",
+        "patched": {
+          "bytes": 337,
+          "path": "tokenizer/tokenizer_config.json",
+          "sha256": "08d4cf3ac4dca381759441b85b91a6d40e688471dcd33d15d6649eb0a9a854d1"
+        },
+        "summary": {
+          "added_keys": [],
+          "changed_keys": [],
+          "removed_keys": []
+        },
+        "unified_diff": "",
+        "upstream": {
+          "bytes": 337,
+          "path": "tokenizer/tokenizer_config.upstream.json",
+          "sha256": "08d4cf3ac4dca381759441b85b91a6d40e688471dcd33d15d6649eb0a9a854d1"
+        }
+      }
+    }
+  },
+  "python_environment": {
+    "pins": {
+      "huggingface_hub": "1.32.0",
+      "laya": "git+https://github.com/NandhaKishorM/laya@6a5819129eb220570792e417e49723d697efd76f",
+      "numpy": "2.5.3",
+      "safetensors": "0.8.0",
+      "tokenizers": "0.23.2",
+      "torch": "2.14.0",
+      "transformers": "5.17.0"
+    },
+    "reason": "Transformers matches the published T4 harness; other packages are exact current pins. Torch 2.14.0 is the newest release with a CPython 3.12 macOS arm64 wheel resolved by uv on this host.",
+    "requires_python": "==3.12.*"
+  },
+  "schema_version": 1,
+  "sources": {
+    "bundled_hub": {
+      "files": {
+        "README.md": {
+          "bytes": 10217,
+          "path": "README.md",
+          "sha256": "575cb8fb4fd82465036a9d265c283fec9448b78067e6045afac8cfa113dde98f"
+        },
+        "encoder/config.json": {
+          "bytes": 2083,
+          "path": "encoder/config.json",
+          "sha256": "bf3ab80598fdccf414855a2ce80f22859e4492d06ca8a62ddd1cfb63972f8979"
+        },
+        "model.safetensors": {
+          "bytes": 842609210,
+          "path": "model.safetensors",
+          "sha256": "891102d372688fc2a094dac56a384bc537b87c63f21f9f3dac0be2b7cbc8d86c"
+        },
+        "multilingual/encoder/config.json": {
+          "bytes": 1938,
+          "path": "multilingual/encoder/config.json",
+          "sha256": "83f6916d13ef0f556ac461f28308dc2bffa7ebeadee8ec9e2db5812020ea5bb4"
+        },
+        "multilingual/model.safetensors": {
+          "bytes": 643835514,
+          "path": "multilingual/model.safetensors",
+          "sha256": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204"
+        },
+        "multilingual/rl_agent_config.json": {
+          "bytes": 472,
+          "path": "multilingual/rl_agent_config.json",
+          "sha256": "25061739243b617ad88d1219ba6f8a9c86c5881ca28df024fa2d9b3b2fcc30c6"
+        },
+        "multilingual/tokenizer/tokenizer.json": {
+          "bytes": 34363188,
+          "path": "multilingual/tokenizer/tokenizer.json",
+          "sha256": "609d8f4c067cd3950f88594c5a802616cea245823836ef5848ee4fc40aab5b6f"
+        },
+        "multilingual/tokenizer/tokenizer_config.json": {
+          "bytes": 524,
+          "path": "multilingual/tokenizer/tokenizer_config.json",
+          "sha256": "6c6b2d8e3c84ce0e671c129cd6b374b235d6f9863042a5836358d00a89bbb5a1"
+        },
+        "rl_agent_config.json": {
+          "bytes": 745,
+          "path": "rl_agent_config.json",
+          "sha256": "ae287b56bbcf5f8c4f4541ae9dfd00c914c4c48b940b8398c3058af37ba92bbd"
+        },
+        "tokenizer/tokenizer.json": {
+          "bytes": 3583228,
+          "path": "tokenizer/tokenizer.json",
+          "sha256": "6c8aaa9a542084f2457eab775d4eeb51f92a70c0fd9de28d5edb0ddec3c08d30"
+        },
+        "tokenizer/tokenizer_config.json": {
+          "bytes": 308,
+          "path": "tokenizer/tokenizer_config.json",
+          "sha256": "50044de60daaa73df97d262e15a40d4faf0160e7d742df64b377877a1320dd12"
+        },
+        "typed-decisions/encoder/config.json": {
+          "bytes": 2084,
+          "path": "typed-decisions/encoder/config.json",
+          "sha256": "5268d24ad3b77c8151de5dcb0762ba4391619aad9ab0bda33e36fb083cfeae6d"
+        },
+        "typed-decisions/model.safetensors": {
+          "bytes": 842609220,
+          "path": "typed-decisions/model.safetensors",
+          "sha256": "4fa56de72383a9d3efa9cfa78955733c81b9fc8067a587ca4beb82c78107a24e"
+        },
+        "typed-decisions/rl_agent_config.json": {
+          "bytes": 847,
+          "path": "typed-decisions/rl_agent_config.json",
+          "sha256": "ebf0cd524d92342a6be5e48e9fca3d7c2babfb5a56ccd79d2171ef5d8c7f7be8"
+        },
+        "typed-decisions/tokenizer/tokenizer.json": {
+          "bytes": 3583228,
+          "path": "typed-decisions/tokenizer/tokenizer.json",
+          "sha256": "6c8aaa9a542084f2457eab775d4eeb51f92a70c0fd9de28d5edb0ddec3c08d30"
+        },
+        "typed-decisions/tokenizer/tokenizer_config.json": {
+          "bytes": 337,
+          "path": "typed-decisions/tokenizer/tokenizer_config.json",
+          "sha256": "08d4cf3ac4dca381759441b85b91a6d40e688471dcd33d15d6649eb0a9a854d1"
+        }
+      },
+      "license": "Apache-2.0",
+      "revision": "c5d78730f3493e4fe16d61507ef4b78eef7318cf",
+      "url": "https://huggingface.co/convaiinnovations/laya"
+    },
+    "laya_code": {
+      "files": {
+        "LICENSE": {
+          "bytes": 10173,
+          "path": "LICENSE",
+          "sha256": "a6cba85bc92e0cff7a450b1d873c0eaa2e9fc96bf472df0247a26bec77bf3ff9"
+        },
+        "laya/__init__.py": {
+          "bytes": 1151,
+          "path": "laya/__init__.py",
+          "sha256": "b062f868a381f4dabc16c310557acafdb2918b831d41802fb9f05d0c00498f7b"
+        },
+        "laya/agent.py": {
+          "bytes": 15519,
+          "path": "laya/agent.py",
+          "sha256": "025522e4fd212d805703dfe1b93919c6cfae7a3c12dc72a984f88de02f2eb9c0"
+        },
+        "laya/common.py": {
+          "bytes": 10044,
+          "path": "laya/common.py",
+          "sha256": "f948ee606abe2ed2463f830c051f1a60dccc1b9f5ca1fdc15635cfcbe0cff7b2"
+        },
+        "pyproject.toml": {
+          "bytes": 1250,
+          "path": "pyproject.toml",
+          "sha256": "db79758385a6dd9588fb10dbb5e8567aa1cc1e46bb6448cf8b056c31d8711dff"
+        }
+      },
+      "license": "Apache-2.0",
+      "package": {
+        "name": "laya",
+        "version": "0.3.3"
+      },
+      "revision": "6a5819129eb220570792e417e49723d697efd76f",
+      "url": "https://github.com/NandhaKishorM/laya"
+    },
+    "laya_research": {
+      "files": {
+        "research/results/t4_colab_benchmark.json": {
+          "bytes": 143907,
+          "path": "research/results/t4_colab_benchmark.json",
+          "sha256": "484a20273e75c659a2275f09bdb78a4b682363402b591c4bfc8ab12a382d1ec8"
+        },
+        "research/scripts/build_benchmark_nb.py": {
+          "bytes": 38710,
+          "path": "research/scripts/build_benchmark_nb.py",
+          "sha256": "14055b99abcdfddd9407f326626324d43021e8536de2f18b2fb37dd4196526c9"
+        }
+      },
+      "license": "Apache-2.0",
+      "revision": "28d43add7e47ce502489c9433310d55276c64e0f",
+      "runtime_equal_to_laya_code_revision": true,
+      "url": "https://github.com/NandhaKishorM/laya"
+    },
+    "standalone_multilingual": {
+      "files": {
+        "encoder/config.json": {
+          "bytes": 1938,
+          "path": "encoder/config.json",
+          "sha256": "83f6916d13ef0f556ac461f28308dc2bffa7ebeadee8ec9e2db5812020ea5bb4"
+        },
+        "model.safetensors": {
+          "bytes": 643835514,
+          "path": "model.safetensors",
+          "sha256": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204"
+        },
+        "rl_agent_config.json": {
+          "bytes": 472,
+          "path": "rl_agent_config.json",
+          "sha256": "25061739243b617ad88d1219ba6f8a9c86c5881ca28df024fa2d9b3b2fcc30c6"
+        },
+        "tokenizer/tokenizer.json": {
+          "bytes": 34363188,
+          "path": "tokenizer/tokenizer.json",
+          "sha256": "609d8f4c067cd3950f88594c5a802616cea245823836ef5848ee4fc40aab5b6f"
+        },
+        "tokenizer/tokenizer_config.json": {
+          "bytes": 502,
+          "path": "tokenizer/tokenizer_config.json",
+          "sha256": "424b69444bf7b5809dc2cd2e36d0bd71b8055124dd24274d6db3c655d38205e7"
+        }
+      },
+      "license": "Apache-2.0",
+      "revision": "052592a15d198d9ad47da779604259b10b47b7aa",
+      "url": "https://huggingface.co/convaiinnovations/laya-multilingual"
+    },
+    "standalone_typed_decisions": {
+      "files": {
+        "encoder/config.json": {
+          "bytes": 2084,
+          "path": "encoder/config.json",
+          "sha256": "5268d24ad3b77c8151de5dcb0762ba4391619aad9ab0bda33e36fb083cfeae6d"
+        },
+        "model.safetensors": {
+          "bytes": 842609220,
+          "path": "model.safetensors",
+          "sha256": "4fa56de72383a9d3efa9cfa78955733c81b9fc8067a587ca4beb82c78107a24e"
+        },
+        "rl_agent_config.json": {
+          "bytes": 847,
+          "path": "rl_agent_config.json",
+          "sha256": "ebf0cd524d92342a6be5e48e9fca3d7c2babfb5a56ccd79d2171ef5d8c7f7be8"
+        },
+        "tokenizer/tokenizer.json": {
+          "bytes": 3583228,
+          "path": "tokenizer/tokenizer.json",
+          "sha256": "6c8aaa9a542084f2457eab775d4eeb51f92a70c0fd9de28d5edb0ddec3c08d30"
+        },
+        "tokenizer/tokenizer_config.json": {
+          "bytes": 337,
+          "path": "tokenizer/tokenizer_config.json",
+          "sha256": "08d4cf3ac4dca381759441b85b91a6d40e688471dcd33d15d6649eb0a9a854d1"
+        }
+      },
+      "license": "Apache-2.0",
+      "revision": "f9ab0b228f0fc0f14d873dbc99038f135c2da1b2",
+      "url": "https://huggingface.co/convaiinnovations/laya-typed-decisions"
+    },
+    "typesafe_sdk_js": {
+      "files": {
+        "LICENSE": {
+          "bytes": 1065,
+          "path": "LICENSE",
+          "sha256": "f7c12f055628204172796b98c08c910b521ab8278e6217fa8af622140e618d94"
+        },
+        "package.json": {
+          "bytes": 2385,
+          "path": "package.json",
+          "sha256": "b94bd1d862b166be53b0b91a36a2af27a0b14e397ffea8f0c53cbfcc9718c508"
+        },
+        "src/client.ts": {
+          "bytes": 17510,
+          "path": "src/client.ts",
+          "sha256": "6330c856b4735a4b2b900b259a773613cf09db8b09938d6b74993313f14ba10e"
+        },
+        "src/resources/models.ts": {
+          "bytes": 914,
+          "path": "src/resources/models.ts",
+          "sha256": "beb07e6eeda0442674218a6af2bc5114c8b1a089e175de2eb47dd3755bd8223a"
+        },
+        "src/types.ts": {
+          "bytes": 9420,
+          "path": "src/types.ts",
+          "sha256": "557731c541ce740191a16cf67f4947c7acc9b77e87e476c0d967da07ec4c2b53"
+        }
+      },
+      "license": "MIT",
+      "package": {
+        "name": "@typesafe-ai/sdk",
+        "version": "0.6.0"
+      },
+      "revision": "66880ccded6cb642dc1809620c2b108c33730214",
+      "url": "https://github.com/typesafe-ai/typesafe-sdk-js"
+    },
+    "vercel_ai": {
+      "files": {
+        "LICENSE": {
+          "bytes": 552,
+          "path": "LICENSE",
+          "sha256": "b4f9adb7c568904834d0dd6cc98d16c390d21ca32fc17ae7a267715269bd5529"
+        },
+        "packages/typesafe-ai/package.json": {
+          "bytes": 2077,
+          "path": "packages/typesafe-ai/package.json",
+          "sha256": "81c2f3e5f92219ce6df5c45d219f9612cab601a898a858b2d5d2d1c97b930527"
+        },
+        "packages/typesafe-ai/src/typesafe-ai-evaluation-api.ts": {
+          "bytes": 1652,
+          "path": "packages/typesafe-ai/src/typesafe-ai-evaluation-api.ts",
+          "sha256": "4a28dcc71f1e868a86783eb4947fac557353c28ac7061761ace7d3f892ad067f"
+        },
+        "packages/typesafe-ai/src/typesafe-ai-evaluation-model.ts": {
+          "bytes": 5470,
+          "path": "packages/typesafe-ai/src/typesafe-ai-evaluation-model.ts",
+          "sha256": "ab1184a4fdfc0a8b812d34209acc58b7a19b71f74406ccf69a7c7ba76e987857"
+        },
+        "packages/typesafe-ai/src/typesafe-ai-provider.ts": {
+          "bytes": 2030,
+          "path": "packages/typesafe-ai/src/typesafe-ai-provider.ts",
+          "sha256": "0ac5967ef9ca683e1e1b5e11a886690c96147e29bf24bf119bb91246a27a1c2e"
+        }
+      },
+      "license": "Apache-2.0",
+      "package": {
+        "name": "@ai-sdk/typesafe-ai",
+        "version": "3.0.4"
+      },
+      "revision": "20dd00abba618d5a516e0fee40ccd3e18a2bd1fb",
+      "url": "https://github.com/vercel/ai"
+    }
+  }
+}

@@ -1,0 +1,405 @@
+{
+  "meta": {
+    "fixture_id": "bucket-choice-5",
+    "profile": "typed-decisions",
+    "device": "mps",
+    "dtype": "float32",
+    "versions": {
+      "torch": "2.14.0",
+      "transformers": "5.17.0",
+      "tokenizers": "0.23.2"
+    },
+    "laya_sha": "6a5819129eb220570792e417e49723d697efd76f",
+    "weights_sha256": "4fa56de72383a9d3efa9cfa78955733c81b9fc8067a587ca4beb82c78107a24e",
+    "max_len": 1024,
+    "head_max_len": 256,
+    "tokenizer_special": {
+      "cls": {
+        "id": 50281,
+        "string": "[CLS]"
+      },
+      "sep": {
+        "id": 50282,
+        "string": "[SEP]"
+      },
+      "mask": {
+        "id": 50284,
+        "string": "[MASK]"
+      },
+      "pad": {
+        "id": 50283,
+        "string": "[PAD]"
+      }
+    },
+    "timestamp": "2026-09-20T00:34:30.119499Z"
+  },
+  "source": "laya-rs authored",
+  "expect_error": null,
+  "state_text": "The customer reports a late delivery and asks for a discount.",
+  "serialized": {
+    "q": {
+      "internal": {
+        "t": "choice",
+        "ins": "Classify.",
+        "crit": {
+          "class_0": null,
+          "class_1": null,
+          "class_2": null,
+          "class_3": null,
+          "class_4": null
+        }
+      },
+      "rendered_options": [
+        "class_0",
+        "class_1",
+        "class_2",
+        "class_3",
+        "class_4"
+      ],
+      "head_text": "choice question: Classify.",
+      "option_texts": [
+        " class_0",
+        " class_1",
+        " class_2",
+        " class_3",
+        " class_4"
+      ],
+      "state_text_ref": "$.state_text"
+    }
+  },
+  "tokens": {
+    "q": {
+      "head_ids_full": [
+        22122,
+        1953,
+        27,
+        6550,
+        1419,
+        15
+      ],
+      "head_ids_kept": [
+        22122,
+        1953,
+        27,
+        6550,
+        1419,
+        15
+      ],
+      "option_ids_full": [
+        [
+          966,
+          64,
+          17
+        ],
+        [
+          966,
+          64,
+          18
+        ],
+        [
+          966,
+          64,
+          19
+        ],
+        [
+          966,
+          64,
+          20
+        ],
+        [
+          966,
+          64,
+          21
+        ]
+      ],
+      "option_ids_kept": [
+        [
+          50284,
+          966,
+          64,
+          17
+        ],
+        [
+          50284,
+          966,
+          64,
+          18
+        ],
+        [
+          50284,
+          966,
+          64,
+          19
+        ],
+        [
+          50284,
+          966,
+          64,
+          20
+        ],
+        [
+          50284,
+          966,
+          64,
+          21
+        ]
+      ],
+      "opt_budget_initial": 236,
+      "retruncated": false,
+      "per": null,
+      "state_ids_full_len": 12,
+      "state_ids_kept_len": 12,
+      "room": 994,
+      "ids": [
+        50281,
+        22122,
+        1953,
+        27,
+        6550,
+        1419,
+        15,
+        50282,
+        50284,
+        966,
+        64,
+        17,
+        50284,
+        966,
+        64,
+        18,
+        50284,
+        966,
+        64,
+        19,
+        50284,
+        966,
+        64,
+        20,
+        50284,
+        966,
+        64,
+        21,
+        50282,
+        510,
+        7731,
+        5012,
+        247,
+        3563,
+        6742,
+        285,
+        12325,
+        323,
+        247,
+        13630,
+        15,
+        50282
+      ],
+      "markers": [
+        8,
+        12,
+        16,
+        20,
+        24
+      ],
+      "truncated_state_tokens": 0,
+      "sequence_len": 42,
+      "hit_max_len": false
+    }
+  },
+  "batch": {
+    "input_ids": [
+      [
+        50281,
+        22122,
+        1953,
+        27,
+        6550,
+        1419,
+        15,
+        50282,
+        50284,
+        966,
+        64,
+        17,
+        50284,
+        966,
+        64,
+        18,
+        50284,
+        966,
+        64,
+        19,
+        50284,
+        966,
+        64,
+        20,
+        50284,
+        966,
+        64,
+        21,
+        50282,
+        510,
+        7731,
+        5012,
+        247,
+        3563,
+        6742,
+        285,
+        12325,
+        323,
+        247,
+        13630,
+        15,
+        50282
+      ]
+    ],
+    "attention_mask": [
+      [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    ],
+    "marker_pos": [
+      [
+        8,
+        12,
+        16,
+        20,
+        24
+      ]
+    ],
+    "marker_mask": [
+      [
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    ],
+    "qtype": [
+      0
+    ],
+    "pad_id": 50283,
+    "n_tokens": 42
+  },
+  "model": {
+    "q": {
+      "option_logits_raw": [
+        0.7697016000747681,
+        1.225489854812622,
+        0.9588618278503418,
+        0.33344703912734985,
+        -0.022055834531784058
+      ],
+      "option_logits_masked_full": [
+        0.7697016000747681,
+        1.225489854812622,
+        0.9588618278503418,
+        0.33344703912734985,
+        -0.022055834531784058
+      ],
+      "act_logits": [
+        4738.029296875,
+        -3864.57373046875
+      ],
+      "act_probs": [
+        1.0,
+        0.0
+      ],
+      "temperature": 1.7601518630981445,
+      "temp_bucket": "choice:3-5",
+      "probs_unrounded": [
+        0.20715773105621338,
+        0.2683866620063782,
+        0.23066087067127228,
+        0.16168175637722015,
+        0.13211293518543243
+      ],
+      "confidence_unrounded": 0.01860886812210083,
+      "expected_score_unrounded": null,
+      "argmax_index": 1
+    }
+  },
+  "native_result": {
+    "model": "laya-rl-agent",
+    "answers": {
+      "q": {
+        "type": "choice",
+        "choice": "class_1",
+        "probabilities": {
+          "class_0": 0.2072,
+          "class_1": 0.2684,
+          "class_2": 0.2307,
+          "class_3": 0.1617,
+          "class_4": 0.1321
+        },
+        "confidence": 0.0186,
+        "action": {
+          "act_probability": 1.0
+        }
+      }
+    },
+    "usage": {
+      "input_tokens": 42,
+      "output_tokens": 0
+    }
+  },
+  "instrumented_matches_native": true,
+  "error": null,
+  "determinism": {
+    "device": "mps",
+    "bitwise_identical": true,
+    "max_abs_diff": 0.0
+  },
+  "hidden_states_npz": "bucket-choice-5.npz",
+  "hidden_cls_shape": [
+    1,
+    1024
+  ],
+  "hidden_markers_shape": [
+    1,
+    5,
+    1024
+  ]
+}

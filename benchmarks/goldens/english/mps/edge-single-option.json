@@ -1,0 +1,175 @@
+{
+  "meta": {
+    "fixture_id": "edge-single-option",
+    "profile": "english",
+    "device": "mps",
+    "dtype": "float32",
+    "versions": {
+      "torch": "2.14.0",
+      "transformers": "5.17.0",
+      "tokenizers": "0.23.2"
+    },
+    "laya_sha": "6a5819129eb220570792e417e49723d697efd76f",
+    "weights_sha256": "891102d372688fc2a094dac56a384bc537b87c63f21f9f3dac0be2b7cbc8d86c",
+    "max_len": 512,
+    "head_max_len": 192,
+    "tokenizer_special": {
+      "cls": {
+        "id": 50281,
+        "string": "[CLS]"
+      },
+      "sep": {
+        "id": 50282,
+        "string": "[SEP]"
+      },
+      "mask": {
+        "id": 50284,
+        "string": "[MASK]"
+      },
+      "pad": {
+        "id": 50283,
+        "string": "[PAD]"
+      }
+    },
+    "timestamp": "2026-09-20T00:32:31.762505Z"
+  },
+  "source": "laya-rs authored",
+  "expect_error": "record actual behaviour (topk(2) on k=1)",
+  "state_text": "x",
+  "serialized": {
+    "one": {
+      "internal": {
+        "t": "choice",
+        "ins": "Only one.",
+        "crit": {
+          "only": null
+        }
+      },
+      "rendered_options": [
+        "only"
+      ],
+      "head_text": "choice question: Only one.",
+      "option_texts": [
+        " only"
+      ],
+      "state_text_ref": "$.state_text"
+    }
+  },
+  "tokens": {
+    "one": {
+      "head_ids_full": [
+        22122,
+        1953,
+        27,
+        7214,
+        581,
+        15
+      ],
+      "head_ids_kept": [
+        22122,
+        1953,
+        27,
+        7214,
+        581,
+        15
+      ],
+      "option_ids_full": [
+        [
+          760
+        ]
+      ],
+      "option_ids_kept": [
+        [
+          50284,
+          760
+        ]
+      ],
+      "opt_budget_initial": 190,
+      "retruncated": false,
+      "per": null,
+      "state_ids_full_len": 1,
+      "state_ids_kept_len": 1,
+      "room": 500,
+      "ids": [
+        50281,
+        22122,
+        1953,
+        27,
+        7214,
+        581,
+        15,
+        50282,
+        50284,
+        760,
+        50282,
+        89,
+        50282
+      ],
+      "markers": [
+        8
+      ],
+      "truncated_state_tokens": 0,
+      "sequence_len": 13,
+      "hit_max_len": false
+    }
+  },
+  "batch": {
+    "input_ids": [
+      [
+        50281,
+        22122,
+        1953,
+        27,
+        7214,
+        581,
+        15,
+        50282,
+        50284,
+        760,
+        50282,
+        89,
+        50282
+      ]
+    ],
+    "attention_mask": [
+      [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    ],
+    "marker_pos": [
+      [
+        8
+      ]
+    ],
+    "marker_mask": [
+      [
+        true
+      ]
+    ],
+    "qtype": [
+      0
+    ],
+    "pad_id": 50283,
+    "n_tokens": 13
+  },
+  "model": null,
+  "native_result": null,
+  "instrumented_matches_native": true,
+  "error": {
+    "type": "RuntimeError",
+    "message": "selected index k out of range"
+  },
+  "determinism": null
+}

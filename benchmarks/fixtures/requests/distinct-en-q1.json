@@ -1,0 +1,46 @@
+{
+  "id": "distinct-en-q1",
+  "source": "laya-rs authored",
+  "state": {
+    "ticket_id": "T-48213",
+    "channel": "email",
+    "customer": {
+      "name": "Amara Okafor",
+      "plan": "Pro",
+      "tenure_months": 27,
+      "country": "NG"
+    },
+    "subject": "Duplicate charge on invoice #INV-2291 and export still broken",
+    "body": "Hello, I noticed I was billed twice on 14 May for the Pro plan (two lines of $49.00 on my card statement). I already opened a ticket last week about CSV exports failing with a 500 error for workspaces over 10k rows, and nobody replied. I'm honestly considering cancelling — this is the third billing mistake this year. Please refund the duplicate charge and let me know when the export bug will be fixed. Thanks, Amara",
+    "prior_tickets": [
+      {
+        "id": "T-47990",
+        "topic": "CSV export 500 error",
+        "status": "open",
+        "age_days": 8
+      },
+      {
+        "id": "T-45120",
+        "topic": "billing",
+        "status": "closed",
+        "age_days": 61
+      }
+    ],
+    "account_flags": [
+      "payment_retry_failed_2026-03",
+      "nps_detractor"
+    ]
+  },
+  "questions": {
+    "department": {
+      "type": "choice",
+      "instructions": "Which team should own this ticket first?",
+      "criteria": {
+        "billing": "Payments, invoices and refunds",
+        "engineering": "Bugs, outages and product defects",
+        "success": "Account management and retention",
+        "sales": "Upgrades, pricing and new plans"
+      }
+    }
+  }
+}

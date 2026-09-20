@@ -1,0 +1,15 @@
+{
+  "id": "bucket-choice-2",
+  "source": "laya-rs authored",
+  "state": "The customer reports a late delivery and asks for a discount.",
+  "questions": {
+    "q": {
+      "type": "choice",
+      "instructions": "Classify.",
+      "criteria": [
+        "class_0",
+        "class_1"
+      ]
+    }
+  }
+}

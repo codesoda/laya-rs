@@ -1,0 +1,43 @@
+[build-system]
+requires = ["hatchling==1.28.0"]
+build-backend = "hatchling.build"
+
+[project]
+name = "laya-baseline"
+version = "0.1.0"
+description = "Pinned Python baseline tooling for laya-rs"
+readme = "README.md"
+requires-python = "==3.12.*"
+dependencies = [
+  "huggingface-hub==1.32.0",
+  "laya @ git+https://github.com/NandhaKishorM/laya@6a5819129eb220570792e417e49723d697efd76f",
+  "numpy==2.5.3",
+  "safetensors==0.8.0",
+  "tokenizers==0.23.2",
+  "torch==2.14.0",
+  "transformers==5.17.0",
+]
+
+[dependency-groups]
+dev = [
+  "pytest==9.0.2",
+]
+
+[project.scripts]
+laya-fetch = "laya_baseline.fetch:main"
+laya-env = "laya_baseline.env:main"
+laya-smoke = "laya_baseline.smoke:main"
+laya-bench = "laya_baseline.bench:main"
+laya-bench-cold = "laya_baseline.bench_cold:main"
+laya-bench-report = "laya_baseline.bench_report:main"
+laya-goldens = "laya_baseline.goldens:main"
+laya-compare-goldens = "laya_baseline.compare_devices:main"
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/laya_baseline"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

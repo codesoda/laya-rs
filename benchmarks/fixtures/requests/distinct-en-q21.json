@@ -1,0 +1,233 @@
+{
+  "id": "distinct-en-q21",
+  "source": "laya-rs authored: distinct-en-q10 + ragged-q12 (minus empty/json instructions) + 1",
+  "state": {
+    "ticket_id": "T-48213",
+    "channel": "email",
+    "customer": {
+      "name": "Amara Okafor",
+      "plan": "Pro",
+      "tenure_months": 27,
+      "country": "NG"
+    },
+    "subject": "Duplicate charge on invoice #INV-2291 and export still broken",
+    "body": "Hello, I noticed I was billed twice on 14 May for the Pro plan (two lines of $49.00 on my card statement). I already opened a ticket last week about CSV exports failing with a 500 error for workspaces over 10k rows, and nobody replied. I'm honestly considering cancelling — this is the third billing mistake this year. Please refund the duplicate charge and let me know when the export bug will be fixed. Thanks, Amara",
+    "prior_tickets": [
+      {
+        "id": "T-47990",
+        "topic": "CSV export 500 error",
+        "status": "open",
+        "age_days": 8
+      },
+      {
+        "id": "T-45120",
+        "topic": "billing",
+        "status": "closed",
+        "age_days": 61
+      }
+    ],
+    "account_flags": [
+      "payment_retry_failed_2026-03",
+      "nps_detractor"
+    ]
+  },
+  "questions": {
+    "department": {
+      "type": "choice",
+      "instructions": "Which team should own this ticket first?",
+      "criteria": {
+        "billing": "Payments, invoices and refunds",
+        "engineering": "Bugs, outages and product defects",
+        "success": "Account management and retention",
+        "sales": "Upgrades, pricing and new plans"
+      }
+    },
+    "urgency": {
+      "type": "score",
+      "instructions": "How urgent is this ticket?",
+      "criteria": [
+        "can wait a week",
+        "should be handled within a few days",
+        "same day",
+        "immediate escalation"
+      ]
+    },
+    "refund_requested": {
+      "type": "noul",
+      "instructions": "Does the customer explicitly ask for a refund?"
+    },
+    "churn_risk": {
+      "type": "score",
+      "instructions": "How likely is this customer to cancel their subscription?",
+      "criteria": [
+        "unlikely",
+        "possible",
+        "likely",
+        "very likely"
+      ]
+    },
+    "sentiment": {
+      "type": "choice",
+      "instructions": "What is the overall tone of the message?",
+      "criteria": [
+        "angry",
+        "frustrated",
+        "neutral",
+        "positive"
+      ]
+    },
+    "duplicate_charge": {
+      "type": "noul",
+      "instructions": "Is there a duplicate charge on the customer's account?",
+      "criteria": {
+        "true": "the customer was charged more than once for the same item",
+        "false": "no duplicate charge is described"
+      }
+    },
+    "needs_human": {
+      "type": "noul",
+      "instructions": "Does this ticket require a human agent rather than an automated reply?"
+    },
+    "language": {
+      "type": "choice",
+      "instructions": "Which language is the customer writing in?",
+      "criteria": {
+        "en": "English",
+        "fr": "French",
+        "de": "German",
+        "es": "Spanish",
+        "pt": "Portuguese",
+        "hi": "Hindi",
+        "ja": "Japanese",
+        "ko": "Korean",
+        "ar": "Arabic",
+        "zh": "Chinese"
+      }
+    },
+    "bug_report": {
+      "type": "noul",
+      "instructions": "Does the message report a software defect?",
+      "criteria": {
+        "true": "a specific product malfunction is described"
+      }
+    },
+    "next_action": {
+      "type": "choice",
+      "instructions": "What is the best next action for the support agent?",
+      "criteria": {
+        "refund": {
+          "action": "issue refund",
+          "requires": "billing approval"
+        },
+        "escalate_engineering": {
+          "action": "escalate the export bug",
+          "sla_hours": 24
+        },
+        "apology_and_credit": {
+          "action": "apologise and add account credit",
+          "credit_usd": 49.0
+        },
+        "close": null
+      }
+    },
+    "r_damaged": {
+      "type": "noul",
+      "instructions": "Was an item delivered damaged?"
+    },
+    "r_missing_item": {
+      "type": "noul",
+      "instructions": "Is an item still missing?",
+      "criteria": {
+        "true": "at least one ordered item has not been delivered"
+      }
+    },
+    "r_outcome": {
+      "type": "choice",
+      "instructions": "What does the customer want?",
+      "criteria": [
+        "replacement",
+        "partial refund",
+        "either"
+      ]
+    },
+    "r_promise_broken": {
+      "type": "noul",
+      "instructions": "Did the company fail to meet a commitment it made?"
+    },
+    "r_sla_days": {
+      "type": "score",
+      "instructions": "How many business days should the response SLA be?",
+      "criteria": [
+        "1",
+        "2",
+        "3",
+        "5",
+        "10"
+      ]
+    },
+    "r_category": {
+      "type": "choice",
+      "instructions": "Classify the ticket.",
+      "criteria": {
+        "damage": "damaged goods",
+        "missing": "missing delivery",
+        "refund": "refund request",
+        "billing": "billing error",
+        "exchange": "exchange request",
+        "warranty": "warranty claim",
+        "shipping_delay": "late shipment",
+        "wrong_item": "wrong item",
+        "cancellation": "cancel order",
+        "other": null
+      }
+    },
+    "r_intent20": {
+      "type": "choice",
+      "instructions": "Which of these 20 intents best matches the message?",
+      "criteria": [
+        "track_order",
+        "cancel_order",
+        "change_address",
+        "damaged_item",
+        "missing_item",
+        "request_refund",
+        "request_replacement",
+        "product_question",
+        "pricing_question",
+        "complaint",
+        "praise",
+        "warranty_claim",
+        "return_item",
+        "exchange_item",
+        "payment_issue",
+        "account_access",
+        "delivery_delay",
+        "invoice_request",
+        "speak_to_human",
+        "other"
+      ]
+    },
+    "r_amount_mentioned": {
+      "type": "noul",
+      "instructions": "Does the customer state a specific monetary amount?"
+    },
+    "r_tone": {
+      "type": "score",
+      "instructions": "How angry is the customer?",
+      "criteria": [
+        "calm",
+        "annoyed",
+        "angry",
+        "furious"
+      ]
+    },
+    "r_short": {
+      "type": "noul",
+      "instructions": "Is it a desk?"
+    },
+    "escalate": {
+      "type": "noul",
+      "instructions": "Should this ticket be escalated to a manager?"
+    }
+  }
+}

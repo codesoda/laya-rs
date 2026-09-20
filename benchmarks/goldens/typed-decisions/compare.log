@@ -1,0 +1,9 @@
+metric                 max_abs       mean_abs      RMSE
+option_logits_raw      1.38878822e-05 1.87653275e-06 2.60691139e-06
+act_logits             0.00732421875 0.00120867649 0.00165690588
+probs max abs         1.60932541e-06
+expected score max    3.57627869e-06
+act_probs max abs     0
+argmax agreement      203/203 (1)
+rounded field diffs   1
+wrote /Users/chrisraethke/projects/laya-rs/benchmarks/goldens/typed-decisions/mps-vs-cpu.json

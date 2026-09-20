@@ -1,0 +1,342 @@
+{
+  "id": "published-latency-q50",
+  "source": "NandhaKishorM/laya@28d43add research/scripts/build_benchmark_nb.py section 7 (verbatim)",
+  "state": {
+    "ticket": {
+      "subject": "Payout failing",
+      "messages": [
+        {
+          "from": "customer",
+          "text": "Hi, my Stripe payouts have failed for 3 days and I am losing sales. Please help ASAP. Hi, my Stripe payouts have failed for 3 days and I am losing sales. Please help ASAP. Hi, my Stripe payouts have failed for 3 days and I am losing sales. Please help ASAP. Hi, my Stripe payouts have failed for 3 days and I am losing sales. Please help ASAP. Hi, my Stripe payouts have failed for 3 days and I am losing sales. Please help ASAP. Hi, my Stripe payouts have failed for 3 days and I am losing sales. Please help ASAP. "
+        }
+      ]
+    }
+  },
+  "questions": {
+    "q0": {
+      "type": "choice",
+      "instructions": "Which team should handle this?",
+      "criteria": {
+        "billing": "payments",
+        "technical": "bugs and integrations",
+        "sales": "pricing"
+      }
+    },
+    "q1": {
+      "type": "noul",
+      "instructions": "Does `ticket.messages[0].text` express urgency?"
+    },
+    "q2": {
+      "type": "choice",
+      "instructions": "Which team should handle this?",
+      "criteria": {
+        "billing": "payments",
+        "technical": "bugs and integrations",
+        "sales": "pricing"
+      }
+    },
+    "q3": {
+      "type": "noul",
+      "instructions": "Does `ticket.messages[0].text` express urgency?"
+    },
+    "q4": {
+      "type": "choice",
+      "instructions": "Which team should handle this?",
+      "criteria": {
+        "billing": "payments",
+        "technical": "bugs and integrations",
+        "sales": "pricing"
+      }
+    },
+    "q5": {
+      "type": "noul",
+      "instructions": "Does `ticket.messages[0].text` express urgency?"
+    },
+    "q6": {
+      "type": "choice",
+      "instructions": "Which team should handle this?",
+      "criteria": {
+        "billing": "payments",
+        "technical": "bugs and integrations",
+        "sales": "pricing"
+      }
+    },
+    "q7": {
+      "type": "noul",
+      "instructions": "Does `ticket.messages[0].text` express urgency?"
+    },
+    "q8": {
+      "type": "choice",
+      "instructions": "Which team should handle this?",
+      "criteria": {
+        "billing": "payments",
+        "technical": "bugs and integrations",
+        "sales": "pricing"
+      }
+    },
+    "q9": {
+      "type": "noul",
+      "instructions": "Does `ticket.messages[0].text` express urgency?"
+    },
+    "q10": {
+      "type": "choice",
+      "instructions": "Which team should handle this?",
+      "criteria": {
+        "billing": "payments",
+        "technical": "bugs and integrations",
+        "sales": "pricing"
+      }
+    },
+    "q11": {
+      "type": "noul",
+      "instructions": "Does `ticket.messages[0].text` express urgency?"
+    },
+    "q12": {
+      "type": "choice",
+      "instructions": "Which team should handle this?",
+      "criteria": {
+        "billing": "payments",
+        "technical": "bugs and integrations",
+        "sales": "pricing"
+      }
+    },
+    "q13": {
+      "type": "noul",
+      "instructions": "Does `ticket.messages[0].text` express urgency?"
+    },
+    "q14": {
+      "type": "choice",
+      "instructions": "Which team should handle this?",
+      "criteria": {
+        "billing": "payments",
+        "technical": "bugs and integrations",
+        "sales": "pricing"
+      }
+    },
+    "q15": {
+      "type": "noul",
+      "instructions": "Does `ticket.messages[0].text` express urgency?"
+    },
+    "q16": {
+      "type": "choice",
+      "instructions": "Which team should handle this?",
+      "criteria": {
+        "billing": "payments",
+        "technical": "bugs and integrations",
+        "sales": "pricing"
+      }
+    },
+    "q17": {
+      "type": "noul",
+      "instructions": "Does `ticket.messages[0].text` express urgency?"
+    },
+    "q18": {
+      "type": "choice",
+      "instructions": "Which team should handle this?",
+      "criteria": {
+        "billing": "payments",
+        "technical": "bugs and integrations",
+        "sales": "pricing"
+      }
+    },
+    "q19": {
+      "type": "noul",
+      "instructions": "Does `ticket.messages[0].text` express urgency?"
+    },
+    "q20": {
+      "type": "choice",
+      "instructions": "Which team should handle this?",
+      "criteria": {
+        "billing": "payments",
+        "technical": "bugs and integrations",
+        "sales": "pricing"
+      }
+    },
+    "q21": {
+      "type": "noul",
+      "instructions": "Does `ticket.messages[0].text` express urgency?"
+    },
+    "q22": {
+      "type": "choice",
+      "instructions": "Which team should handle this?",
+      "criteria": {
+        "billing": "payments",
+        "technical": "bugs and integrations",
+        "sales": "pricing"
+      }
+    },
+    "q23": {
+      "type": "noul",
+      "instructions": "Does `ticket.messages[0].text` express urgency?"
+    },
+    "q24": {
+      "type": "choice",
+      "instructions": "Which team should handle this?",
+      "criteria": {
+        "billing": "payments",
+        "technical": "bugs and integrations",
+        "sales": "pricing"
+      }
+    },
+    "q25": {
+      "type": "noul",
+      "instructions": "Does `ticket.messages[0].text` express urgency?"
+    },
+    "q26": {
+      "type": "choice",
+      "instructions": "Which team should handle this?",
+      "criteria": {
+        "billing": "payments",
+        "technical": "bugs and integrations",
+        "sales": "pricing"
+      }
+    },
+    "q27": {
+      "type": "noul",
+      "instructions": "Does `ticket.messages[0].text` express urgency?"
+    },
+    "q28": {
+      "type": "choice",
+      "instructions": "Which team should handle this?",
+      "criteria": {
+        "billing": "payments",
+        "technical": "bugs and integrations",
+        "sales": "pricing"
+      }
+    },
+    "q29": {
+      "type": "noul",
+      "instructions": "Does `ticket.messages[0].text` express urgency?"
+    },
+    "q30": {
+      "type": "choice",
+      "instructions": "Which team should handle this?",
+      "criteria": {
+        "billing": "payments",
+        "technical": "bugs and integrations",
+        "sales": "pricing"
+      }
+    },
+    "q31": {
+      "type": "noul",
+      "instructions": "Does `ticket.messages[0].text` express urgency?"
+    },
+    "q32": {
+      "type": "choice",
+      "instructions": "Which team should handle this?",
+      "criteria": {
+        "billing": "payments",
+        "technical": "bugs and integrations",
+        "sales": "pricing"
+      }
+    },
+    "q33": {
+      "type": "noul",
+      "instructions": "Does `ticket.messages[0].text` express urgency?"
+    },
+    "q34": {
+      "type": "choice",
+      "instructions": "Which team should handle this?",
+      "criteria": {
+        "billing": "payments",
+        "technical": "bugs and integrations",
+        "sales": "pricing"
+      }
+    },
+    "q35": {
+      "type": "noul",
+      "instructions": "Does `ticket.messages[0].text` express urgency?"
+    },
+    "q36": {
+      "type": "choice",
+      "instructions": "Which team should handle this?",
+      "criteria": {
+        "billing": "payments",
+        "technical": "bugs and integrations",
+        "sales": "pricing"
+      }
+    },
+    "q37": {
+      "type": "noul",
+      "instructions": "Does `ticket.messages[0].text` express urgency?"
+    },
+    "q38": {
+      "type": "choice",
+      "instructions": "Which team should handle this?",
+      "criteria": {
+        "billing": "payments",
+        "technical": "bugs and integrations",
+        "sales": "pricing"
+      }
+    },
+    "q39": {
+      "type": "noul",
+      "instructions": "Does `ticket.messages[0].text` express urgency?"
+    },
+    "q40": {
+      "type": "choice",
+      "instructions": "Which team should handle this?",
+      "criteria": {
+        "billing": "payments",
+        "technical": "bugs and integrations",
+        "sales": "pricing"
+      }
+    },
+    "q41": {
+      "type": "noul",
+      "instructions": "Does `ticket.messages[0].text` express urgency?"
+    },
+    "q42": {
+      "type": "choice",
+      "instructions": "Which team should handle this?",
+      "criteria": {
+        "billing": "payments",
+        "technical": "bugs and integrations",
+        "sales": "pricing"
+      }
+    },
+    "q43": {
+      "type": "noul",
+      "instructions": "Does `ticket.messages[0].text` express urgency?"
+    },
+    "q44": {
+      "type": "choice",
+      "instructions": "Which team should handle this?",
+      "criteria": {
+        "billing": "payments",
+        "technical": "bugs and integrations",
+        "sales": "pricing"
+      }
+    },
+    "q45": {
+      "type": "noul",
+      "instructions": "Does `ticket.messages[0].text` express urgency?"
+    },
+    "q46": {
+      "type": "choice",
+      "instructions": "Which team should handle this?",
+      "criteria": {
+        "billing": "payments",
+        "technical": "bugs and integrations",
+        "sales": "pricing"
+      }
+    },
+    "q47": {
+      "type": "noul",
+      "instructions": "Does `ticket.messages[0].text` express urgency?"
+    },
+    "q48": {
+      "type": "choice",
+      "instructions": "Which team should handle this?",
+      "criteria": {
+        "billing": "payments",
+        "technical": "bugs and integrations",
+        "sales": "pricing"
+      }
+    },
+    "q49": {
+      "type": "noul",
+      "instructions": "Does `ticket.messages[0].text` express urgency?"
+    }
+  }
+}

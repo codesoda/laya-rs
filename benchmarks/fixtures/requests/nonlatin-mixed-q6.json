@@ -1,0 +1,74 @@
+{
+  "id": "nonlatin-mixed-q6",
+  "source": "laya-rs authored",
+  "state": {
+    "messages": [
+      {
+        "lang": "hi",
+        "text": "नमस्ते, मुझसे इस महीने दो बार शुल्क लिया गया है। कृपया एक भुगतान वापस करें।"
+      },
+      {
+        "lang": "ko",
+        "text": "안녕하세요, 이번 달 요금이 두 번 청구되었습니다. 중복 결제를 환불해 주세요."
+      },
+      {
+        "lang": "ja",
+        "text": "こんにちは。今月二重に請求されています。重複分の返金をお願いします。"
+      },
+      {
+        "lang": "ar",
+        "text": "مرحبًا، تم خصم المبلغ مرتين هذا الشهر. يرجى إعادة المبلغ المكرر."
+      },
+      {
+        "lang": "zh",
+        "text": "你好，这个月我被重复扣款了两次，请退还多扣的费用。"
+      },
+      {
+        "lang": "emoji",
+        "text": "🙏 refund pls 💳💳 → 💳"
+      }
+    ]
+  },
+  "questions": {
+    "refund_hi": {
+      "type": "noul",
+      "instructions": "क्या ग्राहक धनवापसी माँग रहा है?"
+    },
+    "refund_ko": {
+      "type": "noul",
+      "instructions": "고객이 환불을 요청하고 있습니까?"
+    },
+    "refund_ja": {
+      "type": "noul",
+      "instructions": "顧客は返金を求めていますか？"
+    },
+    "topic_ar": {
+      "type": "choice",
+      "instructions": "ما موضوع الرسالة؟",
+      "criteria": {
+        "فوترة": "المدفوعات والاسترداد",
+        "تقني": "أعطال",
+        "أخرى": null
+      }
+    },
+    "urgency_zh": {
+      "type": "score",
+      "instructions": "这个请求有多紧急？",
+      "criteria": [
+        "不紧急",
+        "一般",
+        "紧急"
+      ]
+    },
+    "count": {
+      "type": "choice",
+      "instructions": "How many duplicate charges are described across all messages?",
+      "criteria": [
+        "one",
+        "two",
+        "three or more",
+        "none"
+      ]
+    }
+  }
+}

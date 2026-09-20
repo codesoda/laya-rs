@@ -1,0 +1,40 @@
+{
+  "request": {
+    "method": "GET",
+    "path": "/v1/models",
+    "headers": {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate",
+      "accept-language": "*",
+      "authorization": "Bearer dummy-local-key",
+      "connection": "keep-alive",
+      "host": "<local-mock>",
+      "sec-fetch-mode": "cors",
+      "user-agent": "typesafe-sdk/0.6.0",
+      "x-typesafe-runtime": "node/24.15.0 (darwin; arm64)",
+      "x-typesafe-sdk": "typesafe-sdk/0.6.0"
+    },
+    "rawBody": "",
+    "body": null
+  },
+  "response": {
+    "status": 200,
+    "body": {
+      "models": [
+        {
+          "name": "jev-latest",
+          "description": "fixture",
+          "release_date": "2026-01-01"
+        }
+      ]
+    }
+  },
+  "result": [
+    {
+      "name": "jev-latest",
+      "description": "fixture",
+      "release_date": "2026-01-01"
+    }
+  ],
+  "error": null
+}

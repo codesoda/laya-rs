@@ -1,0 +1,100 @@
+{
+  "profile": "typed-decisions",
+  "a": "/Users/chrisraethke/projects/laya-rs/benchmarks/goldens/typed-decisions/cpu",
+  "b": "/Users/chrisraethke/projects/laya-rs/benchmarks/goldens/typed-decisions/mps",
+  "fixture_count": 29,
+  "compared_success_count": 28,
+  "error_records": [
+    {
+      "fixture": "edge-single-option",
+      "a": {
+        "type": "RuntimeError",
+        "message": "selected index k out of range"
+      },
+      "b": {
+        "type": "RuntimeError",
+        "message": "selected index k out of range"
+      },
+      "equal": true
+    }
+  ],
+  "exact": {
+    "input_ids": {
+      "exact": true,
+      "mismatched_fixtures": []
+    },
+    "attention_mask": {
+      "exact": true,
+      "mismatched_fixtures": []
+    },
+    "marker_pos": {
+      "exact": true,
+      "mismatched_fixtures": []
+    },
+    "marker_mask": {
+      "exact": true,
+      "mismatched_fixtures": []
+    },
+    "qtype": {
+      "exact": true,
+      "mismatched_fixtures": []
+    },
+    "question_ids": {
+      "exact": true,
+      "mismatched_fixtures": []
+    },
+    "question_markers": {
+      "exact": true,
+      "mismatched_fixtures": []
+    }
+  },
+  "metrics": {
+    "option_logits_raw": {
+      "count": 838,
+      "max_abs_diff": 1.3887882232666016e-05,
+      "mean_abs_diff": 1.8765327469545788e-06,
+      "rmse": 2.6069113914865462e-06
+    },
+    "act_logits": {
+      "count": 406,
+      "max_abs_diff": 0.00732421875,
+      "mean_abs_diff": 0.001208676493226601,
+      "rmse": 0.0016569058775154767
+    },
+    "probs_unrounded": {
+      "count": 838,
+      "max_abs_diff": 1.6093254089355469e-06,
+      "mean_abs_diff": 1.8712930686233066e-07,
+      "rmse": 3.1368759504920606e-07
+    },
+    "expected_score": {
+      "count": 24,
+      "max_abs_diff": 3.5762786865234375e-06,
+      "mean_abs_diff": 8.811863760153452e-07,
+      "rmse": 1.1742568165050292e-06
+    },
+    "act_probs": {
+      "count": 406,
+      "max_abs_diff": 0.0,
+      "mean_abs_diff": 0.0,
+      "rmse": 0.0
+    },
+    "argmax": {
+      "matches": 203,
+      "count": 203,
+      "agreement_rate": 1.0
+    }
+  },
+  "native_result_rounded_differences": {
+    "count": 1,
+    "items": [
+      {
+        "fixture": "distinct-en-q50",
+        "qid": "country_region",
+        "field": "confidence",
+        "a": 0.2941,
+        "b": 0.2942
+      }
+    ]
+  }
+}

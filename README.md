@@ -2,7 +2,7 @@
 
 Planned Rust runtime for [Laya](https://github.com/NandhaKishorM/laya): typed local decisions, a lean JSON CLI, and a resident Jev-compatible HTTP server.
 
-**Status: plan only. No implementation, benchmarks, or release binaries yet.**
+**Status: L0 in progress — pinned Python baseline tooling, goldens, and SDK compatibility fixtures exist; no Rust port, idle-host benchmarks, or release binaries yet.** See [docs/PROGRESS.md](docs/PROGRESS.md) and [docs/RESULTS.md](docs/RESULTS.md).
 
 ## Build contract
 

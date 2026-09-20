@@ -1,0 +1,26 @@
+{
+  "id": "published-latency-q1",
+  "source": "NandhaKishorM/laya@28d43add research/scripts/build_benchmark_nb.py section 7 (verbatim)",
+  "state": {
+    "ticket": {
+      "subject": "Payout failing",
+      "messages": [
+        {
+          "from": "customer",
+          "text": "Hi, my Stripe payouts have failed for 3 days and I am losing sales. Please help ASAP. Hi, my Stripe payouts have failed for 3 days and I am losing sales. Please help ASAP. Hi, my Stripe payouts have failed for 3 days and I am losing sales. Please help ASAP. Hi, my Stripe payouts have failed for 3 days and I am losing sales. Please help ASAP. Hi, my Stripe payouts have failed for 3 days and I am losing sales. Please help ASAP. Hi, my Stripe payouts have failed for 3 days and I am losing sales. Please help ASAP. "
+        }
+      ]
+    }
+  },
+  "questions": {
+    "q0": {
+      "type": "choice",
+      "instructions": "Which team should handle this?",
+      "criteria": {
+        "billing": "payments",
+        "technical": "bugs and integrations",
+        "sales": "pricing"
+      }
+    }
+  }
+}

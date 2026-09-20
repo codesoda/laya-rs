@@ -1,0 +1,82 @@
+{
+  "id": "published-latency-q10",
+  "source": "NandhaKishorM/laya@28d43add research/scripts/build_benchmark_nb.py section 7 (verbatim)",
+  "state": {
+    "ticket": {
+      "subject": "Payout failing",
+      "messages": [
+        {
+          "from": "customer",
+          "text": "Hi, my Stripe payouts have failed for 3 days and I am losing sales. Please help ASAP. Hi, my Stripe payouts have failed for 3 days and I am losing sales. Please help ASAP. Hi, my Stripe payouts have failed for 3 days and I am losing sales. Please help ASAP. Hi, my Stripe payouts have failed for 3 days and I am losing sales. Please help ASAP. Hi, my Stripe payouts have failed for 3 days and I am losing sales. Please help ASAP. Hi, my Stripe payouts have failed for 3 days and I am losing sales. Please help ASAP. "
+        }
+      ]
+    }
+  },
+  "questions": {
+    "q0": {
+      "type": "choice",
+      "instructions": "Which team should handle this?",
+      "criteria": {
+        "billing": "payments",
+        "technical": "bugs and integrations",
+        "sales": "pricing"
+      }
+    },
+    "q1": {
+      "type": "noul",
+      "instructions": "Does `ticket.messages[0].text` express urgency?"
+    },
+    "q2": {
+      "type": "choice",
+      "instructions": "Which team should handle this?",
+      "criteria": {
+        "billing": "payments",
+        "technical": "bugs and integrations",
+        "sales": "pricing"
+      }
+    },
+    "q3": {
+      "type": "noul",
+      "instructions": "Does `ticket.messages[0].text` express urgency?"
+    },
+    "q4": {
+      "type": "choice",
+      "instructions": "Which team should handle this?",
+      "criteria": {
+        "billing": "payments",
+        "technical": "bugs and integrations",
+        "sales": "pricing"
+      }
+    },
+    "q5": {
+      "type": "noul",
+      "instructions": "Does `ticket.messages[0].text` express urgency?"
+    },
+    "q6": {
+      "type": "choice",
+      "instructions": "Which team should handle this?",
+      "criteria": {
+        "billing": "payments",
+        "technical": "bugs and integrations",
+        "sales": "pricing"
+      }
+    },
+    "q7": {
+      "type": "noul",
+      "instructions": "Does `ticket.messages[0].text` express urgency?"
+    },
+    "q8": {
+      "type": "choice",
+      "instructions": "Which team should handle this?",
+      "criteria": {
+        "billing": "payments",
+        "technical": "bugs and integrations",
+        "sales": "pricing"
+      }
+    },
+    "q9": {
+      "type": "noul",
+      "instructions": "Does `ticket.messages[0].text` express urgency?"
+    }
+  }
+}

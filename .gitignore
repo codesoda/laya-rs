@@ -1,6 +1,7 @@
 /target/
 /target-*/
 /.venv/
+**/.venv/
 /.cache/
 __pycache__/
 *.pyc
@@ -18,3 +19,5 @@ __pycache__/
 *.pt
 *.pth
 *.npz
+!/benchmarks/goldens/**/*.npz
+/compat/js/node_modules/

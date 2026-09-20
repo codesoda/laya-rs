@@ -1,0 +1,74 @@
+{
+  "request": {
+    "method": "POST",
+    "path": "/v1/systemone",
+    "headers": {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate",
+      "accept-language": "*",
+      "authorization": "Bearer dummy-local-key",
+      "connection": "keep-alive",
+      "content-length": "116",
+      "content-type": "application/json",
+      "host": "<local-mock>",
+      "sec-fetch-mode": "cors",
+      "user-agent": "typesafe-sdk/0.6.0",
+      "x-typesafe-runtime": "node/24.15.0 (darwin; arm64)",
+      "x-typesafe-sdk": "typesafe-sdk/0.6.0"
+    },
+    "rawBody": "{\"state\":\"route this\",\"questions\":{\"route\":{\"type\":\"choice\",\"criteria\":[\"billing\",\"support\"]}},\"model\":\"jev-latest\"}",
+    "body": {
+      "state": "route this",
+      "questions": {
+        "route": {
+          "type": "choice",
+          "criteria": [
+            "billing",
+            "support"
+          ]
+        }
+      },
+      "model": "jev-latest"
+    }
+  },
+  "response": {
+    "status": 200,
+    "body": {
+      "model": "laya-english@fixture",
+      "answers": {
+        "route": {
+          "type": "choice",
+          "choice": "billing",
+          "confidence": 0.75,
+          "probabilities": {
+            "billing": 0.75,
+            "support": 0.25
+          }
+        }
+      },
+      "usage": {
+        "input_tokens": 10,
+        "output_tokens": 0
+      }
+    }
+  },
+  "result": {
+    "model": "laya-english@fixture",
+    "answers": {
+      "route": {
+        "type": "choice",
+        "choice": "billing",
+        "confidence": 0.75,
+        "probabilities": {
+          "billing": 0.75,
+          "support": 0.25
+        }
+      }
+    },
+    "usage": {
+      "input_tokens": 10,
+      "output_tokens": 0
+    }
+  },
+  "error": null
+}

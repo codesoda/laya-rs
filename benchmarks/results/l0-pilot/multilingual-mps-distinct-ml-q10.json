@@ -1,0 +1,402 @@
+{
+  "contended": true,
+  "contended_reason": "harness development; goldens worker active",
+  "device": "mps",
+  "diagnostics": {
+    "n_tokens": 2824,
+    "option_counts": [
+      4,
+      4,
+      2,
+      4,
+      4,
+      2,
+      2,
+      10,
+      2,
+      4
+    ],
+    "padded_batch_shape": [
+      10,
+      297
+    ],
+    "sequence_lengths": [
+      291,
+      287,
+      276,
+      283,
+      267,
+      277,
+      278,
+      294,
+      274,
+      297
+    ],
+    "state_tokens": [
+      {
+        "full_tokens": 239,
+        "kept_tokens": 239,
+        "truncated": false
+      },
+      {
+        "full_tokens": 239,
+        "kept_tokens": 239,
+        "truncated": false
+      },
+      {
+        "full_tokens": 239,
+        "kept_tokens": 239,
+        "truncated": false
+      },
+      {
+        "full_tokens": 239,
+        "kept_tokens": 239,
+        "truncated": false
+      },
+      {
+        "full_tokens": 239,
+        "kept_tokens": 239,
+        "truncated": false
+      },
+      {
+        "full_tokens": 239,
+        "kept_tokens": 239,
+        "truncated": false
+      },
+      {
+        "full_tokens": 239,
+        "kept_tokens": 239,
+        "truncated": false
+      },
+      {
+        "full_tokens": 239,
+        "kept_tokens": 239,
+        "truncated": false
+      },
+      {
+        "full_tokens": 239,
+        "kept_tokens": 239,
+        "truncated": false
+      },
+      {
+        "full_tokens": 239,
+        "kept_tokens": 239,
+        "truncated": false
+      }
+    ],
+    "truncated": false
+  },
+  "e2e_ms": [
+    365.40454195346683,
+    307.00133298523724,
+    307.53041699063033
+  ],
+  "fixture": "distinct-ml-q10",
+  "host_after": {
+    "loadavg": [
+      19.94189453125,
+      16.74658203125,
+      15.50830078125
+    ],
+    "pmset_therm": "Note: No thermal warning level has been recorded\nNote: No performance warning level has been recorded\nNote: No CPU power status has been recorded",
+    "time": 1789861072.694179
+  },
+  "host_before": {
+    "loadavg": [
+      20.720703125,
+      16.84375,
+      15.53515625
+    ],
+    "pmset_therm": "Note: No thermal warning level has been recorded\nNote: No performance warning level has been recorded\nNote: No CPU power status has been recorded",
+    "time": 1789861067.808171
+  },
+  "model_ms": [
+    322.9511249810457,
+    318.2094160001725,
+    338.75616698060185
+  ],
+  "mps_memory_after_reps": {
+    "current_allocated_memory": 1296075520,
+    "driver_allocated_memory": 2447081472
+  },
+  "mps_memory_after_warmup": {
+    "current_allocated_memory": 1296075520,
+    "driver_allocated_memory": 2447081472
+  },
+  "n_questions": 10,
+  "preprocess_ms": [
+    11.199208092875779,
+    7.165166083723307,
+    12.490542023442686
+  ],
+  "profile": "multilingual",
+  "reps": 3,
+  "result": {
+    "answers": {
+      "cargo_duplicado": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.5252,
+        "noul": 0.5252,
+        "type": "noul"
+      },
+      "departamento": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "choice": "facturación",
+        "confidence": 0.8952,
+        "probabilities": {
+          "facturación": 0.9743,
+          "ingeniería": 0.0136,
+          "ventas": 0.0043,
+          "éxito_cliente": 0.0078
+        },
+        "type": "choice"
+      },
+      "idioma": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "choice": "hi",
+        "confidence": 0.587,
+        "probabilities": {
+          "ar": 0.0074,
+          "de": 0.014,
+          "en": 0.0852,
+          "es": 0.0636,
+          "fr": 0.0083,
+          "hi": 0.768,
+          "ja": 0.0211,
+          "ko": 0.0077,
+          "pt": 0.0123,
+          "zh": 0.0123
+        },
+        "type": "choice"
+      },
+      "reembolso": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.7005,
+        "noul": 0.2995,
+        "type": "noul"
+      },
+      "reporte_de_error": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.6239,
+        "noul": 0.6239,
+        "type": "noul"
+      },
+      "requiere_humano": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.8002,
+        "noul": 0.8002,
+        "type": "noul"
+      },
+      "riesgo_cancelación": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.3041,
+        "legend": {
+          "0": "baja",
+          "1": "media",
+          "2": "alta",
+          "3": "muy alta"
+        },
+        "probabilities": {
+          "0": 0.0143,
+          "1": 0.1262,
+          "2": 0.2439,
+          "3": 0.6156
+        },
+        "score": 2.4608,
+        "type": "score"
+      },
+      "siguiente_acción": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "choice": "cerrar",
+        "confidence": 0.1988,
+        "probabilities": {
+          "cerrar": 0.5139,
+          "crédito": 0.1381,
+          "escalar_ingeniería": 0.3062,
+          "reembolsar": 0.0419
+        },
+        "type": "choice"
+      },
+      "tono": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "choice": "frustrada",
+        "confidence": 0.3666,
+        "probabilities": {
+          "enojada": 0.1461,
+          "frustrada": 0.6959,
+          "neutral": 0.0166,
+          "positiva": 0.1414
+        },
+        "type": "choice"
+      },
+      "urgencia": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.1585,
+        "legend": {
+          "0": "puede esperar una semana",
+          "1": "en unos días",
+          "2": "el mismo día",
+          "3": "escalación inmediata"
+        },
+        "probabilities": {
+          "0": 0.0185,
+          "1": 0.3491,
+          "2": 0.3457,
+          "3": 0.2867
+        },
+        "score": 1.9006,
+        "type": "score"
+      }
+    },
+    "model": "laya-rl-agent",
+    "usage": {
+      "input_tokens": 2824,
+      "output_tokens": 0
+    }
+  },
+  "results_identical": true,
+  "ru_maxrss": 4050075648,
+  "schema_version": 1,
+  "timing": {
+    "e2e": {
+      "sample_timestamps": [
+        1789861071.0982232,
+        1789861071.463638,
+        1789861071.7706501
+      ],
+      "samples_ms": [
+        365.40454195346683,
+        307.00133298523724,
+        307.53041699063033
+      ],
+      "stats": {
+        "max_ms": 365.40454195346683,
+        "mean_ms": 326.64543064311147,
+        "min_ms": 307.00133298523724,
+        "ms_per_question": 30.753041699063033,
+        "n": 3,
+        "p50_ms": 307.53041699063033,
+        "p95_ms": 359.6171294571832,
+        "p99_ms": 364.2470594542101,
+        "questions_per_sec": 32.51710870702157,
+        "requests_per_sec": 3.251710870702157,
+        "std_ms": 27.407681583181244
+      },
+      "warmup_ms": [
+        320.95108390785754
+      ]
+    },
+    "model": {
+      "sample_timestamps": [
+        1789861068.545346,
+        1789861068.8683279,
+        1789861069.1865659
+      ],
+      "samples_ms": [
+        322.9511249810457,
+        318.2094160001725,
+        338.75616698060185
+      ],
+      "stats": {
+        "max_ms": 338.75616698060185,
+        "mean_ms": 326.63890265394,
+        "min_ms": 318.2094160001725,
+        "ms_per_question": 32.29511249810457,
+        "n": 3,
+        "p50_ms": 322.9511249810457,
+        "p95_ms": 337.17566278064623,
+        "p99_ms": 338.4400661406107,
+        "questions_per_sec": 30.964437732139526,
+        "requests_per_sec": 3.0964437732139527,
+        "std_ms": 8.784153235095832
+      },
+      "warmup_ms": [
+        642.4392919288948
+      ]
+    },
+    "preprocess": {
+      "sample_timestamps": [
+        1789861067.871992,
+        1789861067.883195,
+        1789861067.890369
+      ],
+      "samples_ms": [
+        11.199208092875779,
+        7.165166083723307,
+        12.490542023442686
+      ],
+      "stats": {
+        "max_ms": 12.490542023442686,
+        "mean_ms": 10.28497206668059,
+        "min_ms": 7.165166083723307,
+        "ms_per_question": 1.1199208092875779,
+        "n": 3,
+        "p50_ms": 11.199208092875779,
+        "p95_ms": 12.361408630385995,
+        "p99_ms": 12.464715344831347,
+        "questions_per_sec": 892.9202776722545,
+        "requests_per_sec": 89.29202776722545,
+        "std_ms": 2.2681531192478155
+      },
+      "warmup_ms": [
+        13.39520898181945
+      ]
+    },
+    "transfer": {
+      "included_in_model_ms": false,
+      "sample_timestamps": [
+        1789861069.863966,
+        1789861070.172965,
+        1789861070.47907
+      ],
+      "samples_ms": [
+        0.7248749025166035,
+        0.5191249074414372,
+        0.6011660443618894
+      ],
+      "stats": {
+        "max_ms": 0.7248749025166035,
+        "mean_ms": 0.6150552847733101,
+        "min_ms": 0.5191249074414372,
+        "ms_per_question": 0.060116604436188936,
+        "n": 3,
+        "p50_ms": 0.6011660443618894,
+        "p95_ms": 0.7125040167011321,
+        "p99_ms": 0.7224007253535092,
+        "questions_per_sec": 16634.339370605252,
+        "requests_per_sec": 1663.4339370605253,
+        "std_ms": 0.08456929453713254
+      },
+      "warmup_ms": [
+        0.748916994780302
+      ]
+    }
+  },
+  "transfer_ms": [
+    0.7248749025166035,
+    0.5191249074414372,
+    0.6011660443618894
+  ],
+  "wall_clock_seconds": 4.882222625077702,
+  "warmup": 1
+}

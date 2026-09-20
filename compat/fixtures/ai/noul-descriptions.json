@@ -1,0 +1,95 @@
+{
+  "request": {
+    "method": "POST",
+    "path": "/v1/systemone",
+    "headers": {
+      "accept": "*/*",
+      "accept-encoding": "gzip, deflate",
+      "accept-language": "*",
+      "authorization": "Bearer dummy-local-key",
+      "connection": "keep-alive",
+      "content-length": "136",
+      "content-type": "application/json",
+      "host": "<local-mock>",
+      "sec-fetch-mode": "cors",
+      "user-agent": "ai-sdk/typesafe-ai/3.0.4 ai-sdk/provider-utils/5.0.45 runtime/node.js/24"
+    },
+    "rawBody": "{\"model\":\"jev-latest\",\"state\":\"state\",\"questions\":{\"refund\":{\"type\":\"noul\",\"instructions\":null,\"criteria\":{\"true\":\"yes\",\"false\":\"no\"}}}}",
+    "body": {
+      "model": "jev-latest",
+      "state": "state",
+      "questions": {
+        "refund": {
+          "type": "noul",
+          "instructions": null,
+          "criteria": {
+            "true": "yes",
+            "false": "no"
+          }
+        }
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "body": {
+      "model": "laya-english@fixture",
+      "answers": {
+        "refund": {
+          "type": "noul",
+          "noul": 0.95
+        }
+      },
+      "usage": {
+        "input_tokens": 8,
+        "output_tokens": 0
+      }
+    }
+  },
+  "result": {
+    "answers": {
+      "refund": {
+        "type": "boolean",
+        "probability": 0.95
+      }
+    },
+    "usage": {
+      "inputTokens": 8,
+      "outputTokens": 0
+    },
+    "rounding": {
+      "probabilityDecimals": 2,
+      "scoreDecimals": 2
+    },
+    "warnings": [],
+    "providerMetadata": {
+      "typesafe": {
+        "confidence": {}
+      }
+    },
+    "response": {
+      "modelId": "laya-english@fixture",
+      "headers": {
+        "connection": "keep-alive",
+        "content-type": "application/json",
+        "date": "<runtime-date>",
+        "keep-alive": "timeout=5",
+        "transfer-encoding": "chunked"
+      },
+      "body": {
+        "model": "laya-english@fixture",
+        "answers": {
+          "refund": {
+            "type": "noul",
+            "noul": 0.95
+          }
+        },
+        "usage": {
+          "input_tokens": 8,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "error": null
+}

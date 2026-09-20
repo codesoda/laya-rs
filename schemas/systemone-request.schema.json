@@ -1,0 +1,79 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://laya-rs.dev/schemas/systemone-request.schema.json",
+  "title": "TypeSafe SystemOne request",
+  "description": "Derived from typesafe-ai/typesafe-sdk-js 66880ccded6cb642dc1809620c2b108c33730214 src/types.ts:1-11,20-58,153-170. The client resolves model before POST.",
+  "$defs": {
+    "jsonValue": {
+      "description": "Source EntryType / JsonValue.",
+      "anyOf": [
+        { "type": "string" },
+        { "type": "number" },
+        { "type": "boolean" },
+        { "type": "null" },
+        { "type": "array", "items": { "$ref": "#/$defs/jsonValue" } },
+        { "type": "object", "additionalProperties": { "$ref": "#/$defs/jsonValue" } }
+      ]
+    },
+    "choiceCriteria": {
+      "type": "object",
+      "description": "ChoiceCriteria: labels mapped to EntryType descriptions.",
+      "additionalProperties": { "$ref": "#/$defs/jsonValue" }
+    },
+    "noulCriteria": {
+      "type": "object",
+      "properties": {
+        "true": { "$ref": "#/$defs/jsonValue" },
+        "false": { "$ref": "#/$defs/jsonValue" }
+      },
+      "additionalProperties": false
+    },
+    "question": {
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "type": { "const": "choice" },
+            "instructions": { "$ref": "#/$defs/jsonValue" },
+            "criteria": { "$ref": "#/$defs/choiceCriteria" }
+          },
+          "required": ["type", "criteria"]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "type": { "const": "score" },
+            "instructions": { "$ref": "#/$defs/jsonValue" },
+            "criteria": {
+              "type": "array",
+              "minItems": 2,
+              "items": { "$ref": "#/$defs/jsonValue" }
+            }
+          },
+          "required": ["type", "criteria"]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "type": { "const": "noul" },
+            "instructions": { "$ref": "#/$defs/jsonValue" },
+            "criteria": { "anyOf": [{ "$ref": "#/$defs/noulCriteria" }, { "type": "null" }] }
+          },
+          "required": ["type"]
+        }
+      ]
+    }
+  },
+  "type": "object",
+  "properties": {
+    "model": { "type": "string" },
+    "state": { "$ref": "#/$defs/jsonValue" },
+    "questions": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": { "$ref": "#/$defs/question" }
+    }
+  },
+  "required": ["state", "questions"],
+  "additionalProperties": true
+}

@@ -1,0 +1,33 @@
+{
+  "id": "edge-state-list",
+  "source": "laya-rs authored",
+  "state": [
+    {
+      "role": "user",
+      "content": "I want to cancel."
+    },
+    {
+      "role": "assistant",
+      "content": "May I ask why?"
+    },
+    {
+      "role": "user",
+      "content": "Too expensive."
+    }
+  ],
+  "questions": {
+    "cancel": {
+      "type": "noul",
+      "instructions": "Does the user want to cancel?"
+    },
+    "reason": {
+      "type": "choice",
+      "instructions": "Why?",
+      "criteria": {
+        "price": "cost",
+        "quality": "product quality",
+        "unknown": null
+      }
+    }
+  }
+}

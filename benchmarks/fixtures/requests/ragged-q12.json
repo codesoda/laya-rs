@@ -1,0 +1,135 @@
+{
+  "id": "ragged-q12",
+  "source": "laya-rs authored",
+  "state": {
+    "order": 88213,
+    "summary": "Order 88213 was placed on 2 March for a standing desk (oak, 160 cm) and a monitor arm. The desk arrived on 9 March with a cracked top panel; the monitor arm has not arrived. I contacted chat support on 10 March and was told a replacement panel would ship within 5 business days. It is now 24 March and I have received neither the panel nor a tracking number. I have paid in full ($1,245.00 including delivery). I would like either a replacement desk top shipped this week with tracking, or a partial refund of $300 for the damage. Order 88213 was placed on 2 March for a standing desk (oak, 160 cm) and a monitor arm. The desk arrived on 9 March with a cracked top panel; the monitor arm has not arrived. I contacted chat support on 10 March and was told a replacement panel would ship within 5 business days. It is now 24 March and I have received neither the panel nor a tracking number. I have paid in full ($1,245.00 including delivery). I would like either a replacement desk top shipped this week with tracking, or a partial refund of $300 for the damage. Order 88213 was placed on 2 March for a standing desk (oak, 160 cm) and a monitor arm. The desk arrived on 9 March with a cracked top panel; the monitor arm has not arrived. I contacted chat support on 10 March and was told a replacement panel would ship within 5 business days. It is now 24 March and I have received neither the panel nor a tracking number. I have paid in full ($1,245.00 including delivery). I would like either a replacement desk top shipped this week with tracking, or a partial refund of $300 for the damage. ",
+    "events": [
+      {
+        "day": "2026-03-02",
+        "event": "ordered"
+      },
+      {
+        "day": "2026-03-09",
+        "event": "desk delivered damaged"
+      },
+      {
+        "day": "2026-03-10",
+        "event": "chat: replacement promised"
+      },
+      {
+        "day": "2026-03-24",
+        "event": "customer follow-up"
+      }
+    ]
+  },
+  "questions": {
+    "damaged": {
+      "type": "noul",
+      "instructions": "Was an item delivered damaged?"
+    },
+    "missing_item": {
+      "type": "noul",
+      "instructions": "Is an item still missing?",
+      "criteria": {
+        "true": "at least one ordered item has not been delivered"
+      }
+    },
+    "outcome": {
+      "type": "choice",
+      "instructions": "What does the customer want?",
+      "criteria": [
+        "replacement",
+        "partial refund",
+        "either"
+      ]
+    },
+    "promise_broken": {
+      "type": "noul",
+      "instructions": "Did the company fail to meet a commitment it made?"
+    },
+    "sla_days": {
+      "type": "score",
+      "instructions": "How many business days should the response SLA be?",
+      "criteria": [
+        "1",
+        "2",
+        "3",
+        "5",
+        "10"
+      ]
+    },
+    "category": {
+      "type": "choice",
+      "instructions": "Classify the ticket.",
+      "criteria": {
+        "damage": "damaged goods",
+        "missing": "missing delivery",
+        "refund": "refund request",
+        "billing": "billing error",
+        "exchange": "exchange request",
+        "warranty": "warranty claim",
+        "shipping_delay": "late shipment",
+        "wrong_item": "wrong item",
+        "cancellation": "cancel order",
+        "other": null
+      }
+    },
+    "intent20": {
+      "type": "choice",
+      "instructions": "Which of these 20 intents best matches the message?",
+      "criteria": [
+        "track_order",
+        "cancel_order",
+        "change_address",
+        "damaged_item",
+        "missing_item",
+        "request_refund",
+        "request_replacement",
+        "product_question",
+        "pricing_question",
+        "complaint",
+        "praise",
+        "warranty_claim",
+        "return_item",
+        "exchange_item",
+        "payment_issue",
+        "account_access",
+        "delivery_delay",
+        "invoice_request",
+        "speak_to_human",
+        "other"
+      ]
+    },
+    "amount_mentioned": {
+      "type": "noul",
+      "instructions": "Does the customer state a specific monetary amount?"
+    },
+    "tone": {
+      "type": "score",
+      "instructions": "How angry is the customer?",
+      "criteria": [
+        "calm",
+        "annoyed",
+        "angry",
+        "furious"
+      ]
+    },
+    "short": {
+      "type": "noul",
+      "instructions": "Is it a desk?"
+    },
+    "empty_ins": {
+      "type": "noul",
+      "instructions": ""
+    },
+    "json_ins": {
+      "type": "noul",
+      "instructions": {
+        "rule": "flag if delivery > 14 days late",
+        "field": "events",
+        "unicode": "café"
+      }
+    }
+  }
+}

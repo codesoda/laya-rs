@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://laya-rs.dev/schemas/models-response.schema.json",
+  "title": "TypeSafe models response",
+  "description": "Derived from typesafe-ai/typesafe-sdk-js 66880ccded6cb642dc1809620c2b108c33730214 src/resources/models.ts:14-27 and src/types.ts:144-148.",
+  "type": "object",
+  "properties": {
+    "models": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": { "type": "string" },
+          "description": { "type": "string" },
+          "release_date": { "type": "string" }
+        },
+        "required": ["name", "description", "release_date"],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": ["models"],
+  "additionalProperties": false
+}
