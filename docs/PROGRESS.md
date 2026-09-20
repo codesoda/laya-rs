@@ -4,16 +4,16 @@ Contract: [docs/plans/initial-build.md](plans/initial-build.md). Lead: Fable. Wo
 
 Host for all local measurements: Apple M3 Pro (11 CPU cores, 14 GPU cores, Metal 4), 18 GB unified memory, macOS 26.2 (25C56), low power mode off.
 
-## Gate status
+## Roadmap (per [amendment 2026-09-20](plans/amendment-2026-09-20-roadmap.md))
 
-| Gate | Status | Notes |
-| --- | --- | --- |
-| L0 — baseline and compatibility contract | in progress | see checklist below |
-| L1 — backend/export/distribution feasibility | not started | |
-| L2 — Rust core and inline CLI | not started | |
-| L3 — warm HTTP and client compatibility | not started | |
-| L4 — same-machine benchmark and optimization | not started | |
-| L5 — releases and documentation | not started | |
+| Step | Gate | Status | Notes |
+| --- | --- | --- | --- |
+| 1 | L0 — baseline + eval set (Python reference) | in progress | tooling/goldens/compat done; idle-host timings and eval set pending |
+| 2 | L1 — Metal/CPU feasibility spike | not started | go/no-go before wide surface area |
+| 3 | L2 + L3 — basic implementation (core, CLI, HTTP, SDK compat) | not started | |
+| 4 | L4a — benchmark basic implementation; first release (L5) | not started | |
+| 5 | L4b — quality/architecture improvements; first Rust eval run | not started | |
+| 6 | Improvement loop: perf / quality / recalibration / fine-tuning track | not started | each iteration re-runs parity + eval + benchmark |
 
 ## L0 checklist
 
@@ -29,6 +29,7 @@ Host for all local measurements: Apple M3 Pro (11 CPU cores, 14 GPU cores, Metal
 - [x] Harness pilot (contended, harness validation only)
 - [ ] **Idle-host baseline measurements (CPU, MPS) with raw samples — blocked on an uncontended host window** (`benchmarks/README.md` has the commands)
 - [ ] Idle-host cold start / load measurements
+- [ ] Eval set: pinned held-out labelled subset with licences, split held-out/train-candidate, Python reference accuracy per profile (does not gate L1–L3)
 - [x] Benchmark manifest freezing primary acceptance (`benchmarks/manifest.json`: multilingual distinct Q=1/Q=10, Rust Metal vs Python MPS, fp32)
 - [x] Pinned SDK request/response/error fixtures (`compat/`, `schemas/`)
 - [x] `docs/RESULTS.md`, `docs/COMPAT.md` written; milestone committed and pushed

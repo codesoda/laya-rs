@@ -15,7 +15,7 @@ Read [docs/plans/initial-build.md](docs/plans/initial-build.md).
 - Same-machine Python/Rust benchmarks before speedup claims.
 - Precompiled GitHub binaries, verified first-run asset downloads, and offline cache reuse without Python.
 
-A ready-to-paste prompt for a Fable-led session using Sol/Luna workers is in [docs/plans/implementation-prompt.md](docs/plans/implementation-prompt.md).
+Roadmap amendments live alongside the plan (latest: [docs/plans/amendment-2026-09-20-roadmap.md](docs/plans/amendment-2026-09-20-roadmap.md)). A ready-to-paste prompt for a Fable-led session using Sol/Luna workers is in [docs/plans/implementation-prompt.md](docs/plans/implementation-prompt.md).
 
 ## License and affiliation
 
