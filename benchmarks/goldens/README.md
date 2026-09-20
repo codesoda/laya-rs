@@ -4,7 +4,7 @@ These files are generated from the pinned upstream Laya runtime and are the prep
 
 ## Regenerate
 
-From `baseline/`:
+From `benchmarks/baseline/`:
 
 ```sh
 ~/.local/bin/uv sync

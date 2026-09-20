@@ -5,7 +5,7 @@ from __future__ import annotations
 import os
 from pathlib import Path
 
-REPO_ROOT = Path(__file__).resolve().parents[3]
+REPO_ROOT = Path(__file__).resolve().parents[4]
 DEFAULT_CACHE_ROOT = REPO_ROOT / ".cache" / "laya"
 HUB_REPO_ID = "convaiinnovations/laya"
 HUB_REVISION = "c5d78730f3493e4fe16d61507ef4b78eef7318cf"
