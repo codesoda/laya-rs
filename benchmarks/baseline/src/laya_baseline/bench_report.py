@@ -9,6 +9,7 @@ from typing import Any, Iterable
 
 import numpy as np
 
+from . import hostload
 from .paths import REPO_ROOT
 
 PUBLISHED_T4: dict[tuple[str, str], tuple[float, float]] = {
@@ -41,10 +42,30 @@ def _fmt(value: float) -> str:
     return "—" if not np.isfinite(value) else f"{value:.1f}"
 
 
+def _midrun_contention(record: dict[str, Any]) -> bool:
+    start = record.get("idle_evaluation_start")
+    end = record.get("idle_evaluation_end")
+    return bool(isinstance(start, dict) and start.get("idle") is True
+                and isinstance(end, dict) and end.get("idle") is False)
+
+
+def _env_fingerprint(record: dict[str, Any]) -> str:
+    value = record.get("env_fingerprint")
+    if isinstance(value, str):
+        return value
+    policy_record = record.get("host_policy")
+    start = record.get("host_start")
+    if isinstance(policy_record, dict) and isinstance(start, dict):
+        policy = policy_record.get("policy", policy_record)
+        if isinstance(policy, dict):
+            return hostload.fingerprint(start, policy)
+    return "—"
+
+
 def render_markdown(records: Iterable[dict[str, Any]], compare_published: bool = False) -> str:
     records = list(records)
     headers = ["profile", "device", "fixture", "nq", "n_tokens", "e2e p50 ms", "e2e p95 ms",
-               "model p50 ms", "preprocess p50 ms", "ms/question", "contended"]
+               "model p50 ms", "preprocess p50 ms", "ms/question", "contended", "env"]
     if compare_published:
         headers.extend(["published T4 p50 ms", "published T4 p95 ms"])
     lines = ["| " + " | ".join(headers) + " |", "|" + "|".join("---" for _ in headers) + "|"]
@@ -56,7 +77,8 @@ def render_markdown(records: Iterable[dict[str, Any]], compare_published: bool =
             str(record.get("diagnostics", {}).get("n_tokens", record.get("n_tokens", ""))),
             _fmt(e2e_p50), _fmt(_p(record, "e2e", 95)), _fmt(_p(record, "model", 50)),
             _fmt(_p(record, "preprocess", 50)), _fmt(e2e_p50 / int(record.get("n_questions", 1))),
-            "yes" if record.get("contended") else "no",
+            "contended(mid-run)" if _midrun_contention(record) else ("yes" if record.get("contended") else "no"),
+            _env_fingerprint(record),
         ]
         if compare_published:
             published = PUBLISHED_T4.get((str(record.get("profile")), str(record.get("fixture"))))

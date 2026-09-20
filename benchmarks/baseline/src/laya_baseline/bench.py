@@ -14,9 +14,8 @@ from pathlib import Path
 from typing import Any, Callable, Iterable
 
 import numpy as np
-import torch
 
-from .env import environment_summary
+from . import hostload
 from .paths import PROFILES, REPO_ROOT, profile_dir
 
 FIXTURE_DIR = REPO_ROOT / "benchmarks" / "fixtures" / "requests"
@@ -115,12 +114,20 @@ def _thermals() -> str | None:
     return text or None
 
 
-def _host_snapshot() -> dict[str, Any]:
-    try:
-        load = list(os.getloadavg())
-    except OSError:
-        load = []
-    return {"time": time.time(), "loadavg": load, "pmset_therm": _thermals()}
+def _host_snapshot(policy: dict[str, Any] | None = None) -> dict[str, Any]:
+    """Keep fixture snapshots compact while retaining the idle-host evidence."""
+    policy = policy or hostload.load_policy()
+    full = hostload.snapshot(policy)
+    loadavg = full.get("loadavg", {})
+    compact = {
+        "time": full.get("timestamp", time.time()),
+        "loadavg": loadavg,
+        "pmset_therm": full.get("thermal"),
+        "top_processes": full.get("processes", [])[:10],
+        "idle_evaluation": hostload.evaluate(full, policy),
+        "fingerprint": hostload.fingerprint(full, policy),
+    }
+    return compact
 
 
 def _write_json(path: Path, value: dict[str, Any]) -> None:
@@ -231,9 +238,9 @@ def _timed_model(agent: Any, batch: dict[str, torch.Tensor], device: str) -> tup
 
 
 def _run_fixture(agent: Any, profile: str, device: str, request: dict[str, Any], warmup: int, reps: int,
-                 contended: str | None) -> dict[str, Any]:
+                 contended: str | None, policy: dict[str, Any]) -> dict[str, Any]:
     fixture_id = request["id"]
-    before = _host_snapshot()
+    before = _host_snapshot(policy)
     wall_start = time.perf_counter()
     batch, cpu_batch, diagnostics = _load_plan(agent, request)
     device_batch = {key: value.to(agent.device) for key, value in cpu_batch.items()}
@@ -286,8 +293,18 @@ def _run_fixture(agent: Any, profile: str, device: str, request: dict[str, Any],
     if not identical:
         raise AssertionError(f"non-deterministic second system_one result for {fixture_id}")
 
-    after = _host_snapshot()
+    after = _host_snapshot(policy)
     nq = len(request["questions"])
+    start_evaluation = before["idle_evaluation"]
+    end_evaluation = after["idle_evaluation"]
+    midrun_violations = list(start_evaluation["violations"]) + [
+        violation for violation in end_evaluation["violations"]
+        if violation not in start_evaluation["violations"]
+    ]
+    fixture_contended = bool(contended or midrun_violations)
+    fixture_reason = contended
+    if midrun_violations and not fixture_reason:
+        fixture_reason = "auto: " + "; ".join(midrun_violations)
     result: dict[str, Any] = {
         "schema_version": 1,
         "profile": profile,
@@ -296,8 +313,12 @@ def _run_fixture(agent: Any, profile: str, device: str, request: dict[str, Any],
         "n_questions": nq,
         "warmup": warmup,
         "reps": reps,
-        "contended": bool(contended),
-        "contended_reason": contended,
+        "contended": fixture_contended,
+        "contended_reason": fixture_reason,
+        "host_policy": {"policy": policy},
+        "idle_evaluation_start": start_evaluation,
+        "idle_evaluation_end": end_evaluation,
+        "env_fingerprint": before["fingerprint"],
         "diagnostics": diagnostics,
         "n_tokens": diagnostics["n_tokens"],
         "sequence_lengths": diagnostics["sequence_lengths"],
@@ -308,17 +329,17 @@ def _run_fixture(agent: Any, profile: str, device: str, request: dict[str, Any],
         "result": first,
         "timing": {
             "preprocess": {"samples_ms": preprocess_samples, "sample_timestamps": preprocess_timestamps,
-                            "sample_contended": [bool(contended)] * reps, "contended_reason": contended,
+                            "sample_contended": [fixture_contended] * reps, "contended_reason": fixture_reason,
                             "warmup_ms": preprocess_warm, "stats": summarize_samples(preprocess_samples, nq)},
             "model": {"samples_ms": model_samples, "sample_timestamps": model_timestamps,
-                      "sample_contended": [bool(contended)] * reps, "contended_reason": contended,
+                      "sample_contended": [fixture_contended] * reps, "contended_reason": fixture_reason,
                       "warmup_ms": model_warm, "stats": summarize_samples(model_samples, nq)},
             "transfer": {"samples_ms": transfer_samples, "sample_timestamps": transfer_timestamps,
-                         "sample_contended": [bool(contended)] * reps, "contended_reason": contended,
+                         "sample_contended": [fixture_contended] * reps, "contended_reason": fixture_reason,
                          "warmup_ms": transfer_warm, "stats": summarize_samples(transfer_samples, nq),
                          "included_in_model_ms": False},
             "e2e": {"samples_ms": e2e_samples, "sample_timestamps": e2e_timestamps,
-                    "sample_contended": [bool(contended)] * reps, "contended_reason": contended,
+                    "sample_contended": [fixture_contended] * reps, "contended_reason": fixture_reason,
                     "warmup_ms": e2e_warm, "stats": summarize_samples(e2e_samples, nq)},
         },
         # Stable aliases make raw sample lists obvious to non-Python consumers.
@@ -347,9 +368,17 @@ def _run_fixture(agent: Any, profile: str, device: str, request: dict[str, Any],
     return result
 
 
+class IdleHostError(RuntimeError):
+    """Raised before model loading when --require-idle cannot be satisfied."""
+
+    def __init__(self, violations: list[str]) -> None:
+        self.violations = violations
+        super().__init__("idle-host policy violation: " + "; ".join(violations))
+
+
 def run(profile: str, device: str, workload: str, warmup: int = 3, reps: int = 20,
         run_id: str = "l0", label: str | None = None, contended: str | None = None,
-        threads: int | None = None) -> dict[str, Any]:
+        threads: int | None = None, require_idle: bool = False) -> dict[str, Any]:
     if profile not in PROFILES:
         raise ValueError(f"unknown profile: {profile}")
     if device not in ("cpu", "mps"):
@@ -362,20 +391,38 @@ def run(profile: str, device: str, workload: str, warmup: int = 3, reps: int = 2
     existing = [str(path) for path in paths if path.exists()]
     if existing:
         raise FileExistsError("refusing to overwrite immutable benchmark result(s): " + ", ".join(existing))
+    policy_path = REPO_ROOT / "benchmarks" / "idle-policy.json"
+    policy = hostload.load_policy(policy_path)
+    host_start = hostload.snapshot(policy)
+    idle_start = hostload.evaluate(host_start, policy)
+    if require_idle and not idle_start["idle"]:
+        raise IdleHostError(idle_start["violations"])
+    effective_contended = contended
+    if not idle_start["idle"] and effective_contended is None:
+        effective_contended = "auto: " + "; ".join(idle_start["violations"])
+        print("warning: host is contended; recording this run as contended: " + effective_contended, file=sys.stderr)
+
+    # Keep torch/laya imports after the require-idle gate so a rejected run does no model work.
+    global torch
+    import torch
+    from .env import environment_summary
     if threads is not None:
         if threads <= 0:
             raise ValueError("threads must be positive")
         torch.set_num_threads(threads)
     requested_threads = threads
     run_timer_start = time.perf_counter()
+    host_policy = {"path": str(policy_path.relative_to(REPO_ROOT)), "policy": policy}
     run_record: dict[str, Any] = {
         "schema_version": 1, "run_id": run_id, "profile": profile, "device": device,
         "workload": fixture_ids, "warmup": warmup, "reps": reps, "label": label,
-        "contended": bool(contended), "contended_reason": contended,
+        "contended": bool(effective_contended), "contended_reason": effective_contended,
         "requested_threads": requested_threads, "torch_threads": torch.get_num_threads(),
         "dtype": "float32", "autocast": False, "interrupted": False,
-        "cli_args": list(sys.argv),
-        "started_at": time.time(), "env": environment_summary(),
+        "cli_args": list(sys.argv), "started_at": time.time(), "env": environment_summary(),
+        "host_policy": host_policy, "host_start": host_start, "host_end": None,
+        "idle_evaluation_start": idle_start, "idle_evaluation_end": None,
+        "env_fingerprint": hostload.fingerprint(host_start, policy),
     }
     run_json = output_dir / "run.json"
     previous_run: dict[str, Any] | None = None
@@ -388,9 +435,9 @@ def run(profile: str, device: str, workload: str, warmup: int = 3, reps: int = 2
     _write_json(run_json, run_record)
     current: dict[str, Any] | None = None
     elapsed = 0.0
+    stdout = io.StringIO()
     try:
         from laya import Agent
-        stdout = io.StringIO()
         with contextlib.redirect_stdout(stdout):
             agent = Agent(str(profile_dir(profile)), device=device)
         captured = stdout.getvalue()
@@ -407,7 +454,7 @@ def run(profile: str, device: str, workload: str, warmup: int = 3, reps: int = 2
             request = _fixture(fixture_id)
             fixture_stdout = io.StringIO()
             with contextlib.redirect_stdout(fixture_stdout):
-                current = _run_fixture(agent, profile, device, request, warmup, reps, contended)
+                current = _run_fixture(agent, profile, device, request, warmup, reps, effective_contended, policy)
             fixture_output = fixture_stdout.getvalue()
             if any(marker in fixture_output.lower() for marker in FALLBACK_MARKERS):
                 raise RuntimeError("Laya emitted a fallback warning during measurement: " + fixture_output.strip())
@@ -425,7 +472,14 @@ def run(profile: str, device: str, workload: str, warmup: int = 3, reps: int = 2
             _write_json(output_dir / f"{profile}-{device}-{current['fixture']}.json", current)
         raise
     finally:
-        run_record.pop("_timer_start", None)
+        host_end = hostload.snapshot(policy)
+        idle_end = hostload.evaluate(host_end, policy)
+        run_record["host_end"] = host_end
+        run_record["idle_evaluation_end"] = idle_end
+        if not idle_end["idle"] and contended is None:
+            end_reason = "auto: " + "; ".join(idle_end["violations"])
+            run_record["contended"] = True
+            run_record["contended_reason"] = (effective_contended + "; " + end_reason.removeprefix("auto: ")) if effective_contended else end_reason
         _write_json(output_dir / "run.json", run_record)
         if stdout.getvalue() if 'stdout' in locals() else False:
             print(stdout.getvalue(), file=sys.stderr, end="")
@@ -442,13 +496,19 @@ def _parser() -> argparse.ArgumentParser:
     parser.add_argument("--run-id", default="l0")
     parser.add_argument("--label")
     parser.add_argument("--contended", metavar="REASON")
+    parser.add_argument("--require-idle", action="store_true", help="reject the run unless the start host passes idle-policy.json")
     parser.add_argument("--threads", type=int)
     return parser
 
 
 def main() -> None:
     args = _parser().parse_args()
-    run(**vars(args))
+    try:
+        run(**vars(args))
+    except IdleHostError as error:
+        for violation in error.violations:
+            print(f"idle-host violation: {violation}", file=sys.stderr)
+        raise SystemExit(3) from error
 
 
 if __name__ == "__main__":

@@ -21,6 +21,22 @@ When the host is shared, add `--contended "<reason>"`; contended samples must no
 reported as an uncontended speed claim. The requested development pilot was recorded
 separately under `benchmarks/results/l0-pilot/`.
 
+### Idle-host policy
+
+`benchmarks/idle-policy.json` is the committed policy for comparable runs. The harness
+records load, competing processes, GUI applications, thermal state, power source and
+low-power mode at the run boundaries. Use `--require-idle` to reject a run before a
+model is loaded when the start snapshot violates the policy (exit status **3**). Without
+that flag, a violating start is automatically recorded as contended with an `auto:`
+reason; it is never silently treated as clean. Cold runs support the same flag.
+
+Inspect `host_start`, `host_end`, `idle_evaluation_start` and `idle_evaluation_end` in
+`run.json` (or the cold result), and the per-fixture `host_before`/`host_after` fields.
+The report's `env` fingerprint and `contended(mid-run)` marker make changes visible.
+The Rust benchmark harness must apply this same `benchmarks/idle-policy.json`, including
+its allow list, thresholds and system-prefix exclusions; do not substitute a Rust-only
+policy.
+
 ## Full L0 baseline
 
 After the pilot, stop other builds, tests, inference workers, and background model

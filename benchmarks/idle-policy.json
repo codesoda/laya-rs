@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "load1_max": 3.0,
+  "process_cpu_percent_max": 15.0,
+  "process_rss_mb_report_min": 200,
+  "allow": [
+    "Terminal",
+    "iTerm2",
+    "Ghostty",
+    "Code",
+    "Cursor",
+    "Windsurf",
+    "Zed",
+    "pi",
+    "node",
+    "uv",
+    "python3.12"
+  ],
+  "system_prefixes": [
+    "/System/",
+    "/usr/libexec/",
+    "/usr/sbin/",
+    "/sbin/",
+    "com.apple."
+  ],
+  "notes": "allow lists terminal and editor processes that are expected while a developer runs a benchmark, plus the pi harness (pi), its node workers (node), uv, and the benchmark's Python 3.12 process; ctx is intentionally not allowed because it can contend for substantial CPU. system_prefixes identifies OS daemons and com.apple.* services that are excluded from the report."
+}

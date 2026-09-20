@@ -1,0 +1,276 @@
+{
+  "evaluation": {
+    "idle": false,
+    "violations": [
+      "load1 11.0 > 3.0",
+      "Google Chrome Helper (Renderer) pcpu 100.0 > 15.0 (not in allow list)",
+      "Google Chrome Helper pcpu 100.0 > 15.0 (not in allow list)",
+      "Google Chrome Helper pcpu 99.3 > 15.0 (not in allow list)",
+      "Google Chrome Helper (Renderer) pcpu 99.1 > 15.0 (not in allow list)",
+      "Google Chrome Helper (GPU) pcpu 99.0 > 15.0 (not in allow list)",
+      "Google Chrome Helper (Renderer) pcpu 87.9 > 15.0 (not in allow list)",
+      "Google Chrome Helper (Renderer) pcpu 87.9 > 15.0 (not in allow list)",
+      "Google Chrome Helper (Renderer) pcpu 87.4 > 15.0 (not in allow list)",
+      "ctx pcpu 81.7 > 15.0 (not in allow list)",
+      "Paseo Helper (Renderer) pcpu 41.1 > 15.0 (not in allow list)",
+      "Paseo Helper pcpu 25.7 > 15.0 (not in allow list)"
+    ]
+  },
+  "fingerprint": "load1-high|Google Chrome Helper,Google Chrome Helper (GPU),Google Chrome Helper (Renderer),Paseo Helper,Paseo Helper (Renderer),ctx",
+  "host_policy": {
+    "path": "benchmarks/idle-policy.json",
+    "policy": {
+      "allow": [
+        "Terminal",
+        "iTerm2",
+        "Ghostty",
+        "Code",
+        "Cursor",
+        "Windsurf",
+        "Zed",
+        "pi",
+        "node",
+        "uv",
+        "python3.12"
+      ],
+      "load1_max": 3.0,
+      "notes": "allow lists terminal and editor processes that are expected while a developer runs a benchmark, plus the pi harness (pi), its node workers (node), uv, and the benchmark's Python 3.12 process; ctx is intentionally not allowed because it can contend for substantial CPU. system_prefixes identifies OS daemons and com.apple.* services that are excluded from the report.",
+      "process_cpu_percent_max": 15.0,
+      "process_rss_mb_report_min": 200,
+      "schema_version": 1,
+      "system_prefixes": [
+        "/System/",
+        "/usr/libexec/",
+        "/usr/sbin/",
+        "/sbin/",
+        "com.apple."
+      ]
+    }
+  },
+  "schema_version": 1,
+  "snapshot": {
+    "gui_apps": [
+      "Finder",
+      "Google Chrome",
+      "Paseo"
+    ],
+    "load1": 10.974609375,
+    "load15": 13.46875,
+    "load5": 11.451171875,
+    "loadavg": {
+      "1": 10.974609375,
+      "15": 13.46875,
+      "5": 11.451171875
+    },
+    "lowpowermode": 0,
+    "power": {
+      "battery_percent": 100,
+      "raw": "Now drawing from 'AC Power'\n -InternalBattery-0 (id=22282339)\t100%; charged; 0:00 remaining present: true",
+      "source": "AC Power"
+    },
+    "processes": [
+      {
+        "comm": "/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/153.0.8010.48/Helpers/Google Chrome Helper (Renderer).app/Contents/MacOS/Google Chrome Helper (Renderer)",
+        "name": "Google Chrome Helper (Renderer)",
+        "pcpu": 100.0,
+        "pid": 68327,
+        "rss_mb": 12.625,
+        "user": "chrisraethke"
+      },
+      {
+        "comm": "/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/153.0.8010.48/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper",
+        "name": "Google Chrome Helper",
+        "pcpu": 100.0,
+        "pid": 68318,
+        "rss_mb": 9.875,
+        "user": "chrisraethke"
+      },
+      {
+        "comm": "/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/153.0.8010.48/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper",
+        "name": "Google Chrome Helper",
+        "pcpu": 99.3,
+        "pid": 68319,
+        "rss_mb": 6.96875,
+        "user": "chrisraethke"
+      },
+      {
+        "comm": "/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/153.0.8010.48/Helpers/Google Chrome Helper (Renderer).app/Contents/MacOS/Google Chrome Helper (Renderer)",
+        "name": "Google Chrome Helper (Renderer)",
+        "pcpu": 99.1,
+        "pid": 68324,
+        "rss_mb": 14.296875,
+        "user": "chrisraethke"
+      },
+      {
+        "comm": "/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/153.0.8010.48/Helpers/Google Chrome Helper (GPU).app/Contents/MacOS/Google Chrome Helper (GPU)",
+        "name": "Google Chrome Helper (GPU)",
+        "pcpu": 99.0,
+        "pid": 68316,
+        "rss_mb": 3.890625,
+        "user": "chrisraethke"
+      },
+      {
+        "comm": "/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/153.0.8010.48/Helpers/Google Chrome Helper (Renderer).app/Contents/MacOS/Google Chrome Helper (Renderer)",
+        "name": "Google Chrome Helper (Renderer)",
+        "pcpu": 87.9,
+        "pid": 68326,
+        "rss_mb": 14.734375,
+        "user": "chrisraethke"
+      },
+      {
+        "comm": "/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/153.0.8010.48/Helpers/Google Chrome Helper (Renderer).app/Contents/MacOS/Google Chrome Helper (Renderer)",
+        "name": "Google Chrome Helper (Renderer)",
+        "pcpu": 87.9,
+        "pid": 68330,
+        "rss_mb": 13.25,
+        "user": "chrisraethke"
+      },
+      {
+        "comm": "/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/153.0.8010.48/Helpers/Google Chrome Helper (Renderer).app/Contents/MacOS/Google Chrome Helper (Renderer)",
+        "name": "Google Chrome Helper (Renderer)",
+        "pcpu": 87.4,
+        "pid": 68333,
+        "rss_mb": 8.671875,
+        "user": "chrisraethke"
+      },
+      {
+        "comm": "/Users/chrisraethke/.local/bin/ctx",
+        "name": "ctx",
+        "pcpu": 81.7,
+        "pid": 71584,
+        "rss_mb": 297.640625,
+        "user": "chrisraethke"
+      },
+      {
+        "comm": "/Applications/Paseo.app/Contents/Frameworks/Paseo Helper (Renderer).app/Contents/MacOS/Paseo Helper (Renderer)",
+        "name": "Paseo Helper (Renderer)",
+        "pcpu": 41.1,
+        "pid": 82252,
+        "rss_mb": 444.03125,
+        "user": "chrisraethke"
+      },
+      {
+        "comm": "/Applications/Paseo.app/Contents/Frameworks/Paseo Helper.app/Contents/MacOS/Paseo Helper",
+        "name": "Paseo Helper",
+        "pcpu": 25.7,
+        "pid": 82249,
+        "rss_mb": 93.953125,
+        "user": "chrisraethke"
+      },
+      {
+        "comm": "pi",
+        "name": "pi",
+        "pcpu": 6.1,
+        "pid": 652,
+        "rss_mb": 308.921875,
+        "user": "chrisraethke"
+      },
+      {
+        "comm": "/Applications/Cloudflare WARP.app/Contents/Resources/CloudflareWARP",
+        "name": "CloudflareWARP",
+        "pcpu": 3.2,
+        "pid": 728,
+        "rss_mb": 262.65625,
+        "user": "root"
+      },
+      {
+        "comm": "/Applications/Backtrack.app/Contents/MacOS/Backtrack",
+        "name": "Backtrack",
+        "pcpu": 2.5,
+        "pid": 1241,
+        "rss_mb": 27.234375,
+        "user": "chrisraethke"
+      },
+      {
+        "comm": "pi",
+        "name": "pi",
+        "pcpu": 1.9,
+        "pid": 84363,
+        "rss_mb": 233.328125,
+        "user": "chrisraethke"
+      },
+      {
+        "comm": "/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/153.0.8010.48/Helpers/Google Chrome Helper (Renderer).app/Contents/MacOS/Google Chrome Helper (Renderer)",
+        "name": "Google Chrome Helper (Renderer)",
+        "pcpu": 1.8,
+        "pid": 63512,
+        "rss_mb": 135.0,
+        "user": "chrisraethke"
+      },
+      {
+        "comm": "Paseo Daemon",
+        "name": "Paseo Daemon",
+        "pcpu": 1.5,
+        "pid": 82279,
+        "rss_mb": 198.9375,
+        "user": "chrisraethke"
+      },
+      {
+        "comm": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+        "name": "Google Chrome",
+        "pcpu": 0.5,
+        "pid": 88048,
+        "rss_mb": 494.171875,
+        "user": "chrisraethke"
+      },
+      {
+        "comm": "/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/153.0.8010.48/Helpers/Google Chrome Helper (Renderer).app/Contents/MacOS/Google Chrome Helper (Renderer)",
+        "name": "Google Chrome Helper (Renderer)",
+        "pcpu": 0.0,
+        "pid": 63501,
+        "rss_mb": 399.53125,
+        "user": "chrisraethke"
+      },
+      {
+        "comm": "/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/153.0.8010.48/Helpers/Google Chrome Helper (Renderer).app/Contents/MacOS/Google Chrome Helper (Renderer)",
+        "name": "Google Chrome Helper (Renderer)",
+        "pcpu": 0.0,
+        "pid": 6047,
+        "rss_mb": 365.59375,
+        "user": "chrisraethke"
+      },
+      {
+        "comm": "/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/153.0.8010.48/Helpers/Google Chrome Helper (Renderer).app/Contents/MacOS/Google Chrome Helper (Renderer)",
+        "name": "Google Chrome Helper (Renderer)",
+        "pcpu": 0.0,
+        "pid": 96890,
+        "rss_mb": 330.609375,
+        "user": "chrisraethke"
+      },
+      {
+        "comm": "/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/153.0.8010.48/Helpers/Google Chrome Helper (Renderer).app/Contents/MacOS/Google Chrome Helper (Renderer)",
+        "name": "Google Chrome Helper (Renderer)",
+        "pcpu": 0.0,
+        "pid": 34020,
+        "rss_mb": 289.0,
+        "user": "chrisraethke"
+      },
+      {
+        "comm": "/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/153.0.8010.48/Helpers/Google Chrome Helper (Renderer).app/Contents/MacOS/Google Chrome Helper (Renderer)",
+        "name": "Google Chrome Helper (Renderer)",
+        "pcpu": 0.0,
+        "pid": 41035,
+        "rss_mb": 280.203125,
+        "user": "chrisraethke"
+      },
+      {
+        "comm": "/Applications/Paseo.app/Contents/MacOS/Paseo",
+        "name": "Paseo",
+        "pcpu": 0.0,
+        "pid": 82208,
+        "rss_mb": 230.453125,
+        "user": "chrisraethke"
+      },
+      {
+        "comm": "/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/153.0.8010.48/Helpers/Google Chrome Helper (Renderer).app/Contents/MacOS/Google Chrome Helper (Renderer)",
+        "name": "Google Chrome Helper (Renderer)",
+        "pcpu": 0.0,
+        "pid": 44973,
+        "rss_mb": 221.953125,
+        "user": "chrisraethke"
+      }
+    ],
+    "thermal": "Note: No thermal warning level has been recorded\nNote: No performance warning level has been recorded\nNote: No CPU power status has been recorded",
+    "timestamp": 1789900485.522432
+  }
+}

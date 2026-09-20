@@ -11,6 +11,7 @@ import time
 from pathlib import Path
 from typing import Any
 
+from . import hostload
 from .paths import PROFILES, REPO_ROOT, profile_dir
 
 _CHILD = r'''
@@ -55,7 +56,14 @@ def _child_command(profile: str, device: str, request: dict[str, Any]) -> list[s
     return [sys.executable, "-c", code]
 
 
-def run(profile: str, device: str, n: int, run_id: str) -> dict[str, Any]:
+class IdleHostError(RuntimeError):
+    def __init__(self, violations: list[str]) -> None:
+        self.violations = violations
+        super().__init__("idle-host policy violation: " + "; ".join(violations))
+
+
+def run(profile: str, device: str, n: int, run_id: str, contended: str | None = None,
+        require_idle: bool = False) -> dict[str, Any]:
     if profile not in PROFILES:
         raise ValueError(f"unknown profile: {profile}")
     if device not in ("cpu", "mps"):
@@ -68,6 +76,16 @@ def run(profile: str, device: str, n: int, run_id: str) -> dict[str, Any]:
     fixture_path = REPO_ROOT / "benchmarks" / "fixtures" / "requests" / "plan-example.json"
     with fixture_path.open(encoding="utf-8") as handle:
         request = json.load(handle)
+    policy_path = REPO_ROOT / "benchmarks" / "idle-policy.json"
+    policy = hostload.load_policy(policy_path)
+    host_start = hostload.snapshot(policy)
+    idle_start = hostload.evaluate(host_start, policy)
+    if require_idle and not idle_start["idle"]:
+        raise IdleHostError(idle_start["violations"])
+    effective_contended = contended
+    if not idle_start["idle"] and effective_contended is None:
+        effective_contended = "auto: " + "; ".join(idle_start["violations"])
+        print("warning: host is contended; recording this cold run as contended: " + effective_contended, file=sys.stderr)
     iterations: list[dict[str, Any]] = []
     for index in range(n):
         started = time.perf_counter()
@@ -85,6 +103,8 @@ def run(profile: str, device: str, n: int, run_id: str) -> dict[str, Any]:
         child["wall_process_ms"] = wall_ms
         child["page_cache"] = "cold/unknown on first iteration" if index == 0 else "warm (after first iteration)"
         iterations.append(child)
+    host_end = hostload.snapshot(policy)
+    idle_end = hostload.evaluate(host_end, policy)
     record = {
         "schema_version": 1,
         "profile": profile,
@@ -92,6 +112,14 @@ def run(profile: str, device: str, n: int, run_id: str) -> dict[str, Any]:
         "run_id": run_id,
         "n": n,
         "fixture": "plan-example",
+        "contended": bool(effective_contended or not idle_end["idle"]),
+        "contended_reason": effective_contended or (("auto: " + "; ".join(idle_end["violations"])) if not idle_end["idle"] else None),
+        "host_policy": {"path": str(policy_path.relative_to(REPO_ROOT)), "policy": policy},
+        "host_start": host_start,
+        "host_end": host_end,
+        "idle_evaluation_start": idle_start,
+        "idle_evaluation_end": idle_end,
+        "env_fingerprint": hostload.fingerprint(host_start, policy),
         "page_cache_note": "The first iteration is not classified; subsequent iterations are noted as warm. The OS page cache was not purged.",
         "iterations": iterations,
         "created_at": time.time(),
@@ -109,8 +137,15 @@ def main() -> None:
     parser.add_argument("--device", choices=("cpu", "mps"), required=True)
     parser.add_argument("--n", type=int, default=3)
     parser.add_argument("--run-id", required=True)
+    parser.add_argument("--contended", metavar="REASON")
+    parser.add_argument("--require-idle", action="store_true")
     args = parser.parse_args()
-    record = run(**vars(args))
+    try:
+        record = run(**vars(args))
+    except IdleHostError as error:
+        for violation in error.violations:
+            print(f"idle-host violation: {violation}", file=sys.stderr)
+        raise SystemExit(3) from error
     print(json.dumps(record, ensure_ascii=False, sort_keys=True))
 
 
