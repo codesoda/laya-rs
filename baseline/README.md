@@ -3,7 +3,7 @@
 This uv project reproduces the pinned upstream Laya runtime used as the laya-rs correctness and timing oracle. It requires uv and uses managed Python 3.12.
 
 ```sh
-cd python
+cd baseline
 uv sync
 uv run laya-fetch --profile all
 uv run laya-fetch --verify

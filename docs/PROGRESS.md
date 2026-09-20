@@ -18,7 +18,7 @@ Host for all local measurements: Apple M3 Pro (11 CPU cores, 14 GPU cores, Metal
 ## L0 checklist
 
 - [x] Pinned upstream sources fetched; runtime equality between reviewed revisions re-verified (`git diff 6a58191..28d43ad -- laya/` is empty — verified by Fable)
-- [x] Locked Python environment (`python/uv.lock`)
+- [x] Locked Python environment (`baseline/uv.lock`)
 - [x] Pinned hub assets fetched into project cache; `manifests/sources.json` with SHA-256, sizes, licenses
 - [x] Bundle-vs-standalone checkpoint parity recorded
 - [x] Host/environment capture (`uv run laya-env`)

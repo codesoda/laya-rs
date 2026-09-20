@@ -2,7 +2,7 @@
 
 These commands run the pinned Python 3.12 environment (`laya==0.3.3`, PyTorch 2.14.0,
 Transformers 5.17.0). Run them from the repository root; `uv run` is invoked from
-`python/` so that the locked project environment is used.
+`baseline/` so that the locked project environment is used.
 
 ## Pilot
 
@@ -10,7 +10,7 @@ The pilot is deliberately short and is only for estimating duration or checking 
 harness. On an otherwise idle host, use:
 
 ```sh
-cd python
+cd baseline
 ~/.local/bin/uv run laya-bench --profile english --device cpu --workload all --reps 5 --warmup 2 --run-id l0-pilot
 ~/.local/bin/uv run laya-bench --profile english --device mps --workload all --reps 5 --warmup 2 --run-id l0-pilot
 ~/.local/bin/uv run laya-bench --profile multilingual --device cpu --workload all --reps 5 --warmup 2 --run-id l0-pilot
@@ -27,7 +27,7 @@ After the pilot, stop other builds, tests, inference workers, and background mod
 jobs. Run the sets serially for all three profiles and both devices:
 
 ```sh
-cd python
+cd baseline
 for profile in english multilingual typed-decisions; do
   for device in cpu mps; do
     for set in published distinct extended; do
@@ -62,7 +62,7 @@ state. Raw timestamped samples and host/thermal snapshots are retained. Cold run
 choose a new run id for a repeat.
 
 ```sh
-cd python
+cd baseline
 ~/.local/bin/uv run laya-bench-report --run-id l0-pilot --compare-published
 ```
 

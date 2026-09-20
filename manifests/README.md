@@ -2,7 +2,7 @@
 
 `sources.json` records immutable upstream revisions, exact package pins, model-file sizes and SHA-256 digests. It is generated and updated by the pinned Python baseline fetcher. Model weights and cache files are deliberately excluded from Git.
 
-From `python/`:
+From `baseline/`:
 
 ```sh
 uv sync

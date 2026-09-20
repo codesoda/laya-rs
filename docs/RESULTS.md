@@ -6,7 +6,7 @@ All numbers here are reproducible from committed fixtures/scripts and raw JSON u
 
 ### Pinned sources and assets
 
-`manifests/sources.json` (regenerate/verify with `cd python && uv run laya-fetch --verify`).
+`manifests/sources.json` (regenerate/verify with `cd baseline && uv run laya-fetch --verify`).
 
 | Profile | `model.safetensors` SHA-256 | bytes | context / head budget |
 | --- | --- | ---: | --- |

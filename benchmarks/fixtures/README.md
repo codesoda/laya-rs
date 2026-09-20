@@ -1,6 +1,6 @@
 # Frozen request fixtures
 
-Authored by Fable at L0. Each `requests/*.json` has `id`, `source`, `state`, `questions` and optionally `expect_error`. Only `state` and `questions` are passed to the model; the other keys are metadata. Goldens (`python/`) and benchmarks (`benchmarks/`) must both read these files so Python and Rust are measured on byte-identical inputs. Do not edit a fixture after goldens or benchmark results referencing it have been committed; add a new id instead.
+Authored by Fable at L0. Each `requests/*.json` has `id`, `source`, `state`, `questions` and optionally `expect_error`. Only `state` and `questions` are passed to the model; the other keys are metadata. Goldens (`baseline/`) and benchmarks (`benchmarks/`) must both read these files so Python and Rust are measured on byte-identical inputs. Do not edit a fixture after goldens or benchmark results referencing it have been committed; add a new id instead.
 
 | Family | Ids | Purpose |
 | --- | --- | --- |
