@@ -1,0 +1,192 @@
+start Mon 21 Sep 2026 19:08:30 AEST
+== multilingual mps published 19:08
+idle-host violation: load1 4.9 > 3.0
+FAILED/REJECTED (exit 3) multilingual mps published
+== multilingual mps distinct 19:08
+idle-host violation: load1 4.9 > 3.0
+FAILED/REJECTED (exit 3) multilingual mps distinct
+== multilingual mps extended 19:08
+idle-host violation: load1 4.9 > 3.0
+FAILED/REJECTED (exit 3) multilingual mps extended
+== cold multilingual mps 19:08
+idle-host violation: load1 4.7 > 3.0
+FAILED/REJECTED cold multilingual mps
+== multilingual cpu published 19:08
+idle-host violation: load1 4.7 > 3.0
+FAILED/REJECTED (exit 3) multilingual cpu published
+== multilingual cpu distinct 19:08
+idle-host violation: load1 4.7 > 3.0
+FAILED/REJECTED (exit 3) multilingual cpu distinct
+== multilingual cpu extended 19:08
+idle-host violation: load1 4.7 > 3.0
+FAILED/REJECTED (exit 3) multilingual cpu extended
+== cold multilingual cpu 19:08
+idle-host violation: load1 4.7 > 3.0
+FAILED/REJECTED cold multilingual cpu
+== english mps published 19:08
+idle-host violation: load1 4.7 > 3.0
+FAILED/REJECTED (exit 3) english mps published
+== english mps distinct 19:08
+idle-host violation: load1 4.7 > 3.0
+FAILED/REJECTED (exit 3) english mps distinct
+== english mps extended 19:08
+idle-host violation: load1 4.7 > 3.0
+FAILED/REJECTED (exit 3) english mps extended
+== cold english mps 19:08
+idle-host violation: load1 4.7 > 3.0
+FAILED/REJECTED cold english mps
+== english cpu published 19:08
+idle-host violation: load1 4.7 > 3.0
+FAILED/REJECTED (exit 3) english cpu published
+== english cpu distinct 19:08
+idle-host violation: load1 4.7 > 3.0
+FAILED/REJECTED (exit 3) english cpu distinct
+== english cpu extended 19:08
+idle-host violation: load1 4.7 > 3.0
+FAILED/REJECTED (exit 3) english cpu extended
+== cold english cpu 19:08
+idle-host violation: load1 4.7 > 3.0
+FAILED/REJECTED cold english cpu
+== typed-decisions mps published 19:08
+idle-host violation: load1 4.7 > 3.0
+FAILED/REJECTED (exit 3) typed-decisions mps published
+== typed-decisions mps distinct 19:08
+idle-host violation: load1 4.7 > 3.0
+FAILED/REJECTED (exit 3) typed-decisions mps distinct
+== typed-decisions mps extended 19:08
+idle-host violation: load1 4.7 > 3.0
+FAILED/REJECTED (exit 3) typed-decisions mps extended
+== cold typed-decisions mps 19:08
+idle-host violation: load1 4.7 > 3.0
+FAILED/REJECTED cold typed-decisions mps
+== typed-decisions cpu published 19:08
+idle-host violation: load1 4.4 > 3.0
+FAILED/REJECTED (exit 3) typed-decisions cpu published
+== typed-decisions cpu distinct 19:08
+idle-host violation: load1 4.4 > 3.0
+FAILED/REJECTED (exit 3) typed-decisions cpu distinct
+== typed-decisions cpu extended 19:08
+idle-host violation: load1 4.4 > 3.0
+FAILED/REJECTED (exit 3) typed-decisions cpu extended
+== cold typed-decisions cpu 19:08
+idle-host violation: load1 4.4 > 3.0
+FAILED/REJECTED cold typed-decisions cpu
+done Mon 21 Sep 2026 19:08:36 AEST
+start Mon 21 Sep 2026 19:11:22 AEST
+== multilingual mps published 19:11
+published-latency-q1: elapsed=30.5s estimated_remaining=1.4s
+published-latency-q5: elapsed=38.0s estimated_remaining=3.9s
+published-latency-q10: elapsed=52.0s estimated_remaining=3.8s
+published-latency-q50: elapsed=119.3s estimated_remaining=0.0s
+== multilingual mps distinct 19:13
+distinct-ml-q1: elapsed=26.6s estimated_remaining=3.5s
+distinct-ml-q10: elapsed=48.1s estimated_remaining=23.8s
+distinct-en-q1: elapsed=51.5s estimated_remaining=2.4s
+distinct-en-q10: elapsed=78.9s estimated_remaining=15.2s
+distinct-en-q21: elapsed=136.2s estimated_remaining=16.1s
+distinct-en-q50: elapsed=277.6s estimated_remaining=0.0s
+== multilingual mps extended 19:18
+nonlatin-mixed-q6: elapsed=33.7s estimated_remaining=13.9s
+ragged-q12: elapsed=91.1s estimated_remaining=64.1s
+bucket-choice-20: elapsed=93.0s estimated_remaining=1.1s
+bucket-choice-2: elapsed=94.4s estimated_remaining=0.5s
+edge-long-state: elapsed=111.8s estimated_remaining=4.8s
+edge-head-overflow: elapsed=114.6s estimated_remaining=0.0s
+== cold multilingual mps 19:19
+== multilingual cpu published 19:21
+published-latency-q1: elapsed=28.7s estimated_remaining=3.8s
+published-latency-q5: elapsed=47.1s estimated_remaining=9.9s
+published-latency-q10: elapsed=81.8s estimated_remaining=9.7s
+published-latency-q50: elapsed=239.3s estimated_remaining=0.0s
+== multilingual cpu distinct 19:25
+distinct-ml-q1: elapsed=30.3s estimated_remaining=9.2s
+distinct-ml-q10: elapsed=86.1s estimated_remaining=61.3s
+distinct-en-q1: elapsed=94.4s estimated_remaining=6.6s
+distinct-en-q10: elapsed=162.8s estimated_remaining=38.2s
+distinct-en-q21: elapsed=306.0s estimated_remaining=40.2s
+distinct-en-q50: elapsed=645.7s estimated_remaining=0.0s
+== multilingual cpu extended 19:35
+nonlatin-mixed-q6: elapsed=52.2s estimated_remaining=38.6s
+ragged-q12: elapsed=203.4s estimated_remaining=169.5s
+bucket-choice-20: elapsed=207.1s estimated_remaining=2.7s
+bucket-choice-2: elapsed=209.2s estimated_remaining=0.9s
+edge-long-state: elapsed=258.7s estimated_remaining=13.8s
+edge-head-overflow: elapsed=265.2s estimated_remaining=0.0s
+== cold multilingual cpu 19:40
+== english mps published 19:42
+published-latency-q1: elapsed=29.8s estimated_remaining=3.6s
+published-latency-q5: elapsed=48.8s estimated_remaining=10.5s
+published-latency-q10: elapsed=85.6s estimated_remaining=10.3s
+published-latency-q50: elapsed=266.5s estimated_remaining=0.0s
+== english mps distinct 19:46
+distinct-ml-q1: elapsed=32.2s estimated_remaining=9.5s
+distinct-ml-q10: elapsed=97.1s estimated_remaining=72.6s
+distinct-en-q1: elapsed=103.5s estimated_remaining=5.0s
+distinct-en-q10: elapsed=168.4s estimated_remaining=36.3s
+distinct-en-q21: elapsed=305.2s estimated_remaining=38.4s
+distinct-en-q50: elapsed=630.7s estimated_remaining=0.0s
+== english mps extended 19:57
+nonlatin-mixed-q6: elapsed=69.0s estimated_remaining=61.4s
+ragged-q12: elapsed=181.5s estimated_remaining=126.3s
+bucket-choice-20: elapsed=184.6s estimated_remaining=2.2s
+bucket-choice-2: elapsed=186.7s estimated_remaining=0.9s
+edge-long-state: elapsed=206.2s estimated_remaining=5.4s
+edge-head-overflow: elapsed=211.0s estimated_remaining=0.0s
+== cold english mps 20:00
+== english cpu published 20:01
+published-latency-q1: elapsed=37.2s estimated_remaining=10.6s
+published-latency-q5: elapsed=84.8s estimated_remaining=26.5s
+published-latency-q10: elapsed=178.0s estimated_remaining=26.1s
+published-latency-q50: elapsed=623.5s estimated_remaining=0.0s
+== english cpu distinct 20:12
+idle-host violation: Python pcpu 15.2 > 15.0 (not in allow list)
+FAILED (exit 3) english cpu distinct
+== english cpu extended 20:12
+nonlatin-mixed-q6: elapsed=137.9s estimated_remaining=159.1s
+ragged-q12: elapsed=431.7s estimated_remaining=330.7s
+bucket-choice-20: elapsed=440.6s estimated_remaining=7.0s
+bucket-choice-2: elapsed=445.3s estimated_remaining=2.4s
+edge-long-state: elapsed=497.5s estimated_remaining=14.6s
+edge-head-overflow: elapsed=510.7s estimated_remaining=0.0s
+== cold english cpu 20:20
+== typed-decisions mps published 20:22
+published-latency-q1: elapsed=29.9s estimated_remaining=3.6s
+published-latency-q5: elapsed=48.9s estimated_remaining=10.5s
+published-latency-q10: elapsed=85.7s estimated_remaining=10.3s
+published-latency-q50: elapsed=266.6s estimated_remaining=0.0s
+== typed-decisions mps distinct 20:26
+distinct-ml-q1: elapsed=31.8s estimated_remaining=9.5s
+distinct-ml-q10: elapsed=96.6s estimated_remaining=72.6s
+distinct-en-q1: elapsed=103.1s estimated_remaining=5.0s
+distinct-en-q10: elapsed=167.9s estimated_remaining=36.3s
+distinct-en-q21: elapsed=304.7s estimated_remaining=38.4s
+distinct-en-q50: elapsed=630.1s estimated_remaining=0.0s
+== typed-decisions mps extended 20:37
+nonlatin-mixed-q6: elapsed=69.3s estimated_remaining=61.4s
+ragged-q12: elapsed=192.5s estimated_remaining=138.4s
+bucket-choice-20: elapsed=195.6s estimated_remaining=2.2s
+bucket-choice-2: elapsed=197.7s estimated_remaining=0.9s
+edge-long-state: elapsed=238.6s estimated_remaining=11.4s
+edge-head-overflow: elapsed=244.7s estimated_remaining=0.0s
+== cold typed-decisions mps 20:41
+== typed-decisions cpu published 20:42
+published-latency-q1: elapsed=37.3s estimated_remaining=10.6s
+published-latency-q5: elapsed=84.8s estimated_remaining=26.4s
+published-latency-q10: elapsed=177.9s estimated_remaining=26.1s
+published-latency-q50: elapsed=623.7s estimated_remaining=0.0s
+== typed-decisions cpu distinct 20:53
+distinct-ml-q1: elapsed=44.1s estimated_remaining=27.0s
+distinct-ml-q10: elapsed=210.8s estimated_remaining=187.2s
+distinct-en-q1: elapsed=229.0s estimated_remaining=14.9s
+distinct-en-q10: elapsed=395.8s estimated_remaining=93.7s
+distinct-en-q21: elapsed=740.4s estimated_remaining=97.0s
+distinct-en-q50: elapsed=1558.7s estimated_remaining=0.0s
+== typed-decisions cpu extended 21:19
+nonlatin-mixed-q6: elapsed=139.0s estimated_remaining=161.9s
+ragged-q12: elapsed=469.6s estimated_remaining=371.6s
+bucket-choice-20: elapsed=478.9s estimated_remaining=7.1s
+bucket-choice-2: elapsed=484.2s estimated_remaining=2.7s
+edge-long-state: elapsed=599.5s estimated_remaining=32.4s
+edge-head-overflow: elapsed=616.3s estimated_remaining=0.0s
+== cold typed-decisions cpu 21:46
+done Mon 21 Sep 2026 21:47:45 AEST

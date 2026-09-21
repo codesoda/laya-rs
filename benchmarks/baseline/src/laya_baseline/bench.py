@@ -114,7 +114,7 @@ def _thermals() -> str | None:
     return text or None
 
 
-def _host_snapshot(policy: dict[str, Any] | None = None) -> dict[str, Any]:
+def _host_snapshot(policy: dict[str, Any] | None = None, *, phase: str = "start") -> dict[str, Any]:
     """Keep fixture snapshots compact while retaining the idle-host evidence."""
     policy = policy or hostload.load_policy()
     full = hostload.snapshot(policy)
@@ -122,9 +122,11 @@ def _host_snapshot(policy: dict[str, Any] | None = None) -> dict[str, Any]:
     compact = {
         "time": full.get("timestamp", time.time()),
         "loadavg": loadavg,
+        "self_pid": full.get("self_pid"),
+        "self_tree": full.get("self_tree", []),
         "pmset_therm": full.get("thermal"),
         "top_processes": full.get("processes", [])[:10],
-        "idle_evaluation": hostload.evaluate(full, policy),
+        "idle_evaluation": hostload.evaluate(full, policy, phase=phase),
         "fingerprint": hostload.fingerprint(full, policy),
     }
     return compact
@@ -240,7 +242,7 @@ def _timed_model(agent: Any, batch: dict[str, torch.Tensor], device: str) -> tup
 def _run_fixture(agent: Any, profile: str, device: str, request: dict[str, Any], warmup: int, reps: int,
                  contended: str | None, policy: dict[str, Any]) -> dict[str, Any]:
     fixture_id = request["id"]
-    before = _host_snapshot(policy)
+    before = _host_snapshot(policy, phase="start")
     wall_start = time.perf_counter()
     batch, cpu_batch, diagnostics = _load_plan(agent, request)
     device_batch = {key: value.to(agent.device) for key, value in cpu_batch.items()}
@@ -293,7 +295,7 @@ def _run_fixture(agent: Any, profile: str, device: str, request: dict[str, Any],
     if not identical:
         raise AssertionError(f"non-deterministic second system_one result for {fixture_id}")
 
-    after = _host_snapshot(policy)
+    after = _host_snapshot(policy, phase="end")
     nq = len(request["questions"])
     start_evaluation = before["idle_evaluation"]
     end_evaluation = after["idle_evaluation"]
@@ -394,7 +396,7 @@ def run(profile: str, device: str, workload: str, warmup: int = 3, reps: int = 2
     policy_path = REPO_ROOT / "benchmarks" / "idle-policy.json"
     policy = hostload.load_policy(policy_path)
     host_start = hostload.snapshot(policy)
-    idle_start = hostload.evaluate(host_start, policy)
+    idle_start = hostload.evaluate(host_start, policy, phase="start")
     if require_idle and not idle_start["idle"]:
         raise IdleHostError(idle_start["violations"])
     effective_contended = contended
@@ -473,7 +475,7 @@ def run(profile: str, device: str, workload: str, warmup: int = 3, reps: int = 2
         raise
     finally:
         host_end = hostload.snapshot(policy)
-        idle_end = hostload.evaluate(host_end, policy)
+        idle_end = hostload.evaluate(host_end, policy, phase="end")
         run_record["host_end"] = host_end
         run_record["idle_evaluation_end"] = idle_end
         if not idle_end["idle"] and contended is None:

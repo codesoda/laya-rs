@@ -1,0 +1,209 @@
+{
+  "contended": true,
+  "contended_reason": "auto: ClearDisk pcpu 50.6 > 15.0 (not in allow list)",
+  "created_at": 1789983698.214704,
+  "device": "cpu",
+  "env_fingerprint": "load1-idle|none",
+  "fixture": "plan-example",
+  "host_end": {
+    "gui_apps": [
+      "Finder",
+      "iTerm2",
+      "Notes"
+    ],
+    "load1": 1.79541015625,
+    "load15": 2.88818359375,
+    "load5": 2.35498046875,
+    "loadavg": {
+      "1": 1.79541015625,
+      "15": 2.88818359375,
+      "5": 2.35498046875
+    },
+    "lowpowermode": 0,
+    "power": {
+      "battery_percent": 98,
+      "raw": "Now drawing from 'AC Power'\n -InternalBattery-0 (id=22282339)\t98%; charging; 0:19 remaining present: true",
+      "source": "AC Power"
+    },
+    "processes": [
+      {
+        "comm": "/Applications/ClearDisk.app/Contents/MacOS/ClearDisk",
+        "name": "ClearDisk",
+        "pcpu": 50.6,
+        "pid": 4481,
+        "rss_mb": 54.859375,
+        "user": "chrisraethke"
+      },
+      {
+        "comm": "/Applications/Cloudflare WARP.app/Contents/Resources/CloudflareWARP",
+        "name": "CloudflareWARP",
+        "pcpu": 0.1,
+        "pid": 728,
+        "rss_mb": 740.234375,
+        "user": "root"
+      },
+      {
+        "comm": "/Applications/iTerm.app/Contents/MacOS/iTerm2",
+        "name": "iTerm2",
+        "pcpu": 0.1,
+        "pid": 31478,
+        "rss_mb": 218.28125,
+        "user": "chrisraethke"
+      }
+    ],
+    "thermal": "Note: No thermal warning level has been recorded\nNote: No performance warning level has been recorded\nNote: No CPU power status has been recorded",
+    "timestamp": 1789983698.2145028
+  },
+  "host_policy": {
+    "path": "benchmarks/idle-policy.json",
+    "policy": {
+      "allow": [
+        "Terminal",
+        "iTerm2",
+        "Ghostty",
+        "Code",
+        "Cursor",
+        "Windsurf",
+        "Zed",
+        "pi",
+        "node",
+        "uv",
+        "python3.12"
+      ],
+      "load1_max": 3.0,
+      "notes": "allow lists terminal and editor processes that are expected while a developer runs a benchmark, plus the pi harness (pi), its node workers (node), uv, and the benchmark's Python 3.12 process; ctx is intentionally not allowed because it can contend for substantial CPU. system_prefixes identifies OS daemons and com.apple.* services that are excluded from the report.",
+      "process_cpu_percent_max": 15.0,
+      "process_rss_mb_report_min": 200,
+      "schema_version": 1,
+      "system_prefixes": [
+        "/System/",
+        "/usr/libexec/",
+        "/usr/sbin/",
+        "/sbin/",
+        "com.apple."
+      ]
+    }
+  },
+  "host_start": {
+    "gui_apps": [
+      "Finder",
+      "iTerm2",
+      "Notes"
+    ],
+    "load1": 2.60205078125,
+    "load15": 3.0224609375,
+    "load5": 2.619140625,
+    "loadavg": {
+      "1": 2.60205078125,
+      "15": 3.0224609375,
+      "5": 2.619140625
+    },
+    "lowpowermode": 0,
+    "power": {
+      "battery_percent": 98,
+      "raw": "Now drawing from 'AC Power'\n -InternalBattery-0 (id=22282339)\t98%; charging; 0:21 remaining present: true",
+      "source": "AC Power"
+    },
+    "processes": [
+      {
+        "comm": "/Applications/iTerm.app/Contents/MacOS/iTerm2",
+        "name": "iTerm2",
+        "pcpu": 4.1,
+        "pid": 31478,
+        "rss_mb": 218.546875,
+        "user": "chrisraethke"
+      },
+      {
+        "comm": "/Users/chrisraethke/.local/bin/uv",
+        "name": "uv",
+        "pcpu": 3.1,
+        "pid": 50604,
+        "rss_mb": 29.421875,
+        "user": "chrisraethke"
+      },
+      {
+        "comm": "/opt/homebrew/Cellar/python@3.12/3.12.7/Frameworks/Python.framework/Versions/3.12/Resources/Python.app/Contents/MacOS/Python",
+        "name": "Python",
+        "pcpu": 2.5,
+        "pid": 50605,
+        "rss_mb": 16.828125,
+        "user": "chrisraethke"
+      },
+      {
+        "comm": "/Applications/Cloudflare WARP.app/Contents/Resources/CloudflareWARP",
+        "name": "CloudflareWARP",
+        "pcpu": 0.0,
+        "pid": 728,
+        "rss_mb": 375.484375,
+        "user": "root"
+      }
+    ],
+    "thermal": "Note: No thermal warning level has been recorded\nNote: No performance warning level has been recorded\nNote: No CPU power status has been recorded",
+    "timestamp": 1789983626.696961
+  },
+  "idle_evaluation_end": {
+    "idle": false,
+    "violations": [
+      "ClearDisk pcpu 50.6 > 15.0 (not in allow list)"
+    ]
+  },
+  "idle_evaluation_start": {
+    "idle": true,
+    "violations": []
+  },
+  "iterations": [
+    {
+      "actual_device": "cpu",
+      "agent_constructed_ms": 23059.848667122424,
+      "first_call_stage_ms": 52.31525003910065,
+      "first_complete_ms": 23112.163917161524,
+      "import_stage_ms": 477.3453751113266,
+      "imports_done_ms": 477.3453751113266,
+      "iteration": 1,
+      "load_stage_ms": 22582.503292011097,
+      "page_cache": "cold/unknown on first iteration",
+      "ru_maxrss": 5923979264,
+      "runtime_stdout": "",
+      "second_call_stage_ms": 50.00337492674589,
+      "second_complete_ms": 23162.16729208827,
+      "wall_process_ms": 23465.828249929473
+    },
+    {
+      "actual_device": "cpu",
+      "agent_constructed_ms": 23098.75254193321,
+      "first_call_stage_ms": 52.03708307817578,
+      "first_complete_ms": 23150.789625011384,
+      "import_stage_ms": 469.9502920266241,
+      "imports_done_ms": 469.9502920266241,
+      "iteration": 2,
+      "load_stage_ms": 22628.802249906585,
+      "page_cache": "warm (after first iteration)",
+      "ru_maxrss": 5923700736,
+      "runtime_stdout": "",
+      "second_call_stage_ms": 49.86974992789328,
+      "second_complete_ms": 23200.659374939278,
+      "wall_process_ms": 23493.7166669406
+    },
+    {
+      "actual_device": "cpu",
+      "agent_constructed_ms": 23912.386167095974,
+      "first_call_stage_ms": 53.05170803330839,
+      "first_complete_ms": 23965.437875129282,
+      "import_stage_ms": 470.32712516374886,
+      "imports_done_ms": 470.32712516374886,
+      "iteration": 3,
+      "load_stage_ms": 23442.059041932225,
+      "page_cache": "warm (after first iteration)",
+      "ru_maxrss": 5923995648,
+      "runtime_stdout": "",
+      "second_call_stage_ms": 51.41008296050131,
+      "second_complete_ms": 24016.847958089784,
+      "wall_process_ms": 24317.0754162129
+    }
+  ],
+  "n": 3,
+  "page_cache_note": "The first iteration is not classified; subsequent iterations are noted as warm. The OS page cache was not purged.",
+  "profile": "multilingual",
+  "run_id": "l0-full",
+  "schema_version": 1
+}

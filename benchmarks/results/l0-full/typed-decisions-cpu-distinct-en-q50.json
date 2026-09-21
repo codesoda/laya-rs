@@ -1,0 +1,1808 @@
+{
+  "contended": true,
+  "contended_reason": "auto: Python pcpu 61.0 > 15.0 (not in allow list); Python pcpu 170.7 > 15.0 (not in allow list)",
+  "device": "cpu",
+  "diagnostics": {
+    "n_tokens": 15127,
+    "option_counts": [
+      4,
+      4,
+      2,
+      4,
+      4,
+      2,
+      2,
+      10,
+      2,
+      4,
+      2,
+      2,
+      3,
+      2,
+      5,
+      10,
+      20,
+      2,
+      4,
+      2,
+      2,
+      4,
+      2,
+      2,
+      4,
+      2,
+      2,
+      4,
+      2,
+      5,
+      4,
+      4,
+      6,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      4,
+      4,
+      2,
+      2,
+      2,
+      2,
+      5,
+      2,
+      4,
+      2,
+      5
+    ],
+    "padded_batch_shape": [
+      50,
+      360
+    ],
+    "sequence_lengths": [
+      318,
+      309,
+      299,
+      302,
+      288,
+      305,
+      303,
+      321,
+      299,
+      356,
+      296,
+      300,
+      284,
+      301,
+      307,
+      327,
+      360,
+      299,
+      297,
+      295,
+      300,
+      287,
+      302,
+      299,
+      299,
+      300,
+      300,
+      299,
+      298,
+      306,
+      299,
+      303,
+      293,
+      297,
+      302,
+      299,
+      298,
+      298,
+      297,
+      290,
+      305,
+      302,
+      298,
+      298,
+      300,
+      291,
+      300,
+      297,
+      297,
+      307
+    ],
+    "state_tokens": [
+      {
+        "full_tokens": 264,
+        "kept_tokens": 264,
+        "truncated": false
+      },
+      {
+        "full_tokens": 264,
+        "kept_tokens": 264,
+        "truncated": false
+      },
+      {
+        "full_tokens": 264,
+        "kept_tokens": 264,
+        "truncated": false
+      },
+      {
+        "full_tokens": 264,
+        "kept_tokens": 264,
+        "truncated": false
+      },
+      {
+        "full_tokens": 264,
+        "kept_tokens": 264,
+        "truncated": false
+      },
+      {
+        "full_tokens": 264,
+        "kept_tokens": 264,
+        "truncated": false
+      },
+      {
+        "full_tokens": 264,
+        "kept_tokens": 264,
+        "truncated": false
+      },
+      {
+        "full_tokens": 264,
+        "kept_tokens": 264,
+        "truncated": false
+      },
+      {
+        "full_tokens": 264,
+        "kept_tokens": 264,
+        "truncated": false
+      },
+      {
+        "full_tokens": 264,
+        "kept_tokens": 264,
+        "truncated": false
+      },
+      {
+        "full_tokens": 264,
+        "kept_tokens": 264,
+        "truncated": false
+      },
+      {
+        "full_tokens": 264,
+        "kept_tokens": 264,
+        "truncated": false
+      },
+      {
+        "full_tokens": 264,
+        "kept_tokens": 264,
+        "truncated": false
+      },
+      {
+        "full_tokens": 264,
+        "kept_tokens": 264,
+        "truncated": false
+      },
+      {
+        "full_tokens": 264,
+        "kept_tokens": 264,
+        "truncated": false
+      },
+      {
+        "full_tokens": 264,
+        "kept_tokens": 264,
+        "truncated": false
+      },
+      {
+        "full_tokens": 264,
+        "kept_tokens": 264,
+        "truncated": false
+      },
+      {
+        "full_tokens": 264,
+        "kept_tokens": 264,
+        "truncated": false
+      },
+      {
+        "full_tokens": 264,
+        "kept_tokens": 264,
+        "truncated": false
+      },
+      {
+        "full_tokens": 264,
+        "kept_tokens": 264,
+        "truncated": false
+      },
+      {
+        "full_tokens": 264,
+        "kept_tokens": 264,
+        "truncated": false
+      },
+      {
+        "full_tokens": 264,
+        "kept_tokens": 264,
+        "truncated": false
+      },
+      {
+        "full_tokens": 264,
+        "kept_tokens": 264,
+        "truncated": false
+      },
+      {
+        "full_tokens": 264,
+        "kept_tokens": 264,
+        "truncated": false
+      },
+      {
+        "full_tokens": 264,
+        "kept_tokens": 264,
+        "truncated": false
+      },
+      {
+        "full_tokens": 264,
+        "kept_tokens": 264,
+        "truncated": false
+      },
+      {
+        "full_tokens": 264,
+        "kept_tokens": 264,
+        "truncated": false
+      },
+      {
+        "full_tokens": 264,
+        "kept_tokens": 264,
+        "truncated": false
+      },
+      {
+        "full_tokens": 264,
+        "kept_tokens": 264,
+        "truncated": false
+      },
+      {
+        "full_tokens": 264,
+        "kept_tokens": 264,
+        "truncated": false
+      },
+      {
+        "full_tokens": 264,
+        "kept_tokens": 264,
+        "truncated": false
+      },
+      {
+        "full_tokens": 264,
+        "kept_tokens": 264,
+        "truncated": false
+      },
+      {
+        "full_tokens": 264,
+        "kept_tokens": 264,
+        "truncated": false
+      },
+      {
+        "full_tokens": 264,
+        "kept_tokens": 264,
+        "truncated": false
+      },
+      {
+        "full_tokens": 264,
+        "kept_tokens": 264,
+        "truncated": false
+      },
+      {
+        "full_tokens": 264,
+        "kept_tokens": 264,
+        "truncated": false
+      },
+      {
+        "full_tokens": 264,
+        "kept_tokens": 264,
+        "truncated": false
+      },
+      {
+        "full_tokens": 264,
+        "kept_tokens": 264,
+        "truncated": false
+      },
+      {
+        "full_tokens": 264,
+        "kept_tokens": 264,
+        "truncated": false
+      },
+      {
+        "full_tokens": 264,
+        "kept_tokens": 264,
+        "truncated": false
+      },
+      {
+        "full_tokens": 264,
+        "kept_tokens": 264,
+        "truncated": false
+      },
+      {
+        "full_tokens": 264,
+        "kept_tokens": 264,
+        "truncated": false
+      },
+      {
+        "full_tokens": 264,
+        "kept_tokens": 264,
+        "truncated": false
+      },
+      {
+        "full_tokens": 264,
+        "kept_tokens": 264,
+        "truncated": false
+      },
+      {
+        "full_tokens": 264,
+        "kept_tokens": 264,
+        "truncated": false
+      },
+      {
+        "full_tokens": 264,
+        "kept_tokens": 264,
+        "truncated": false
+      },
+      {
+        "full_tokens": 264,
+        "kept_tokens": 264,
+        "truncated": false
+      },
+      {
+        "full_tokens": 264,
+        "kept_tokens": 264,
+        "truncated": false
+      },
+      {
+        "full_tokens": 264,
+        "kept_tokens": 264,
+        "truncated": false
+      },
+      {
+        "full_tokens": 264,
+        "kept_tokens": 264,
+        "truncated": false
+      }
+    ],
+    "truncated": false
+  },
+  "e2e_ms": [
+    11509.200042113662,
+    11538.12695783563,
+    11499.17016690597,
+    11549.41949993372,
+    11533.8265420869,
+    11527.76295808144,
+    11535.511791007593,
+    11504.464792087674,
+    11539.358707843348,
+    11511.66716706939,
+    11524.916999973357,
+    11526.757624931633,
+    11523.459542077035,
+    11511.622125050053,
+    11532.007250003517,
+    11490.599708864465,
+    11530.074834125116,
+    11538.018374936655,
+    11559.907583054155,
+    11515.09499992244
+  ],
+  "env_fingerprint": "load1-idle|Python",
+  "fixture": "distinct-en-q50",
+  "host_after": {
+    "fingerprint": "load1-idle|Python",
+    "idle_evaluation": {
+      "idle": false,
+      "violations": [
+        "Python pcpu 170.7 > 15.0 (not in allow list)"
+      ]
+    },
+    "loadavg": {
+      "1": 2.201171875,
+      "15": 2.0419921875,
+      "5": 2.2412109375
+    },
+    "pmset_therm": "Note: No thermal warning level has been recorded\nNote: No performance warning level has been recorded\nNote: No CPU power status has been recorded",
+    "time": 1789989540.0807118,
+    "top_processes": [
+      {
+        "comm": "/opt/homebrew/Cellar/python@3.12/3.12.7/Frameworks/Python.framework/Versions/3.12/Resources/Python.app/Contents/MacOS/Python",
+        "name": "Python",
+        "pcpu": 170.7,
+        "pid": 54289,
+        "rss_mb": 4130.4375,
+        "user": "chrisraethke"
+      },
+      {
+        "comm": "/Applications/iTerm.app/Contents/MacOS/iTerm2",
+        "name": "iTerm2",
+        "pcpu": 0.8,
+        "pid": 31478,
+        "rss_mb": 222.640625,
+        "user": "chrisraethke"
+      },
+      {
+        "comm": "/Applications/Cloudflare WARP.app/Contents/Resources/CloudflareWARP",
+        "name": "CloudflareWARP",
+        "pcpu": 0.0,
+        "pid": 728,
+        "rss_mb": 289.28125,
+        "user": "root"
+      }
+    ]
+  },
+  "host_before": {
+    "fingerprint": "load1-idle|Python",
+    "idle_evaluation": {
+      "idle": false,
+      "violations": [
+        "Python pcpu 61.0 > 15.0 (not in allow list)"
+      ]
+    },
+    "loadavg": {
+      "1": 1.7314453125,
+      "15": 1.73046875,
+      "5": 1.91943359375
+    },
+    "pmset_therm": "Note: No thermal warning level has been recorded\nNote: No performance warning level has been recorded\nNote: No CPU power status has been recorded",
+    "time": 1789988722.092472,
+    "top_processes": [
+      {
+        "comm": "/opt/homebrew/Cellar/python@3.12/3.12.7/Frameworks/Python.framework/Versions/3.12/Resources/Python.app/Contents/MacOS/Python",
+        "name": "Python",
+        "pcpu": 61.0,
+        "pid": 54289,
+        "rss_mb": 2659.171875,
+        "user": "chrisraethke"
+      },
+      {
+        "comm": "/Applications/iTerm.app/Contents/MacOS/iTerm2",
+        "name": "iTerm2",
+        "pcpu": 0.7,
+        "pid": 31478,
+        "rss_mb": 222.515625,
+        "user": "chrisraethke"
+      },
+      {
+        "comm": "/Applications/Cloudflare WARP.app/Contents/Resources/CloudflareWARP",
+        "name": "CloudflareWARP",
+        "pcpu": 0.0,
+        "pid": 728,
+        "rss_mb": 302.90625,
+        "user": "root"
+      }
+    ]
+  },
+  "host_policy": {
+    "policy": {
+      "allow": [
+        "Terminal",
+        "iTerm2",
+        "Ghostty",
+        "Code",
+        "Cursor",
+        "Windsurf",
+        "Zed",
+        "pi",
+        "node",
+        "uv",
+        "python3.12"
+      ],
+      "load1_max": 3.0,
+      "notes": "allow lists terminal and editor processes that are expected while a developer runs a benchmark, plus the pi harness (pi), its node workers (node), uv, and the benchmark's Python 3.12 process; ctx is intentionally not allowed because it can contend for substantial CPU. system_prefixes identifies OS daemons and com.apple.* services that are excluded from the report.",
+      "process_cpu_percent_max": 15.0,
+      "process_rss_mb_report_min": 200,
+      "schema_version": 1,
+      "system_prefixes": [
+        "/System/",
+        "/usr/libexec/",
+        "/usr/sbin/",
+        "/sbin/",
+        "com.apple."
+      ]
+    }
+  },
+  "idle_evaluation_end": {
+    "idle": false,
+    "violations": [
+      "Python pcpu 170.7 > 15.0 (not in allow list)"
+    ]
+  },
+  "idle_evaluation_start": {
+    "idle": false,
+    "violations": [
+      "Python pcpu 61.0 > 15.0 (not in allow list)"
+    ]
+  },
+  "model_ms": [
+    11520.645250100642,
+    11498.911375179887,
+    11504.55216690898,
+    11570.58308296837,
+    11483.594374964014,
+    11517.41295796819,
+    11464.489124948159,
+    11511.212833924219,
+    11478.201917139813,
+    11494.402999989688,
+    11521.278250031173,
+    11474.462041864172,
+    11511.290750000626,
+    11480.821416946128,
+    11490.349708124995,
+    11499.325125012547,
+    11485.3094171267,
+    11506.702625192702,
+    11487.80508316122,
+    11492.08450014703
+  ],
+  "n_questions": 50,
+  "n_tokens": 15127,
+  "option_counts": [
+    4,
+    4,
+    2,
+    4,
+    4,
+    2,
+    2,
+    10,
+    2,
+    4,
+    2,
+    2,
+    3,
+    2,
+    5,
+    10,
+    20,
+    2,
+    4,
+    2,
+    2,
+    4,
+    2,
+    2,
+    4,
+    2,
+    2,
+    4,
+    2,
+    5,
+    4,
+    4,
+    6,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    4,
+    4,
+    2,
+    2,
+    2,
+    2,
+    5,
+    2,
+    4,
+    2,
+    5
+  ],
+  "padded_batch_shape": [
+    50,
+    360
+  ],
+  "preprocess_ms": [
+    18.834165995940566,
+    18.794959178194404,
+    18.83612503297627,
+    18.852457869797945,
+    18.771500093862414,
+    18.846958875656128,
+    18.76433310098946,
+    18.818417098373175,
+    18.775457981973886,
+    18.777625169605017,
+    18.754499964416027,
+    18.880584044381976,
+    18.74958397820592,
+    18.778458004817367,
+    18.759584054350853,
+    18.730083014816046,
+    18.762541003525257,
+    18.833542009815574,
+    18.784417072311044,
+    18.70754105038941
+  ],
+  "profile": "typed-decisions",
+  "reps": 20,
+  "result": {
+    "answers": {
+      "apology_needed": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.7541,
+        "noul": 0.2459,
+        "type": "noul"
+      },
+      "asks_eta": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.5483,
+        "noul": 0.4517,
+        "type": "noul"
+      },
+      "auto_reply_ok": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.7744,
+        "noul": 0.2256,
+        "type": "noul"
+      },
+      "bug_report": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.5789,
+        "noul": 0.5789,
+        "type": "noul"
+      },
+      "channel_email": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.634,
+        "noul": 0.634,
+        "type": "noul"
+      },
+      "charge_amount": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "choice": "$49.00",
+        "confidence": 0.1255,
+        "probabilities": {
+          "$19.00": 0.119,
+          "$49.00": 0.4969,
+          "$99.00": 0.2567,
+          "not stated": 0.1273
+        },
+        "type": "choice"
+      },
+      "churn_risk": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.1628,
+        "legend": {
+          "0": "unlikely",
+          "1": "possible",
+          "2": "likely",
+          "3": "very likely"
+        },
+        "probabilities": {
+          "0": 0.0294,
+          "1": 0.2867,
+          "2": 0.2331,
+          "3": 0.4507
+        },
+        "score": 2.1051,
+        "type": "score"
+      },
+      "country_region": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "choice": "North America",
+        "confidence": 0.2941,
+        "probabilities": {
+          "Africa": 0.0337,
+          "Asia": 0.0422,
+          "Europe": 0.0783,
+          "North America": 0.6027,
+          "Oceania": 0.1226,
+          "South America": 0.1206
+        },
+        "type": "choice"
+      },
+      "credit_recommended": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.1027,
+        "legend": {
+          "0": "0",
+          "1": "10",
+          "2": "25",
+          "3": "49",
+          "4": "100"
+        },
+        "probabilities": {
+          "0": 0.0885,
+          "1": 0.1065,
+          "2": 0.1326,
+          "3": 0.3932,
+          "4": 0.2793
+        },
+        "score": 2.6684,
+        "type": "score"
+      },
+      "data_loss": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.5066,
+        "noul": 0.5066,
+        "type": "noul"
+      },
+      "department": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "choice": "billing",
+        "confidence": 0.092,
+        "probabilities": {
+          "billing": 0.4645,
+          "engineering": 0.2497,
+          "sales": 0.1424,
+          "success": 0.1434
+        },
+        "type": "choice"
+      },
+      "detractor": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.5574,
+        "noul": 0.5574,
+        "type": "noul"
+      },
+      "duplicate_charge": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.6679,
+        "noul": 0.6679,
+        "type": "noul"
+      },
+      "escalate": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.604,
+        "noul": 0.604,
+        "type": "noul"
+      },
+      "explicit_deadline": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.5618,
+        "noul": 0.4382,
+        "type": "noul"
+      },
+      "export_bug_severity": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.3078,
+        "legend": {
+          "0": "cosmetic",
+          "1": "minor",
+          "2": "major",
+          "3": "blocking"
+        },
+        "probabilities": {
+          "0": 0.0309,
+          "1": 0.0446,
+          "2": 0.4527,
+          "3": 0.4718
+        },
+        "score": 2.3652,
+        "type": "score"
+      },
+      "greeting_present": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.8407,
+        "noul": 0.1593,
+        "type": "noul"
+      },
+      "issues_count": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "choice": "three",
+        "confidence": 0.2585,
+        "probabilities": {
+          "four or more": 0.2323,
+          "one": 0.0586,
+          "three": 0.6143,
+          "two": 0.0948
+        },
+        "type": "choice"
+      },
+      "language": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "choice": "en",
+        "confidence": 0.215,
+        "probabilities": {
+          "ar": 0.0445,
+          "de": 0.0598,
+          "en": 0.488,
+          "es": 0.0621,
+          "fr": 0.0581,
+          "hi": 0.0579,
+          "ja": 0.0525,
+          "ko": 0.0763,
+          "pt": 0.0652,
+          "zh": 0.0355
+        },
+        "type": "choice"
+      },
+      "legal_risk": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.1748,
+        "legend": {
+          "0": "none",
+          "1": "low",
+          "2": "medium",
+          "3": "high"
+        },
+        "probabilities": {
+          "0": 0.0648,
+          "1": 0.1416,
+          "2": 0.2663,
+          "3": 0.5273
+        },
+        "score": 2.2561,
+        "type": "score"
+      },
+      "mentions_card": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.5331,
+        "noul": 0.5331,
+        "type": "noul"
+      },
+      "mentions_invoice": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.5034,
+        "noul": 0.4966,
+        "type": "noul"
+      },
+      "month_of_charge": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "choice": "May",
+        "confidence": 0.3302,
+        "probabilities": {
+          "April": 0.0759,
+          "June": 0.0899,
+          "March": 0.0548,
+          "May": 0.6721,
+          "not stated": 0.1073
+        },
+        "type": "choice"
+      },
+      "needs_human": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.5001,
+        "noul": 0.5001,
+        "type": "noul"
+      },
+      "next_action": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "choice": "refund",
+        "confidence": 0.1888,
+        "probabilities": {
+          "apology_and_credit": 0.0835,
+          "close": 0.0956,
+          "escalate_engineering": 0.2862,
+          "refund": 0.5347
+        },
+        "type": "choice"
+      },
+      "payment_retry_failed": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.7388,
+        "noul": 0.7388,
+        "type": "noul"
+      },
+      "plan_tier": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "choice": "Pro",
+        "confidence": 0.3402,
+        "probabilities": {
+          "Enterprise": 0.1488,
+          "Free": 0.06,
+          "Pro": 0.7028,
+          "Starter": 0.0884
+        },
+        "type": "choice"
+      },
+      "polite": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.7274,
+        "noul": 0.2726,
+        "type": "noul"
+      },
+      "primary_issue": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "choice": "duplicate_charge",
+        "confidence": 0.046,
+        "probabilities": {
+          "cancellation": 0.2474,
+          "duplicate_charge": 0.3716,
+          "export_bug": 0.2555,
+          "no_reply": 0.1255
+        },
+        "type": "choice"
+      },
+      "prior_ticket_open": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.5481,
+        "noul": 0.5481,
+        "type": "noul"
+      },
+      "priority": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.0611,
+        "legend": {
+          "0": "P4",
+          "1": "P3",
+          "2": "P2",
+          "3": "P1",
+          "4": "P0"
+        },
+        "probabilities": {
+          "0": 0.1395,
+          "1": 0.2446,
+          "2": 0.3516,
+          "3": 0.1692,
+          "4": 0.0951
+        },
+        "score": 1.8358,
+        "type": "score"
+      },
+      "r_amount_mentioned": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.5578,
+        "noul": 0.4422,
+        "type": "noul"
+      },
+      "r_category": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "choice": "billing",
+        "confidence": 0.3611,
+        "probabilities": {
+          "billing": 0.5044,
+          "cancellation": 0.2511,
+          "damage": 0.0244,
+          "exchange": 0.0189,
+          "missing": 0.0108,
+          "other": 0.0129,
+          "refund": 0.0883,
+          "shipping_delay": 0.0056,
+          "warranty": 0.0374,
+          "wrong_item": 0.0462
+        },
+        "type": "choice"
+      },
+      "r_damaged": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.5327,
+        "noul": 0.5327,
+        "type": "noul"
+      },
+      "r_intent20": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "choice": "invoice_request",
+        "confidence": 0.8981,
+        "probabilities": {
+          "account_access": 0.0,
+          "cancel_order": 0.0,
+          "change_address": 0.0,
+          "complaint": 0.0,
+          "damaged_item": 0.0,
+          "delivery_delay": 0.0,
+          "exchange_item": 0.0,
+          "invoice_request": 0.909,
+          "missing_item": 0.0,
+          "other": 0.0,
+          "payment_issue": 0.0909,
+          "praise": 0.0,
+          "pricing_question": 0.0,
+          "product_question": 0.0,
+          "request_refund": 0.0,
+          "request_replacement": 0.0,
+          "return_item": 0.0,
+          "speak_to_human": 0.0,
+          "track_order": 0.0,
+          "warranty_claim": 0.0
+        },
+        "type": "choice"
+      },
+      "r_missing_item": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.5285,
+        "noul": 0.5285,
+        "type": "noul"
+      },
+      "r_outcome": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "choice": "replacement",
+        "confidence": 0.0729,
+        "probabilities": {
+          "either": 0.2139,
+          "partial refund": 0.2607,
+          "replacement": 0.5254
+        },
+        "type": "choice"
+      },
+      "r_promise_broken": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.616,
+        "noul": 0.616,
+        "type": "noul"
+      },
+      "r_short": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.5682,
+        "noul": 0.4318,
+        "type": "noul"
+      },
+      "r_sla_days": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.0281,
+        "legend": {
+          "0": "1",
+          "1": "2",
+          "2": "3",
+          "3": "5",
+          "4": "10"
+        },
+        "probabilities": {
+          "0": 0.0986,
+          "1": 0.2198,
+          "2": 0.2395,
+          "3": 0.1825,
+          "4": 0.2596
+        },
+        "score": 2.2847,
+        "type": "score"
+      },
+      "r_tone": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.1432,
+        "legend": {
+          "0": "calm",
+          "1": "annoyed",
+          "2": "angry",
+          "3": "furious"
+        },
+        "probabilities": {
+          "0": 0.0328,
+          "1": 0.249,
+          "2": 0.4055,
+          "3": 0.3127
+        },
+        "score": 1.9981,
+        "type": "score"
+      },
+      "refund_requested": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.5236,
+        "noul": 0.5236,
+        "type": "noul"
+      },
+      "repeat_issue": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.5259,
+        "noul": 0.5259,
+        "type": "noul"
+      },
+      "response_sla_hours": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.0789,
+        "legend": {
+          "0": "1",
+          "1": "4",
+          "2": "24",
+          "3": "72"
+        },
+        "probabilities": {
+          "0": 0.1104,
+          "1": 0.2066,
+          "2": 0.248,
+          "3": 0.4351
+        },
+        "score": 2.0078,
+        "type": "score"
+      },
+      "sentiment": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "choice": "angry",
+        "confidence": 0.2264,
+        "probabilities": {
+          "angry": 0.5155,
+          "frustrated": 0.3483,
+          "neutral": 0.0809,
+          "positive": 0.0553
+        },
+        "type": "choice"
+      },
+      "signature_present": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.6979,
+        "noul": 0.3021,
+        "type": "noul"
+      },
+      "tenure_long": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.5957,
+        "noul": 0.4043,
+        "type": "noul"
+      },
+      "threatens_cancel": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.6553,
+        "noul": 0.6553,
+        "type": "noul"
+      },
+      "urgency": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.2444,
+        "legend": {
+          "0": "can wait a week",
+          "1": "should be handled within a few days",
+          "2": "same day",
+          "3": "immediate escalation"
+        },
+        "probabilities": {
+          "0": 0.0469,
+          "1": 0.1346,
+          "2": 0.2139,
+          "3": 0.6046
+        },
+        "score": 2.3762,
+        "type": "score"
+      },
+      "workspace_size": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "choice": "large",
+        "confidence": 0.1859,
+        "probabilities": {
+          "large": 0.565,
+          "medium": 0.2279,
+          "small": 0.0957,
+          "unknown": 0.1113
+        },
+        "type": "choice"
+      }
+    },
+    "model": "laya-rl-agent",
+    "usage": {
+      "input_tokens": 15127,
+      "output_tokens": 0
+    }
+  },
+  "results_identical": true,
+  "ru_maxrss": 4956012544,
+  "schema_version": 1,
+  "sequence_lengths": [
+    318,
+    309,
+    299,
+    302,
+    288,
+    305,
+    303,
+    321,
+    299,
+    356,
+    296,
+    300,
+    284,
+    301,
+    307,
+    327,
+    360,
+    299,
+    297,
+    295,
+    300,
+    287,
+    302,
+    299,
+    299,
+    300,
+    300,
+    299,
+    298,
+    306,
+    299,
+    303,
+    293,
+    297,
+    302,
+    299,
+    298,
+    298,
+    297,
+    290,
+    305,
+    302,
+    298,
+    298,
+    300,
+    291,
+    300,
+    297,
+    297,
+    307
+  ],
+  "stats": {
+    "e2e": {
+      "max": 11559.907583054155,
+      "max_ms": 11559.907583054155,
+      "mean": 11525.048383395188,
+      "mean_ms": 11525.048383395188,
+      "min": 11490.599708864465,
+      "min_ms": 11490.599708864465,
+      "ms_per_question": 230.54520583013073,
+      "n": 20,
+      "p50": 11527.260291506536,
+      "p50_ms": 11527.260291506536,
+      "p95": 11549.943904089741,
+      "p95_ms": 11549.943904089741,
+      "p99": 11557.914847261272,
+      "p99_ms": 11557.914847261272,
+      "qps": 0.08675088223147139,
+      "questions_per_sec": 4.337544111573569,
+      "requests_per_sec": 0.08675088223147139,
+      "std": 16.756895630036468,
+      "std_ms": 16.756895630036468
+    },
+    "model": {
+      "max": 11570.58308296837,
+      "max_ms": 11570.58308296837,
+      "mean": 11499.671750084963,
+      "mean_ms": 11499.671750084963,
+      "min": 11464.489124948159,
+      "min_ms": 11464.489124948159,
+      "ms_per_question": 229.93314375169575,
+      "n": 20,
+      "p50": 11496.657187584788,
+      "p50_ms": 11496.657187584788,
+      "p95": 11523.743491678033,
+      "p95_ms": 11523.743491678033,
+      "p99": 11561.215164710302,
+      "p99_ms": 11561.215164710302,
+      "qps": 0.08698180555300002,
+      "questions_per_sec": 4.349090277650001,
+      "requests_per_sec": 0.08698180555300002,
+      "std": 22.427084209716718,
+      "std_ms": 22.427084209716718
+    },
+    "preprocess": {
+      "max": 18.880584044381976,
+      "max_ms": 18.880584044381976,
+      "mean": 18.790641729719937,
+      "mean_ms": 18.790641729719937,
+      "min": 18.70754105038941,
+      "min_ms": 18.70754105038941,
+      "ms_per_question": 0.37556083174422383,
+      "n": 20,
+      "p50": 18.77804158721119,
+      "p50_ms": 18.77804158721119,
+      "p95": 18.853864178527147,
+      "p95_ms": 18.853864178527147,
+      "p99": 18.87524007121101,
+      "p99_ms": 18.87524007121101,
+      "qps": 53.253689707506624,
+      "questions_per_sec": 2662.6844853753314,
+      "requests_per_sec": 53.253689707506624,
+      "std": 0.04395514982954347,
+      "std_ms": 0.04395514982954347
+    },
+    "transfer": {
+      "max": 0.0027921050786972046,
+      "max_ms": 0.0027921050786972046,
+      "mean": 0.0024187727831304073,
+      "mean_ms": 0.0024187727831304073,
+      "min": 0.0020419247448444366,
+      "min_ms": 0.0020419247448444366,
+      "ms_per_question": 4.833098500967026e-05,
+      "n": 20,
+      "p50": 0.002416549250483513,
+      "p50_ms": 0.002416549250483513,
+      "p95": 0.0027131405659019947,
+      "p95_ms": 0.0027131405659019947,
+      "p99": 0.0027763121761381626,
+      "p99_ms": 0.0027763121761381626,
+      "qps": 413813.2089796705,
+      "questions_per_sec": 20690660.448983524,
+      "requests_per_sec": 413813.2089796705,
+      "std": 0.00020655837262697086,
+      "std_ms": 0.00020655837262697086
+    }
+  },
+  "timing": {
+    "e2e": {
+      "contended_reason": "auto: Python pcpu 61.0 > 15.0 (not in allow list); Python pcpu 170.7 > 15.0 (not in allow list)",
+      "sample_contended": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "sample_timestamps": [
+        1789989286.147229,
+        1789989297.656513,
+        1789989309.1947231,
+        1789989320.6939762,
+        1789989332.243479,
+        1789989343.777389,
+        1789989355.3052359,
+        1789989366.840831,
+        1789989378.34538,
+        1789989389.8848221,
+        1789989401.3965719,
+        1789989412.9215732,
+        1789989424.4484138,
+        1789989435.971957,
+        1789989447.4836621,
+        1789989459.0157518,
+        1789989470.5064378,
+        1789989482.036597,
+        1789989493.574698,
+        1789989505.134689
+      ],
+      "samples_ms": [
+        11509.200042113662,
+        11538.12695783563,
+        11499.17016690597,
+        11549.41949993372,
+        11533.8265420869,
+        11527.76295808144,
+        11535.511791007593,
+        11504.464792087674,
+        11539.358707843348,
+        11511.66716706939,
+        11524.916999973357,
+        11526.757624931633,
+        11523.459542077035,
+        11511.622125050053,
+        11532.007250003517,
+        11490.599708864465,
+        11530.074834125116,
+        11538.018374936655,
+        11559.907583054155,
+        11515.09499992244
+      ],
+      "stats": {
+        "max": 11559.907583054155,
+        "max_ms": 11559.907583054155,
+        "mean": 11525.048383395188,
+        "mean_ms": 11525.048383395188,
+        "min": 11490.599708864465,
+        "min_ms": 11490.599708864465,
+        "ms_per_question": 230.54520583013073,
+        "n": 20,
+        "p50": 11527.260291506536,
+        "p50_ms": 11527.260291506536,
+        "p95": 11549.943904089741,
+        "p95_ms": 11549.943904089741,
+        "p99": 11557.914847261272,
+        "p99_ms": 11557.914847261272,
+        "qps": 0.08675088223147139,
+        "questions_per_sec": 4.337544111573569,
+        "requests_per_sec": 0.08675088223147139,
+        "std": 16.756895630036468,
+        "std_ms": 16.756895630036468
+      },
+      "warmup_ms": [
+        11537.516499869525,
+        11533.789625158533,
+        11544.853874947876
+      ]
+    },
+    "model": {
+      "contended_reason": "auto: Python pcpu 61.0 > 15.0 (not in allow list); Python pcpu 170.7 > 15.0 (not in allow list)",
+      "sample_contended": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "sample_timestamps": [
+        1789988757.095962,
+        1789988768.616686,
+        1789988780.115675,
+        1789988791.6203048,
+        1789988803.190967,
+        1789988814.674639,
+        1789988826.19213,
+        1789988837.656697,
+        1789988849.167988,
+        1789988860.646267,
+        1789988872.140748,
+        1789988883.6621041,
+        1789988895.1366432,
+        1789988906.648012,
+        1789988918.128912,
+        1789988929.61934,
+        1789988941.118743,
+        1789988952.604131,
+        1789988964.110912,
+        1789988975.598795
+      ],
+      "samples_ms": [
+        11520.645250100642,
+        11498.911375179887,
+        11504.55216690898,
+        11570.58308296837,
+        11483.594374964014,
+        11517.41295796819,
+        11464.489124948159,
+        11511.212833924219,
+        11478.201917139813,
+        11494.402999989688,
+        11521.278250031173,
+        11474.462041864172,
+        11511.290750000626,
+        11480.821416946128,
+        11490.349708124995,
+        11499.325125012547,
+        11485.3094171267,
+        11506.702625192702,
+        11487.80508316122,
+        11492.08450014703
+      ],
+      "stats": {
+        "max": 11570.58308296837,
+        "max_ms": 11570.58308296837,
+        "mean": 11499.671750084963,
+        "mean_ms": 11499.671750084963,
+        "min": 11464.489124948159,
+        "min_ms": 11464.489124948159,
+        "ms_per_question": 229.93314375169575,
+        "n": 20,
+        "p50": 11496.657187584788,
+        "p50_ms": 11496.657187584788,
+        "p95": 11523.743491678033,
+        "p95_ms": 11523.743491678033,
+        "p99": 11561.215164710302,
+        "p99_ms": 11561.215164710302,
+        "qps": 0.08698180555300002,
+        "questions_per_sec": 4.349090277650001,
+        "requests_per_sec": 0.08698180555300002,
+        "std": 22.427084209716718,
+        "std_ms": 22.427084209716718
+      },
+      "warmup_ms": [
+        11583.752624923363,
+        11462.435791036114,
+        11503.059790935367
+      ]
+    },
+    "preprocess": {
+      "contended_reason": "auto: Python pcpu 61.0 > 15.0 (not in allow list); Python pcpu 170.7 > 15.0 (not in allow list)",
+      "sample_contended": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "sample_timestamps": [
+        1789988722.170599,
+        1789988722.189436,
+        1789988722.208235,
+        1789988722.2270741,
+        1789988722.245929,
+        1789988722.264704,
+        1789988722.2835572,
+        1789988722.302324,
+        1789988722.321145,
+        1789988722.3399239,
+        1789988722.358704,
+        1789988722.377462,
+        1789988722.3963451,
+        1789988722.4150982,
+        1789988722.4338791,
+        1789988722.452642,
+        1789988722.471375,
+        1789988722.49014,
+        1789988722.508977,
+        1789988722.527764
+      ],
+      "samples_ms": [
+        18.834165995940566,
+        18.794959178194404,
+        18.83612503297627,
+        18.852457869797945,
+        18.771500093862414,
+        18.846958875656128,
+        18.76433310098946,
+        18.818417098373175,
+        18.775457981973886,
+        18.777625169605017,
+        18.754499964416027,
+        18.880584044381976,
+        18.74958397820592,
+        18.778458004817367,
+        18.759584054350853,
+        18.730083014816046,
+        18.762541003525257,
+        18.833542009815574,
+        18.784417072311044,
+        18.70754105038941
+      ],
+      "stats": {
+        "max": 18.880584044381976,
+        "max_ms": 18.880584044381976,
+        "mean": 18.790641729719937,
+        "mean_ms": 18.790641729719937,
+        "min": 18.70754105038941,
+        "min_ms": 18.70754105038941,
+        "ms_per_question": 0.37556083174422383,
+        "n": 20,
+        "p50": 18.77804158721119,
+        "p50_ms": 18.77804158721119,
+        "p95": 18.853864178527147,
+        "p95_ms": 18.853864178527147,
+        "p99": 18.87524007121101,
+        "p99_ms": 18.87524007121101,
+        "qps": 53.253689707506624,
+        "questions_per_sec": 2662.6844853753314,
+        "requests_per_sec": 53.253689707506624,
+        "std": 0.04395514982954347,
+        "std_ms": 0.04395514982954347
+      },
+      "warmup_ms": [
+        19.08687478862703,
+        18.78499984741211,
+        18.807291984558105
+      ]
+    },
+    "transfer": {
+      "contended_reason": "auto: Python pcpu 61.0 > 15.0 (not in allow list); Python pcpu 170.7 > 15.0 (not in allow list)",
+      "included_in_model_ms": false,
+      "sample_contended": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "sample_timestamps": [
+        1789989021.587082,
+        1789989033.106476,
+        1789989044.58563,
+        1789989056.077631,
+        1789989067.603907,
+        1789989079.066692,
+        1789989090.591313,
+        1789989102.063062,
+        1789989113.570014,
+        1789989125.05004,
+        1789989136.572035,
+        1789989148.042892,
+        1789989159.5793338,
+        1789989171.0544488,
+        1789989182.55258,
+        1789989194.0870988,
+        1789989205.555663,
+        1789989217.070789,
+        1789989228.543191,
+        1789989240.060925
+      ],
+      "samples_ms": [
+        0.00262516550719738,
+        0.002334127202630043,
+        0.002624932676553726,
+        0.0025830231606960297,
+        0.0027921050786972046,
+        0.002416083589196205,
+        0.0021669548004865646,
+        0.0024579931050539017,
+        0.0020419247448444366,
+        0.002583954483270645,
+        0.0025418121367692947,
+        0.002708984538912773,
+        0.0022079329937696457,
+        0.0025830231606960297,
+        0.00237487256526947,
+        0.0022079329937696457,
+        0.0020829029381275177,
+        0.00237487256526947,
+        0.0024170149117708206,
+        0.0022498425096273422
+      ],
+      "stats": {
+        "max": 0.0027921050786972046,
+        "max_ms": 0.0027921050786972046,
+        "mean": 0.0024187727831304073,
+        "mean_ms": 0.0024187727831304073,
+        "min": 0.0020419247448444366,
+        "min_ms": 0.0020419247448444366,
+        "ms_per_question": 4.833098500967026e-05,
+        "n": 20,
+        "p50": 0.002416549250483513,
+        "p50_ms": 0.002416549250483513,
+        "p95": 0.0027131405659019947,
+        "p95_ms": 0.0027131405659019947,
+        "p99": 0.0027763121761381626,
+        "p99_ms": 0.0027763121761381626,
+        "qps": 413813.2089796705,
+        "questions_per_sec": 20690660.448983524,
+        "requests_per_sec": 413813.2089796705,
+        "std": 0.00020655837262697086,
+        "std_ms": 0.00020655837262697086
+      },
+      "warmup_ms": [
+        0.0020421575754880905,
+        0.0017909333109855652,
+        0.002500135451555252
+      ]
+    }
+  },
+  "transfer_ms": [
+    0.00262516550719738,
+    0.002334127202630043,
+    0.002624932676553726,
+    0.0025830231606960297,
+    0.0027921050786972046,
+    0.002416083589196205,
+    0.0021669548004865646,
+    0.0024579931050539017,
+    0.0020419247448444366,
+    0.002583954483270645,
+    0.0025418121367692947,
+    0.002708984538912773,
+    0.0022079329937696457,
+    0.0025830231606960297,
+    0.00237487256526947,
+    0.0022079329937696457,
+    0.0020829029381275177,
+    0.00237487256526947,
+    0.0024170149117708206,
+    0.0022498425096273422
+  ],
+  "truncated": false,
+  "wall_clock_seconds": 817.9836700840387,
+  "warmup": 3
+}

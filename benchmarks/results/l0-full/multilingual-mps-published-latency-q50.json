@@ -1,0 +1,1709 @@
+{
+  "contended": true,
+  "contended_reason": "auto: Python pcpu 17.9 > 15.0 (not in allow list)",
+  "device": "mps",
+  "diagnostics": {
+    "n_tokens": 9350,
+    "option_counts": [
+      3,
+      2,
+      3,
+      2,
+      3,
+      2,
+      3,
+      2,
+      3,
+      2,
+      3,
+      2,
+      3,
+      2,
+      3,
+      2,
+      3,
+      2,
+      3,
+      2,
+      3,
+      2,
+      3,
+      2,
+      3,
+      2,
+      3,
+      2,
+      3,
+      2,
+      3,
+      2,
+      3,
+      2,
+      3,
+      2,
+      3,
+      2,
+      3,
+      2,
+      3,
+      2,
+      3,
+      2,
+      3,
+      2,
+      3,
+      2,
+      3,
+      2
+    ],
+    "padded_batch_shape": [
+      50,
+      193
+    ],
+    "sequence_lengths": [
+      181,
+      193,
+      181,
+      193,
+      181,
+      193,
+      181,
+      193,
+      181,
+      193,
+      181,
+      193,
+      181,
+      193,
+      181,
+      193,
+      181,
+      193,
+      181,
+      193,
+      181,
+      193,
+      181,
+      193,
+      181,
+      193,
+      181,
+      193,
+      181,
+      193,
+      181,
+      193,
+      181,
+      193,
+      181,
+      193,
+      181,
+      193,
+      181,
+      193,
+      181,
+      193,
+      181,
+      193,
+      181,
+      193,
+      181,
+      193,
+      181,
+      193
+    ],
+    "state_tokens": [
+      {
+        "full_tokens": 154,
+        "kept_tokens": 154,
+        "truncated": false
+      },
+      {
+        "full_tokens": 154,
+        "kept_tokens": 154,
+        "truncated": false
+      },
+      {
+        "full_tokens": 154,
+        "kept_tokens": 154,
+        "truncated": false
+      },
+      {
+        "full_tokens": 154,
+        "kept_tokens": 154,
+        "truncated": false
+      },
+      {
+        "full_tokens": 154,
+        "kept_tokens": 154,
+        "truncated": false
+      },
+      {
+        "full_tokens": 154,
+        "kept_tokens": 154,
+        "truncated": false
+      },
+      {
+        "full_tokens": 154,
+        "kept_tokens": 154,
+        "truncated": false
+      },
+      {
+        "full_tokens": 154,
+        "kept_tokens": 154,
+        "truncated": false
+      },
+      {
+        "full_tokens": 154,
+        "kept_tokens": 154,
+        "truncated": false
+      },
+      {
+        "full_tokens": 154,
+        "kept_tokens": 154,
+        "truncated": false
+      },
+      {
+        "full_tokens": 154,
+        "kept_tokens": 154,
+        "truncated": false
+      },
+      {
+        "full_tokens": 154,
+        "kept_tokens": 154,
+        "truncated": false
+      },
+      {
+        "full_tokens": 154,
+        "kept_tokens": 154,
+        "truncated": false
+      },
+      {
+        "full_tokens": 154,
+        "kept_tokens": 154,
+        "truncated": false
+      },
+      {
+        "full_tokens": 154,
+        "kept_tokens": 154,
+        "truncated": false
+      },
+      {
+        "full_tokens": 154,
+        "kept_tokens": 154,
+        "truncated": false
+      },
+      {
+        "full_tokens": 154,
+        "kept_tokens": 154,
+        "truncated": false
+      },
+      {
+        "full_tokens": 154,
+        "kept_tokens": 154,
+        "truncated": false
+      },
+      {
+        "full_tokens": 154,
+        "kept_tokens": 154,
+        "truncated": false
+      },
+      {
+        "full_tokens": 154,
+        "kept_tokens": 154,
+        "truncated": false
+      },
+      {
+        "full_tokens": 154,
+        "kept_tokens": 154,
+        "truncated": false
+      },
+      {
+        "full_tokens": 154,
+        "kept_tokens": 154,
+        "truncated": false
+      },
+      {
+        "full_tokens": 154,
+        "kept_tokens": 154,
+        "truncated": false
+      },
+      {
+        "full_tokens": 154,
+        "kept_tokens": 154,
+        "truncated": false
+      },
+      {
+        "full_tokens": 154,
+        "kept_tokens": 154,
+        "truncated": false
+      },
+      {
+        "full_tokens": 154,
+        "kept_tokens": 154,
+        "truncated": false
+      },
+      {
+        "full_tokens": 154,
+        "kept_tokens": 154,
+        "truncated": false
+      },
+      {
+        "full_tokens": 154,
+        "kept_tokens": 154,
+        "truncated": false
+      },
+      {
+        "full_tokens": 154,
+        "kept_tokens": 154,
+        "truncated": false
+      },
+      {
+        "full_tokens": 154,
+        "kept_tokens": 154,
+        "truncated": false
+      },
+      {
+        "full_tokens": 154,
+        "kept_tokens": 154,
+        "truncated": false
+      },
+      {
+        "full_tokens": 154,
+        "kept_tokens": 154,
+        "truncated": false
+      },
+      {
+        "full_tokens": 154,
+        "kept_tokens": 154,
+        "truncated": false
+      },
+      {
+        "full_tokens": 154,
+        "kept_tokens": 154,
+        "truncated": false
+      },
+      {
+        "full_tokens": 154,
+        "kept_tokens": 154,
+        "truncated": false
+      },
+      {
+        "full_tokens": 154,
+        "kept_tokens": 154,
+        "truncated": false
+      },
+      {
+        "full_tokens": 154,
+        "kept_tokens": 154,
+        "truncated": false
+      },
+      {
+        "full_tokens": 154,
+        "kept_tokens": 154,
+        "truncated": false
+      },
+      {
+        "full_tokens": 154,
+        "kept_tokens": 154,
+        "truncated": false
+      },
+      {
+        "full_tokens": 154,
+        "kept_tokens": 154,
+        "truncated": false
+      },
+      {
+        "full_tokens": 154,
+        "kept_tokens": 154,
+        "truncated": false
+      },
+      {
+        "full_tokens": 154,
+        "kept_tokens": 154,
+        "truncated": false
+      },
+      {
+        "full_tokens": 154,
+        "kept_tokens": 154,
+        "truncated": false
+      },
+      {
+        "full_tokens": 154,
+        "kept_tokens": 154,
+        "truncated": false
+      },
+      {
+        "full_tokens": 154,
+        "kept_tokens": 154,
+        "truncated": false
+      },
+      {
+        "full_tokens": 154,
+        "kept_tokens": 154,
+        "truncated": false
+      },
+      {
+        "full_tokens": 154,
+        "kept_tokens": 154,
+        "truncated": false
+      },
+      {
+        "full_tokens": 154,
+        "kept_tokens": 154,
+        "truncated": false
+      },
+      {
+        "full_tokens": 154,
+        "kept_tokens": 154,
+        "truncated": false
+      },
+      {
+        "full_tokens": 154,
+        "kept_tokens": 154,
+        "truncated": false
+      }
+    ],
+    "truncated": false
+  },
+  "e2e_ms": [
+    942.7675420884043,
+    943.1972908787429,
+    942.6137921400368,
+    943.1221249978989,
+    943.5974590014666,
+    943.0874579120427,
+    943.1128329597414,
+    943.0895410478115,
+    943.7045420054346,
+    943.5537499375641,
+    943.0770829785615,
+    942.8584999404848,
+    942.6397499628365,
+    943.0001250002533,
+    942.8466248791665,
+    942.5251248758286,
+    943.0665420368314,
+    943.4489170089364,
+    943.0932500399649,
+    942.4849580973387
+  ],
+  "env_fingerprint": "load1-idle|Python",
+  "fixture": "published-latency-q50",
+  "host_after": {
+    "fingerprint": "load1-idle|none",
+    "idle_evaluation": {
+      "idle": true,
+      "violations": []
+    },
+    "loadavg": {
+      "1": 0.41845703125,
+      "15": 7.01513671875,
+      "5": 3.8193359375
+    },
+    "pmset_therm": "Note: No thermal warning level has been recorded\nNote: No performance warning level has been recorded\nNote: No CPU power status has been recorded",
+    "time": 1789982003.087626,
+    "top_processes": [
+      {
+        "comm": "/opt/homebrew/Cellar/python@3.12/3.12.7/Frameworks/Python.framework/Versions/3.12/Resources/Python.app/Contents/MacOS/Python",
+        "name": "Python",
+        "pcpu": 0.2,
+        "pid": 48840,
+        "rss_mb": 1148.28125,
+        "user": "chrisraethke"
+      },
+      {
+        "comm": "/Applications/Cloudflare WARP.app/Contents/Resources/CloudflareWARP",
+        "name": "CloudflareWARP",
+        "pcpu": 0.0,
+        "pid": 728,
+        "rss_mb": 300.96875,
+        "user": "root"
+      },
+      {
+        "comm": "/Applications/iTerm.app/Contents/MacOS/iTerm2",
+        "name": "iTerm2",
+        "pcpu": 0.0,
+        "pid": 31478,
+        "rss_mb": 221.984375,
+        "user": "chrisraethke"
+      }
+    ]
+  },
+  "host_before": {
+    "fingerprint": "load1-idle|Python",
+    "idle_evaluation": {
+      "idle": false,
+      "violations": [
+        "Python pcpu 17.9 > 15.0 (not in allow list)"
+      ]
+    },
+    "loadavg": {
+      "1": 1.12353515625,
+      "15": 7.5693359375,
+      "5": 4.73388671875
+    },
+    "pmset_therm": "Note: No thermal warning level has been recorded\nNote: No performance warning level has been recorded\nNote: No CPU power status has been recorded",
+    "time": 1789981936.0141308,
+    "top_processes": [
+      {
+        "comm": "/opt/homebrew/Cellar/python@3.12/3.12.7/Frameworks/Python.framework/Versions/3.12/Resources/Python.app/Contents/MacOS/Python",
+        "name": "Python",
+        "pcpu": 17.9,
+        "pid": 48840,
+        "rss_mb": 1145.484375,
+        "user": "chrisraethke"
+      },
+      {
+        "comm": "/Applications/iTerm.app/Contents/MacOS/iTerm2",
+        "name": "iTerm2",
+        "pcpu": 3.0,
+        "pid": 31478,
+        "rss_mb": 221.984375,
+        "user": "chrisraethke"
+      },
+      {
+        "comm": "/Applications/Cloudflare WARP.app/Contents/Resources/CloudflareWARP",
+        "name": "CloudflareWARP",
+        "pcpu": 0.1,
+        "pid": 728,
+        "rss_mb": 300.90625,
+        "user": "root"
+      }
+    ]
+  },
+  "host_policy": {
+    "policy": {
+      "allow": [
+        "Terminal",
+        "iTerm2",
+        "Ghostty",
+        "Code",
+        "Cursor",
+        "Windsurf",
+        "Zed",
+        "pi",
+        "node",
+        "uv",
+        "python3.12"
+      ],
+      "load1_max": 3.0,
+      "notes": "allow lists terminal and editor processes that are expected while a developer runs a benchmark, plus the pi harness (pi), its node workers (node), uv, and the benchmark's Python 3.12 process; ctx is intentionally not allowed because it can contend for substantial CPU. system_prefixes identifies OS daemons and com.apple.* services that are excluded from the report.",
+      "process_cpu_percent_max": 15.0,
+      "process_rss_mb_report_min": 200,
+      "schema_version": 1,
+      "system_prefixes": [
+        "/System/",
+        "/usr/libexec/",
+        "/usr/sbin/",
+        "/sbin/",
+        "com.apple."
+      ]
+    }
+  },
+  "idle_evaluation_end": {
+    "idle": true,
+    "violations": []
+  },
+  "idle_evaluation_start": {
+    "idle": false,
+    "violations": [
+      "Python pcpu 17.9 > 15.0 (not in allow list)"
+    ]
+  },
+  "model_ms": [
+    931.3437081873417,
+    933.2930829841644,
+    932.45237483643,
+    932.4690001085401,
+    931.6134159453213,
+    931.9748328998685,
+    932.4302081950009,
+    931.9766669068485,
+    931.9067080505192,
+    931.7731249611825,
+    931.5922500099987,
+    931.9647091906518,
+    931.850666180253,
+    934.0339158661664,
+    932.4543329421431,
+    932.420042110607,
+    931.3120830338448,
+    932.3195000179112,
+    932.441791985184,
+    932.475500041619
+  ],
+  "mps_memory_after_reps": {
+    "current_allocated_memory": 1296183040,
+    "driver_allocated_memory": 2442903552
+  },
+  "mps_memory_after_warmup": {
+    "current_allocated_memory": 1296183040,
+    "driver_allocated_memory": 2442903552
+  },
+  "n_questions": 50,
+  "n_tokens": 9350,
+  "option_counts": [
+    3,
+    2,
+    3,
+    2,
+    3,
+    2,
+    3,
+    2,
+    3,
+    2,
+    3,
+    2,
+    3,
+    2,
+    3,
+    2,
+    3,
+    2,
+    3,
+    2,
+    3,
+    2,
+    3,
+    2,
+    3,
+    2,
+    3,
+    2,
+    3,
+    2,
+    3,
+    2,
+    3,
+    2,
+    3,
+    2,
+    3,
+    2,
+    3,
+    2,
+    3,
+    2,
+    3,
+    2,
+    3,
+    2,
+    3,
+    2,
+    3,
+    2
+  ],
+  "padded_batch_shape": [
+    50,
+    193
+  ],
+  "preprocess_ms": [
+    10.621875058859587,
+    10.587624972686172,
+    10.631541023030877,
+    10.626999894157052,
+    10.529249906539917,
+    10.67362492904067,
+    10.52424986846745,
+    10.554915992543101,
+    10.497000068426132,
+    10.531166102737188,
+    10.554749984294176,
+    10.542707983404398,
+    10.54454199038446,
+    10.496124858036637,
+    10.498291114345193,
+    10.485915932804346,
+    10.493332985788584,
+    10.521124815568328,
+    10.548208141699433,
+    10.62683411873877
+  ],
+  "profile": "multilingual",
+  "reps": 20,
+  "result": {
+    "answers": {
+      "q0": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "choice": "billing",
+        "confidence": 0.8616,
+        "probabilities": {
+          "billing": 0.9668,
+          "sales": 0.0016,
+          "technical": 0.0315
+        },
+        "type": "choice"
+      },
+      "q1": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.6303,
+        "noul": 0.6303,
+        "type": "noul"
+      },
+      "q10": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "choice": "billing",
+        "confidence": 0.8616,
+        "probabilities": {
+          "billing": 0.9668,
+          "sales": 0.0016,
+          "technical": 0.0315
+        },
+        "type": "choice"
+      },
+      "q11": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.6303,
+        "noul": 0.6303,
+        "type": "noul"
+      },
+      "q12": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "choice": "billing",
+        "confidence": 0.8616,
+        "probabilities": {
+          "billing": 0.9668,
+          "sales": 0.0016,
+          "technical": 0.0315
+        },
+        "type": "choice"
+      },
+      "q13": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.6303,
+        "noul": 0.6303,
+        "type": "noul"
+      },
+      "q14": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "choice": "billing",
+        "confidence": 0.8616,
+        "probabilities": {
+          "billing": 0.9668,
+          "sales": 0.0016,
+          "technical": 0.0315
+        },
+        "type": "choice"
+      },
+      "q15": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.6303,
+        "noul": 0.6303,
+        "type": "noul"
+      },
+      "q16": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "choice": "billing",
+        "confidence": 0.8616,
+        "probabilities": {
+          "billing": 0.9668,
+          "sales": 0.0016,
+          "technical": 0.0315
+        },
+        "type": "choice"
+      },
+      "q17": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.6303,
+        "noul": 0.6303,
+        "type": "noul"
+      },
+      "q18": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "choice": "billing",
+        "confidence": 0.8616,
+        "probabilities": {
+          "billing": 0.9668,
+          "sales": 0.0016,
+          "technical": 0.0315
+        },
+        "type": "choice"
+      },
+      "q19": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.6303,
+        "noul": 0.6303,
+        "type": "noul"
+      },
+      "q2": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "choice": "billing",
+        "confidence": 0.8616,
+        "probabilities": {
+          "billing": 0.9668,
+          "sales": 0.0016,
+          "technical": 0.0315
+        },
+        "type": "choice"
+      },
+      "q20": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "choice": "billing",
+        "confidence": 0.8616,
+        "probabilities": {
+          "billing": 0.9668,
+          "sales": 0.0016,
+          "technical": 0.0315
+        },
+        "type": "choice"
+      },
+      "q21": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.6303,
+        "noul": 0.6303,
+        "type": "noul"
+      },
+      "q22": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "choice": "billing",
+        "confidence": 0.8616,
+        "probabilities": {
+          "billing": 0.9668,
+          "sales": 0.0016,
+          "technical": 0.0315
+        },
+        "type": "choice"
+      },
+      "q23": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.6303,
+        "noul": 0.6303,
+        "type": "noul"
+      },
+      "q24": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "choice": "billing",
+        "confidence": 0.8616,
+        "probabilities": {
+          "billing": 0.9668,
+          "sales": 0.0016,
+          "technical": 0.0315
+        },
+        "type": "choice"
+      },
+      "q25": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.6303,
+        "noul": 0.6303,
+        "type": "noul"
+      },
+      "q26": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "choice": "billing",
+        "confidence": 0.8616,
+        "probabilities": {
+          "billing": 0.9668,
+          "sales": 0.0016,
+          "technical": 0.0315
+        },
+        "type": "choice"
+      },
+      "q27": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.6303,
+        "noul": 0.6303,
+        "type": "noul"
+      },
+      "q28": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "choice": "billing",
+        "confidence": 0.8616,
+        "probabilities": {
+          "billing": 0.9668,
+          "sales": 0.0016,
+          "technical": 0.0315
+        },
+        "type": "choice"
+      },
+      "q29": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.6303,
+        "noul": 0.6303,
+        "type": "noul"
+      },
+      "q3": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.6303,
+        "noul": 0.6303,
+        "type": "noul"
+      },
+      "q30": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "choice": "billing",
+        "confidence": 0.8616,
+        "probabilities": {
+          "billing": 0.9668,
+          "sales": 0.0016,
+          "technical": 0.0315
+        },
+        "type": "choice"
+      },
+      "q31": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.6303,
+        "noul": 0.6303,
+        "type": "noul"
+      },
+      "q32": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "choice": "billing",
+        "confidence": 0.8616,
+        "probabilities": {
+          "billing": 0.9668,
+          "sales": 0.0016,
+          "technical": 0.0315
+        },
+        "type": "choice"
+      },
+      "q33": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.6303,
+        "noul": 0.6303,
+        "type": "noul"
+      },
+      "q34": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "choice": "billing",
+        "confidence": 0.8616,
+        "probabilities": {
+          "billing": 0.9668,
+          "sales": 0.0016,
+          "technical": 0.0315
+        },
+        "type": "choice"
+      },
+      "q35": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.6303,
+        "noul": 0.6303,
+        "type": "noul"
+      },
+      "q36": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "choice": "billing",
+        "confidence": 0.8616,
+        "probabilities": {
+          "billing": 0.9668,
+          "sales": 0.0016,
+          "technical": 0.0315
+        },
+        "type": "choice"
+      },
+      "q37": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.6303,
+        "noul": 0.6303,
+        "type": "noul"
+      },
+      "q38": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "choice": "billing",
+        "confidence": 0.8616,
+        "probabilities": {
+          "billing": 0.9668,
+          "sales": 0.0016,
+          "technical": 0.0315
+        },
+        "type": "choice"
+      },
+      "q39": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.6303,
+        "noul": 0.6303,
+        "type": "noul"
+      },
+      "q4": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "choice": "billing",
+        "confidence": 0.8616,
+        "probabilities": {
+          "billing": 0.9668,
+          "sales": 0.0016,
+          "technical": 0.0315
+        },
+        "type": "choice"
+      },
+      "q40": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "choice": "billing",
+        "confidence": 0.8616,
+        "probabilities": {
+          "billing": 0.9668,
+          "sales": 0.0016,
+          "technical": 0.0315
+        },
+        "type": "choice"
+      },
+      "q41": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.6303,
+        "noul": 0.6303,
+        "type": "noul"
+      },
+      "q42": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "choice": "billing",
+        "confidence": 0.8616,
+        "probabilities": {
+          "billing": 0.9668,
+          "sales": 0.0016,
+          "technical": 0.0315
+        },
+        "type": "choice"
+      },
+      "q43": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.6303,
+        "noul": 0.6303,
+        "type": "noul"
+      },
+      "q44": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "choice": "billing",
+        "confidence": 0.8616,
+        "probabilities": {
+          "billing": 0.9668,
+          "sales": 0.0016,
+          "technical": 0.0315
+        },
+        "type": "choice"
+      },
+      "q45": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.6303,
+        "noul": 0.6303,
+        "type": "noul"
+      },
+      "q46": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "choice": "billing",
+        "confidence": 0.8616,
+        "probabilities": {
+          "billing": 0.9668,
+          "sales": 0.0016,
+          "technical": 0.0315
+        },
+        "type": "choice"
+      },
+      "q47": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.6303,
+        "noul": 0.6303,
+        "type": "noul"
+      },
+      "q48": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "choice": "billing",
+        "confidence": 0.8616,
+        "probabilities": {
+          "billing": 0.9668,
+          "sales": 0.0016,
+          "technical": 0.0315
+        },
+        "type": "choice"
+      },
+      "q49": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.6303,
+        "noul": 0.6303,
+        "type": "noul"
+      },
+      "q5": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.6303,
+        "noul": 0.6303,
+        "type": "noul"
+      },
+      "q6": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "choice": "billing",
+        "confidence": 0.8616,
+        "probabilities": {
+          "billing": 0.9668,
+          "sales": 0.0016,
+          "technical": 0.0315
+        },
+        "type": "choice"
+      },
+      "q7": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.6303,
+        "noul": 0.6303,
+        "type": "noul"
+      },
+      "q8": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "choice": "billing",
+        "confidence": 0.8616,
+        "probabilities": {
+          "billing": 0.9668,
+          "sales": 0.0016,
+          "technical": 0.0315
+        },
+        "type": "choice"
+      },
+      "q9": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.6303,
+        "noul": 0.6303,
+        "type": "noul"
+      }
+    },
+    "model": "laya-rl-agent",
+    "usage": {
+      "input_tokens": 9350,
+      "output_tokens": 0
+    }
+  },
+  "results_identical": true,
+  "ru_maxrss": 5914787840,
+  "schema_version": 1,
+  "sequence_lengths": [
+    181,
+    193,
+    181,
+    193,
+    181,
+    193,
+    181,
+    193,
+    181,
+    193,
+    181,
+    193,
+    181,
+    193,
+    181,
+    193,
+    181,
+    193,
+    181,
+    193,
+    181,
+    193,
+    181,
+    193,
+    181,
+    193,
+    181,
+    193,
+    181,
+    193,
+    181,
+    193,
+    181,
+    193,
+    181,
+    193,
+    181,
+    193,
+    181,
+    193,
+    181,
+    193,
+    181,
+    193,
+    181,
+    193,
+    181,
+    193,
+    181,
+    193
+  ],
+  "stats": {
+    "e2e": {
+      "max": 943.7045420054346,
+      "max_ms": 943.7045420054346,
+      "mean": 943.0443603894673,
+      "mean_ms": 943.0443603894673,
+      "min": 942.4849580973387,
+      "min_ms": 942.4849580973387,
+      "ms_per_question": 18.861645408906043,
+      "n": 20,
+      "p50": 943.0822704453021,
+      "p50_ms": 943.0822704453021,
+      "p95": 943.602813151665,
+      "p95_ms": 943.602813151665,
+      "p99": 943.6841962346807,
+      "p99_ms": 943.6841962346807,
+      "qps": 1.0603528783632235,
+      "questions_per_sec": 53.01764391816117,
+      "requests_per_sec": 1.0603528783632235,
+      "std": 0.3384331905909704,
+      "std_ms": 0.3384331905909704
+    },
+    "model": {
+      "max": 934.0339158661664,
+      "max_ms": 934.0339158661664,
+      "mean": 932.2048957226798,
+      "mean_ms": 932.2048957226798,
+      "min": 931.3120830338448,
+      "min_ms": 931.3120830338448,
+      "ms_per_question": 18.642961669247597,
+      "n": 20,
+      "p50": 932.1480834623799,
+      "p50_ms": 932.1480834623799,
+      "p95": 933.3301246282645,
+      "p95_ms": 933.3301246282645,
+      "p99": 933.893157618586,
+      "p99_ms": 933.893157618586,
+      "qps": 1.0727909199636931,
+      "questions_per_sec": 53.63954599818466,
+      "requests_per_sec": 1.0727909199636931,
+      "std": 0.6240867488726368,
+      "std_ms": 0.6240867488726368
+    },
+    "preprocess": {
+      "max": 10.67362492904067,
+      "max_ms": 10.67362492904067,
+      "mean": 10.554503987077624,
+      "mean_ms": 10.554503987077624,
+      "min": 10.485915932804346,
+      "min_ms": 10.485915932804346,
+      "ms_per_question": 0.21087249973788857,
+      "n": 20,
+      "p50": 10.543624986894429,
+      "p50_ms": 10.543624986894429,
+      "p95": 10.633645218331367,
+      "p95_ms": 10.633645218331367,
+      "p99": 10.66562898689881,
+      "p99_ms": 10.66562898689881,
+      "qps": 94.84404094824933,
+      "questions_per_sec": 4742.2020474124665,
+      "requests_per_sec": 94.84404094824933,
+      "std": 0.053878916774045146,
+      "std_ms": 0.053878916774045146
+    },
+    "transfer": {
+      "max": 0.4042091313749552,
+      "max_ms": 0.4042091313749552,
+      "mean": 0.3735250560566783,
+      "mean_ms": 0.3735250560566783,
+      "min": 0.26970915496349335,
+      "min_ms": 0.26970915496349335,
+      "ms_per_question": 0.007585831917822361,
+      "n": 20,
+      "p50": 0.37929159589111805,
+      "p50_ms": 0.37929159589111805,
+      "p95": 0.40017043938860297,
+      "p95_ms": 0.40017043938860297,
+      "p99": 0.40340139297768474,
+      "p99_ms": 0.40340139297768474,
+      "qps": 2636.493955661139,
+      "questions_per_sec": 131824.69778305694,
+      "requests_per_sec": 2636.493955661139,
+      "std": 0.027385658284255685,
+      "std_ms": 0.027385658284255685
+    }
+  },
+  "timing": {
+    "e2e": {
+      "contended_reason": "auto: Python pcpu 17.9 > 15.0 (not in allow list)",
+      "sample_contended": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "sample_timestamps": [
+        1789981982.024829,
+        1789981982.967607,
+        1789981983.910815,
+        1789981984.853439,
+        1789981985.7965708,
+        1789981986.740179,
+        1789981987.6832771,
+        1789981988.6264,
+        1789981989.5695,
+        1789981990.5132139,
+        1789981991.456779,
+        1789981992.3998668,
+        1789981993.3427358,
+        1789981994.285386,
+        1789981995.2283971,
+        1789981996.171253,
+        1789981997.1137888,
+        1789981998.056866,
+        1789981999.0003252,
+        1789981999.9434292
+      ],
+      "samples_ms": [
+        942.7675420884043,
+        943.1972908787429,
+        942.6137921400368,
+        943.1221249978989,
+        943.5974590014666,
+        943.0874579120427,
+        943.1128329597414,
+        943.0895410478115,
+        943.7045420054346,
+        943.5537499375641,
+        943.0770829785615,
+        942.8584999404848,
+        942.6397499628365,
+        943.0001250002533,
+        942.8466248791665,
+        942.5251248758286,
+        943.0665420368314,
+        943.4489170089364,
+        943.0932500399649,
+        942.4849580973387
+      ],
+      "stats": {
+        "max": 943.7045420054346,
+        "max_ms": 943.7045420054346,
+        "mean": 943.0443603894673,
+        "mean_ms": 943.0443603894673,
+        "min": 942.4849580973387,
+        "min_ms": 942.4849580973387,
+        "ms_per_question": 18.861645408906043,
+        "n": 20,
+        "p50": 943.0822704453021,
+        "p50_ms": 943.0822704453021,
+        "p95": 943.602813151665,
+        "p95_ms": 943.602813151665,
+        "p99": 943.6841962346807,
+        "p99_ms": 943.6841962346807,
+        "qps": 1.0603528783632235,
+        "questions_per_sec": 53.01764391816117,
+        "requests_per_sec": 1.0603528783632235,
+        "std": 0.3384331905909704,
+        "std_ms": 0.3384331905909704
+      },
+      "warmup_ms": [
+        945.0947500299662,
+        942.8284170571715,
+        943.0973341222852
+      ]
+    },
+    "model": {
+      "contended_reason": "auto: Python pcpu 17.9 > 15.0 (not in allow list)",
+      "sample_contended": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "sample_timestamps": [
+        1789981939.08926,
+        1789981940.0206149,
+        1789981940.9539242,
+        1789981941.88639,
+        1789981942.81887,
+        1789981943.750494,
+        1789981944.68248,
+        1789981945.61492,
+        1789981946.546906,
+        1789981947.478823,
+        1789981948.410605,
+        1789981949.342208,
+        1789981950.274184,
+        1789981951.2060459,
+        1789981952.1400971,
+        1789981953.072565,
+        1789981954.004995,
+        1789981954.9363189,
+        1789981955.868649,
+        1789981956.801101
+      ],
+      "samples_ms": [
+        931.3437081873417,
+        933.2930829841644,
+        932.45237483643,
+        932.4690001085401,
+        931.6134159453213,
+        931.9748328998685,
+        932.4302081950009,
+        931.9766669068485,
+        931.9067080505192,
+        931.7731249611825,
+        931.5922500099987,
+        931.9647091906518,
+        931.850666180253,
+        934.0339158661664,
+        932.4543329421431,
+        932.420042110607,
+        931.3120830338448,
+        932.3195000179112,
+        932.441791985184,
+        932.475500041619
+      ],
+      "stats": {
+        "max": 934.0339158661664,
+        "max_ms": 934.0339158661664,
+        "mean": 932.2048957226798,
+        "mean_ms": 932.2048957226798,
+        "min": 931.3120830338448,
+        "min_ms": 931.3120830338448,
+        "ms_per_question": 18.642961669247597,
+        "n": 20,
+        "p50": 932.1480834623799,
+        "p50_ms": 932.1480834623799,
+        "p95": 933.3301246282645,
+        "p95_ms": 933.3301246282645,
+        "p99": 933.893157618586,
+        "p99_ms": 933.893157618586,
+        "qps": 1.0727909199636931,
+        "questions_per_sec": 53.63954599818466,
+        "requests_per_sec": 1.0727909199636931,
+        "std": 0.6240867488726368,
+        "std_ms": 0.6240867488726368
+      },
+      "warmup_ms": [
+        957.463958999142,
+        930.2995000034571,
+        931.0667091049254
+      ]
+    },
+    "preprocess": {
+      "contended_reason": "auto: Python pcpu 17.9 > 15.0 (not in allow list)",
+      "sample_contended": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "sample_timestamps": [
+        1789981936.059237,
+        1789981936.0698612,
+        1789981936.0804522,
+        1789981936.091087,
+        1789981936.1017191,
+        1789981936.112252,
+        1789981936.1229281,
+        1789981936.133455,
+        1789981936.1440132,
+        1789981936.154513,
+        1789981936.165047,
+        1789981936.175605,
+        1789981936.1861498,
+        1789981936.1966982,
+        1789981936.207197,
+        1789981936.217698,
+        1789981936.2281868,
+        1789981936.238683,
+        1789981936.249207,
+        1789981936.259758
+      ],
+      "samples_ms": [
+        10.621875058859587,
+        10.587624972686172,
+        10.631541023030877,
+        10.626999894157052,
+        10.529249906539917,
+        10.67362492904067,
+        10.52424986846745,
+        10.554915992543101,
+        10.497000068426132,
+        10.531166102737188,
+        10.554749984294176,
+        10.542707983404398,
+        10.54454199038446,
+        10.496124858036637,
+        10.498291114345193,
+        10.485915932804346,
+        10.493332985788584,
+        10.521124815568328,
+        10.548208141699433,
+        10.62683411873877
+      ],
+      "stats": {
+        "max": 10.67362492904067,
+        "max_ms": 10.67362492904067,
+        "mean": 10.554503987077624,
+        "mean_ms": 10.554503987077624,
+        "min": 10.485915932804346,
+        "min_ms": 10.485915932804346,
+        "ms_per_question": 0.21087249973788857,
+        "n": 20,
+        "p50": 10.543624986894429,
+        "p50_ms": 10.543624986894429,
+        "p95": 10.633645218331367,
+        "p95_ms": 10.633645218331367,
+        "p99": 10.66562898689881,
+        "p99_ms": 10.66562898689881,
+        "qps": 94.84404094824933,
+        "questions_per_sec": 4742.2020474124665,
+        "requests_per_sec": 94.84404094824933,
+        "std": 0.053878916774045146,
+        "std_ms": 0.053878916774045146
+      },
+      "warmup_ms": [
+        10.829125065356493,
+        10.581250069662929,
+        10.564417112618685
+      ]
+    },
+    "transfer": {
+      "contended_reason": "auto: Python pcpu 17.9 > 15.0 (not in allow list)",
+      "included_in_model_ms": false,
+      "sample_contended": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "sample_timestamps": [
+        1789981960.5315049,
+        1789981961.4643142,
+        1789981962.397017,
+        1789981963.3289201,
+        1789981964.261357,
+        1789981965.194197,
+        1789981966.127176,
+        1789981967.059521,
+        1789981967.993078,
+        1789981968.9265862,
+        1789981969.860342,
+        1789981970.793325,
+        1789981971.7267892,
+        1789981972.6600802,
+        1789981973.593292,
+        1789981974.526974,
+        1789981975.460577,
+        1789981976.394057,
+        1789981977.32733,
+        1789981978.260811
+      ],
+      "samples_ms": [
+        0.35816687159240246,
+        0.39995787665247917,
+        0.35912496969103813,
+        0.392083078622818,
+        0.38724998012185097,
+        0.38041709922254086,
+        0.4042091313749552,
+        0.37816609255969524,
+        0.26970915496349335,
+        0.38766697980463505,
+        0.38199988193809986,
+        0.38654101081192493,
+        0.3599580377340317,
+        0.3739169333130121,
+        0.36420789547264576,
+        0.3658328205347061,
+        0.3829591441899538,
+        0.3735420759767294,
+        0.3662921953946352,
+        0.39849989116191864
+      ],
+      "stats": {
+        "max": 0.4042091313749552,
+        "max_ms": 0.4042091313749552,
+        "mean": 0.3735250560566783,
+        "mean_ms": 0.3735250560566783,
+        "min": 0.26970915496349335,
+        "min_ms": 0.26970915496349335,
+        "ms_per_question": 0.007585831917822361,
+        "n": 20,
+        "p50": 0.37929159589111805,
+        "p50_ms": 0.37929159589111805,
+        "p95": 0.40017043938860297,
+        "p95_ms": 0.40017043938860297,
+        "p99": 0.40340139297768474,
+        "p99_ms": 0.40340139297768474,
+        "qps": 2636.493955661139,
+        "questions_per_sec": 131824.69778305694,
+        "requests_per_sec": 2636.493955661139,
+        "std": 0.027385658284255685,
+        "std_ms": 0.027385658284255685
+      },
+      "warmup_ms": [
+        0.4157081712037325,
+        0.39329216815531254,
+        0.3572080750018358
+      ]
+    }
+  },
+  "transfer_ms": [
+    0.35816687159240246,
+    0.39995787665247917,
+    0.35912496969103813,
+    0.392083078622818,
+    0.38724998012185097,
+    0.38041709922254086,
+    0.4042091313749552,
+    0.37816609255969524,
+    0.26970915496349335,
+    0.38766697980463505,
+    0.38199988193809986,
+    0.38654101081192493,
+    0.3599580377340317,
+    0.3739169333130121,
+    0.36420789547264576,
+    0.3658328205347061,
+    0.3829591441899538,
+    0.3735420759767294,
+    0.3662921953946352,
+    0.39849989116191864
+  ],
+  "truncated": false,
+  "wall_clock_seconds": 67.07386608282104,
+  "warmup": 3
+}

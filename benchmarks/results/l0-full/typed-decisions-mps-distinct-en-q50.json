@@ -1,0 +1,1808 @@
+{
+  "contended": false,
+  "contended_reason": null,
+  "device": "mps",
+  "diagnostics": {
+    "n_tokens": 15127,
+    "option_counts": [
+      4,
+      4,
+      2,
+      4,
+      4,
+      2,
+      2,
+      10,
+      2,
+      4,
+      2,
+      2,
+      3,
+      2,
+      5,
+      10,
+      20,
+      2,
+      4,
+      2,
+      2,
+      4,
+      2,
+      2,
+      4,
+      2,
+      2,
+      4,
+      2,
+      5,
+      4,
+      4,
+      6,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      4,
+      4,
+      2,
+      2,
+      2,
+      2,
+      5,
+      2,
+      4,
+      2,
+      5
+    ],
+    "padded_batch_shape": [
+      50,
+      360
+    ],
+    "sequence_lengths": [
+      318,
+      309,
+      299,
+      302,
+      288,
+      305,
+      303,
+      321,
+      299,
+      356,
+      296,
+      300,
+      284,
+      301,
+      307,
+      327,
+      360,
+      299,
+      297,
+      295,
+      300,
+      287,
+      302,
+      299,
+      299,
+      300,
+      300,
+      299,
+      298,
+      306,
+      299,
+      303,
+      293,
+      297,
+      302,
+      299,
+      298,
+      298,
+      297,
+      290,
+      305,
+      302,
+      298,
+      298,
+      300,
+      291,
+      300,
+      297,
+      297,
+      307
+    ],
+    "state_tokens": [
+      {
+        "full_tokens": 264,
+        "kept_tokens": 264,
+        "truncated": false
+      },
+      {
+        "full_tokens": 264,
+        "kept_tokens": 264,
+        "truncated": false
+      },
+      {
+        "full_tokens": 264,
+        "kept_tokens": 264,
+        "truncated": false
+      },
+      {
+        "full_tokens": 264,
+        "kept_tokens": 264,
+        "truncated": false
+      },
+      {
+        "full_tokens": 264,
+        "kept_tokens": 264,
+        "truncated": false
+      },
+      {
+        "full_tokens": 264,
+        "kept_tokens": 264,
+        "truncated": false
+      },
+      {
+        "full_tokens": 264,
+        "kept_tokens": 264,
+        "truncated": false
+      },
+      {
+        "full_tokens": 264,
+        "kept_tokens": 264,
+        "truncated": false
+      },
+      {
+        "full_tokens": 264,
+        "kept_tokens": 264,
+        "truncated": false
+      },
+      {
+        "full_tokens": 264,
+        "kept_tokens": 264,
+        "truncated": false
+      },
+      {
+        "full_tokens": 264,
+        "kept_tokens": 264,
+        "truncated": false
+      },
+      {
+        "full_tokens": 264,
+        "kept_tokens": 264,
+        "truncated": false
+      },
+      {
+        "full_tokens": 264,
+        "kept_tokens": 264,
+        "truncated": false
+      },
+      {
+        "full_tokens": 264,
+        "kept_tokens": 264,
+        "truncated": false
+      },
+      {
+        "full_tokens": 264,
+        "kept_tokens": 264,
+        "truncated": false
+      },
+      {
+        "full_tokens": 264,
+        "kept_tokens": 264,
+        "truncated": false
+      },
+      {
+        "full_tokens": 264,
+        "kept_tokens": 264,
+        "truncated": false
+      },
+      {
+        "full_tokens": 264,
+        "kept_tokens": 264,
+        "truncated": false
+      },
+      {
+        "full_tokens": 264,
+        "kept_tokens": 264,
+        "truncated": false
+      },
+      {
+        "full_tokens": 264,
+        "kept_tokens": 264,
+        "truncated": false
+      },
+      {
+        "full_tokens": 264,
+        "kept_tokens": 264,
+        "truncated": false
+      },
+      {
+        "full_tokens": 264,
+        "kept_tokens": 264,
+        "truncated": false
+      },
+      {
+        "full_tokens": 264,
+        "kept_tokens": 264,
+        "truncated": false
+      },
+      {
+        "full_tokens": 264,
+        "kept_tokens": 264,
+        "truncated": false
+      },
+      {
+        "full_tokens": 264,
+        "kept_tokens": 264,
+        "truncated": false
+      },
+      {
+        "full_tokens": 264,
+        "kept_tokens": 264,
+        "truncated": false
+      },
+      {
+        "full_tokens": 264,
+        "kept_tokens": 264,
+        "truncated": false
+      },
+      {
+        "full_tokens": 264,
+        "kept_tokens": 264,
+        "truncated": false
+      },
+      {
+        "full_tokens": 264,
+        "kept_tokens": 264,
+        "truncated": false
+      },
+      {
+        "full_tokens": 264,
+        "kept_tokens": 264,
+        "truncated": false
+      },
+      {
+        "full_tokens": 264,
+        "kept_tokens": 264,
+        "truncated": false
+      },
+      {
+        "full_tokens": 264,
+        "kept_tokens": 264,
+        "truncated": false
+      },
+      {
+        "full_tokens": 264,
+        "kept_tokens": 264,
+        "truncated": false
+      },
+      {
+        "full_tokens": 264,
+        "kept_tokens": 264,
+        "truncated": false
+      },
+      {
+        "full_tokens": 264,
+        "kept_tokens": 264,
+        "truncated": false
+      },
+      {
+        "full_tokens": 264,
+        "kept_tokens": 264,
+        "truncated": false
+      },
+      {
+        "full_tokens": 264,
+        "kept_tokens": 264,
+        "truncated": false
+      },
+      {
+        "full_tokens": 264,
+        "kept_tokens": 264,
+        "truncated": false
+      },
+      {
+        "full_tokens": 264,
+        "kept_tokens": 264,
+        "truncated": false
+      },
+      {
+        "full_tokens": 264,
+        "kept_tokens": 264,
+        "truncated": false
+      },
+      {
+        "full_tokens": 264,
+        "kept_tokens": 264,
+        "truncated": false
+      },
+      {
+        "full_tokens": 264,
+        "kept_tokens": 264,
+        "truncated": false
+      },
+      {
+        "full_tokens": 264,
+        "kept_tokens": 264,
+        "truncated": false
+      },
+      {
+        "full_tokens": 264,
+        "kept_tokens": 264,
+        "truncated": false
+      },
+      {
+        "full_tokens": 264,
+        "kept_tokens": 264,
+        "truncated": false
+      },
+      {
+        "full_tokens": 264,
+        "kept_tokens": 264,
+        "truncated": false
+      },
+      {
+        "full_tokens": 264,
+        "kept_tokens": 264,
+        "truncated": false
+      },
+      {
+        "full_tokens": 264,
+        "kept_tokens": 264,
+        "truncated": false
+      },
+      {
+        "full_tokens": 264,
+        "kept_tokens": 264,
+        "truncated": false
+      },
+      {
+        "full_tokens": 264,
+        "kept_tokens": 264,
+        "truncated": false
+      }
+    ],
+    "truncated": false
+  },
+  "e2e_ms": [
+    4578.466499922797,
+    4576.748999999836,
+    4576.854916987941,
+    4577.331207925454,
+    4577.062166063115,
+    4576.878541847691,
+    4576.448958134279,
+    4576.627959031612,
+    4577.009625034407,
+    4576.550332829356,
+    4576.184458099306,
+    4576.71883283183,
+    4579.367958940566,
+    4577.033041976392,
+    4576.855416176841,
+    4577.05554086715,
+    4577.129957964644,
+    4577.516000019386,
+    4576.569540891796,
+    4576.4096670318395
+  ],
+  "env_fingerprint": "load1-idle|none",
+  "fixture": "distinct-en-q50",
+  "host_after": {
+    "fingerprint": "load1-idle|none",
+    "idle_evaluation": {
+      "idle": true,
+      "violations": []
+    },
+    "loadavg": {
+      "1": 0.1025390625,
+      "15": 0.95458984375,
+      "5": 0.54833984375
+    },
+    "pmset_therm": "Note: No thermal warning level has been recorded\nNote: No performance warning level has been recorded\nNote: No CPU power status has been recorded",
+    "time": 1789987031.7065651,
+    "top_processes": [
+      {
+        "comm": "/opt/homebrew/Cellar/python@3.12/3.12.7/Frameworks/Python.framework/Versions/3.12/Resources/Python.app/Contents/MacOS/Python",
+        "name": "Python",
+        "pcpu": 0.0,
+        "pid": 52953,
+        "rss_mb": 832.25,
+        "user": "chrisraethke"
+      },
+      {
+        "comm": "/Applications/Cloudflare WARP.app/Contents/Resources/CloudflareWARP",
+        "name": "CloudflareWARP",
+        "pcpu": 0.0,
+        "pid": 728,
+        "rss_mb": 288.640625,
+        "user": "root"
+      },
+      {
+        "comm": "/Applications/iTerm.app/Contents/MacOS/iTerm2",
+        "name": "iTerm2",
+        "pcpu": 0.0,
+        "pid": 31478,
+        "rss_mb": 221.375,
+        "user": "chrisraethke"
+      }
+    ]
+  },
+  "host_before": {
+    "fingerprint": "load1-idle|none",
+    "idle_evaluation": {
+      "idle": true,
+      "violations": []
+    },
+    "loadavg": {
+      "1": 2.93408203125,
+      "15": 1.31689453125,
+      "5": 1.271484375
+    },
+    "pmset_therm": "Note: No thermal warning level has been recorded\nNote: No performance warning level has been recorded\nNote: No CPU power status has been recorded",
+    "time": 1789986706.656438,
+    "top_processes": [
+      {
+        "comm": "/opt/homebrew/Cellar/python@3.12/3.12.7/Frameworks/Python.framework/Versions/3.12/Resources/Python.app/Contents/MacOS/Python",
+        "name": "Python",
+        "pcpu": 13.1,
+        "pid": 52953,
+        "rss_mb": 828.9375,
+        "user": "chrisraethke"
+      },
+      {
+        "comm": "/Applications/iTerm.app/Contents/MacOS/iTerm2",
+        "name": "iTerm2",
+        "pcpu": 2.2,
+        "pid": 31478,
+        "rss_mb": 221.375,
+        "user": "chrisraethke"
+      },
+      {
+        "comm": "/Applications/Cloudflare WARP.app/Contents/Resources/CloudflareWARP",
+        "name": "CloudflareWARP",
+        "pcpu": 0.3,
+        "pid": 728,
+        "rss_mb": 654.1875,
+        "user": "root"
+      }
+    ]
+  },
+  "host_policy": {
+    "policy": {
+      "allow": [
+        "Terminal",
+        "iTerm2",
+        "Ghostty",
+        "Code",
+        "Cursor",
+        "Windsurf",
+        "Zed",
+        "pi",
+        "node",
+        "uv",
+        "python3.12"
+      ],
+      "load1_max": 3.0,
+      "notes": "allow lists terminal and editor processes that are expected while a developer runs a benchmark, plus the pi harness (pi), its node workers (node), uv, and the benchmark's Python 3.12 process; ctx is intentionally not allowed because it can contend for substantial CPU. system_prefixes identifies OS daemons and com.apple.* services that are excluded from the report.",
+      "process_cpu_percent_max": 15.0,
+      "process_rss_mb_report_min": 200,
+      "schema_version": 1,
+      "system_prefixes": [
+        "/System/",
+        "/usr/libexec/",
+        "/usr/sbin/",
+        "/sbin/",
+        "com.apple."
+      ]
+    }
+  },
+  "idle_evaluation_end": {
+    "idle": true,
+    "violations": []
+  },
+  "idle_evaluation_start": {
+    "idle": true,
+    "violations": []
+  },
+  "model_ms": [
+    4559.751792112365,
+    4559.854459017515,
+    4559.407499851659,
+    4559.3472921755165,
+    4561.340082902461,
+    4559.38862496987,
+    4558.60041687265,
+    4558.310250053182,
+    4559.736208058894,
+    4558.531417045742,
+    4559.622667031363,
+    4558.487250003964,
+    4559.708832995966,
+    4558.945999946445,
+    4559.2929581180215,
+    4559.439041884616,
+    4558.58741607517,
+    4558.465332956985,
+    4558.742417022586,
+    4560.691917082295
+  ],
+  "mps_memory_after_reps": {
+    "current_allocated_memory": 1688911616,
+    "driver_allocated_memory": 5378916352
+  },
+  "mps_memory_after_warmup": {
+    "current_allocated_memory": 1688911616,
+    "driver_allocated_memory": 5378916352
+  },
+  "n_questions": 50,
+  "n_tokens": 15127,
+  "option_counts": [
+    4,
+    4,
+    2,
+    4,
+    4,
+    2,
+    2,
+    10,
+    2,
+    4,
+    2,
+    2,
+    3,
+    2,
+    5,
+    10,
+    20,
+    2,
+    4,
+    2,
+    2,
+    4,
+    2,
+    2,
+    4,
+    2,
+    2,
+    4,
+    2,
+    5,
+    4,
+    4,
+    6,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    4,
+    4,
+    2,
+    2,
+    2,
+    2,
+    5,
+    2,
+    4,
+    2,
+    5
+  ],
+  "padded_batch_shape": [
+    50,
+    360
+  ],
+  "preprocess_ms": [
+    18.701333086937666,
+    18.734625075012445,
+    19.322500098496675,
+    19.733832916244864,
+    20.2393748331815,
+    20.50470793619752,
+    20.306500140577555,
+    19.8962080758065,
+    20.002083154395223,
+    19.90708289667964,
+    20.226499997079372,
+    20.183791173622012,
+    20.385874900966883,
+    20.106832962483168,
+    20.055499859154224,
+    19.986208993941545,
+    20.019416930153966,
+    20.48308285884559,
+    20.1046671718359,
+    20.10566694661975
+  ],
+  "profile": "typed-decisions",
+  "reps": 20,
+  "result": {
+    "answers": {
+      "apology_needed": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.7541,
+        "noul": 0.2459,
+        "type": "noul"
+      },
+      "asks_eta": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.5483,
+        "noul": 0.4517,
+        "type": "noul"
+      },
+      "auto_reply_ok": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.7744,
+        "noul": 0.2256,
+        "type": "noul"
+      },
+      "bug_report": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.5789,
+        "noul": 0.5789,
+        "type": "noul"
+      },
+      "channel_email": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.634,
+        "noul": 0.634,
+        "type": "noul"
+      },
+      "charge_amount": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "choice": "$49.00",
+        "confidence": 0.1255,
+        "probabilities": {
+          "$19.00": 0.119,
+          "$49.00": 0.4969,
+          "$99.00": 0.2567,
+          "not stated": 0.1273
+        },
+        "type": "choice"
+      },
+      "churn_risk": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.1628,
+        "legend": {
+          "0": "unlikely",
+          "1": "possible",
+          "2": "likely",
+          "3": "very likely"
+        },
+        "probabilities": {
+          "0": 0.0294,
+          "1": 0.2867,
+          "2": 0.2331,
+          "3": 0.4507
+        },
+        "score": 2.1051,
+        "type": "score"
+      },
+      "country_region": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "choice": "North America",
+        "confidence": 0.2942,
+        "probabilities": {
+          "Africa": 0.0337,
+          "Asia": 0.0422,
+          "Europe": 0.0783,
+          "North America": 0.6027,
+          "Oceania": 0.1226,
+          "South America": 0.1206
+        },
+        "type": "choice"
+      },
+      "credit_recommended": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.1027,
+        "legend": {
+          "0": "0",
+          "1": "10",
+          "2": "25",
+          "3": "49",
+          "4": "100"
+        },
+        "probabilities": {
+          "0": 0.0885,
+          "1": 0.1065,
+          "2": 0.1326,
+          "3": 0.3932,
+          "4": 0.2793
+        },
+        "score": 2.6684,
+        "type": "score"
+      },
+      "data_loss": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.5066,
+        "noul": 0.5066,
+        "type": "noul"
+      },
+      "department": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "choice": "billing",
+        "confidence": 0.092,
+        "probabilities": {
+          "billing": 0.4645,
+          "engineering": 0.2497,
+          "sales": 0.1424,
+          "success": 0.1434
+        },
+        "type": "choice"
+      },
+      "detractor": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.5574,
+        "noul": 0.5574,
+        "type": "noul"
+      },
+      "duplicate_charge": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.6679,
+        "noul": 0.6679,
+        "type": "noul"
+      },
+      "escalate": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.604,
+        "noul": 0.604,
+        "type": "noul"
+      },
+      "explicit_deadline": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.5618,
+        "noul": 0.4382,
+        "type": "noul"
+      },
+      "export_bug_severity": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.3078,
+        "legend": {
+          "0": "cosmetic",
+          "1": "minor",
+          "2": "major",
+          "3": "blocking"
+        },
+        "probabilities": {
+          "0": 0.0309,
+          "1": 0.0446,
+          "2": 0.4527,
+          "3": 0.4718
+        },
+        "score": 2.3652,
+        "type": "score"
+      },
+      "greeting_present": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.8407,
+        "noul": 0.1593,
+        "type": "noul"
+      },
+      "issues_count": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "choice": "three",
+        "confidence": 0.2585,
+        "probabilities": {
+          "four or more": 0.2323,
+          "one": 0.0586,
+          "three": 0.6143,
+          "two": 0.0948
+        },
+        "type": "choice"
+      },
+      "language": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "choice": "en",
+        "confidence": 0.215,
+        "probabilities": {
+          "ar": 0.0445,
+          "de": 0.0598,
+          "en": 0.488,
+          "es": 0.0621,
+          "fr": 0.0581,
+          "hi": 0.0579,
+          "ja": 0.0525,
+          "ko": 0.0763,
+          "pt": 0.0652,
+          "zh": 0.0355
+        },
+        "type": "choice"
+      },
+      "legal_risk": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.1748,
+        "legend": {
+          "0": "none",
+          "1": "low",
+          "2": "medium",
+          "3": "high"
+        },
+        "probabilities": {
+          "0": 0.0648,
+          "1": 0.1416,
+          "2": 0.2663,
+          "3": 0.5273
+        },
+        "score": 2.2561,
+        "type": "score"
+      },
+      "mentions_card": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.5331,
+        "noul": 0.5331,
+        "type": "noul"
+      },
+      "mentions_invoice": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.5034,
+        "noul": 0.4966,
+        "type": "noul"
+      },
+      "month_of_charge": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "choice": "May",
+        "confidence": 0.3302,
+        "probabilities": {
+          "April": 0.0759,
+          "June": 0.0899,
+          "March": 0.0548,
+          "May": 0.6721,
+          "not stated": 0.1073
+        },
+        "type": "choice"
+      },
+      "needs_human": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.5001,
+        "noul": 0.5001,
+        "type": "noul"
+      },
+      "next_action": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "choice": "refund",
+        "confidence": 0.1888,
+        "probabilities": {
+          "apology_and_credit": 0.0835,
+          "close": 0.0956,
+          "escalate_engineering": 0.2862,
+          "refund": 0.5347
+        },
+        "type": "choice"
+      },
+      "payment_retry_failed": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.7388,
+        "noul": 0.7388,
+        "type": "noul"
+      },
+      "plan_tier": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "choice": "Pro",
+        "confidence": 0.3402,
+        "probabilities": {
+          "Enterprise": 0.1488,
+          "Free": 0.06,
+          "Pro": 0.7028,
+          "Starter": 0.0884
+        },
+        "type": "choice"
+      },
+      "polite": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.7274,
+        "noul": 0.2726,
+        "type": "noul"
+      },
+      "primary_issue": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "choice": "duplicate_charge",
+        "confidence": 0.046,
+        "probabilities": {
+          "cancellation": 0.2474,
+          "duplicate_charge": 0.3716,
+          "export_bug": 0.2555,
+          "no_reply": 0.1255
+        },
+        "type": "choice"
+      },
+      "prior_ticket_open": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.5481,
+        "noul": 0.5481,
+        "type": "noul"
+      },
+      "priority": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.0611,
+        "legend": {
+          "0": "P4",
+          "1": "P3",
+          "2": "P2",
+          "3": "P1",
+          "4": "P0"
+        },
+        "probabilities": {
+          "0": 0.1395,
+          "1": 0.2446,
+          "2": 0.3516,
+          "3": 0.1692,
+          "4": 0.0951
+        },
+        "score": 1.8358,
+        "type": "score"
+      },
+      "r_amount_mentioned": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.5578,
+        "noul": 0.4422,
+        "type": "noul"
+      },
+      "r_category": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "choice": "billing",
+        "confidence": 0.3611,
+        "probabilities": {
+          "billing": 0.5044,
+          "cancellation": 0.2511,
+          "damage": 0.0244,
+          "exchange": 0.0189,
+          "missing": 0.0108,
+          "other": 0.0129,
+          "refund": 0.0883,
+          "shipping_delay": 0.0056,
+          "warranty": 0.0374,
+          "wrong_item": 0.0462
+        },
+        "type": "choice"
+      },
+      "r_damaged": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.5327,
+        "noul": 0.5327,
+        "type": "noul"
+      },
+      "r_intent20": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "choice": "invoice_request",
+        "confidence": 0.8981,
+        "probabilities": {
+          "account_access": 0.0,
+          "cancel_order": 0.0,
+          "change_address": 0.0,
+          "complaint": 0.0,
+          "damaged_item": 0.0,
+          "delivery_delay": 0.0,
+          "exchange_item": 0.0,
+          "invoice_request": 0.909,
+          "missing_item": 0.0,
+          "other": 0.0,
+          "payment_issue": 0.0909,
+          "praise": 0.0,
+          "pricing_question": 0.0,
+          "product_question": 0.0,
+          "request_refund": 0.0,
+          "request_replacement": 0.0,
+          "return_item": 0.0,
+          "speak_to_human": 0.0,
+          "track_order": 0.0,
+          "warranty_claim": 0.0
+        },
+        "type": "choice"
+      },
+      "r_missing_item": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.5285,
+        "noul": 0.5285,
+        "type": "noul"
+      },
+      "r_outcome": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "choice": "replacement",
+        "confidence": 0.0729,
+        "probabilities": {
+          "either": 0.2139,
+          "partial refund": 0.2607,
+          "replacement": 0.5254
+        },
+        "type": "choice"
+      },
+      "r_promise_broken": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.616,
+        "noul": 0.616,
+        "type": "noul"
+      },
+      "r_short": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.5682,
+        "noul": 0.4318,
+        "type": "noul"
+      },
+      "r_sla_days": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.0281,
+        "legend": {
+          "0": "1",
+          "1": "2",
+          "2": "3",
+          "3": "5",
+          "4": "10"
+        },
+        "probabilities": {
+          "0": 0.0986,
+          "1": 0.2198,
+          "2": 0.2395,
+          "3": 0.1825,
+          "4": 0.2596
+        },
+        "score": 2.2847,
+        "type": "score"
+      },
+      "r_tone": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.1432,
+        "legend": {
+          "0": "calm",
+          "1": "annoyed",
+          "2": "angry",
+          "3": "furious"
+        },
+        "probabilities": {
+          "0": 0.0328,
+          "1": 0.249,
+          "2": 0.4055,
+          "3": 0.3127
+        },
+        "score": 1.9981,
+        "type": "score"
+      },
+      "refund_requested": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.5236,
+        "noul": 0.5236,
+        "type": "noul"
+      },
+      "repeat_issue": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.5259,
+        "noul": 0.5259,
+        "type": "noul"
+      },
+      "response_sla_hours": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.0789,
+        "legend": {
+          "0": "1",
+          "1": "4",
+          "2": "24",
+          "3": "72"
+        },
+        "probabilities": {
+          "0": 0.1104,
+          "1": 0.2066,
+          "2": 0.248,
+          "3": 0.4351
+        },
+        "score": 2.0078,
+        "type": "score"
+      },
+      "sentiment": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "choice": "angry",
+        "confidence": 0.2264,
+        "probabilities": {
+          "angry": 0.5155,
+          "frustrated": 0.3483,
+          "neutral": 0.0809,
+          "positive": 0.0553
+        },
+        "type": "choice"
+      },
+      "signature_present": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.6979,
+        "noul": 0.3021,
+        "type": "noul"
+      },
+      "tenure_long": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.5957,
+        "noul": 0.4043,
+        "type": "noul"
+      },
+      "threatens_cancel": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.6553,
+        "noul": 0.6553,
+        "type": "noul"
+      },
+      "urgency": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.2444,
+        "legend": {
+          "0": "can wait a week",
+          "1": "should be handled within a few days",
+          "2": "same day",
+          "3": "immediate escalation"
+        },
+        "probabilities": {
+          "0": 0.0469,
+          "1": 0.1346,
+          "2": 0.2139,
+          "3": 0.6046
+        },
+        "score": 2.3762,
+        "type": "score"
+      },
+      "workspace_size": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "choice": "large",
+        "confidence": 0.1859,
+        "probabilities": {
+          "large": 0.565,
+          "medium": 0.2279,
+          "small": 0.0957,
+          "unknown": 0.1113
+        },
+        "type": "choice"
+      }
+    },
+    "model": "laya-rl-agent",
+    "usage": {
+      "input_tokens": 15127,
+      "output_tokens": 0
+    }
+  },
+  "results_identical": true,
+  "ru_maxrss": 3845521408,
+  "schema_version": 1,
+  "sequence_lengths": [
+    318,
+    309,
+    299,
+    302,
+    288,
+    305,
+    303,
+    321,
+    299,
+    356,
+    296,
+    300,
+    284,
+    301,
+    307,
+    327,
+    360,
+    299,
+    297,
+    295,
+    300,
+    287,
+    302,
+    299,
+    299,
+    300,
+    300,
+    299,
+    298,
+    306,
+    299,
+    303,
+    293,
+    297,
+    302,
+    299,
+    298,
+    298,
+    297,
+    290,
+    305,
+    302,
+    298,
+    298,
+    300,
+    291,
+    300,
+    297,
+    297,
+    307
+  ],
+  "stats": {
+    "e2e": {
+      "max": 4579.367958940566,
+      "max_ms": 4579.367958940566,
+      "mean": 4577.040981128812,
+      "mean_ms": 4577.040981128812,
+      "min": 4576.184458099306,
+      "min_ms": 4576.184458099306,
+      "ms_per_question": 91.53733958024532,
+      "n": 20,
+      "p50": 4576.866979012266,
+      "p50_ms": 4576.866979012266,
+      "p95": 4578.5115728736855,
+      "p95_ms": 4578.5115728736855,
+      "p99": 4579.19668172719,
+      "p99_ms": 4579.19668172719,
+      "qps": 0.2184900729222876,
+      "questions_per_sec": 10.92450364611438,
+      "requests_per_sec": 0.2184900729222876,
+      "std": 0.712992305971774,
+      "std_ms": 0.712992305971774
+    },
+    "model": {
+      "max": 4561.340082902461,
+      "max_ms": 4561.340082902461,
+      "mean": 4559.312593808863,
+      "mean_ms": 4559.312593808863,
+      "min": 4558.310250053182,
+      "min_ms": 4558.310250053182,
+      "ms_per_question": 91.18735917145386,
+      "n": 20,
+      "p50": 4559.367958572693,
+      "p50_ms": 4559.367958572693,
+      "p95": 4560.724325373303,
+      "p95_ms": 4560.724325373303,
+      "p99": 4561.21693139663,
+      "p99_ms": 4561.21693139663,
+      "qps": 0.21932864578735367,
+      "questions_per_sec": 10.966432289367683,
+      "requests_per_sec": 0.21932864578735367,
+      "std": 0.7573397222163423,
+      "std_ms": 0.7573397222163423
+    },
+    "preprocess": {
+      "max": 20.50470793619752,
+      "max_ms": 20.50470793619752,
+      "mean": 19.9502895004116,
+      "mean_ms": 19.9502895004116,
+      "min": 18.701333086937666,
+      "min_ms": 18.701333086937666,
+      "ms_per_question": 0.40160167030990124,
+      "n": 20,
+      "p50": 20.080083515495062,
+      "p50_ms": 20.080083515495062,
+      "p95": 20.484164112713188,
+      "p95_ms": 20.484164112713188,
+      "p99": 20.500599171500653,
+      "p99_ms": 20.500599171500653,
+      "qps": 49.80058968521405,
+      "questions_per_sec": 2490.0294842607022,
+      "requests_per_sec": 49.80058968521405,
+      "std": 0.4846675471937967,
+      "std_ms": 0.4846675471937967
+    },
+    "transfer": {
+      "max": 0.8802500087767839,
+      "max_ms": 0.8802500087767839,
+      "mean": 0.6043999223038554,
+      "mean_ms": 0.6043999223038554,
+      "min": 0.3903750330209732,
+      "min_ms": 0.3903750330209732,
+      "ms_per_question": 0.010037082247436047,
+      "n": 20,
+      "p50": 0.5018541123718023,
+      "p50_ms": 0.5018541123718023,
+      "p95": 0.8567373850382864,
+      "p95_ms": 0.8567373850382864,
+      "p99": 0.8755474840290844,
+      "p99_ms": 0.8755474840290844,
+      "qps": 1992.6109507679846,
+      "questions_per_sec": 99630.54753839923,
+      "requests_per_sec": 1992.6109507679846,
+      "std": 0.18186191842497187,
+      "std_ms": 0.18186191842497187
+    }
+  },
+  "timing": {
+    "e2e": {
+      "contended_reason": null,
+      "sample_contended": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "sample_timestamps": [
+        1789986930.622527,
+        1789986935.2010272,
+        1789986939.777809,
+        1789986944.354697,
+        1789986948.932061,
+        1789986953.509156,
+        1789986958.086067,
+        1789986962.662549,
+        1789986967.23921,
+        1789986971.816253,
+        1789986976.392836,
+        1789986980.969053,
+        1789986985.545805,
+        1789986990.125206,
+        1789986994.702272,
+        1789986999.27916,
+        1789987003.856249,
+        1789987008.4334111,
+        1789987013.0109599,
+        1789987017.587562
+      ],
+      "samples_ms": [
+        4578.466499922797,
+        4576.748999999836,
+        4576.854916987941,
+        4577.331207925454,
+        4577.062166063115,
+        4576.878541847691,
+        4576.448958134279,
+        4576.627959031612,
+        4577.009625034407,
+        4576.550332829356,
+        4576.184458099306,
+        4576.71883283183,
+        4579.367958940566,
+        4577.033041976392,
+        4576.855416176841,
+        4577.05554086715,
+        4577.129957964644,
+        4577.516000019386,
+        4576.569540891796,
+        4576.4096670318395
+      ],
+      "stats": {
+        "max": 4579.367958940566,
+        "max_ms": 4579.367958940566,
+        "mean": 4577.040981128812,
+        "mean_ms": 4577.040981128812,
+        "min": 4576.184458099306,
+        "min_ms": 4576.184458099306,
+        "ms_per_question": 91.53733958024532,
+        "n": 20,
+        "p50": 4576.866979012266,
+        "p50_ms": 4576.866979012266,
+        "p95": 4578.5115728736855,
+        "p95_ms": 4578.5115728736855,
+        "p99": 4579.19668172719,
+        "p99_ms": 4579.19668172719,
+        "qps": 0.2184900729222876,
+        "questions_per_sec": 10.92450364611438,
+        "requests_per_sec": 0.2184900729222876,
+        "std": 0.712992305971774,
+        "std_ms": 0.712992305971774
+      },
+      "warmup_ms": [
+        4579.327000072226,
+        4577.000833116472,
+        4576.801167102531
+      ]
+    },
+    "model": {
+      "contended_reason": null,
+      "sample_contended": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "sample_timestamps": [
+        1789986720.824178,
+        1789986725.383976,
+        1789986729.943878,
+        1789986734.5033312,
+        1789986739.0627258,
+        1789986743.6241128,
+        1789986748.1835468,
+        1789986752.742193,
+        1789986757.300552,
+        1789986761.860335,
+        1789986766.418914,
+        1789986770.978576,
+        1789986775.53711,
+        1789986780.096868,
+        1789986784.65586,
+        1789986789.215202,
+        1789986793.774687,
+        1789986798.333322,
+        1789986802.891832,
+        1789986807.450619
+      ],
+      "samples_ms": [
+        4559.751792112365,
+        4559.854459017515,
+        4559.407499851659,
+        4559.3472921755165,
+        4561.340082902461,
+        4559.38862496987,
+        4558.60041687265,
+        4558.310250053182,
+        4559.736208058894,
+        4558.531417045742,
+        4559.622667031363,
+        4558.487250003964,
+        4559.708832995966,
+        4558.945999946445,
+        4559.2929581180215,
+        4559.439041884616,
+        4558.58741607517,
+        4558.465332956985,
+        4558.742417022586,
+        4560.691917082295
+      ],
+      "stats": {
+        "max": 4561.340082902461,
+        "max_ms": 4561.340082902461,
+        "mean": 4559.312593808863,
+        "mean_ms": 4559.312593808863,
+        "min": 4558.310250053182,
+        "min_ms": 4558.310250053182,
+        "ms_per_question": 91.18735917145386,
+        "n": 20,
+        "p50": 4559.367958572693,
+        "p50_ms": 4559.367958572693,
+        "p95": 4560.724325373303,
+        "p95_ms": 4560.724325373303,
+        "p99": 4561.21693139663,
+        "p99_ms": 4561.21693139663,
+        "qps": 0.21932864578735367,
+        "questions_per_sec": 10.966432289367683,
+        "requests_per_sec": 0.21932864578735367,
+        "std": 0.7573397222163423,
+        "std_ms": 0.7573397222163423
+      },
+      "warmup_ms": [
+        4571.808333043009,
+        4559.187958016992,
+        4558.941083960235
+      ]
+    },
+    "preprocess": {
+      "contended_reason": null,
+      "sample_contended": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "sample_timestamps": [
+        1789986706.735032,
+        1789986706.753736,
+        1789986706.772474,
+        1789986706.7918,
+        1789986706.8115368,
+        1789986706.831779,
+        1789986706.852287,
+        1789986706.872597,
+        1789986706.8924968,
+        1789986706.912502,
+        1789986706.9324129,
+        1789986706.9526432,
+        1789986706.9728289,
+        1789986706.993218,
+        1789986707.0133288,
+        1789986707.0333881,
+        1789986707.053378,
+        1789986707.0734,
+        1789986707.093886,
+        1789986707.113994
+      ],
+      "samples_ms": [
+        18.701333086937666,
+        18.734625075012445,
+        19.322500098496675,
+        19.733832916244864,
+        20.2393748331815,
+        20.50470793619752,
+        20.306500140577555,
+        19.8962080758065,
+        20.002083154395223,
+        19.90708289667964,
+        20.226499997079372,
+        20.183791173622012,
+        20.385874900966883,
+        20.106832962483168,
+        20.055499859154224,
+        19.986208993941545,
+        20.019416930153966,
+        20.48308285884559,
+        20.1046671718359,
+        20.10566694661975
+      ],
+      "stats": {
+        "max": 20.50470793619752,
+        "max_ms": 20.50470793619752,
+        "mean": 19.9502895004116,
+        "mean_ms": 19.9502895004116,
+        "min": 18.701333086937666,
+        "min_ms": 18.701333086937666,
+        "ms_per_question": 0.40160167030990124,
+        "n": 20,
+        "p50": 20.080083515495062,
+        "p50_ms": 20.080083515495062,
+        "p95": 20.484164112713188,
+        "p95_ms": 20.484164112713188,
+        "p99": 20.500599171500653,
+        "p99_ms": 20.500599171500653,
+        "qps": 49.80058968521405,
+        "questions_per_sec": 2490.0294842607022,
+        "requests_per_sec": 49.80058968521405,
+        "std": 0.4846675471937967,
+        "std_ms": 0.4846675471937967
+      },
+      "warmup_ms": [
+        18.906541168689728,
+        18.643334042280912,
+        18.623792100697756
+      ]
+    },
+    "transfer": {
+      "contended_reason": null,
+      "included_in_model_ms": false,
+      "sample_contended": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "sample_timestamps": [
+        1789986825.691226,
+        1789986830.2503538,
+        1789986834.809664,
+        1789986839.368959,
+        1789986843.929077,
+        1789986848.488798,
+        1789986853.048367,
+        1789986857.607705,
+        1789986862.1671739,
+        1789986866.727017,
+        1789986871.286377,
+        1789986875.847223,
+        1789986880.406917,
+        1789986884.967276,
+        1789986889.526699,
+        1789986894.089637,
+        1789986898.649846,
+        1789986903.209692,
+        1789986907.7696252,
+        1789986912.329608
+      ],
+      "samples_ms": [
+        0.4408750683069229,
+        0.8443749975413084,
+        0.5198749713599682,
+        0.45954086817801,
+        0.5187499336898327,
+        0.49925013445317745,
+        0.8317921310663223,
+        0.4664999432861805,
+        0.8802500087767839,
+        0.3903750330209732,
+        0.8474169299006462,
+        0.4690829664468765,
+        0.8461670950055122,
+        0.4701660946011543,
+        0.5044580902904272,
+        0.4605830181390047,
+        0.47487509436905384,
+        0.839458080008626,
+        0.4687081091105938,
+        0.855499878525734
+      ],
+      "stats": {
+        "max": 0.8802500087767839,
+        "max_ms": 0.8802500087767839,
+        "mean": 0.6043999223038554,
+        "mean_ms": 0.6043999223038554,
+        "min": 0.3903750330209732,
+        "min_ms": 0.3903750330209732,
+        "ms_per_question": 0.010037082247436047,
+        "n": 20,
+        "p50": 0.5018541123718023,
+        "p50_ms": 0.5018541123718023,
+        "p95": 0.8567373850382864,
+        "p95_ms": 0.8567373850382864,
+        "p99": 0.8755474840290844,
+        "p99_ms": 0.8755474840290844,
+        "qps": 1992.6109507679846,
+        "questions_per_sec": 99630.54753839923,
+        "requests_per_sec": 1992.6109507679846,
+        "std": 0.18186191842497187,
+        "std_ms": 0.18186191842497187
+      },
+      "warmup_ms": [
+        0.8625001646578312,
+        0.4792921245098114,
+        0.8361251093447208
+      ]
+    }
+  },
+  "transfer_ms": [
+    0.4408750683069229,
+    0.8443749975413084,
+    0.5198749713599682,
+    0.45954086817801,
+    0.5187499336898327,
+    0.49925013445317745,
+    0.8317921310663223,
+    0.4664999432861805,
+    0.8802500087767839,
+    0.3903750330209732,
+    0.8474169299006462,
+    0.4690829664468765,
+    0.8461670950055122,
+    0.4701660946011543,
+    0.5044580902904272,
+    0.4605830181390047,
+    0.47487509436905384,
+    0.839458080008626,
+    0.4687081091105938,
+    0.855499878525734
+  ],
+  "truncated": false,
+  "wall_clock_seconds": 325.0490294168703,
+  "warmup": 3
+}

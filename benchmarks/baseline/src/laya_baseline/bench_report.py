@@ -38,15 +38,46 @@ def _p(record: dict[str, Any], kind: str, quantile: float) -> float:
     return float(np.percentile(np.asarray(values, dtype=float), quantile))
 
 
-def _fmt(value: float) -> str:
-    return "—" if not np.isfinite(value) else f"{value:.1f}"
+def _fmt(value: float | None) -> str:
+    return "—" if value is None or not np.isfinite(value) else f"{value:.1f}"
 
 
-def _midrun_contention(record: dict[str, Any]) -> bool:
-    start = record.get("idle_evaluation_start")
-    end = record.get("idle_evaluation_end")
-    return bool(isinstance(start, dict) and start.get("idle") is True
-                and isinstance(end, dict) and end.get("idle") is False)
+def _start_snapshot(record: dict[str, Any]) -> dict[str, Any] | None:
+    fixture_snapshot = record.get("host_before")
+    if isinstance(fixture_snapshot, dict):
+        return fixture_snapshot
+    run_snapshot = record.get("host_start")
+    return run_snapshot if isinstance(run_snapshot, dict) else None
+
+
+def _recorded_contended(record: dict[str, Any]) -> bool:
+    value = record.get("contended", False)
+    if isinstance(value, str):
+        return value.strip().lower() not in ("", "0", "false", "no", "none")
+    return bool(value)
+
+
+def reevaluate_contention(record: dict[str, Any], policy: dict[str, Any] | None = None) -> bool:
+    """Re-evaluate a stored start snapshot with today's policy without editing it."""
+    snapshot = _start_snapshot(record)
+    if snapshot is None:
+        return _recorded_contended(record)
+    current_policy = policy or hostload.load_policy()
+    evaluation_snapshot = snapshot
+    if "processes" not in snapshot and "top_processes" in snapshot:
+        # Fixture snapshots use a compact top_processes key; evaluate the same data
+        # without changing the immutable record.
+        evaluation_snapshot = dict(snapshot)
+        evaluation_snapshot["processes"] = snapshot["top_processes"]
+    return not hostload.evaluate(evaluation_snapshot, current_policy, phase="start")["idle"]
+
+
+def _load1_start(record: dict[str, Any]) -> float | None:
+    snapshot = _start_snapshot(record)
+    if snapshot is None:
+        return None
+    load1, _, _ = hostload._load_values(snapshot)
+    return load1
 
 
 def _env_fingerprint(record: dict[str, Any]) -> str:
@@ -62,28 +93,58 @@ def _env_fingerprint(record: dict[str, Any]) -> str:
     return "—"
 
 
-def render_markdown(records: Iterable[dict[str, Any]], compare_published: bool = False) -> str:
+def table_rows(records: Iterable[dict[str, Any]], policy: dict[str, Any] | None = None,
+               compare_published: bool = False) -> list[dict[str, Any]]:
+    """Build the derived report rows; source result JSON is never modified."""
     records = list(records)
+    current_policy = policy or hostload.load_policy()
+    rows: list[dict[str, Any]] = []
+    for record in records:
+        e2e_p50 = _p(record, "e2e", 50)
+        n_questions = int(record.get("n_questions", 1))
+        row: dict[str, Any] = {
+            "profile": str(record.get("profile", "")),
+            "device": str(record.get("device", "")),
+            "fixture": str(record.get("fixture", "")),
+            "nq": record.get("n_questions", record.get("nq", "")),
+            "n_tokens": record.get("diagnostics", {}).get("n_tokens", record.get("n_tokens", "")),
+            "e2e_p50_ms": e2e_p50,
+            "e2e_p95_ms": _p(record, "e2e", 95),
+            "model_p50_ms": _p(record, "model", 50),
+            "preprocess_p50_ms": _p(record, "preprocess", 50),
+            "ms_per_question": e2e_p50 / n_questions,
+            "contended_recorded": _recorded_contended(record),
+            "contended_reevaluated": reevaluate_contention(record, current_policy),
+            "load1_start": _load1_start(record),
+            "env": _env_fingerprint(record),
+        }
+        if compare_published:
+            published = PUBLISHED_T4.get((str(record.get("profile")), str(record.get("fixture"))))
+            row["published_t4_p50_ms"] = published[0] if published else None
+            row["published_t4_p95_ms"] = published[1] if published else None
+        rows.append(row)
+    return rows
+
+
+def render_markdown(records: Iterable[dict[str, Any]], compare_published: bool = False) -> str:
+    rows = table_rows(records, compare_published=compare_published)
     headers = ["profile", "device", "fixture", "nq", "n_tokens", "e2e p50 ms", "e2e p95 ms",
-               "model p50 ms", "preprocess p50 ms", "ms/question", "contended", "env"]
+               "model p50 ms", "preprocess p50 ms", "ms/question", "contended (recorded)",
+               "contended (re-evaluated)", "load1 start", "env"]
     if compare_published:
         headers.extend(["published T4 p50 ms", "published T4 p95 ms"])
     lines = ["| " + " | ".join(headers) + " |", "|" + "|".join("---" for _ in headers) + "|"]
-    for record in records:
-        e2e_p50 = _p(record, "e2e", 50)
-        row = [
-            str(record.get("profile", "")), str(record.get("device", "")), str(record.get("fixture", "")),
-            str(record.get("n_questions", record.get("nq", ""))),
-            str(record.get("diagnostics", {}).get("n_tokens", record.get("n_tokens", ""))),
-            _fmt(e2e_p50), _fmt(_p(record, "e2e", 95)), _fmt(_p(record, "model", 50)),
-            _fmt(_p(record, "preprocess", 50)), _fmt(e2e_p50 / int(record.get("n_questions", 1))),
-            "contended(mid-run)" if _midrun_contention(record) else ("yes" if record.get("contended") else "no"),
-            _env_fingerprint(record),
+    for row in rows:
+        values = [
+            row["profile"], row["device"], row["fixture"], str(row["nq"]), str(row["n_tokens"]),
+            _fmt(row["e2e_p50_ms"]), _fmt(row["e2e_p95_ms"]), _fmt(row["model_p50_ms"]),
+            _fmt(row["preprocess_p50_ms"]), _fmt(row["ms_per_question"]),
+            "yes" if row["contended_recorded"] else "no",
+            "yes" if row["contended_reevaluated"] else "no", _fmt(row["load1_start"]), row["env"],
         ]
         if compare_published:
-            published = PUBLISHED_T4.get((str(record.get("profile")), str(record.get("fixture"))))
-            row.extend([_fmt(published[0]) if published else "—", _fmt(published[1]) if published else "—"])
-        lines.append("| " + " | ".join(row) + " |")
+            values.extend([_fmt(row["published_t4_p50_ms"]), _fmt(row["published_t4_p95_ms"])])
+        lines.append("| " + " | ".join(str(value) for value in values) + " |")
     if compare_published:
         lines.extend(["", "*Published T4 values are different hardware — not comparable as a speedup.*"])
     return "\n".join(lines) + "\n"
@@ -109,8 +170,13 @@ def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--run-id", action="append", required=True)
     parser.add_argument("--compare-published", action="store_true")
+    parser.add_argument("--json", action="store_true", help="emit derived table rows as JSON")
     args = parser.parse_args()
-    print(render_markdown(load_records(args.run_id), args.compare_published), end="")
+    records = load_records(args.run_id)
+    if args.json:
+        print(json.dumps(table_rows(records, compare_published=args.compare_published), ensure_ascii=False, indent=2, allow_nan=False))
+    else:
+        print(render_markdown(records, args.compare_published), end="")
 
 
 if __name__ == "__main__":

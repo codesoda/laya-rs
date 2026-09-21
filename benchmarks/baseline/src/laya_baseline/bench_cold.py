@@ -79,7 +79,7 @@ def run(profile: str, device: str, n: int, run_id: str, contended: str | None = 
     policy_path = REPO_ROOT / "benchmarks" / "idle-policy.json"
     policy = hostload.load_policy(policy_path)
     host_start = hostload.snapshot(policy)
-    idle_start = hostload.evaluate(host_start, policy)
+    idle_start = hostload.evaluate(host_start, policy, phase="start")
     if require_idle and not idle_start["idle"]:
         raise IdleHostError(idle_start["violations"])
     effective_contended = contended
@@ -104,7 +104,7 @@ def run(profile: str, device: str, n: int, run_id: str, contended: str | None = 
         child["page_cache"] = "cold/unknown on first iteration" if index == 0 else "warm (after first iteration)"
         iterations.append(child)
     host_end = hostload.snapshot(policy)
-    idle_end = hostload.evaluate(host_end, policy)
+    idle_end = hostload.evaluate(host_end, policy, phase="end")
     record = {
         "schema_version": 1,
         "profile": profile,

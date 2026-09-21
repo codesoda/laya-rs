@@ -17,6 +17,8 @@ Read [docs/plans/initial-build.md](docs/plans/initial-build.md).
 
 Roadmap amendments live alongside the plan (latest: [docs/plans/amendment-2026-09-20-roadmap.md](docs/plans/amendment-2026-09-20-roadmap.md)). A ready-to-paste prompt for a Fable-led session using Sol/Luna workers is in [docs/plans/implementation-prompt.md](docs/plans/implementation-prompt.md).
 
+Benchmark reports re-evaluate each stored start snapshot against the current idle policy; result JSON is immutable evidence. The `l0-full` run's recorded Python CPU false positives came from the interpreter's Homebrew framework `comm` being named `Python` rather than `python3.12`, and its end-of-run load was produced by the benchmark's own CPU work. The derived report therefore excludes the recorded benchmark process tree, applies the current Python path patterns, and treats end load as informational.
+
 ## License and affiliation
 
 Planned project license: Apache-2.0. Upstream Laya code and model cards declare Apache-2.0; implementation must audit and preserve all applicable dependency, model and tokenizer notices.

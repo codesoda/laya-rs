@@ -16,6 +16,10 @@
     "uv",
     "python3.12"
   ],
+  "allow_comm_patterns": [
+    ".*/Python\\.framework/.*Python$",
+    ".*/laya-rs/benchmarks/baseline/\\.venv/bin/[^/]+$"
+  ],
   "system_prefixes": [
     "/System/",
     "/usr/libexec/",
@@ -23,5 +27,5 @@
     "/sbin/",
     "com.apple."
   ],
-  "notes": "allow lists terminal and editor processes that are expected while a developer runs a benchmark, plus the pi harness (pi), its node workers (node), uv, and the benchmark's Python 3.12 process; ctx is intentionally not allowed because it can contend for substantial CPU. system_prefixes identifies OS daemons and com.apple.* services that are excluded from the report."
+  "notes": "allow lists terminal and editor processes that are expected while a developer runs a benchmark, plus the pi harness (pi), its node workers (node), uv, and the benchmark's Python 3.12 process; allow_comm_patterns matches the full comm for Homebrew Python framework executables and this repo's .venv/bin/ executables (and is also the old-record fallback for identifying the benchmark process); ctx is intentionally not allowed because it can contend for substantial CPU. system_prefixes identifies OS daemons and com.apple.* services that are excluded from the report. The benchmark process and descendants are recorded in self_tree and excluded from per-process contention checks."
 }

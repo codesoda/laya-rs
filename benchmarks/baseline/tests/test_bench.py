@@ -43,6 +43,25 @@ def test_immutability_refusal_precedes_model_load(tmp_path: Path, monkeypatch: p
         bench.run("english", "cpu", "tiny", reps=1, run_id="run")
 
 
+def test_report_reevaluates_old_python_record_as_uncontended() -> None:
+    record = {
+        "contended": True,
+        "host_start": {
+            "loadavg": {"1": 2.3, "5": 2.0, "15": 2.0},
+            "processes": [{
+                "pid": 99, "name": "Python",
+                "comm": "/opt/homebrew/Cellar/python@3.12/3.12.7/Frameworks/Python.framework/Versions/3.12/Resources/Python.app/Contents/MacOS/Python",
+                "pcpu": 112.8,
+            }],
+        },
+    }
+    policy = {
+        "load1_max": 3.0, "process_cpu_percent_max": 15.0,
+        "allow_comm_patterns": [r".*/Python\.framework/.*Python$"],
+    }
+    assert bench_report.reevaluate_contention(record, policy) is False
+
+
 def test_report_renderer_on_synthetic_result() -> None:
     record = {
         "profile": "multilingual", "device": "cpu", "fixture": "published-latency-q1",

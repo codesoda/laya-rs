@@ -1,0 +1,1705 @@
+{
+  "contended": false,
+  "contended_reason": null,
+  "device": "mps",
+  "diagnostics": {
+    "n_tokens": 9975,
+    "option_counts": [
+      3,
+      2,
+      3,
+      2,
+      3,
+      2,
+      3,
+      2,
+      3,
+      2,
+      3,
+      2,
+      3,
+      2,
+      3,
+      2,
+      3,
+      2,
+      3,
+      2,
+      3,
+      2,
+      3,
+      2,
+      3,
+      2,
+      3,
+      2,
+      3,
+      2,
+      3,
+      2,
+      3,
+      2,
+      3,
+      2,
+      3,
+      2,
+      3,
+      2,
+      3,
+      2,
+      3,
+      2,
+      3,
+      2,
+      3,
+      2,
+      3,
+      2
+    ],
+    "padded_batch_shape": [
+      50,
+      205
+    ],
+    "sequence_lengths": [
+      194,
+      205,
+      194,
+      205,
+      194,
+      205,
+      194,
+      205,
+      194,
+      205,
+      194,
+      205,
+      194,
+      205,
+      194,
+      205,
+      194,
+      205,
+      194,
+      205,
+      194,
+      205,
+      194,
+      205,
+      194,
+      205,
+      194,
+      205,
+      194,
+      205,
+      194,
+      205,
+      194,
+      205,
+      194,
+      205,
+      194,
+      205,
+      194,
+      205,
+      194,
+      205,
+      194,
+      205,
+      194,
+      205,
+      194,
+      205,
+      194,
+      205
+    ],
+    "state_tokens": [
+      {
+        "full_tokens": 166,
+        "kept_tokens": 166,
+        "truncated": false
+      },
+      {
+        "full_tokens": 166,
+        "kept_tokens": 166,
+        "truncated": false
+      },
+      {
+        "full_tokens": 166,
+        "kept_tokens": 166,
+        "truncated": false
+      },
+      {
+        "full_tokens": 166,
+        "kept_tokens": 166,
+        "truncated": false
+      },
+      {
+        "full_tokens": 166,
+        "kept_tokens": 166,
+        "truncated": false
+      },
+      {
+        "full_tokens": 166,
+        "kept_tokens": 166,
+        "truncated": false
+      },
+      {
+        "full_tokens": 166,
+        "kept_tokens": 166,
+        "truncated": false
+      },
+      {
+        "full_tokens": 166,
+        "kept_tokens": 166,
+        "truncated": false
+      },
+      {
+        "full_tokens": 166,
+        "kept_tokens": 166,
+        "truncated": false
+      },
+      {
+        "full_tokens": 166,
+        "kept_tokens": 166,
+        "truncated": false
+      },
+      {
+        "full_tokens": 166,
+        "kept_tokens": 166,
+        "truncated": false
+      },
+      {
+        "full_tokens": 166,
+        "kept_tokens": 166,
+        "truncated": false
+      },
+      {
+        "full_tokens": 166,
+        "kept_tokens": 166,
+        "truncated": false
+      },
+      {
+        "full_tokens": 166,
+        "kept_tokens": 166,
+        "truncated": false
+      },
+      {
+        "full_tokens": 166,
+        "kept_tokens": 166,
+        "truncated": false
+      },
+      {
+        "full_tokens": 166,
+        "kept_tokens": 166,
+        "truncated": false
+      },
+      {
+        "full_tokens": 166,
+        "kept_tokens": 166,
+        "truncated": false
+      },
+      {
+        "full_tokens": 166,
+        "kept_tokens": 166,
+        "truncated": false
+      },
+      {
+        "full_tokens": 166,
+        "kept_tokens": 166,
+        "truncated": false
+      },
+      {
+        "full_tokens": 166,
+        "kept_tokens": 166,
+        "truncated": false
+      },
+      {
+        "full_tokens": 166,
+        "kept_tokens": 166,
+        "truncated": false
+      },
+      {
+        "full_tokens": 166,
+        "kept_tokens": 166,
+        "truncated": false
+      },
+      {
+        "full_tokens": 166,
+        "kept_tokens": 166,
+        "truncated": false
+      },
+      {
+        "full_tokens": 166,
+        "kept_tokens": 166,
+        "truncated": false
+      },
+      {
+        "full_tokens": 166,
+        "kept_tokens": 166,
+        "truncated": false
+      },
+      {
+        "full_tokens": 166,
+        "kept_tokens": 166,
+        "truncated": false
+      },
+      {
+        "full_tokens": 166,
+        "kept_tokens": 166,
+        "truncated": false
+      },
+      {
+        "full_tokens": 166,
+        "kept_tokens": 166,
+        "truncated": false
+      },
+      {
+        "full_tokens": 166,
+        "kept_tokens": 166,
+        "truncated": false
+      },
+      {
+        "full_tokens": 166,
+        "kept_tokens": 166,
+        "truncated": false
+      },
+      {
+        "full_tokens": 166,
+        "kept_tokens": 166,
+        "truncated": false
+      },
+      {
+        "full_tokens": 166,
+        "kept_tokens": 166,
+        "truncated": false
+      },
+      {
+        "full_tokens": 166,
+        "kept_tokens": 166,
+        "truncated": false
+      },
+      {
+        "full_tokens": 166,
+        "kept_tokens": 166,
+        "truncated": false
+      },
+      {
+        "full_tokens": 166,
+        "kept_tokens": 166,
+        "truncated": false
+      },
+      {
+        "full_tokens": 166,
+        "kept_tokens": 166,
+        "truncated": false
+      },
+      {
+        "full_tokens": 166,
+        "kept_tokens": 166,
+        "truncated": false
+      },
+      {
+        "full_tokens": 166,
+        "kept_tokens": 166,
+        "truncated": false
+      },
+      {
+        "full_tokens": 166,
+        "kept_tokens": 166,
+        "truncated": false
+      },
+      {
+        "full_tokens": 166,
+        "kept_tokens": 166,
+        "truncated": false
+      },
+      {
+        "full_tokens": 166,
+        "kept_tokens": 166,
+        "truncated": false
+      },
+      {
+        "full_tokens": 166,
+        "kept_tokens": 166,
+        "truncated": false
+      },
+      {
+        "full_tokens": 166,
+        "kept_tokens": 166,
+        "truncated": false
+      },
+      {
+        "full_tokens": 166,
+        "kept_tokens": 166,
+        "truncated": false
+      },
+      {
+        "full_tokens": 166,
+        "kept_tokens": 166,
+        "truncated": false
+      },
+      {
+        "full_tokens": 166,
+        "kept_tokens": 166,
+        "truncated": false
+      },
+      {
+        "full_tokens": 166,
+        "kept_tokens": 166,
+        "truncated": false
+      },
+      {
+        "full_tokens": 166,
+        "kept_tokens": 166,
+        "truncated": false
+      },
+      {
+        "full_tokens": 166,
+        "kept_tokens": 166,
+        "truncated": false
+      },
+      {
+        "full_tokens": 166,
+        "kept_tokens": 166,
+        "truncated": false
+      }
+    ],
+    "truncated": false
+  },
+  "e2e_ms": [
+    2546.1052919272333,
+    2545.515290927142,
+    2543.449209071696,
+    2542.4097920767963,
+    2541.2690001539886,
+    2542.949124937877,
+    2541.6867081075907,
+    2542.25629218854,
+    2540.861208923161,
+    2540.499416878447,
+    2540.7340000383556,
+    2539.333750028163,
+    2540.0549159385264,
+    2540.4786251019686,
+    2539.484709035605,
+    2540.073625044897,
+    2540.0552910286933,
+    2540.5664169229567,
+    2541.8511249590665,
+    2540.817166911438
+  ],
+  "env_fingerprint": "load1-idle|none",
+  "fixture": "published-latency-q50",
+  "host_after": {
+    "fingerprint": "load1-idle|none",
+    "idle_evaluation": {
+      "idle": true,
+      "violations": []
+    },
+    "loadavg": {
+      "1": 0.2080078125,
+      "15": 2.16796875,
+      "5": 1.12548828125
+    },
+    "pmset_therm": "Note: No thermal warning level has been recorded\nNote: No performance warning level has been recorded\nNote: No CPU power status has been recorded",
+    "time": 1789983996.041708,
+    "top_processes": [
+      {
+        "comm": "/Applications/iTerm.app/Contents/MacOS/iTerm2",
+        "name": "iTerm2",
+        "pcpu": 0.2,
+        "pid": 31478,
+        "rss_mb": 209.921875,
+        "user": "chrisraethke"
+      },
+      {
+        "comm": "/Applications/Cloudflare WARP.app/Contents/Resources/CloudflareWARP",
+        "name": "CloudflareWARP",
+        "pcpu": 0.1,
+        "pid": 728,
+        "rss_mb": 287.921875,
+        "user": "root"
+      },
+      {
+        "comm": "/opt/homebrew/Cellar/python@3.12/3.12.7/Frameworks/Python.framework/Versions/3.12/Resources/Python.app/Contents/MacOS/Python",
+        "name": "Python",
+        "pcpu": 0.0,
+        "pid": 50705,
+        "rss_mb": 829.046875,
+        "user": "chrisraethke"
+      }
+    ]
+  },
+  "host_before": {
+    "fingerprint": "load1-idle|none",
+    "idle_evaluation": {
+      "idle": true,
+      "violations": []
+    },
+    "loadavg": {
+      "1": 0.9814453125,
+      "15": 2.642578125,
+      "5": 1.9072265625
+    },
+    "pmset_therm": "Note: No thermal warning level has been recorded\nNote: No performance warning level has been recorded\nNote: No CPU power status has been recorded",
+    "time": 1789983815.45047,
+    "top_processes": [
+      {
+        "comm": "/opt/homebrew/Cellar/python@3.12/3.12.7/Frameworks/Python.framework/Versions/3.12/Resources/Python.app/Contents/MacOS/Python",
+        "name": "Python",
+        "pcpu": 3.7,
+        "pid": 50705,
+        "rss_mb": 825.203125,
+        "user": "chrisraethke"
+      },
+      {
+        "comm": "/Applications/iTerm.app/Contents/MacOS/iTerm2",
+        "name": "iTerm2",
+        "pcpu": 1.2,
+        "pid": 31478,
+        "rss_mb": 209.921875,
+        "user": "chrisraethke"
+      },
+      {
+        "comm": "/Applications/Cloudflare WARP.app/Contents/Resources/CloudflareWARP",
+        "name": "CloudflareWARP",
+        "pcpu": 0.2,
+        "pid": 728,
+        "rss_mb": 652.578125,
+        "user": "root"
+      }
+    ]
+  },
+  "host_policy": {
+    "policy": {
+      "allow": [
+        "Terminal",
+        "iTerm2",
+        "Ghostty",
+        "Code",
+        "Cursor",
+        "Windsurf",
+        "Zed",
+        "pi",
+        "node",
+        "uv",
+        "python3.12"
+      ],
+      "load1_max": 3.0,
+      "notes": "allow lists terminal and editor processes that are expected while a developer runs a benchmark, plus the pi harness (pi), its node workers (node), uv, and the benchmark's Python 3.12 process; ctx is intentionally not allowed because it can contend for substantial CPU. system_prefixes identifies OS daemons and com.apple.* services that are excluded from the report.",
+      "process_cpu_percent_max": 15.0,
+      "process_rss_mb_report_min": 200,
+      "schema_version": 1,
+      "system_prefixes": [
+        "/System/",
+        "/usr/libexec/",
+        "/usr/sbin/",
+        "/sbin/",
+        "com.apple."
+      ]
+    }
+  },
+  "idle_evaluation_end": {
+    "idle": true,
+    "violations": []
+  },
+  "idle_evaluation_start": {
+    "idle": true,
+    "violations": []
+  },
+  "model_ms": [
+    2526.9479581620544,
+    2528.482957975939,
+    2527.966249966994,
+    2527.9898329172283,
+    2527.196291135624,
+    2528.375499881804,
+    2527.1017078775913,
+    2527.2603339981288,
+    2527.1451668813825,
+    2527.582834009081,
+    2528.394625056535,
+    2527.302709175274,
+    2527.6333750225604,
+    2526.909166947007,
+    2528.032957809046,
+    2529.7898340504616,
+    2529.5025419909507,
+    2530.1244580186903,
+    2530.8808339759707,
+    2530.7529158890247
+  ],
+  "mps_memory_after_reps": {
+    "current_allocated_memory": 1688780032,
+    "driver_allocated_memory": 3231432704
+  },
+  "mps_memory_after_warmup": {
+    "current_allocated_memory": 1688780032,
+    "driver_allocated_memory": 3231432704
+  },
+  "n_questions": 50,
+  "n_tokens": 9975,
+  "option_counts": [
+    3,
+    2,
+    3,
+    2,
+    3,
+    2,
+    3,
+    2,
+    3,
+    2,
+    3,
+    2,
+    3,
+    2,
+    3,
+    2,
+    3,
+    2,
+    3,
+    2,
+    3,
+    2,
+    3,
+    2,
+    3,
+    2,
+    3,
+    2,
+    3,
+    2,
+    3,
+    2,
+    3,
+    2,
+    3,
+    2,
+    3,
+    2,
+    3,
+    2,
+    3,
+    2,
+    3,
+    2,
+    3,
+    2,
+    3,
+    2,
+    3,
+    2
+  ],
+  "padded_batch_shape": [
+    50,
+    205
+  ],
+  "preprocess_ms": [
+    13.703332981094718,
+    13.873625081032515,
+    14.750708127394319,
+    14.867499936372042,
+    15.211625024676323,
+    15.300249913707376,
+    14.878083020448685,
+    15.333083225414157,
+    15.53437509573996,
+    15.276124933734536,
+    15.313625102862716,
+    15.396333066746593,
+    15.059292083606124,
+    15.365791972726583,
+    15.050375135615468,
+    15.356790972873569,
+    15.124208061024547,
+    15.164375072345138,
+    15.11958404444158,
+    15.294333919882774
+  ],
+  "profile": "english",
+  "reps": 20,
+  "result": {
+    "answers": {
+      "q0": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "choice": "billing",
+        "confidence": 0.6179,
+        "probabilities": {
+          "billing": 0.8899,
+          "sales": 0.0685,
+          "technical": 0.0417
+        },
+        "type": "choice"
+      },
+      "q1": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.6794,
+        "noul": 0.6794,
+        "type": "noul"
+      },
+      "q10": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "choice": "billing",
+        "confidence": 0.6179,
+        "probabilities": {
+          "billing": 0.8899,
+          "sales": 0.0685,
+          "technical": 0.0417
+        },
+        "type": "choice"
+      },
+      "q11": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.6794,
+        "noul": 0.6794,
+        "type": "noul"
+      },
+      "q12": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "choice": "billing",
+        "confidence": 0.6179,
+        "probabilities": {
+          "billing": 0.8899,
+          "sales": 0.0685,
+          "technical": 0.0417
+        },
+        "type": "choice"
+      },
+      "q13": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.6794,
+        "noul": 0.6794,
+        "type": "noul"
+      },
+      "q14": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "choice": "billing",
+        "confidence": 0.6179,
+        "probabilities": {
+          "billing": 0.8899,
+          "sales": 0.0685,
+          "technical": 0.0417
+        },
+        "type": "choice"
+      },
+      "q15": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.6794,
+        "noul": 0.6794,
+        "type": "noul"
+      },
+      "q16": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "choice": "billing",
+        "confidence": 0.6179,
+        "probabilities": {
+          "billing": 0.8899,
+          "sales": 0.0685,
+          "technical": 0.0417
+        },
+        "type": "choice"
+      },
+      "q17": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.6794,
+        "noul": 0.6794,
+        "type": "noul"
+      },
+      "q18": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "choice": "billing",
+        "confidence": 0.6179,
+        "probabilities": {
+          "billing": 0.8899,
+          "sales": 0.0685,
+          "technical": 0.0417
+        },
+        "type": "choice"
+      },
+      "q19": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.6794,
+        "noul": 0.6794,
+        "type": "noul"
+      },
+      "q2": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "choice": "billing",
+        "confidence": 0.6179,
+        "probabilities": {
+          "billing": 0.8899,
+          "sales": 0.0685,
+          "technical": 0.0417
+        },
+        "type": "choice"
+      },
+      "q20": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "choice": "billing",
+        "confidence": 0.6179,
+        "probabilities": {
+          "billing": 0.8899,
+          "sales": 0.0685,
+          "technical": 0.0417
+        },
+        "type": "choice"
+      },
+      "q21": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.6794,
+        "noul": 0.6794,
+        "type": "noul"
+      },
+      "q22": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "choice": "billing",
+        "confidence": 0.6179,
+        "probabilities": {
+          "billing": 0.8899,
+          "sales": 0.0685,
+          "technical": 0.0417
+        },
+        "type": "choice"
+      },
+      "q23": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.6794,
+        "noul": 0.6794,
+        "type": "noul"
+      },
+      "q24": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "choice": "billing",
+        "confidence": 0.6179,
+        "probabilities": {
+          "billing": 0.8899,
+          "sales": 0.0685,
+          "technical": 0.0417
+        },
+        "type": "choice"
+      },
+      "q25": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.6794,
+        "noul": 0.6794,
+        "type": "noul"
+      },
+      "q26": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "choice": "billing",
+        "confidence": 0.6179,
+        "probabilities": {
+          "billing": 0.8899,
+          "sales": 0.0685,
+          "technical": 0.0417
+        },
+        "type": "choice"
+      },
+      "q27": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.6794,
+        "noul": 0.6794,
+        "type": "noul"
+      },
+      "q28": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "choice": "billing",
+        "confidence": 0.6179,
+        "probabilities": {
+          "billing": 0.8899,
+          "sales": 0.0685,
+          "technical": 0.0417
+        },
+        "type": "choice"
+      },
+      "q29": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.6794,
+        "noul": 0.6794,
+        "type": "noul"
+      },
+      "q3": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.6794,
+        "noul": 0.6794,
+        "type": "noul"
+      },
+      "q30": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "choice": "billing",
+        "confidence": 0.6179,
+        "probabilities": {
+          "billing": 0.8899,
+          "sales": 0.0685,
+          "technical": 0.0417
+        },
+        "type": "choice"
+      },
+      "q31": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.6794,
+        "noul": 0.6794,
+        "type": "noul"
+      },
+      "q32": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "choice": "billing",
+        "confidence": 0.6179,
+        "probabilities": {
+          "billing": 0.8899,
+          "sales": 0.0685,
+          "technical": 0.0417
+        },
+        "type": "choice"
+      },
+      "q33": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.6794,
+        "noul": 0.6794,
+        "type": "noul"
+      },
+      "q34": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "choice": "billing",
+        "confidence": 0.6179,
+        "probabilities": {
+          "billing": 0.8899,
+          "sales": 0.0685,
+          "technical": 0.0417
+        },
+        "type": "choice"
+      },
+      "q35": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.6794,
+        "noul": 0.6794,
+        "type": "noul"
+      },
+      "q36": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "choice": "billing",
+        "confidence": 0.6179,
+        "probabilities": {
+          "billing": 0.8899,
+          "sales": 0.0685,
+          "technical": 0.0417
+        },
+        "type": "choice"
+      },
+      "q37": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.6794,
+        "noul": 0.6794,
+        "type": "noul"
+      },
+      "q38": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "choice": "billing",
+        "confidence": 0.6179,
+        "probabilities": {
+          "billing": 0.8899,
+          "sales": 0.0685,
+          "technical": 0.0417
+        },
+        "type": "choice"
+      },
+      "q39": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.6794,
+        "noul": 0.6794,
+        "type": "noul"
+      },
+      "q4": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "choice": "billing",
+        "confidence": 0.6179,
+        "probabilities": {
+          "billing": 0.8899,
+          "sales": 0.0685,
+          "technical": 0.0417
+        },
+        "type": "choice"
+      },
+      "q40": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "choice": "billing",
+        "confidence": 0.6179,
+        "probabilities": {
+          "billing": 0.8899,
+          "sales": 0.0685,
+          "technical": 0.0417
+        },
+        "type": "choice"
+      },
+      "q41": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.6794,
+        "noul": 0.6794,
+        "type": "noul"
+      },
+      "q42": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "choice": "billing",
+        "confidence": 0.6179,
+        "probabilities": {
+          "billing": 0.8899,
+          "sales": 0.0685,
+          "technical": 0.0417
+        },
+        "type": "choice"
+      },
+      "q43": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.6794,
+        "noul": 0.6794,
+        "type": "noul"
+      },
+      "q44": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "choice": "billing",
+        "confidence": 0.6179,
+        "probabilities": {
+          "billing": 0.8899,
+          "sales": 0.0685,
+          "technical": 0.0417
+        },
+        "type": "choice"
+      },
+      "q45": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.6794,
+        "noul": 0.6794,
+        "type": "noul"
+      },
+      "q46": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "choice": "billing",
+        "confidence": 0.6179,
+        "probabilities": {
+          "billing": 0.8899,
+          "sales": 0.0685,
+          "technical": 0.0417
+        },
+        "type": "choice"
+      },
+      "q47": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.6794,
+        "noul": 0.6794,
+        "type": "noul"
+      },
+      "q48": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "choice": "billing",
+        "confidence": 0.6179,
+        "probabilities": {
+          "billing": 0.8899,
+          "sales": 0.0685,
+          "technical": 0.0417
+        },
+        "type": "choice"
+      },
+      "q49": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.6794,
+        "noul": 0.6794,
+        "type": "noul"
+      },
+      "q5": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.6794,
+        "noul": 0.6794,
+        "type": "noul"
+      },
+      "q6": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "choice": "billing",
+        "confidence": 0.6179,
+        "probabilities": {
+          "billing": 0.8899,
+          "sales": 0.0685,
+          "technical": 0.0417
+        },
+        "type": "choice"
+      },
+      "q7": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.6794,
+        "noul": 0.6794,
+        "type": "noul"
+      },
+      "q8": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "choice": "billing",
+        "confidence": 0.6179,
+        "probabilities": {
+          "billing": 0.8899,
+          "sales": 0.0685,
+          "technical": 0.0417
+        },
+        "type": "choice"
+      },
+      "q9": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.6794,
+        "noul": 0.6794,
+        "type": "noul"
+      }
+    },
+    "model": "laya-rl-agent",
+    "usage": {
+      "input_tokens": 9975,
+      "output_tokens": 0
+    }
+  },
+  "results_identical": true,
+  "ru_maxrss": 3844489216,
+  "schema_version": 1,
+  "sequence_lengths": [
+    194,
+    205,
+    194,
+    205,
+    194,
+    205,
+    194,
+    205,
+    194,
+    205,
+    194,
+    205,
+    194,
+    205,
+    194,
+    205,
+    194,
+    205,
+    194,
+    205,
+    194,
+    205,
+    194,
+    205,
+    194,
+    205,
+    194,
+    205,
+    194,
+    205,
+    194,
+    205,
+    194,
+    205,
+    194,
+    205,
+    194,
+    205,
+    194,
+    205,
+    194,
+    205,
+    194,
+    205,
+    194,
+    205,
+    194,
+    205,
+    194,
+    205
+  ],
+  "stats": {
+    "e2e": {
+      "max": 2546.1052919272333,
+      "max_ms": 2546.1052919272333,
+      "mean": 2541.522548010107,
+      "mean_ms": 2541.522548010107,
+      "min": 2539.333750028163,
+      "min_ms": 2539.333750028163,
+      "ms_per_question": 50.81678375834599,
+      "n": 20,
+      "p50": 2540.8391879172996,
+      "p50_ms": 2540.8391879172996,
+      "p95": 2545.5447909771465,
+      "p95_ms": 2545.5447909771465,
+      "p99": 2545.993191737216,
+      "p99_ms": 2545.993191737216,
+      "qps": 0.3935707559751902,
+      "questions_per_sec": 19.67853779875951,
+      "requests_per_sec": 0.3935707559751902,
+      "std": 1.7912670180160806,
+      "std_ms": 1.7912670180160806
+    },
+    "model": {
+      "max": 2530.8808339759707,
+      "max_ms": 2530.8808339759707,
+      "mean": 2528.2686125370674,
+      "mean_ms": 2528.2686125370674,
+      "min": 2526.909166947007,
+      "min_ms": 2526.909166947007,
+      "ms_per_question": 50.55956082884222,
+      "n": 20,
+      "p50": 2527.978041442111,
+      "p50_ms": 2527.978041442111,
+      "p95": 2530.759311793372,
+      "p95_ms": 2530.759311793372,
+      "p99": 2530.856529539451,
+      "p99_ms": 2530.856529539451,
+      "qps": 0.3955730562554806,
+      "questions_per_sec": 19.77865281277403,
+      "requests_per_sec": 0.3955730562554806,
+      "std": 1.2402328313595636,
+      "std_ms": 1.2402328313595636
+    },
+    "preprocess": {
+      "max": 15.53437509573996,
+      "max_ms": 15.53437509573996,
+      "mean": 15.048670838586986,
+      "mean_ms": 15.048670838586986,
+      "min": 13.703332981094718,
+      "min_ms": 13.703332981094718,
+      "ms_per_question": 0.3037600009702146,
+      "n": 20,
+      "p50": 15.18800004851073,
+      "p50_ms": 15.18800004851073,
+      "p95": 15.403235168196261,
+      "p95_ms": 15.403235168196261,
+      "p99": 15.50814711023122,
+      "p99_ms": 15.50814711023122,
+      "qps": 65.84145356900072,
+      "questions_per_sec": 3292.072678450036,
+      "requests_per_sec": 65.84145356900072,
+      "std": 0.46211002811380025,
+      "std_ms": 0.46211002811380025
+    },
+    "transfer": {
+      "max": 4.028083989396691,
+      "max_ms": 4.028083989396691,
+      "mean": 0.7127833785489202,
+      "mean_ms": 0.7127833785489202,
+      "min": 0.4227918107062578,
+      "min_ms": 0.4227918107062578,
+      "ms_per_question": 0.008973339572548866,
+      "n": 20,
+      "p50": 0.4486669786274433,
+      "p50_ms": 0.4486669786274433,
+      "p95": 0.9839268168434523,
+      "p95_ms": 0.9839268168434523,
+      "p99": 3.419252554886039,
+      "p99_ms": 3.419252554886039,
+      "qps": 2228.824601844308,
+      "questions_per_sec": 111441.2300922154,
+      "requests_per_sec": 2228.824601844308,
+      "std": 0.7765748963204666,
+      "std_ms": 0.7765748963204666
+    }
+  },
+  "timing": {
+    "e2e": {
+      "contended_reason": null,
+      "sample_contended": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "sample_timestamps": [
+        1789983939.840054,
+        1789983942.386179,
+        1789983944.931715,
+        1789983947.4751842,
+        1789983950.0176132,
+        1789983952.558903,
+        1789983955.1018722,
+        1789983957.6435788,
+        1789983960.185856,
+        1789983962.7267368,
+        1789983965.267257,
+        1789983967.808011,
+        1789983970.3473651,
+        1789983972.887441,
+        1789983975.4279401,
+        1789983977.967444,
+        1789983980.5075378,
+        1789983983.047613,
+        1789983985.5881999,
+        1789983988.130071
+      ],
+      "samples_ms": [
+        2546.1052919272333,
+        2545.515290927142,
+        2543.449209071696,
+        2542.4097920767963,
+        2541.2690001539886,
+        2542.949124937877,
+        2541.6867081075907,
+        2542.25629218854,
+        2540.861208923161,
+        2540.499416878447,
+        2540.7340000383556,
+        2539.333750028163,
+        2540.0549159385264,
+        2540.4786251019686,
+        2539.484709035605,
+        2540.073625044897,
+        2540.0552910286933,
+        2540.5664169229567,
+        2541.8511249590665,
+        2540.817166911438
+      ],
+      "stats": {
+        "max": 2546.1052919272333,
+        "max_ms": 2546.1052919272333,
+        "mean": 2541.522548010107,
+        "mean_ms": 2541.522548010107,
+        "min": 2539.333750028163,
+        "min_ms": 2539.333750028163,
+        "ms_per_question": 50.81678375834599,
+        "n": 20,
+        "p50": 2540.8391879172996,
+        "p50_ms": 2540.8391879172996,
+        "p95": 2545.5447909771465,
+        "p95_ms": 2545.5447909771465,
+        "p99": 2545.993191737216,
+        "p99_ms": 2545.993191737216,
+        "qps": 0.3935707559751902,
+        "questions_per_sec": 19.67853779875951,
+        "requests_per_sec": 0.3935707559751902,
+        "std": 1.7912670180160806,
+        "std_ms": 1.7912670180160806
+      },
+      "warmup_ms": [
+        2550.0202919356525,
+        2546.3366659823805,
+        2545.45862483792
+      ]
+    },
+    "model": {
+      "contended_reason": null,
+      "sample_contended": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "sample_timestamps": [
+        1789983823.4076958,
+        1789983825.934679,
+        1789983828.463192,
+        1789983830.99119,
+        1789983833.519215,
+        1789983836.0464482,
+        1789983838.574861,
+        1789983841.101996,
+        1789983843.629289,
+        1789983846.1564648,
+        1789983848.684082,
+        1789983851.2125142,
+        1789983853.7398489,
+        1789983856.267515,
+        1789983858.794456,
+        1789983861.3225222,
+        1789983863.852339,
+        1789983866.381873,
+        1789983868.91203,
+        1789983871.442945
+      ],
+      "samples_ms": [
+        2526.9479581620544,
+        2528.482957975939,
+        2527.966249966994,
+        2527.9898329172283,
+        2527.196291135624,
+        2528.375499881804,
+        2527.1017078775913,
+        2527.2603339981288,
+        2527.1451668813825,
+        2527.582834009081,
+        2528.394625056535,
+        2527.302709175274,
+        2527.6333750225604,
+        2526.909166947007,
+        2528.032957809046,
+        2529.7898340504616,
+        2529.5025419909507,
+        2530.1244580186903,
+        2530.8808339759707,
+        2530.7529158890247
+      ],
+      "stats": {
+        "max": 2530.8808339759707,
+        "max_ms": 2530.8808339759707,
+        "mean": 2528.2686125370674,
+        "mean_ms": 2528.2686125370674,
+        "min": 2526.909166947007,
+        "min_ms": 2526.909166947007,
+        "ms_per_question": 50.55956082884222,
+        "n": 20,
+        "p50": 2527.978041442111,
+        "p50_ms": 2527.978041442111,
+        "p95": 2530.759311793372,
+        "p95_ms": 2530.759311793372,
+        "p99": 2530.856529539451,
+        "p99_ms": 2530.856529539451,
+        "qps": 0.3955730562554806,
+        "questions_per_sec": 19.77865281277403,
+        "requests_per_sec": 0.3955730562554806,
+        "std": 1.2402328313595636,
+        "std_ms": 1.2402328313595636
+      },
+      "warmup_ms": [
+        2542.0531251002103,
+        2527.7924169786274,
+        2528.401041869074
+      ]
+    },
+    "preprocess": {
+      "contended_reason": null,
+      "sample_contended": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "sample_timestamps": [
+        1789983815.508306,
+        1789983815.522013,
+        1789983815.535889,
+        1789983815.550643,
+        1789983815.565514,
+        1789983815.580729,
+        1789983815.596032,
+        1789983815.610914,
+        1789983815.62625,
+        1789983815.641788,
+        1789983815.657067,
+        1789983815.672384,
+        1789983815.687783,
+        1789983815.702846,
+        1789983815.718215,
+        1789983815.733268,
+        1789983815.748628,
+        1789983815.763756,
+        1789983815.778923,
+        1789983815.794046
+      ],
+      "samples_ms": [
+        13.703332981094718,
+        13.873625081032515,
+        14.750708127394319,
+        14.867499936372042,
+        15.211625024676323,
+        15.300249913707376,
+        14.878083020448685,
+        15.333083225414157,
+        15.53437509573996,
+        15.276124933734536,
+        15.313625102862716,
+        15.396333066746593,
+        15.059292083606124,
+        15.365791972726583,
+        15.050375135615468,
+        15.356790972873569,
+        15.124208061024547,
+        15.164375072345138,
+        15.11958404444158,
+        15.294333919882774
+      ],
+      "stats": {
+        "max": 15.53437509573996,
+        "max_ms": 15.53437509573996,
+        "mean": 15.048670838586986,
+        "mean_ms": 15.048670838586986,
+        "min": 13.703332981094718,
+        "min_ms": 13.703332981094718,
+        "ms_per_question": 0.3037600009702146,
+        "n": 20,
+        "p50": 15.18800004851073,
+        "p50_ms": 15.18800004851073,
+        "p95": 15.403235168196261,
+        "p95_ms": 15.403235168196261,
+        "p99": 15.50814711023122,
+        "p99_ms": 15.50814711023122,
+        "qps": 65.84145356900072,
+        "questions_per_sec": 3292.072678450036,
+        "requests_per_sec": 65.84145356900072,
+        "std": 0.46211002811380025,
+        "std_ms": 0.46211002811380025
+      },
+      "warmup_ms": [
+        13.896375196054578,
+        13.774959137663245,
+        13.732457999140024
+      ]
+    },
+    "transfer": {
+      "contended_reason": null,
+      "included_in_model_ms": false,
+      "sample_contended": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "sample_timestamps": [
+        1789983881.568317,
+        1789983884.099437,
+        1789983886.630731,
+        1789983889.1625202,
+        1789983891.6938822,
+        1789983894.224948,
+        1789983896.7560608,
+        1789983899.2875059,
+        1789983901.8185549,
+        1789983904.349633,
+        1789983906.880482,
+        1789983909.411016,
+        1789983911.942736,
+        1789983914.473424,
+        1789983917.004719,
+        1789983919.536839,
+        1789983922.067924,
+        1789983924.599295,
+        1789983927.130833,
+        1789983929.662341
+      ],
+      "samples_ms": [
+        0.8237080182880163,
+        0.45504095032811165,
+        0.7982081733644009,
+        0.44729188084602356,
+        0.4242081195116043,
+        0.4604998975992203,
+        0.45004207640886307,
+        0.49104192294180393,
+        0.4408750683069229,
+        0.42404187843203545,
+        0.4282919690012932,
+        0.4309588111937046,
+        0.4405418876558542,
+        0.805417075753212,
+        0.4227918107062578,
+        0.799583038315177,
+        0.43645803816616535,
+        0.8038750384002924,
+        0.4447079263627529,
+        4.028083989396691
+      ],
+      "stats": {
+        "max": 4.028083989396691,
+        "max_ms": 4.028083989396691,
+        "mean": 0.7127833785489202,
+        "mean_ms": 0.7127833785489202,
+        "min": 0.4227918107062578,
+        "min_ms": 0.4227918107062578,
+        "ms_per_question": 0.008973339572548866,
+        "n": 20,
+        "p50": 0.4486669786274433,
+        "p50_ms": 0.4486669786274433,
+        "p95": 0.9839268168434523,
+        "p95_ms": 0.9839268168434523,
+        "p99": 3.419252554886039,
+        "p99_ms": 3.419252554886039,
+        "qps": 2228.824601844308,
+        "questions_per_sec": 111441.2300922154,
+        "requests_per_sec": 2228.824601844308,
+        "std": 0.7765748963204666,
+        "std_ms": 0.7765748963204666
+      },
+      "warmup_ms": [
+        0.44591701589524746,
+        0.8012920152395964,
+        0.40695792995393276
+      ]
+    }
+  },
+  "transfer_ms": [
+    0.8237080182880163,
+    0.45504095032811165,
+    0.7982081733644009,
+    0.44729188084602356,
+    0.4242081195116043,
+    0.4604998975992203,
+    0.45004207640886307,
+    0.49104192294180393,
+    0.4408750683069229,
+    0.42404187843203545,
+    0.4282919690012932,
+    0.4309588111937046,
+    0.4405418876558542,
+    0.805417075753212,
+    0.4227918107062578,
+    0.799583038315177,
+    0.43645803816616535,
+    0.8038750384002924,
+    0.4447079263627529,
+    4.028083989396691
+  ],
+  "truncated": false,
+  "wall_clock_seconds": 180.5909039999824,
+  "warmup": 3
+}

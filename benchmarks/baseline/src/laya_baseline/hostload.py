@@ -38,6 +38,46 @@ def _is_system(comm: str, prefixes: list[str]) -> bool:
     return any(comm.startswith(prefix) or base.startswith(prefix) for prefix in prefixes)
 
 
+def _allow_comm_patterns(policy: dict[str, Any]) -> list[str]:
+    return [str(pattern) for pattern in policy.get("allow_comm_patterns", [])]
+
+
+def _comm_matches(comm: str, patterns: list[str]) -> bool:
+    for pattern in patterns:
+        try:
+            if re.search(pattern, comm):
+                return True
+        except re.error:
+            continue
+    return False
+
+
+def _self_tree(self_pid: int) -> tuple[list[int], str | None]:
+    """Return this process and all descendants from a single ps parent map."""
+    raw, error = _run(("ps", "-Ao", "pid,ppid"))
+    tree = {self_pid}
+    if raw is None:
+        return sorted(tree), error
+    children: dict[int, list[int]] = {}
+    for line in raw.splitlines()[1:]:
+        fields = line.strip().split()
+        if len(fields) != 2:
+            continue
+        try:
+            pid, ppid = int(fields[0]), int(fields[1])
+        except ValueError:
+            continue
+        children.setdefault(ppid, []).append(pid)
+    pending = [self_pid]
+    while pending:
+        parent = pending.pop()
+        for child in children.get(parent, []):
+            if child not in tree:
+                tree.add(child)
+                pending.append(child)
+    return sorted(tree), error
+
+
 def _processes(policy: dict[str, Any]) -> tuple[list[dict[str, Any]], str | None]:
     raw, error = _run(("ps", "-Ao", "pid,pcpu,rss,user,comm"))
     if raw is None:
@@ -119,6 +159,8 @@ def _low_power_mode(raw: str | None) -> int | None:
 def snapshot(policy: dict[str, Any] | None = None) -> dict[str, Any]:
     """Capture load, notable processes, GUI applications, thermal and power state."""
     policy = policy or load_policy()
+    self_pid = os.getpid()
+    self_tree, self_tree_error = _self_tree(self_pid)
     try:
         loads = os.getloadavg()
     except OSError:
@@ -141,6 +183,8 @@ def snapshot(policy: dict[str, Any] | None = None) -> dict[str, Any]:
         "load1": float(loads[0]),
         "load5": float(loads[1]),
         "load15": float(loads[2]),
+        "self_pid": self_pid,
+        "self_tree": self_tree,
         "processes": processes,
         "gui_apps": gui_apps,
         "thermal": thermal,
@@ -148,6 +192,7 @@ def snapshot(policy: dict[str, Any] | None = None) -> dict[str, Any]:
         "lowpowermode": _low_power_mode(pmset_raw),
     }
     errors = {
+        "self_tree": self_tree_error,
         "processes": process_error,
         "gui_apps": gui_error,
         "thermal": thermal_error,
@@ -166,20 +211,37 @@ def snapshot(policy: dict[str, Any] | None = None) -> dict[str, Any]:
     return result
 
 
-def evaluate(snapshot_value: dict[str, Any], policy: dict[str, Any]) -> dict[str, Any]:
-    """Evaluate only declared idle-host gates; RSS-only reports are informational."""
+def evaluate(snapshot_value: dict[str, Any], policy: dict[str, Any], *, phase: str = "start") -> dict[str, Any]:
+    """Evaluate a host snapshot, counting load only for the pre-run start gate."""
+    if phase not in ("start", "end"):
+        raise ValueError(f"unknown host evaluation phase: {phase}")
     load1, _, _ = _load_values(snapshot_value)
     load_limit = float(policy.get("load1_max", 3.0))
     cpu_limit = float(policy.get("process_cpu_percent_max", 15.0))
     allow = {str(name) for name in policy.get("allow", [])}
+    allow_patterns = _allow_comm_patterns(policy)
     prefixes = [str(prefix) for prefix in policy.get("system_prefixes", [])]
     violations: list[str] = []
-    if load1 > load_limit:
+    self_processes: list[dict[str, Any]] = []
+    if phase == "start" and load1 > load_limit:
         violations.append(f"load1 {load1:.1f} > {load_limit:.1f}")
+    self_tree_present = "self_tree" in snapshot_value
+    try:
+        self_tree = {int(pid) for pid in snapshot_value.get("self_tree", [])}
+    except (TypeError, ValueError):
+        self_tree = set()
     for process in snapshot_value.get("processes", []):
         if not isinstance(process, dict):
             continue
         comm = str(process.get("comm", process.get("name", "")))
+        try:
+            pid = int(process.get("pid"))
+        except (TypeError, ValueError):
+            pid = None
+        comm_is_self = pid in self_tree if self_tree_present else _comm_matches(comm, allow_patterns)
+        if comm_is_self:
+            self_processes.append(process)
+            continue
         if _is_system(comm, prefixes):
             continue
         name = str(process.get("name") or Path(comm).name)
@@ -187,9 +249,14 @@ def evaluate(snapshot_value: dict[str, Any], policy: dict[str, Any]) -> dict[str
             pcpu = float(process.get("pcpu", 0.0))
         except (TypeError, ValueError):
             continue
-        if pcpu > cpu_limit and name not in allow:
+        if pcpu > cpu_limit and name not in allow and not _comm_matches(comm, allow_patterns):
             violations.append(f"{name} pcpu {pcpu:.1f} > {cpu_limit:.1f} (not in allow list)")
-    return {"idle": not violations, "violations": violations}
+    result: dict[str, Any] = {"idle": not violations, "violations": violations, "self_processes": self_processes}
+    if phase == "end":
+        result["load1_end_informational"] = (
+            f"load1 {load1:.1f} > {load_limit:.1f}" if load1 > load_limit else None
+        )
+    return result
 
 
 def fingerprint(snapshot_value: dict[str, Any], policy: dict[str, Any]) -> str:
@@ -198,12 +265,24 @@ def fingerprint(snapshot_value: dict[str, Any], policy: dict[str, Any]) -> str:
     load_limit = float(policy.get("load1_max", 3.0))
     cpu_limit = float(policy.get("process_cpu_percent_max", 15.0))
     allow = {str(name) for name in policy.get("allow", [])}
+    allow_patterns = _allow_comm_patterns(policy)
     prefixes = [str(prefix) for prefix in policy.get("system_prefixes", [])]
     names: set[str] = set()
+    self_tree_present = "self_tree" in snapshot_value
+    try:
+        self_tree = {int(pid) for pid in snapshot_value.get("self_tree", [])}
+    except (TypeError, ValueError):
+        self_tree = set()
     for process in snapshot_value.get("processes", []):
         if not isinstance(process, dict):
             continue
         comm = str(process.get("comm", process.get("name", "")))
+        try:
+            pid = int(process.get("pid"))
+        except (TypeError, ValueError):
+            pid = None
+        if (pid in self_tree if self_tree_present else _comm_matches(comm, allow_patterns)):
+            continue
         if _is_system(comm, prefixes):
             continue
         name = str(process.get("name") or Path(comm).name)
@@ -211,7 +290,7 @@ def fingerprint(snapshot_value: dict[str, Any], policy: dict[str, Any]) -> str:
             pcpu = float(process.get("pcpu", 0.0))
         except (TypeError, ValueError):
             continue
-        if pcpu > cpu_limit and name not in allow:
+        if pcpu > cpu_limit and name not in allow and not _comm_matches(comm, allow_patterns):
             names.add(name)
     load_bucket = "high" if load1 > load_limit else "idle"
     offenders = ",".join(sorted(names)) or "none"
