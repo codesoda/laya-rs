@@ -1,0 +1,12 @@
+[workspace]
+resolver = "2"
+members = ["crates/*"]
+exclude = ["spikes/*"]
+
+[workspace.package]
+edition = "2021"
+license = "Apache-2.0"
+repository = "https://github.com/codesoda/laya-rs"
+
+[profile.release]
+debug = 1
