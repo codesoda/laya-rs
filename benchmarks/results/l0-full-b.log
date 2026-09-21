@@ -1,0 +1,22 @@
+start Tue 22 Sep 2026 06:17:12 AEST
+== english cpu distinct 06:18
+distinct-ml-q1: elapsed=45.1s estimated_remaining=27.6s
+distinct-ml-q10: elapsed=212.3s estimated_remaining=187.7s
+distinct-en-q1: elapsed=230.4s estimated_remaining=14.9s
+distinct-en-q10: elapsed=398.1s estimated_remaining=94.0s
+distinct-en-q21: elapsed=742.9s estimated_remaining=96.8s
+distinct-en-q50: elapsed=1563.3s estimated_remaining=0.0s
+== english mps published-latency-q5 06:44
+published-latency-q5: elapsed=44.6s estimated_remaining=0.0s
+== multilingual cpu distinct-en-q1,distinct-en-q21,published-latency-q1,published-latency-q5 06:45
+distinct-en-q1: elapsed=30.1s estimated_remaining=6.1s
+distinct-en-q21: elapsed=173.5s estimated_remaining=80.6s
+published-latency-q1: elapsed=178.3s estimated_remaining=1.2s
+published-latency-q5: elapsed=196.3s estimated_remaining=0.0s
+== typed-decisions cpu bucket-choice-2,bucket-choice-20,edge-head-overflow,edge-long-state,ragged-q12 06:49
+bucket-choice-2: elapsed=29.7s estimated_remaining=4.8s
+bucket-choice-20: elapsed=38.6s estimated_remaining=7.0s
+edge-head-overflow: elapsed=54.9s estimated_remaining=8.9s
+edge-long-state: elapsed=168.9s estimated_remaining=32.0s
+ragged-q12: elapsed=494.0s estimated_remaining=0.0s
+done Tue 22 Sep 2026 06:57:39 AEST

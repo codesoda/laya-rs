@@ -1,0 +1,1002 @@
+{
+  "contended": false,
+  "contended_reason": null,
+  "device": "cpu",
+  "diagnostics": {
+    "n_tokens": 3229,
+    "option_counts": [
+      4,
+      4,
+      2,
+      4,
+      4,
+      2,
+      2,
+      10,
+      2,
+      4
+    ],
+    "padded_batch_shape": [
+      10,
+      356
+    ],
+    "sequence_lengths": [
+      346,
+      324,
+      314,
+      317,
+      304,
+      311,
+      318,
+      329,
+      310,
+      356
+    ],
+    "state_tokens": [
+      {
+        "full_tokens": 272,
+        "kept_tokens": 272,
+        "truncated": false
+      },
+      {
+        "full_tokens": 272,
+        "kept_tokens": 272,
+        "truncated": false
+      },
+      {
+        "full_tokens": 272,
+        "kept_tokens": 272,
+        "truncated": false
+      },
+      {
+        "full_tokens": 272,
+        "kept_tokens": 272,
+        "truncated": false
+      },
+      {
+        "full_tokens": 272,
+        "kept_tokens": 272,
+        "truncated": false
+      },
+      {
+        "full_tokens": 272,
+        "kept_tokens": 272,
+        "truncated": false
+      },
+      {
+        "full_tokens": 272,
+        "kept_tokens": 272,
+        "truncated": false
+      },
+      {
+        "full_tokens": 272,
+        "kept_tokens": 272,
+        "truncated": false
+      },
+      {
+        "full_tokens": 272,
+        "kept_tokens": 272,
+        "truncated": false
+      },
+      {
+        "full_tokens": 272,
+        "kept_tokens": 272,
+        "truncated": false
+      }
+    ],
+    "truncated": false
+  },
+  "e2e_ms": [
+    2345.9113750141114,
+    2348.4003329649568,
+    2345.306583214551,
+    2344.6139581501484,
+    2350.8497080765665,
+    2348.612583009526,
+    2347.808332880959,
+    2351.0264582000673,
+    2348.083709133789,
+    2346.241540974006,
+    2346.0531658492982,
+    2347.358207916841,
+    2348.207499831915,
+    2344.119500136003,
+    2346.917124930769,
+    2346.928541082889,
+    2344.836709089577,
+    2347.820500144735,
+    2349.3904161732644,
+    2346.642541931942
+  ],
+  "env_fingerprint": "load1-idle|none",
+  "fixture": "distinct-ml-q10",
+  "host_after": {
+    "fingerprint": "load1-idle|none",
+    "idle_evaluation": {
+      "idle": true,
+      "load1_end_informational": null,
+      "self_processes": [
+        {
+          "comm": "/opt/homebrew/Cellar/python@3.12/3.12.7/Frameworks/Python.framework/Versions/3.12/Resources/Python.app/Contents/MacOS/Python",
+          "name": "Python",
+          "pcpu": 193.2,
+          "pid": 31287,
+          "rss_mb": 2459.859375,
+          "user": "chrisraethke"
+        }
+      ],
+      "violations": []
+    },
+    "loadavg": {
+      "1": 2.5361328125,
+      "15": 2.66552734375,
+      "5": 2.65673828125
+    },
+    "pmset_therm": "Note: No thermal warning level has been recorded\nNote: No performance warning level has been recorded\nNote: No CPU power status has been recorded",
+    "self_pid": 31287,
+    "self_tree": [
+      31287,
+      31488
+    ],
+    "time": 1790022137.3219452,
+    "top_processes": [
+      {
+        "comm": "/opt/homebrew/Cellar/python@3.12/3.12.7/Frameworks/Python.framework/Versions/3.12/Resources/Python.app/Contents/MacOS/Python",
+        "name": "Python",
+        "pcpu": 193.2,
+        "pid": 31287,
+        "rss_mb": 2459.859375,
+        "user": "chrisraethke"
+      },
+      {
+        "comm": "/Applications/iTerm.app/Contents/MacOS/iTerm2",
+        "name": "iTerm2",
+        "pcpu": 0.7,
+        "pid": 31039,
+        "rss_mb": 204.4375,
+        "user": "chrisraethke"
+      },
+      {
+        "comm": "/Applications/Cloudflare WARP.app/Contents/Resources/CloudflareWARP",
+        "name": "CloudflareWARP",
+        "pcpu": 0.0,
+        "pid": 728,
+        "rss_mb": 301.90625,
+        "user": "root"
+      }
+    ]
+  },
+  "host_before": {
+    "fingerprint": "load1-idle|none",
+    "idle_evaluation": {
+      "idle": true,
+      "self_processes": [
+        {
+          "comm": "/opt/homebrew/Cellar/python@3.12/3.12.7/Frameworks/Python.framework/Versions/3.12/Resources/Python.app/Contents/MacOS/Python",
+          "name": "Python",
+          "pcpu": 66.2,
+          "pid": 31287,
+          "rss_mb": 2070.0625,
+          "user": "chrisraethke"
+        }
+      ],
+      "violations": []
+    },
+    "loadavg": {
+      "1": 1.95703125,
+      "15": 2.6591796875,
+      "5": 2.61962890625
+    },
+    "pmset_therm": "Note: No thermal warning level has been recorded\nNote: No performance warning level has been recorded\nNote: No CPU power status has been recorded",
+    "self_pid": 31287,
+    "self_tree": [
+      31287,
+      31372
+    ],
+    "time": 1790021970.314193,
+    "top_processes": [
+      {
+        "comm": "/opt/homebrew/Cellar/python@3.12/3.12.7/Frameworks/Python.framework/Versions/3.12/Resources/Python.app/Contents/MacOS/Python",
+        "name": "Python",
+        "pcpu": 66.2,
+        "pid": 31287,
+        "rss_mb": 2070.0625,
+        "user": "chrisraethke"
+      },
+      {
+        "comm": "/Applications/iTerm.app/Contents/MacOS/iTerm2",
+        "name": "iTerm2",
+        "pcpu": 4.3,
+        "pid": 31039,
+        "rss_mb": 195.953125,
+        "user": "chrisraethke"
+      },
+      {
+        "comm": "/Applications/Cloudflare WARP.app/Contents/Resources/CloudflareWARP",
+        "name": "CloudflareWARP",
+        "pcpu": 0.0,
+        "pid": 728,
+        "rss_mb": 671.375,
+        "user": "root"
+      }
+    ]
+  },
+  "host_policy": {
+    "policy": {
+      "allow": [
+        "Terminal",
+        "iTerm2",
+        "Ghostty",
+        "Code",
+        "Cursor",
+        "Windsurf",
+        "Zed",
+        "pi",
+        "node",
+        "uv",
+        "python3.12"
+      ],
+      "allow_comm_patterns": [
+        ".*/Python\\.framework/.*Python$",
+        ".*/laya-rs/benchmarks/baseline/\\.venv/bin/[^/]+$"
+      ],
+      "load1_max": 3.0,
+      "notes": "allow lists terminal and editor processes that are expected while a developer runs a benchmark, plus the pi harness (pi), its node workers (node), uv, and the benchmark's Python 3.12 process; allow_comm_patterns matches the full comm for Homebrew Python framework executables and this repo's .venv/bin/ executables (and is also the old-record fallback for identifying the benchmark process); ctx is intentionally not allowed because it can contend for substantial CPU. system_prefixes identifies OS daemons and com.apple.* services that are excluded from the report. The benchmark process and descendants are recorded in self_tree and excluded from per-process contention checks.",
+      "process_cpu_percent_max": 15.0,
+      "process_rss_mb_report_min": 200,
+      "schema_version": 1,
+      "system_prefixes": [
+        "/System/",
+        "/usr/libexec/",
+        "/usr/sbin/",
+        "/sbin/",
+        "com.apple."
+      ]
+    }
+  },
+  "idle_evaluation_end": {
+    "idle": true,
+    "load1_end_informational": null,
+    "self_processes": [
+      {
+        "comm": "/opt/homebrew/Cellar/python@3.12/3.12.7/Frameworks/Python.framework/Versions/3.12/Resources/Python.app/Contents/MacOS/Python",
+        "name": "Python",
+        "pcpu": 193.2,
+        "pid": 31287,
+        "rss_mb": 2459.859375,
+        "user": "chrisraethke"
+      }
+    ],
+    "violations": []
+  },
+  "idle_evaluation_start": {
+    "idle": true,
+    "self_processes": [
+      {
+        "comm": "/opt/homebrew/Cellar/python@3.12/3.12.7/Frameworks/Python.framework/Versions/3.12/Resources/Python.app/Contents/MacOS/Python",
+        "name": "Python",
+        "pcpu": 66.2,
+        "pid": 31287,
+        "rss_mb": 2070.0625,
+        "user": "chrisraethke"
+      }
+    ],
+    "violations": []
+  },
+  "model_ms": [
+    2353.9022081531584,
+    2363.496874924749,
+    2357.1450419258326,
+    2346.7591658700258,
+    2341.6439581196755,
+    2339.1592078842223,
+    2339.9467919953167,
+    2340.6981250736862,
+    2343.158375006169,
+    2337.6295410562307,
+    2343.4400418773293,
+    2385.9281670302153,
+    2369.8348340112716,
+    2345.8657499868423,
+    2343.3337910100818,
+    2341.0649590659887,
+    2340.358667075634,
+    2340.422583045438,
+    2344.8085419368,
+    2343.2545829564333
+  ],
+  "n_questions": 10,
+  "n_tokens": 3229,
+  "option_counts": [
+    4,
+    4,
+    2,
+    4,
+    4,
+    2,
+    2,
+    10,
+    2,
+    4
+  ],
+  "padded_batch_shape": [
+    10,
+    356
+  ],
+  "preprocess_ms": [
+    4.016582854092121,
+    3.9645840879529715,
+    3.9811250753700733,
+    3.967040916904807,
+    3.9343340322375298,
+    3.9292918518185616,
+    3.904624842107296,
+    3.8935840129852295,
+    3.8957500364631414,
+    3.9137089625000954,
+    3.9303749799728394,
+    3.884208155795932,
+    3.8833748549222946,
+    3.9158749859780073,
+    3.9107089396566153,
+    3.9167499635368586,
+    3.877874929457903,
+    3.886125050485134,
+    3.9116661064326763,
+    3.895167028531432
+  ],
+  "profile": "english",
+  "reps": 20,
+  "result": {
+    "answers": {
+      "cargo_duplicado": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.5427,
+        "noul": 0.5427,
+        "type": "noul"
+      },
+      "departamento": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "choice": "ingeniería",
+        "confidence": 0.0695,
+        "probabilities": {
+          "facturación": 0.1205,
+          "ingeniería": 0.4228,
+          "ventas": 0.2002,
+          "éxito_cliente": 0.2565
+        },
+        "type": "choice"
+      },
+      "idioma": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "choice": "es",
+        "confidence": 0.2664,
+        "probabilities": {
+          "ar": 0.0595,
+          "de": 0.1057,
+          "en": 0.0873,
+          "es": 0.5102,
+          "fr": 0.0528,
+          "hi": 0.0177,
+          "ja": 0.0227,
+          "ko": 0.0492,
+          "pt": 0.079,
+          "zh": 0.0161
+        },
+        "type": "choice"
+      },
+      "reembolso": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.5154,
+        "noul": 0.5154,
+        "type": "noul"
+      },
+      "reporte_de_error": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.8389,
+        "noul": 0.8389,
+        "type": "noul"
+      },
+      "requiere_humano": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.6493,
+        "noul": 0.6493,
+        "type": "noul"
+      },
+      "riesgo_cancelación": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.0219,
+        "legend": {
+          "0": "baja",
+          "1": "media",
+          "2": "alta",
+          "3": "muy alta"
+        },
+        "probabilities": {
+          "0": 0.3372,
+          "1": 0.28,
+          "2": 0.1917,
+          "3": 0.1911
+        },
+        "score": 1.2368,
+        "type": "score"
+      },
+      "siguiente_acción": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "choice": "escalar_ingeniería",
+        "confidence": 0.0119,
+        "probabilities": {
+          "cerrar": 0.2676,
+          "crédito": 0.2286,
+          "escalar_ingeniería": 0.313,
+          "reembolsar": 0.1909
+        },
+        "type": "choice"
+      },
+      "tono": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "choice": "frustrada",
+        "confidence": 0.1344,
+        "probabilities": {
+          "enojada": 0.3301,
+          "frustrada": 0.4523,
+          "neutral": 0.1371,
+          "positiva": 0.0805
+        },
+        "type": "choice"
+      },
+      "urgencia": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.0102,
+        "legend": {
+          "0": "puede esperar una semana",
+          "1": "en unos días",
+          "2": "el mismo día",
+          "3": "escalación inmediata"
+        },
+        "probabilities": {
+          "0": 0.2725,
+          "1": 0.2502,
+          "2": 0.1841,
+          "3": 0.2933
+        },
+        "score": 1.4982,
+        "type": "score"
+      }
+    },
+    "model": "laya-rl-agent",
+    "usage": {
+      "input_tokens": 3229,
+      "output_tokens": 0
+    }
+  },
+  "results_identical": true,
+  "ru_maxrss": 3839688704,
+  "schema_version": 1,
+  "sequence_lengths": [
+    346,
+    324,
+    314,
+    317,
+    304,
+    311,
+    318,
+    329,
+    310,
+    356
+  ],
+  "stats": {
+    "e2e": {
+      "max": 2351.0264582000673,
+      "max_ms": 2351.0264582000673,
+      "mean": 2347.2564394352958,
+      "mean_ms": 2347.2564394352958,
+      "min": 2344.119500136003,
+      "min_ms": 2344.119500136003,
+      "ms_per_question": 234.7143374499865,
+      "n": 20,
+      "p50": 2347.143374499865,
+      "p50_ms": 2347.143374499865,
+      "p95": 2350.8585455827415,
+      "p95_ms": 2350.8585455827415,
+      "p99": 2350.992875676602,
+      "p99_ms": 2350.992875676602,
+      "qps": 0.4260498147937309,
+      "questions_per_sec": 4.260498147937309,
+      "requests_per_sec": 0.4260498147937309,
+      "std": 1.849524672729378,
+      "std_ms": 1.849524672729378
+    },
+    "model": {
+      "max": 2385.9281670302153,
+      "max_ms": 2385.9281670302153,
+      "mean": 2348.092560400255,
+      "mean_ms": 2348.092560400255,
+      "min": 2337.6295410562307,
+      "min_ms": 2337.6295410562307,
+      "ms_per_question": 234.32941869832575,
+      "n": 20,
+      "p50": 2343.2941869832575,
+      "p50_ms": 2343.2941869832575,
+      "p95": 2370.639500662219,
+      "p95_ms": 2370.639500662219,
+      "p99": 2382.870433756616,
+      "p99_ms": 2382.870433756616,
+      "qps": 0.42674966103483314,
+      "questions_per_sec": 4.267496610348331,
+      "requests_per_sec": 0.42674966103483314,
+      "std": 12.014036462721458,
+      "std_ms": 12.014036462721458
+    },
+    "preprocess": {
+      "max": 4.016582854092121,
+      "max_ms": 4.016582854092121,
+      "mean": 3.920637583360076,
+      "mean_ms": 3.920637583360076,
+      "min": 3.877874929457903,
+      "min_ms": 3.877874929457903,
+      "ms_per_question": 0.3912687534466386,
+      "n": 20,
+      "p50": 3.912687534466386,
+      "p50_ms": 3.912687534466386,
+      "p95": 3.9828979643061757,
+      "p95_ms": 3.9828979643061757,
+      "p99": 4.009845876134932,
+      "p99_ms": 4.009845876134932,
+      "qps": 255.57880387613943,
+      "questions_per_sec": 2555.7880387613945,
+      "requests_per_sec": 255.57880387613943,
+      "std": 0.035751073871455805,
+      "std_ms": 0.035751073871455805
+    },
+    "transfer": {
+      "max": 0.0022919848561286926,
+      "max_ms": 0.0022919848561286926,
+      "mean": 0.0020291307009756565,
+      "mean_ms": 0.0020291307009756565,
+      "min": 0.001708976924419403,
+      "min_ms": 0.001708976924419403,
+      "ms_per_question": 0.0002041459083557129,
+      "n": 20,
+      "p50": 0.002041459083557129,
+      "p50_ms": 0.002041459083557129,
+      "p95": 0.002291100099682808,
+      "p95_ms": 0.002291100099682808,
+      "p99": 0.0022918079048395157,
+      "p99_ms": 0.0022918079048395157,
+      "qps": 489845.7226277372,
+      "questions_per_sec": 4898457.226277372,
+      "requests_per_sec": 489845.7226277372,
+      "std": 0.0001702476624380225,
+      "std_ms": 0.0001702476624380225
+    }
+  },
+  "timing": {
+    "e2e": {
+      "contended_reason": null,
+      "sample_contended": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "sample_timestamps": [
+        1790022085.398357,
+        1790022087.744287,
+        1790022090.092706,
+        1790022092.43803,
+        1790022094.7826612,
+        1790022097.1335292,
+        1790022099.48216,
+        1790022101.829984,
+        1790022104.181026,
+        1790022106.5291252,
+        1790022108.875382,
+        1790022111.221449,
+        1790022113.568821,
+        1790022115.917044,
+        1790022118.261177,
+        1790022120.608109,
+        1790022122.955051,
+        1790022125.299902,
+        1790022127.647736,
+        1790022129.99714
+      ],
+      "samples_ms": [
+        2345.9113750141114,
+        2348.4003329649568,
+        2345.306583214551,
+        2344.6139581501484,
+        2350.8497080765665,
+        2348.612583009526,
+        2347.808332880959,
+        2351.0264582000673,
+        2348.083709133789,
+        2346.241540974006,
+        2346.0531658492982,
+        2347.358207916841,
+        2348.207499831915,
+        2344.119500136003,
+        2346.917124930769,
+        2346.928541082889,
+        2344.836709089577,
+        2347.820500144735,
+        2349.3904161732644,
+        2346.642541931942
+      ],
+      "stats": {
+        "max": 2351.0264582000673,
+        "max_ms": 2351.0264582000673,
+        "mean": 2347.2564394352958,
+        "mean_ms": 2347.2564394352958,
+        "min": 2344.119500136003,
+        "min_ms": 2344.119500136003,
+        "ms_per_question": 234.7143374499865,
+        "n": 20,
+        "p50": 2347.143374499865,
+        "p50_ms": 2347.143374499865,
+        "p95": 2350.8585455827415,
+        "p95_ms": 2350.8585455827415,
+        "p99": 2350.992875676602,
+        "p99_ms": 2350.992875676602,
+        "qps": 0.4260498147937309,
+        "questions_per_sec": 4.260498147937309,
+        "requests_per_sec": 0.4260498147937309,
+        "std": 1.849524672729378,
+        "std_ms": 1.849524672729378
+      },
+      "warmup_ms": [
+        2345.4002081416547,
+        2346.76095796749,
+        2347.9707499500364
+      ]
+    },
+    "model": {
+      "contended_reason": null,
+      "sample_contended": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "sample_timestamps": [
+        1790021977.491943,
+        1790021979.845858,
+        1790021982.209368,
+        1790021984.566526,
+        1790021986.913298,
+        1790021989.254955,
+        1790021991.5941272,
+        1790021993.934089,
+        1790021996.2748,
+        1790021998.617974,
+        1790022000.955616,
+        1790022003.299069,
+        1790022005.6850119,
+        1790022008.05486,
+        1790022010.400738,
+        1790022012.744084,
+        1790022015.085162,
+        1790022017.425537,
+        1790022019.765972,
+        1790022022.1107929
+      ],
+      "samples_ms": [
+        2353.9022081531584,
+        2363.496874924749,
+        2357.1450419258326,
+        2346.7591658700258,
+        2341.6439581196755,
+        2339.1592078842223,
+        2339.9467919953167,
+        2340.6981250736862,
+        2343.158375006169,
+        2337.6295410562307,
+        2343.4400418773293,
+        2385.9281670302153,
+        2369.8348340112716,
+        2345.8657499868423,
+        2343.3337910100818,
+        2341.0649590659887,
+        2340.358667075634,
+        2340.422583045438,
+        2344.8085419368,
+        2343.2545829564333
+      ],
+      "stats": {
+        "max": 2385.9281670302153,
+        "max_ms": 2385.9281670302153,
+        "mean": 2348.092560400255,
+        "mean_ms": 2348.092560400255,
+        "min": 2337.6295410562307,
+        "min_ms": 2337.6295410562307,
+        "ms_per_question": 234.32941869832575,
+        "n": 20,
+        "p50": 2343.2941869832575,
+        "p50_ms": 2343.2941869832575,
+        "p95": 2370.639500662219,
+        "p95_ms": 2370.639500662219,
+        "p99": 2382.870433756616,
+        "p99_ms": 2382.870433756616,
+        "qps": 0.42674966103483314,
+        "questions_per_sec": 4.267496610348331,
+        "requests_per_sec": 0.42674966103483314,
+        "std": 12.014036462721458,
+        "std_ms": 12.014036462721458
+      },
+      "warmup_ms": [
+        2383.76950006932,
+        2354.4807080179453,
+        2343.448417028412
+      ]
+    },
+    "preprocess": {
+      "contended_reason": null,
+      "sample_contended": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "sample_timestamps": [
+        1790021970.3317592,
+        1790021970.335777,
+        1790021970.339743,
+        1790021970.3437262,
+        1790021970.3476942,
+        1790021970.35163,
+        1790021970.355561,
+        1790021970.359467,
+        1790021970.363362,
+        1790021970.3672588,
+        1790021970.3711739,
+        1790021970.375106,
+        1790021970.378992,
+        1790021970.382876,
+        1790021970.386794,
+        1790021970.3907058,
+        1790021970.394624,
+        1790021970.3985028,
+        1790021970.40239,
+        1790021970.406303
+      ],
+      "samples_ms": [
+        4.016582854092121,
+        3.9645840879529715,
+        3.9811250753700733,
+        3.967040916904807,
+        3.9343340322375298,
+        3.9292918518185616,
+        3.904624842107296,
+        3.8935840129852295,
+        3.8957500364631414,
+        3.9137089625000954,
+        3.9303749799728394,
+        3.884208155795932,
+        3.8833748549222946,
+        3.9158749859780073,
+        3.9107089396566153,
+        3.9167499635368586,
+        3.877874929457903,
+        3.886125050485134,
+        3.9116661064326763,
+        3.895167028531432
+      ],
+      "stats": {
+        "max": 4.016582854092121,
+        "max_ms": 4.016582854092121,
+        "mean": 3.920637583360076,
+        "mean_ms": 3.920637583360076,
+        "min": 3.877874929457903,
+        "min_ms": 3.877874929457903,
+        "ms_per_question": 0.3912687534466386,
+        "n": 20,
+        "p50": 3.912687534466386,
+        "p50_ms": 3.912687534466386,
+        "p95": 3.9828979643061757,
+        "p95_ms": 3.9828979643061757,
+        "p99": 4.009845876134932,
+        "p99_ms": 4.009845876134932,
+        "qps": 255.57880387613943,
+        "questions_per_sec": 2555.7880387613945,
+        "requests_per_sec": 255.57880387613943,
+        "std": 0.035751073871455805,
+        "std_ms": 0.035751073871455805
+      },
+      "warmup_ms": [
+        4.126957850530744,
+        4.027041839435697,
+        3.9646250661462545
+      ]
+    },
+    "transfer": {
+      "contended_reason": null,
+      "included_in_model_ms": false,
+      "sample_contended": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "sample_timestamps": [
+        1790022031.483862,
+        1790022033.82823,
+        1790022036.169773,
+        1790022038.509221,
+        1790022040.864671,
+        1790022043.2088,
+        1790022045.549671,
+        1790022047.889791,
+        1790022050.232329,
+        1790022052.5757282,
+        1790022054.9176269,
+        1790022057.2606459,
+        1790022059.601741,
+        1790022061.9444811,
+        1790022064.2886531,
+        1790022066.629489,
+        1790022068.971641,
+        1790022071.317635,
+        1790022073.66891,
+        1790022076.0103738
+      ],
+      "samples_ms": [
+        0.0018749851733446121,
+        0.0020419247448444366,
+        0.0020419247448444366,
+        0.002291053533554077,
+        0.0019578728824853897,
+        0.002250075340270996,
+        0.002040993422269821,
+        0.0022079329937696457,
+        0.002125045284628868,
+        0.0017909333109855652,
+        0.00200001522898674,
+        0.0021669548004865646,
+        0.002125045284628868,
+        0.0019168946892023087,
+        0.0017920974642038345,
+        0.0017918646335601807,
+        0.001708976924419403,
+        0.002040993422269821,
+        0.002125045284628868,
+        0.0022919848561286926
+      ],
+      "stats": {
+        "max": 0.0022919848561286926,
+        "max_ms": 0.0022919848561286926,
+        "mean": 0.0020291307009756565,
+        "mean_ms": 0.0020291307009756565,
+        "min": 0.001708976924419403,
+        "min_ms": 0.001708976924419403,
+        "ms_per_question": 0.0002041459083557129,
+        "n": 20,
+        "p50": 0.002041459083557129,
+        "p50_ms": 0.002041459083557129,
+        "p95": 0.002291100099682808,
+        "p95_ms": 0.002291100099682808,
+        "p99": 0.0022918079048395157,
+        "p99_ms": 0.0022918079048395157,
+        "qps": 489845.7226277372,
+        "questions_per_sec": 4898457.226277372,
+        "requests_per_sec": 489845.7226277372,
+        "std": 0.0001702476624380225,
+        "std_ms": 0.0001702476624380225
+      },
+      "warmup_ms": [
+        0.0024579931050539017,
+        0.0018330756574869156,
+        0.0024170149117708206
+      ]
+    }
+  },
+  "transfer_ms": [
+    0.0018749851733446121,
+    0.0020419247448444366,
+    0.0020419247448444366,
+    0.002291053533554077,
+    0.0019578728824853897,
+    0.002250075340270996,
+    0.002040993422269821,
+    0.0022079329937696457,
+    0.002125045284628868,
+    0.0017909333109855652,
+    0.00200001522898674,
+    0.0021669548004865646,
+    0.002125045284628868,
+    0.0019168946892023087,
+    0.0017920974642038345,
+    0.0017918646335601807,
+    0.001708976924419403,
+    0.002040993422269821,
+    0.002125045284628868,
+    0.0022919848561286926
+  ],
+  "truncated": false,
+  "wall_clock_seconds": 167.00767012499273,
+  "warmup": 3
+}

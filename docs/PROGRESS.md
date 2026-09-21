@@ -8,7 +8,7 @@ Host for all local measurements: Apple M3 Pro (11 CPU cores, 14 GPU cores, Metal
 
 | Step | Gate | Status | Notes |
 | --- | --- | --- | --- |
-| 1 | L0 — baseline + eval set (Python reference) | in progress | tooling/goldens/compat done; idle-host timings and eval set pending |
+| 1 | L0 — baseline + eval set (Python reference) | baseline complete | eval set pending (non-gating); L1 may start |
 | 2 | L1 — Metal/CPU feasibility spike | not started | go/no-go before wide surface area |
 | 3 | L2 + L3 — basic implementation (core, CLI, HTTP, SDK compat) | not started | |
 | 4 | L4a — benchmark basic implementation; first release (L5) | not started | |
@@ -27,8 +27,8 @@ Host for all local measurements: Apple M3 Pro (11 CPU cores, 14 GPU cores, Metal
 - [x] MPS-vs-CPU reproducibility deltas → frozen parity tolerances (`benchmarks/goldens/tolerances.json`)
 - [x] Published latency harness reconstructed; distinct/ragged workloads defined (`benchmarks/fixtures/requests/`)
 - [x] Harness pilot (contended, harness validation only)
-- [ ] **Idle-host baseline measurements (CPU, MPS) with raw samples — blocked on an uncontended host window** (`benchmarks/README.md` has the commands)
-- [ ] Idle-host cold start / load measurements
+- [x] Idle-host baseline measurements (CPU, MPS) with raw samples — `benchmarks/results/l0-full{,-b}`, merged in `l0-baseline-merged.json`
+- [x] Idle-host cold start / load measurements
 - [ ] Eval set: pinned held-out labelled subset with licences, split held-out/train-candidate, Python reference accuracy per profile (does not gate L1–L3)
 - [x] Benchmark manifest freezing primary acceptance (`benchmarks/manifest.json`: multilingual distinct Q=1/Q=10, Rust Metal vs Python MPS, fp32)
 - [x] Pinned SDK request/response/error fixtures (`compat/`, `schemas/`)

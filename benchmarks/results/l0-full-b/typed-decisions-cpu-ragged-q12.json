@@ -1,0 +1,1047 @@
+{
+  "contended": false,
+  "contended_reason": null,
+  "device": "cpu",
+  "diagnostics": {
+    "n_tokens": 5957,
+    "option_counts": [
+      2,
+      2,
+      3,
+      2,
+      5,
+      10,
+      20,
+      2,
+      4,
+      2,
+      2,
+      2
+    ],
+    "padded_batch_shape": [
+      12,
+      550
+    ],
+    "sequence_lengths": [
+      486,
+      490,
+      474,
+      491,
+      497,
+      517,
+      550,
+      489,
+      487,
+      485,
+      481,
+      510
+    ],
+    "state_tokens": [
+      {
+        "full_tokens": 454,
+        "kept_tokens": 454,
+        "truncated": false
+      },
+      {
+        "full_tokens": 454,
+        "kept_tokens": 454,
+        "truncated": false
+      },
+      {
+        "full_tokens": 454,
+        "kept_tokens": 454,
+        "truncated": false
+      },
+      {
+        "full_tokens": 454,
+        "kept_tokens": 454,
+        "truncated": false
+      },
+      {
+        "full_tokens": 454,
+        "kept_tokens": 454,
+        "truncated": false
+      },
+      {
+        "full_tokens": 454,
+        "kept_tokens": 454,
+        "truncated": false
+      },
+      {
+        "full_tokens": 454,
+        "kept_tokens": 454,
+        "truncated": false
+      },
+      {
+        "full_tokens": 454,
+        "kept_tokens": 454,
+        "truncated": false
+      },
+      {
+        "full_tokens": 454,
+        "kept_tokens": 454,
+        "truncated": false
+      },
+      {
+        "full_tokens": 454,
+        "kept_tokens": 454,
+        "truncated": false
+      },
+      {
+        "full_tokens": 454,
+        "kept_tokens": 454,
+        "truncated": false
+      },
+      {
+        "full_tokens": 454,
+        "kept_tokens": 454,
+        "truncated": false
+      }
+    ],
+    "truncated": false
+  },
+  "e2e_ms": [
+    4586.401708889753,
+    4587.12362498045,
+    4588.4423749521375,
+    4587.72920910269,
+    4591.655625030398,
+    4587.2835831250995,
+    4590.31179221347,
+    4594.92487506941,
+    4588.995416881517,
+    4587.398416129872,
+    4584.042874863371,
+    4587.938708951697,
+    4587.941291974857,
+    4584.6592921298,
+    4585.999749833718,
+    4587.461542105302,
+    4590.892375214025,
+    4587.924625026062,
+    4589.325542096049,
+    4586.367000127211
+  ],
+  "env_fingerprint": "load1-idle|none",
+  "fixture": "ragged-q12",
+  "host_after": {
+    "fingerprint": "load1-idle|none",
+    "idle_evaluation": {
+      "idle": true,
+      "load1_end_informational": null,
+      "self_processes": [
+        {
+          "comm": "/opt/homebrew/Cellar/python@3.12/3.12.7/Frameworks/Python.framework/Versions/3.12/Resources/Python.app/Contents/MacOS/Python",
+          "name": "Python",
+          "pcpu": 233.3,
+          "pid": 32705,
+          "rss_mb": 2871.671875,
+          "user": "chrisraethke"
+        }
+      ],
+      "violations": []
+    },
+    "loadavg": {
+      "1": 2.2021484375,
+      "15": 2.28759765625,
+      "5": 2.19775390625
+    },
+    "pmset_therm": "Note: No thermal warning level has been recorded\nNote: No performance warning level has been recorded\nNote: No CPU power status has been recorded",
+    "self_pid": 32705,
+    "self_tree": [
+      32705,
+      33098
+    ],
+    "time": 1790024258.81324,
+    "top_processes": [
+      {
+        "comm": "/opt/homebrew/Cellar/python@3.12/3.12.7/Frameworks/Python.framework/Versions/3.12/Resources/Python.app/Contents/MacOS/Python",
+        "name": "Python",
+        "pcpu": 233.3,
+        "pid": 32705,
+        "rss_mb": 2871.671875,
+        "user": "chrisraethke"
+      },
+      {
+        "comm": "/Applications/iTerm.app/Contents/MacOS/iTerm2",
+        "name": "iTerm2",
+        "pcpu": 0.9,
+        "pid": 31039,
+        "rss_mb": 205.265625,
+        "user": "chrisraethke"
+      },
+      {
+        "comm": "/Applications/Cloudflare WARP.app/Contents/Resources/CloudflareWARP",
+        "name": "CloudflareWARP",
+        "pcpu": 0.0,
+        "pid": 728,
+        "rss_mb": 494.359375,
+        "user": "root"
+      }
+    ]
+  },
+  "host_before": {
+    "fingerprint": "load1-idle|none",
+    "idle_evaluation": {
+      "idle": true,
+      "self_processes": [
+        {
+          "comm": "/opt/homebrew/Cellar/python@3.12/3.12.7/Frameworks/Python.framework/Versions/3.12/Resources/Python.app/Contents/MacOS/Python",
+          "name": "Python",
+          "pcpu": 112.2,
+          "pid": 32705,
+          "rss_mb": 2449.3125,
+          "user": "chrisraethke"
+        }
+      ],
+      "violations": []
+    },
+    "loadavg": {
+      "1": 2.3544921875,
+      "15": 2.39501953125,
+      "5": 2.3974609375
+    },
+    "pmset_therm": "Note: No thermal warning level has been recorded\nNote: No performance warning level has been recorded\nNote: No CPU power status has been recorded",
+    "self_pid": 32705,
+    "self_tree": [
+      32705,
+      32862
+    ],
+    "time": 1790023933.997406,
+    "top_processes": [
+      {
+        "comm": "/opt/homebrew/Cellar/python@3.12/3.12.7/Frameworks/Python.framework/Versions/3.12/Resources/Python.app/Contents/MacOS/Python",
+        "name": "Python",
+        "pcpu": 112.2,
+        "pid": 32705,
+        "rss_mb": 2449.3125,
+        "user": "chrisraethke"
+      },
+      {
+        "comm": "/Applications/iTerm.app/Contents/MacOS/iTerm2",
+        "name": "iTerm2",
+        "pcpu": 1.3,
+        "pid": 31039,
+        "rss_mb": 205.234375,
+        "user": "chrisraethke"
+      },
+      {
+        "comm": "/Applications/Cloudflare WARP.app/Contents/Resources/CloudflareWARP",
+        "name": "CloudflareWARP",
+        "pcpu": 0.2,
+        "pid": 728,
+        "rss_mb": 302.234375,
+        "user": "root"
+      }
+    ]
+  },
+  "host_policy": {
+    "policy": {
+      "allow": [
+        "Terminal",
+        "iTerm2",
+        "Ghostty",
+        "Code",
+        "Cursor",
+        "Windsurf",
+        "Zed",
+        "pi",
+        "node",
+        "uv",
+        "python3.12"
+      ],
+      "allow_comm_patterns": [
+        ".*/Python\\.framework/.*Python$",
+        ".*/laya-rs/benchmarks/baseline/\\.venv/bin/[^/]+$"
+      ],
+      "load1_max": 3.0,
+      "notes": "allow lists terminal and editor processes that are expected while a developer runs a benchmark, plus the pi harness (pi), its node workers (node), uv, and the benchmark's Python 3.12 process; allow_comm_patterns matches the full comm for Homebrew Python framework executables and this repo's .venv/bin/ executables (and is also the old-record fallback for identifying the benchmark process); ctx is intentionally not allowed because it can contend for substantial CPU. system_prefixes identifies OS daemons and com.apple.* services that are excluded from the report. The benchmark process and descendants are recorded in self_tree and excluded from per-process contention checks.",
+      "process_cpu_percent_max": 15.0,
+      "process_rss_mb_report_min": 200,
+      "schema_version": 1,
+      "system_prefixes": [
+        "/System/",
+        "/usr/libexec/",
+        "/usr/sbin/",
+        "/sbin/",
+        "com.apple."
+      ]
+    }
+  },
+  "idle_evaluation_end": {
+    "idle": true,
+    "load1_end_informational": null,
+    "self_processes": [
+      {
+        "comm": "/opt/homebrew/Cellar/python@3.12/3.12.7/Frameworks/Python.framework/Versions/3.12/Resources/Python.app/Contents/MacOS/Python",
+        "name": "Python",
+        "pcpu": 233.3,
+        "pid": 32705,
+        "rss_mb": 2871.671875,
+        "user": "chrisraethke"
+      }
+    ],
+    "violations": []
+  },
+  "idle_evaluation_start": {
+    "idle": true,
+    "self_processes": [
+      {
+        "comm": "/opt/homebrew/Cellar/python@3.12/3.12.7/Frameworks/Python.framework/Versions/3.12/Resources/Python.app/Contents/MacOS/Python",
+        "name": "Python",
+        "pcpu": 112.2,
+        "pid": 32705,
+        "rss_mb": 2449.3125,
+        "user": "chrisraethke"
+      }
+    ],
+    "violations": []
+  },
+  "model_ms": [
+    4547.786250011995,
+    4548.0089171323925,
+    4548.770833993331,
+    4567.241209093481,
+    4553.49054094404,
+    4570.001374930143,
+    4553.770083002746,
+    4567.61220889166,
+    4552.165332948789,
+    4554.105499992147,
+    4568.68475000374,
+    4550.851417006925,
+    4551.3907498680055,
+    4550.959791988134,
+    4551.062542013824,
+    4551.1060419958085,
+    4552.1278330124915,
+    4554.594042012468,
+    4551.271500065923,
+    4550.406792201102
+  ],
+  "n_questions": 12,
+  "n_tokens": 5957,
+  "option_counts": [
+    2,
+    2,
+    3,
+    2,
+    5,
+    10,
+    20,
+    2,
+    4,
+    2,
+    2,
+    2
+  ],
+  "padded_batch_shape": [
+    12,
+    550
+  ],
+  "preprocess_ms": [
+    7.391082821413875,
+    7.526540895923972,
+    7.394124986603856,
+    7.44349998421967,
+    7.463583955541253,
+    7.493540877476335,
+    7.491749944165349,
+    7.461042143404484,
+    7.436166051775217,
+    7.382749812677503,
+    7.455040933564305,
+    7.428750162944198,
+    7.375708082690835,
+    7.376667112112045,
+    7.408875040709972,
+    7.371291983872652,
+    7.342917146161199,
+    7.387625053524971,
+    7.341957883909345,
+    7.360249990597367
+  ],
+  "profile": "typed-decisions",
+  "reps": 20,
+  "result": {
+    "answers": {
+      "amount_mentioned": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.6939,
+        "noul": 0.3061,
+        "type": "noul"
+      },
+      "category": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "choice": "damage",
+        "confidence": 0.1086,
+        "probabilities": {
+          "billing": 0.0611,
+          "cancellation": 0.0184,
+          "damage": 0.3247,
+          "exchange": 0.0959,
+          "missing": 0.1144,
+          "other": 0.0802,
+          "refund": 0.0512,
+          "shipping_delay": 0.0938,
+          "warranty": 0.1096,
+          "wrong_item": 0.0507
+        },
+        "type": "choice"
+      },
+      "damaged": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.624,
+        "noul": 0.624,
+        "type": "noul"
+      },
+      "empty_ins": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.5263,
+        "noul": 0.5263,
+        "type": "noul"
+      },
+      "intent20": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "choice": "damaged_item",
+        "confidence": 0.9949,
+        "probabilities": {
+          "account_access": 0.0,
+          "cancel_order": 0.0,
+          "change_address": 0.0,
+          "complaint": 0.0,
+          "damaged_item": 0.9979,
+          "delivery_delay": 0.0,
+          "exchange_item": 0.0,
+          "invoice_request": 0.0,
+          "missing_item": 0.0,
+          "other": 0.0,
+          "payment_issue": 0.0,
+          "praise": 0.0,
+          "pricing_question": 0.0,
+          "product_question": 0.0,
+          "request_refund": 0.0,
+          "request_replacement": 0.0019,
+          "return_item": 0.0,
+          "speak_to_human": 0.0,
+          "track_order": 0.0001,
+          "warranty_claim": 0.0
+        },
+        "type": "choice"
+      },
+      "json_ins": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.5863,
+        "noul": 0.5863,
+        "type": "noul"
+      },
+      "missing_item": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.5061,
+        "noul": 0.4939,
+        "type": "noul"
+      },
+      "outcome": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "choice": "replacement",
+        "confidence": 0.0923,
+        "probabilities": {
+          "either": 0.2593,
+          "partial refund": 0.193,
+          "replacement": 0.5477
+        },
+        "type": "choice"
+      },
+      "promise_broken": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.562,
+        "noul": 0.438,
+        "type": "noul"
+      },
+      "short": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.7551,
+        "noul": 0.7551,
+        "type": "noul"
+      },
+      "sla_days": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.0139,
+        "legend": {
+          "0": "1",
+          "1": "2",
+          "2": "3",
+          "3": "5",
+          "4": "10"
+        },
+        "probabilities": {
+          "0": 0.1584,
+          "1": 0.2682,
+          "2": 0.164,
+          "3": 0.1774,
+          "4": 0.232
+        },
+        "score": 2.0565,
+        "type": "score"
+      },
+      "tone": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "confidence": 0.0948,
+        "legend": {
+          "0": "calm",
+          "1": "annoyed",
+          "2": "angry",
+          "3": "furious"
+        },
+        "probabilities": {
+          "0": 0.244,
+          "1": 0.4622,
+          "2": 0.1842,
+          "3": 0.1096
+        },
+        "score": 1.1595,
+        "type": "score"
+      }
+    },
+    "model": "laya-rl-agent",
+    "usage": {
+      "input_tokens": 5957,
+      "output_tokens": 0
+    }
+  },
+  "results_identical": true,
+  "ru_maxrss": 3839803392,
+  "schema_version": 1,
+  "sequence_lengths": [
+    486,
+    490,
+    474,
+    491,
+    497,
+    517,
+    550,
+    489,
+    487,
+    485,
+    481,
+    510
+  ],
+  "stats": {
+    "e2e": {
+      "max": 4594.92487506941,
+      "max_ms": 4594.92487506941,
+      "mean": 4588.140981434844,
+      "mean_ms": 4588.140981434844,
+      "min": 4584.042874863371,
+      "min_ms": 4584.042874863371,
+      "ms_per_question": 382.3189097553647,
+      "n": 20,
+      "p50": 4587.826917064376,
+      "p50_ms": 4587.826917064376,
+      "p95": 4591.819087532349,
+      "p95_ms": 4591.819087532349,
+      "p99": 4594.3037175619975,
+      "p99_ms": 4594.3037175619975,
+      "qps": 0.21796811825670886,
+      "questions_per_sec": 2.6156174190805066,
+      "requests_per_sec": 0.21796811825670886,
+      "std": 2.404522140890039,
+      "std_ms": 2.404522140890039
+    },
+    "model": {
+      "max": 4570.001374930143,
+      "max_ms": 4570.001374930143,
+      "mean": 4554.770385555457,
+      "mean_ms": 4554.770385555457,
+      "min": 4547.786250011995,
+      "min_ms": 4547.786250011995,
+      "ms_per_question": 379.3132742866874,
+      "n": 20,
+      "p50": 4551.7592914402485,
+      "p50_ms": 4551.7592914402485,
+      "p95": 4568.75058125006,
+      "p95_ms": 4568.75058125006,
+      "p99": 4569.751216194127,
+      "p99_ms": 4569.751216194127,
+      "qps": 0.21969527296413432,
+      "questions_per_sec": 2.6363432755696117,
+      "requests_per_sec": 0.21969527296413432,
+      "std": 7.046833915706544,
+      "std_ms": 7.046833915706544
+    },
+    "preprocess": {
+      "max": 7.526540895923972,
+      "max_ms": 7.526540895923972,
+      "mean": 7.41665824316442,
+      "mean_ms": 7.41665824316442,
+      "min": 7.341957883909345,
+      "min_ms": 7.341957883909345,
+      "ms_per_question": 0.6167916678047428,
+      "n": 20,
+      "p50": 7.401500013656914,
+      "p50_ms": 7.401500013656914,
+      "p95": 7.4951908783987164,
+      "p95_ms": 7.4951908783987164,
+      "p99": 7.520270892418921,
+      "p99_ms": 7.520270892418921,
+      "qps": 135.1077481800777,
+      "questions_per_sec": 1621.2929781609323,
+      "requests_per_sec": 135.1077481800777,
+      "std": 0.05160695502431676,
+      "std_ms": 0.05160695502431676
+    },
+    "transfer": {
+      "max": 0.0022919848561286926,
+      "max_ms": 0.0022919848561286926,
+      "mean": 0.0020124949514865875,
+      "mean_ms": 0.0020124949514865875,
+      "min": 0.0016670674085617065,
+      "min_ms": 0.0016670674085617065,
+      "ms_per_question": 0.00016837536046902338,
+      "n": 20,
+      "p50": 0.0020205043256282806,
+      "p50_ms": 0.0020205043256282806,
+      "p95": 0.002291100099682808,
+      "p95_ms": 0.002291100099682808,
+      "p99": 0.0022918079048395157,
+      "p99_ms": 0.0022918079048395157,
+      "qps": 494925.93869555194,
+      "questions_per_sec": 5939111.264346624,
+      "requests_per_sec": 494925.93869555194,
+      "std": 0.00016511781278472375,
+      "std_ms": 0.00016511781278472375
+    }
+  },
+  "timing": {
+    "e2e": {
+      "contended_reason": null,
+      "sample_contended": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "sample_timestamps": [
+        1790024157.496219,
+        1790024162.082653,
+        1790024166.6698089,
+        1790024171.258284,
+        1790024175.846046,
+        1790024180.437734,
+        1790024185.0250509,
+        1790024189.615395,
+        1790024194.210353,
+        1790024198.799381,
+        1790024203.386812,
+        1790024207.970888,
+        1790024212.5588632,
+        1790024217.146837,
+        1790024221.731529,
+        1790024226.317562,
+        1790024230.905056,
+        1790024235.495981,
+        1790024240.083943,
+        1790024244.673301
+      ],
+      "samples_ms": [
+        4586.401708889753,
+        4587.12362498045,
+        4588.4423749521375,
+        4587.72920910269,
+        4591.655625030398,
+        4587.2835831250995,
+        4590.31179221347,
+        4594.92487506941,
+        4588.995416881517,
+        4587.398416129872,
+        4584.042874863371,
+        4587.938708951697,
+        4587.941291974857,
+        4584.6592921298,
+        4585.999749833718,
+        4587.461542105302,
+        4590.892375214025,
+        4587.924625026062,
+        4589.325542096049,
+        4586.367000127211
+      ],
+      "stats": {
+        "max": 4594.92487506941,
+        "max_ms": 4594.92487506941,
+        "mean": 4588.140981434844,
+        "mean_ms": 4588.140981434844,
+        "min": 4584.042874863371,
+        "min_ms": 4584.042874863371,
+        "ms_per_question": 382.3189097553647,
+        "n": 20,
+        "p50": 4587.826917064376,
+        "p50_ms": 4587.826917064376,
+        "p95": 4591.819087532349,
+        "p95_ms": 4591.819087532349,
+        "p99": 4594.3037175619975,
+        "p99_ms": 4594.3037175619975,
+        "qps": 0.21796811825670886,
+        "questions_per_sec": 2.6156174190805066,
+        "requests_per_sec": 0.21796811825670886,
+        "std": 2.404522140890039,
+        "std_ms": 2.404522140890039
+      },
+      "warmup_ms": [
+        4605.541167082265,
+        4597.659999970347,
+        4586.956458166242
+      ]
+    },
+    "model": {
+      "contended_reason": null,
+      "sample_contended": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "sample_timestamps": [
+        1790023947.8732102,
+        1790023952.421029,
+        1790023956.969069,
+        1790023961.517872,
+        1790023966.085145,
+        1790023970.638669,
+        1790023975.2087018,
+        1790023979.762505,
+        1790023984.3301492,
+        1790023988.882346,
+        1790023993.4364831,
+        1790023998.0051992,
+        1790024002.556082,
+        1790024007.1075048,
+        1790024011.658496,
+        1790024016.20959,
+        1790024020.7607281,
+        1790024025.312887,
+        1790024029.8675132,
+        1790024034.418816
+      ],
+      "samples_ms": [
+        4547.786250011995,
+        4548.0089171323925,
+        4548.770833993331,
+        4567.241209093481,
+        4553.49054094404,
+        4570.001374930143,
+        4553.770083002746,
+        4567.61220889166,
+        4552.165332948789,
+        4554.105499992147,
+        4568.68475000374,
+        4550.851417006925,
+        4551.3907498680055,
+        4550.959791988134,
+        4551.062542013824,
+        4551.1060419958085,
+        4552.1278330124915,
+        4554.594042012468,
+        4551.271500065923,
+        4550.406792201102
+      ],
+      "stats": {
+        "max": 4570.001374930143,
+        "max_ms": 4570.001374930143,
+        "mean": 4554.770385555457,
+        "mean_ms": 4554.770385555457,
+        "min": 4547.786250011995,
+        "min_ms": 4547.786250011995,
+        "ms_per_question": 379.3132742866874,
+        "n": 20,
+        "p50": 4551.7592914402485,
+        "p50_ms": 4551.7592914402485,
+        "p95": 4568.75058125006,
+        "p95_ms": 4568.75058125006,
+        "p99": 4569.751216194127,
+        "p99_ms": 4569.751216194127,
+        "qps": 0.21969527296413432,
+        "questions_per_sec": 2.6363432755696117,
+        "requests_per_sec": 0.21969527296413432,
+        "std": 7.046833915706544,
+        "std_ms": 7.046833915706544
+      },
+      "warmup_ms": [
+        4592.722957953811,
+        4553.072707960382,
+        4550.2856250386685
+      ]
+    },
+    "preprocess": {
+      "contended_reason": null,
+      "sample_contended": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "sample_timestamps": [
+        1790023934.028655,
+        1790023934.036048,
+        1790023934.0435772,
+        1790023934.050973,
+        1790023934.058419,
+        1790023934.0658848,
+        1790023934.07338,
+        1790023934.080874,
+        1790023934.088337,
+        1790023934.095775,
+        1790023934.1031601,
+        1790023934.1106172,
+        1790023934.118048,
+        1790023934.1254258,
+        1790023934.132805,
+        1790023934.140216,
+        1790023934.1475892,
+        1790023934.154934,
+        1790023934.162324,
+        1790023934.1696682
+      ],
+      "samples_ms": [
+        7.391082821413875,
+        7.526540895923972,
+        7.394124986603856,
+        7.44349998421967,
+        7.463583955541253,
+        7.493540877476335,
+        7.491749944165349,
+        7.461042143404484,
+        7.436166051775217,
+        7.382749812677503,
+        7.455040933564305,
+        7.428750162944198,
+        7.375708082690835,
+        7.376667112112045,
+        7.408875040709972,
+        7.371291983872652,
+        7.342917146161199,
+        7.387625053524971,
+        7.341957883909345,
+        7.360249990597367
+      ],
+      "stats": {
+        "max": 7.526540895923972,
+        "max_ms": 7.526540895923972,
+        "mean": 7.41665824316442,
+        "mean_ms": 7.41665824316442,
+        "min": 7.341957883909345,
+        "min_ms": 7.341957883909345,
+        "ms_per_question": 0.6167916678047428,
+        "n": 20,
+        "p50": 7.401500013656914,
+        "p50_ms": 7.401500013656914,
+        "p95": 7.4951908783987164,
+        "p95_ms": 7.4951908783987164,
+        "p99": 7.520270892418921,
+        "p99_ms": 7.520270892418921,
+        "qps": 135.1077481800777,
+        "questions_per_sec": 1621.2929781609323,
+        "requests_per_sec": 135.1077481800777,
+        "std": 0.05160695502431676,
+        "std_ms": 0.05160695502431676
+      },
+      "warmup_ms": [
+        7.555833086371422,
+        7.444625021889806,
+        7.351708831265569
+      ]
+    },
+    "transfer": {
+      "contended_reason": null,
+      "included_in_model_ms": false,
+      "sample_contended": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "sample_timestamps": [
+        1790024052.621599,
+        1790024057.174314,
+        1790024061.723768,
+        1790024066.279291,
+        1790024070.833282,
+        1790024075.3822238,
+        1790024079.935786,
+        1790024084.486274,
+        1790024089.0395882,
+        1790024093.596354,
+        1790024098.1438148,
+        1790024102.6953301,
+        1790024107.247181,
+        1790024111.824235,
+        1790024116.3866692,
+        1790024120.940363,
+        1790024125.494876,
+        1790024130.048011,
+        1790024134.600817,
+        1790024139.1533499
+      ],
+      "samples_ms": [
+        0.0022919848561286926,
+        0.002250075340270996,
+        0.001791166141629219,
+        0.0018749851733446121,
+        0.0016670674085617065,
+        0.0020829029381275177,
+        0.002125045284628868,
+        0.002040993422269821,
+        0.0019168946892023087,
+        0.002291053533554077,
+        0.0020419247448444366,
+        0.0019159633666276932,
+        0.001959037035703659,
+        0.0020419247448444366,
+        0.0018749851733446121,
+        0.0021669548004865646,
+        0.0017918646335601807,
+        0.00200001522898674,
+        0.00200001522898674,
+        0.002125045284628868
+      ],
+      "stats": {
+        "max": 0.0022919848561286926,
+        "max_ms": 0.0022919848561286926,
+        "mean": 0.0020124949514865875,
+        "mean_ms": 0.0020124949514865875,
+        "min": 0.0016670674085617065,
+        "min_ms": 0.0016670674085617065,
+        "ms_per_question": 0.00016837536046902338,
+        "n": 20,
+        "p50": 0.0020205043256282806,
+        "p50_ms": 0.0020205043256282806,
+        "p95": 0.002291100099682808,
+        "p95_ms": 0.002291100099682808,
+        "p99": 0.0022918079048395157,
+        "p99_ms": 0.0022918079048395157,
+        "qps": 494925.93869555194,
+        "questions_per_sec": 5939111.264346624,
+        "requests_per_sec": 494925.93869555194,
+        "std": 0.00016511781278472375,
+        "std_ms": 0.00016511781278472375
+      },
+      "warmup_ms": [
+        0.0020419247448444366,
+        0.002125045284628868,
+        0.0022919848561286926
+      ]
+    }
+  },
+  "transfer_ms": [
+    0.0022919848561286926,
+    0.002250075340270996,
+    0.001791166141629219,
+    0.0018749851733446121,
+    0.0016670674085617065,
+    0.0020829029381275177,
+    0.002125045284628868,
+    0.002040993422269821,
+    0.0019168946892023087,
+    0.002291053533554077,
+    0.0020419247448444366,
+    0.0019159633666276932,
+    0.001959037035703659,
+    0.0020419247448444366,
+    0.0018749851733446121,
+    0.0021669548004865646,
+    0.0017918646335601807,
+    0.00200001522898674,
+    0.00200001522898674,
+    0.002125045284628868
+  ],
+  "truncated": false,
+  "wall_clock_seconds": 324.814591875067,
+  "warmup": 3
+}

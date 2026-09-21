@@ -1,0 +1,825 @@
+{
+  "contended": false,
+  "contended_reason": null,
+  "device": "cpu",
+  "diagnostics": {
+    "n_tokens": 266,
+    "option_counts": [
+      20
+    ],
+    "padded_batch_shape": [
+      1,
+      266
+    ],
+    "sequence_lengths": [
+      266
+    ],
+    "state_tokens": [
+      {
+        "full_tokens": 6,
+        "kept_tokens": 6,
+        "truncated": false
+      }
+    ],
+    "truncated": false
+  },
+  "e2e_ms": [
+    221.91083314828575,
+    221.44875000230968,
+    221.6610419563949,
+    222.10745885968208,
+    221.65745799429715,
+    222.13104204274714,
+    221.935624955222,
+    221.97270905598998,
+    221.4065829757601,
+    221.52345813810825,
+    222.32745890505612,
+    221.7862920369953,
+    221.46320901811123,
+    221.60854213871062,
+    222.30562497861683,
+    221.94445901550353,
+    221.41987481154501,
+    221.68558300472796,
+    221.520041115582,
+    222.1238750498742
+  ],
+  "env_fingerprint": "load1-idle|none",
+  "fixture": "edge-head-overflow",
+  "host_after": {
+    "fingerprint": "load1-idle|none",
+    "idle_evaluation": {
+      "idle": true,
+      "load1_end_informational": null,
+      "self_processes": [
+        {
+          "comm": "/opt/homebrew/Cellar/python@3.12/3.12.7/Frameworks/Python.framework/Versions/3.12/Resources/Python.app/Contents/MacOS/Python",
+          "name": "Python",
+          "pcpu": 152.6,
+          "pid": 32705,
+          "rss_mb": 2078.9375,
+          "user": "chrisraethke"
+        }
+      ],
+      "violations": []
+    },
+    "loadavg": {
+      "1": 2.0927734375,
+      "15": 2.37646484375,
+      "5": 2.34423828125
+    },
+    "pmset_therm": "Note: No thermal warning level has been recorded\nNote: No performance warning level has been recorded\nNote: No CPU power status has been recorded",
+    "self_pid": 32705,
+    "self_tree": [
+      32705,
+      32780
+    ],
+    "time": 1790023819.7162309,
+    "top_processes": [
+      {
+        "comm": "/opt/homebrew/Cellar/python@3.12/3.12.7/Frameworks/Python.framework/Versions/3.12/Resources/Python.app/Contents/MacOS/Python",
+        "name": "Python",
+        "pcpu": 152.6,
+        "pid": 32705,
+        "rss_mb": 2078.9375,
+        "user": "chrisraethke"
+      },
+      {
+        "comm": "/Applications/zoom.us.app/Contents/Library/LaunchAgents/ZoomUpdater.app/Contents/MacOS/ZoomUpdater",
+        "name": "ZoomUpdater",
+        "pcpu": 5.9,
+        "pid": 32772,
+        "rss_mb": 64.796875,
+        "user": "chrisraethke"
+      },
+      {
+        "comm": "/Applications/iTerm.app/Contents/MacOS/iTerm2",
+        "name": "iTerm2",
+        "pcpu": 1.1,
+        "pid": 31039,
+        "rss_mb": 205.234375,
+        "user": "chrisraethke"
+      },
+      {
+        "comm": "/Applications/Cloudflare WARP.app/Contents/Resources/CloudflareWARP",
+        "name": "CloudflareWARP",
+        "pcpu": 0.0,
+        "pid": 728,
+        "rss_mb": 315.9375,
+        "user": "root"
+      }
+    ]
+  },
+  "host_before": {
+    "fingerprint": "load1-idle|none",
+    "idle_evaluation": {
+      "idle": true,
+      "self_processes": [
+        {
+          "comm": "/opt/homebrew/Cellar/python@3.12/3.12.7/Frameworks/Python.framework/Versions/3.12/Resources/Python.app/Contents/MacOS/Python",
+          "name": "Python",
+          "pcpu": 61.8,
+          "pid": 32705,
+          "rss_mb": 2516.03125,
+          "user": "chrisraethke"
+        }
+      ],
+      "violations": []
+    },
+    "loadavg": {
+      "1": 1.83544921875,
+      "15": 2.3662109375,
+      "5": 2.31103515625
+    },
+    "pmset_therm": "Note: No thermal warning level has been recorded\nNote: No performance warning level has been recorded\nNote: No CPU power status has been recorded",
+    "self_pid": 32705,
+    "self_tree": [
+      32705,
+      32766
+    ],
+    "time": 1790023803.648457,
+    "top_processes": [
+      {
+        "comm": "/opt/homebrew/Cellar/python@3.12/3.12.7/Frameworks/Python.framework/Versions/3.12/Resources/Python.app/Contents/MacOS/Python",
+        "name": "Python",
+        "pcpu": 61.8,
+        "pid": 32705,
+        "rss_mb": 2516.03125,
+        "user": "chrisraethke"
+      },
+      {
+        "comm": "/Applications/iTerm.app/Contents/MacOS/iTerm2",
+        "name": "iTerm2",
+        "pcpu": 1.0,
+        "pid": 31039,
+        "rss_mb": 215.046875,
+        "user": "chrisraethke"
+      },
+      {
+        "comm": "/Applications/Cloudflare WARP.app/Contents/Resources/CloudflareWARP",
+        "name": "CloudflareWARP",
+        "pcpu": 0.0,
+        "pid": 728,
+        "rss_mb": 315.9375,
+        "user": "root"
+      }
+    ]
+  },
+  "host_policy": {
+    "policy": {
+      "allow": [
+        "Terminal",
+        "iTerm2",
+        "Ghostty",
+        "Code",
+        "Cursor",
+        "Windsurf",
+        "Zed",
+        "pi",
+        "node",
+        "uv",
+        "python3.12"
+      ],
+      "allow_comm_patterns": [
+        ".*/Python\\.framework/.*Python$",
+        ".*/laya-rs/benchmarks/baseline/\\.venv/bin/[^/]+$"
+      ],
+      "load1_max": 3.0,
+      "notes": "allow lists terminal and editor processes that are expected while a developer runs a benchmark, plus the pi harness (pi), its node workers (node), uv, and the benchmark's Python 3.12 process; allow_comm_patterns matches the full comm for Homebrew Python framework executables and this repo's .venv/bin/ executables (and is also the old-record fallback for identifying the benchmark process); ctx is intentionally not allowed because it can contend for substantial CPU. system_prefixes identifies OS daemons and com.apple.* services that are excluded from the report. The benchmark process and descendants are recorded in self_tree and excluded from per-process contention checks.",
+      "process_cpu_percent_max": 15.0,
+      "process_rss_mb_report_min": 200,
+      "schema_version": 1,
+      "system_prefixes": [
+        "/System/",
+        "/usr/libexec/",
+        "/usr/sbin/",
+        "/sbin/",
+        "com.apple."
+      ]
+    }
+  },
+  "idle_evaluation_end": {
+    "idle": true,
+    "load1_end_informational": null,
+    "self_processes": [
+      {
+        "comm": "/opt/homebrew/Cellar/python@3.12/3.12.7/Frameworks/Python.framework/Versions/3.12/Resources/Python.app/Contents/MacOS/Python",
+        "name": "Python",
+        "pcpu": 152.6,
+        "pid": 32705,
+        "rss_mb": 2078.9375,
+        "user": "chrisraethke"
+      }
+    ],
+    "violations": []
+  },
+  "idle_evaluation_start": {
+    "idle": true,
+    "self_processes": [
+      {
+        "comm": "/opt/homebrew/Cellar/python@3.12/3.12.7/Frameworks/Python.framework/Versions/3.12/Resources/Python.app/Contents/MacOS/Python",
+        "name": "Python",
+        "pcpu": 61.8,
+        "pid": 32705,
+        "rss_mb": 2516.03125,
+        "user": "chrisraethke"
+      }
+    ],
+    "violations": []
+  },
+  "model_ms": [
+    219.91574997082353,
+    219.89454189315438,
+    220.93170881271362,
+    231.08179098926485,
+    230.2665829192847,
+    221.25679184682667,
+    220.20975011400878,
+    220.6868331413716,
+    220.93004104681313,
+    220.62954190187156,
+    220.7163330167532,
+    220.71520891040564,
+    220.38891585543752,
+    221.4703750796616,
+    220.4592500347644,
+    221.09958296641707,
+    220.928916009143,
+    220.37720819935203,
+    220.36937484517694,
+    220.5753750167787
+  ],
+  "n_questions": 1,
+  "n_tokens": 266,
+  "option_counts": [
+    20
+  ],
+  "padded_batch_shape": [
+    1,
+    266
+  ],
+  "preprocess_ms": [
+    2.010375028476119,
+    1.990000018849969,
+    1.9838339649140835,
+    1.9580840598791838,
+    1.9607078284025192,
+    1.9271248020231724,
+    1.897208159789443,
+    1.8568749073892832,
+    1.8579999450594187,
+    1.8527091015130281,
+    1.870499923825264,
+    1.8357080407440662,
+    1.8712908495217562,
+    1.8720000516623259,
+    1.872665947303176,
+    1.8799582030624151,
+    1.8791670445352793,
+    1.8765830900520086,
+    1.8691248260438442,
+    1.8745828419923782
+  ],
+  "profile": "typed-decisions",
+  "reps": 20,
+  "result": {
+    "answers": {
+      "many_long": {
+        "action": {
+          "act_probability": 1.0
+        },
+        "choice": "opt01",
+        "confidence": 0.9343,
+        "probabilities": {
+          "opt00": 0.0175,
+          "opt01": 0.9609,
+          "opt02": 0.0208,
+          "opt03": 0.0,
+          "opt04": 0.0,
+          "opt05": 0.0,
+          "opt06": 0.0,
+          "opt07": 0.0,
+          "opt08": 0.0001,
+          "opt09": 0.0,
+          "opt10": 0.0001,
+          "opt11": 0.0,
+          "opt12": 0.0,
+          "opt13": 0.0,
+          "opt14": 0.0,
+          "opt15": 0.0,
+          "opt16": 0.0,
+          "opt17": 0.0001,
+          "opt18": 0.0001,
+          "opt19": 0.0004
+        },
+        "type": "choice"
+      }
+    },
+    "model": "laya-rl-agent",
+    "usage": {
+      "input_tokens": 266,
+      "output_tokens": 0
+    }
+  },
+  "results_identical": true,
+  "ru_maxrss": 3839803392,
+  "schema_version": 1,
+  "sequence_lengths": [
+    266
+  ],
+  "stats": {
+    "e2e": {
+      "max": 222.32745890505612,
+      "max_ms": 222.32745890505612,
+      "mean": 221.796995960176,
+      "mean_ms": 221.796995960176,
+      "min": 221.4065829757601,
+      "min_ms": 221.4065829757601,
+      "ms_per_question": 221.73593752086163,
+      "n": 20,
+      "p50": 221.73593752086163,
+      "p50_ms": 221.73593752086163,
+      "p95": 222.3067166749388,
+      "p95_ms": 222.3067166749388,
+      "p99": 222.32331045903265,
+      "p99_ms": 222.32331045903265,
+      "qps": 4.509868861045209,
+      "questions_per_sec": 4.509868861045209,
+      "requests_per_sec": 4.509868861045209,
+      "std": 0.2919392790267243,
+      "std_ms": 0.2919392790267243
+    },
+    "model": {
+      "max": 231.08179098926485,
+      "max_ms": 231.08179098926485,
+      "mean": 221.64519362850115,
+      "mean_ms": 221.64519362850115,
+      "min": 219.89454189315438,
+      "min_ms": 219.89454189315438,
+      "ms_per_question": 220.70102102588862,
+      "n": 20,
+      "p50": 220.70102102588862,
+      "p50_ms": 220.70102102588862,
+      "p95": 230.3073433227837,
+      "p95_ms": 230.3073433227837,
+      "p99": 230.92690145596862,
+      "p99_ms": 230.92690145596862,
+      "qps": 4.531016645739479,
+      "questions_per_sec": 4.531016645739479,
+      "requests_per_sec": 4.531016645739479,
+      "std": 3.037671882234687,
+      "std_ms": 3.037671882234687
+    },
+    "preprocess": {
+      "max": 2.010375028476119,
+      "max_ms": 2.010375028476119,
+      "mean": 1.8998249317519367,
+      "mean_ms": 1.8998249317519367,
+      "min": 1.8357080407440662,
+      "min_ms": 1.8357080407440662,
+      "ms_per_question": 1.8755829660221934,
+      "n": 20,
+      "p50": 1.8755829660221934,
+      "p50_ms": 1.8755829660221934,
+      "p95": 1.9910187693312764,
+      "p95_ms": 1.9910187693312764,
+      "p99": 2.0065037766471505,
+      "p99_ms": 2.0065037766471505,
+      "qps": 533.167563427406,
+      "questions_per_sec": 533.167563427406,
+      "requests_per_sec": 533.167563427406,
+      "std": 0.05065350185646216,
+      "std_ms": 0.05065350185646216
+    },
+    "transfer": {
+      "max": 0.002499902620911598,
+      "max_ms": 0.002499902620911598,
+      "mean": 0.0018458114936947823,
+      "mean_ms": 0.0018458114936947823,
+      "min": 0.0014170072972774506,
+      "min_ms": 0.0014170072972774506,
+      "ms_per_question": 0.0018540304154157639,
+      "n": 20,
+      "p50": 0.0018540304154157639,
+      "p50_ms": 0.0018540304154157639,
+      "p95": 0.002262566704303026,
+      "p95_ms": 0.002262566704303026,
+      "p99": 0.0024524354375898834,
+      "p99_ms": 0.0024524354375898834,
+      "qps": 539365.4773326636,
+      "questions_per_sec": 539365.4773326636,
+      "requests_per_sec": 539365.4773326636,
+      "std": 0.00025989212146038354,
+      "std_ms": 0.00025989212146038354
+    }
+  },
+  "timing": {
+    "e2e": {
+      "contended_reason": null,
+      "sample_contended": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "sample_timestamps": [
+        1790023814.5633762,
+        1790023814.78529,
+        1790023815.006741,
+        1790023815.228405,
+        1790023815.450517,
+        1790023815.6721768,
+        1790023815.894311,
+        1790023816.116249,
+        1790023816.3382242,
+        1790023816.559635,
+        1790023816.781162,
+        1790023817.003492,
+        1790023817.225281,
+        1790023817.4467468,
+        1790023817.6683578,
+        1790023817.890666,
+        1790023818.1126158,
+        1790023818.334038,
+        1790023818.555727,
+        1790023818.77725
+      ],
+      "samples_ms": [
+        221.91083314828575,
+        221.44875000230968,
+        221.6610419563949,
+        222.10745885968208,
+        221.65745799429715,
+        222.13104204274714,
+        221.935624955222,
+        221.97270905598998,
+        221.4065829757601,
+        221.52345813810825,
+        222.32745890505612,
+        221.7862920369953,
+        221.46320901811123,
+        221.60854213871062,
+        222.30562497861683,
+        221.94445901550353,
+        221.41987481154501,
+        221.68558300472796,
+        221.520041115582,
+        222.1238750498742
+      ],
+      "stats": {
+        "max": 222.32745890505612,
+        "max_ms": 222.32745890505612,
+        "mean": 221.796995960176,
+        "mean_ms": 221.796995960176,
+        "min": 221.4065829757601,
+        "min_ms": 221.4065829757601,
+        "ms_per_question": 221.73593752086163,
+        "n": 20,
+        "p50": 221.73593752086163,
+        "p50_ms": 221.73593752086163,
+        "p95": 222.3067166749388,
+        "p95_ms": 222.3067166749388,
+        "p99": 222.32331045903265,
+        "p99_ms": 222.32331045903265,
+        "qps": 4.509868861045209,
+        "questions_per_sec": 4.509868861045209,
+        "requests_per_sec": 4.509868861045209,
+        "std": 0.2919392790267243,
+        "std_ms": 0.2919392790267243
+      },
+      "warmup_ms": [
+        222.27320913225412,
+        222.2027499228716,
+        222.10120898671448
+      ]
+    },
+    "model": {
+      "contended_reason": null,
+      "sample_contended": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "sample_timestamps": [
+        1790023804.375564,
+        1790023804.5954828,
+        1790023804.815383,
+        1790023805.0363169,
+        1790023805.2674031,
+        1790023805.497673,
+        1790023805.718932,
+        1790023805.9391448,
+        1790023806.1598349,
+        1790023806.380768,
+        1790023806.601401,
+        1790023806.82212,
+        1790023807.042838,
+        1790023807.263229,
+        1790023807.4847019,
+        1790023807.705164,
+        1790023807.926267,
+        1790023808.147199,
+        1790023808.36758,
+        1790023808.5879521
+      ],
+      "samples_ms": [
+        219.91574997082353,
+        219.89454189315438,
+        220.93170881271362,
+        231.08179098926485,
+        230.2665829192847,
+        221.25679184682667,
+        220.20975011400878,
+        220.6868331413716,
+        220.93004104681313,
+        220.62954190187156,
+        220.7163330167532,
+        220.71520891040564,
+        220.38891585543752,
+        221.4703750796616,
+        220.4592500347644,
+        221.09958296641707,
+        220.928916009143,
+        220.37720819935203,
+        220.36937484517694,
+        220.5753750167787
+      ],
+      "stats": {
+        "max": 231.08179098926485,
+        "max_ms": 231.08179098926485,
+        "mean": 221.64519362850115,
+        "mean_ms": 221.64519362850115,
+        "min": 219.89454189315438,
+        "min_ms": 219.89454189315438,
+        "ms_per_question": 220.70102102588862,
+        "n": 20,
+        "p50": 220.70102102588862,
+        "p50_ms": 220.70102102588862,
+        "p95": 230.3073433227837,
+        "p95_ms": 230.3073433227837,
+        "p99": 230.92690145596862,
+        "p99_ms": 230.92690145596862,
+        "qps": 4.531016645739479,
+        "questions_per_sec": 4.531016645739479,
+        "requests_per_sec": 4.531016645739479,
+        "std": 3.037671882234687,
+        "std_ms": 3.037671882234687
+      },
+      "warmup_ms": [
+        224.73304206505418,
+        234.75987510755658,
+        220.2537499833852
+      ]
+    },
+    "preprocess": {
+      "contended_reason": null,
+      "sample_contended": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "sample_timestamps": [
+        1790023803.6577861,
+        1790023803.659797,
+        1790023803.661789,
+        1790023803.663774,
+        1790023803.665733,
+        1790023803.667695,
+        1790023803.6696231,
+        1790023803.671521,
+        1790023803.6733792,
+        1790023803.675238,
+        1790023803.6770911,
+        1790023803.678963,
+        1790023803.6808,
+        1790023803.682672,
+        1790023803.684545,
+        1790023803.6864178,
+        1790023803.688299,
+        1790023803.690179,
+        1790023803.6920571,
+        1790023803.6939268
+      ],
+      "samples_ms": [
+        2.010375028476119,
+        1.990000018849969,
+        1.9838339649140835,
+        1.9580840598791838,
+        1.9607078284025192,
+        1.9271248020231724,
+        1.897208159789443,
+        1.8568749073892832,
+        1.8579999450594187,
+        1.8527091015130281,
+        1.870499923825264,
+        1.8357080407440662,
+        1.8712908495217562,
+        1.8720000516623259,
+        1.872665947303176,
+        1.8799582030624151,
+        1.8791670445352793,
+        1.8765830900520086,
+        1.8691248260438442,
+        1.8745828419923782
+      ],
+      "stats": {
+        "max": 2.010375028476119,
+        "max_ms": 2.010375028476119,
+        "mean": 1.8998249317519367,
+        "mean_ms": 1.8998249317519367,
+        "min": 1.8357080407440662,
+        "min_ms": 1.8357080407440662,
+        "ms_per_question": 1.8755829660221934,
+        "n": 20,
+        "p50": 1.8755829660221934,
+        "p50_ms": 1.8755829660221934,
+        "p95": 1.9910187693312764,
+        "p95_ms": 1.9910187693312764,
+        "p99": 2.0065037766471505,
+        "p99_ms": 2.0065037766471505,
+        "qps": 533.167563427406,
+        "questions_per_sec": 533.167563427406,
+        "requests_per_sec": 533.167563427406,
+        "std": 0.05065350185646216,
+        "std_ms": 0.05065350185646216
+      },
+      "warmup_ms": [
+        2.07912502810359,
+        2.075458178296685,
+        2.0750409457832575
+      ]
+    },
+    "transfer": {
+      "contended_reason": null,
+      "included_in_model_ms": false,
+      "sample_contended": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "sample_timestamps": [
+        1790023809.475515,
+        1790023809.696651,
+        1790023809.918174,
+        1790023810.138836,
+        1790023810.359838,
+        1790023810.580161,
+        1790023810.800658,
+        1790023811.021825,
+        1790023811.2424781,
+        1790023811.46368,
+        1790023811.6846058,
+        1790023811.9051678,
+        1790023812.125442,
+        1790023812.3463838,
+        1790023812.569491,
+        1790023812.792984,
+        1790023813.014198,
+        1790023813.234549,
+        1790023813.455801,
+        1790023813.676464
+      ],
+      "samples_ms": [
+        0.0019168946892023087,
+        0.0016659032553434372,
+        0.0018749851733446121,
+        0.0015420373529195786,
+        0.00200001522898674,
+        0.0015830155462026596,
+        0.0016249250620603561,
+        0.0021671876311302185,
+        0.002499902620911598,
+        0.0018749851733446121,
+        0.002250075340270996,
+        0.0018330756574869156,
+        0.00200001522898674,
+        0.0018330756574869156,
+        0.0019578728824853897,
+        0.0017499551177024841,
+        0.00162515789270401,
+        0.0019581057131290436,
+        0.0015420373529195786,
+        0.0014170072972774506
+      ],
+      "stats": {
+        "max": 0.002499902620911598,
+        "max_ms": 0.002499902620911598,
+        "mean": 0.0018458114936947823,
+        "mean_ms": 0.0018458114936947823,
+        "min": 0.0014170072972774506,
+        "min_ms": 0.0014170072972774506,
+        "ms_per_question": 0.0018540304154157639,
+        "n": 20,
+        "p50": 0.0018540304154157639,
+        "p50_ms": 0.0018540304154157639,
+        "p95": 0.002262566704303026,
+        "p95_ms": 0.002262566704303026,
+        "p99": 0.0024524354375898834,
+        "p99_ms": 0.0024524354375898834,
+        "qps": 539365.4773326636,
+        "questions_per_sec": 539365.4773326636,
+        "requests_per_sec": 539365.4773326636,
+        "std": 0.00025989212146038354,
+        "std_ms": 0.00025989212146038354
+      },
+      "warmup_ms": [
+        0.0018749851733446121,
+        0.00200001522898674,
+        0.0017920974642038345
+      ]
+    }
+  },
+  "transfer_ms": [
+    0.0019168946892023087,
+    0.0016659032553434372,
+    0.0018749851733446121,
+    0.0015420373529195786,
+    0.00200001522898674,
+    0.0015830155462026596,
+    0.0016249250620603561,
+    0.0021671876311302185,
+    0.002499902620911598,
+    0.0018749851733446121,
+    0.002250075340270996,
+    0.0018330756574869156,
+    0.00200001522898674,
+    0.0018330756574869156,
+    0.0019578728824853897,
+    0.0017499551177024841,
+    0.00162515789270401,
+    0.0019581057131290436,
+    0.0015420373529195786,
+    0.0014170072972774506
+  ],
+  "truncated": false,
+  "wall_clock_seconds": 16.0684590828605,
+  "warmup": 3
+}

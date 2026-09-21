@@ -1,0 +1,1098 @@
+{
+  "autocast": false,
+  "cli_args": [
+    "/Users/chrisraethke/projects/laya-rs/benchmarks/baseline/.venv/bin/laya-bench",
+    "--profile",
+    "typed-decisions",
+    "--device",
+    "cpu",
+    "--workload",
+    "bucket-choice-2,bucket-choice-20,edge-head-overflow,edge-long-state,ragged-q12",
+    "--reps",
+    "20",
+    "--warmup",
+    "3",
+    "--run-id",
+    "l0-full-b",
+    "--label",
+    "idle-host L0 baseline rerun",
+    "--require-idle"
+  ],
+  "contended": false,
+  "contended_reason": null,
+  "device": "cpu",
+  "dtype": "float32",
+  "env": {
+    "executable": "/Users/chrisraethke/projects/laya-rs/benchmarks/baseline/.venv/bin/python",
+    "host": {
+      "chip": "Apple M3 Pro",
+      "cores": {
+        "efficiency": 6,
+        "logical": 11,
+        "performance": 5,
+        "physical": 11
+      },
+      "machine": "arm64",
+      "macos_version": "26.2",
+      "os": "Darwin",
+      "power_mode": {
+        "lowpowermode": 0,
+        "matching_lines": [
+          "lowpowermode         0"
+        ],
+        "raw_available": true
+      },
+      "ram_bytes": 19327352832
+    },
+    "laya": {
+      "expected_git_sha": "6a5819129eb220570792e417e49723d697efd76f",
+      "git_sha": "6a5819129eb220570792e417e49723d697efd76f",
+      "version": "0.3.3"
+    },
+    "timestamp": "2026-09-21T20:49:25.556846Z",
+    "torch": {
+      "interop_thread_count": 11,
+      "mps": {
+        "device_name": "Apple M3 Pro",
+        "is_available": true,
+        "is_built": true
+      },
+      "thread_count": 5
+    },
+    "versions": {
+      "huggingface_hub": "1.32.0",
+      "laya": "0.3.3",
+      "numpy": "2.5.3",
+      "python": "3.12.7",
+      "safetensors": "0.8.0",
+      "tokenizers": "0.23.2",
+      "torch": "2.14.0",
+      "transformers": "5.17.0"
+    }
+  },
+  "env_fingerprint": "load1-idle|none",
+  "finished_at": 1790024258.8155131,
+  "host_end": {
+    "gui_apps": [
+      "Finder",
+      "iTerm2",
+      "Notes"
+    ],
+    "load1": 2.2021484375,
+    "load15": 2.28759765625,
+    "load5": 2.19775390625,
+    "loadavg": {
+      "1": 2.2021484375,
+      "15": 2.28759765625,
+      "5": 2.19775390625
+    },
+    "lowpowermode": 0,
+    "power": {
+      "battery_percent": 100,
+      "raw": "Now drawing from 'AC Power'\n -InternalBattery-0 (id=22282339)\t100%; charged; 0:00 remaining present: true",
+      "source": "AC Power"
+    },
+    "processes": [
+      {
+        "comm": "/opt/homebrew/Cellar/python@3.12/3.12.7/Frameworks/Python.framework/Versions/3.12/Resources/Python.app/Contents/MacOS/Python",
+        "name": "Python",
+        "pcpu": 64.8,
+        "pid": 32705,
+        "rss_mb": 2871.71875,
+        "user": "chrisraethke"
+      },
+      {
+        "comm": "/Applications/iTerm.app/Contents/MacOS/iTerm2",
+        "name": "iTerm2",
+        "pcpu": 0.9,
+        "pid": 31039,
+        "rss_mb": 205.265625,
+        "user": "chrisraethke"
+      },
+      {
+        "comm": "/Applications/Cloudflare WARP.app/Contents/Resources/CloudflareWARP",
+        "name": "CloudflareWARP",
+        "pcpu": 0.0,
+        "pid": 728,
+        "rss_mb": 494.359375,
+        "user": "root"
+      }
+    ],
+    "self_pid": 32705,
+    "self_tree": [
+      32705,
+      33106
+    ],
+    "thermal": "Note: No thermal warning level has been recorded\nNote: No performance warning level has been recorded\nNote: No CPU power status has been recorded",
+    "timestamp": 1790024259.084678
+  },
+  "host_policy": {
+    "path": "benchmarks/idle-policy.json",
+    "policy": {
+      "allow": [
+        "Terminal",
+        "iTerm2",
+        "Ghostty",
+        "Code",
+        "Cursor",
+        "Windsurf",
+        "Zed",
+        "pi",
+        "node",
+        "uv",
+        "python3.12"
+      ],
+      "allow_comm_patterns": [
+        ".*/Python\\.framework/.*Python$",
+        ".*/laya-rs/benchmarks/baseline/\\.venv/bin/[^/]+$"
+      ],
+      "load1_max": 3.0,
+      "notes": "allow lists terminal and editor processes that are expected while a developer runs a benchmark, plus the pi harness (pi), its node workers (node), uv, and the benchmark's Python 3.12 process; allow_comm_patterns matches the full comm for Homebrew Python framework executables and this repo's .venv/bin/ executables (and is also the old-record fallback for identifying the benchmark process); ctx is intentionally not allowed because it can contend for substantial CPU. system_prefixes identifies OS daemons and com.apple.* services that are excluded from the report. The benchmark process and descendants are recorded in self_tree and excluded from per-process contention checks.",
+      "process_cpu_percent_max": 15.0,
+      "process_rss_mb_report_min": 200,
+      "schema_version": 1,
+      "system_prefixes": [
+        "/System/",
+        "/usr/libexec/",
+        "/usr/sbin/",
+        "/sbin/",
+        "com.apple."
+      ]
+    }
+  },
+  "host_start": {
+    "gui_apps": [
+      "Finder",
+      "iTerm2",
+      "Notes"
+    ],
+    "load1": 2.42578125,
+    "load15": 2.42138671875,
+    "load5": 2.4658203125,
+    "loadavg": {
+      "1": 2.42578125,
+      "15": 2.42138671875,
+      "5": 2.4658203125
+    },
+    "lowpowermode": 0,
+    "power": {
+      "battery_percent": 100,
+      "raw": "Now drawing from 'AC Power'\n -InternalBattery-0 (id=22282339)\t100%; charged; 0:00 remaining present: true",
+      "source": "AC Power"
+    },
+    "processes": [
+      {
+        "comm": "/Applications/iTerm.app/Contents/MacOS/iTerm2",
+        "name": "iTerm2",
+        "pcpu": 2.1,
+        "pid": 31039,
+        "rss_mb": 205.140625,
+        "user": "chrisraethke"
+      },
+      {
+        "comm": "/Applications/Cloudflare WARP.app/Contents/Resources/CloudflareWARP",
+        "name": "CloudflareWARP",
+        "pcpu": 0.1,
+        "pid": 728,
+        "rss_mb": 672.125,
+        "user": "root"
+      }
+    ],
+    "self_pid": 32705,
+    "self_tree": [
+      32705,
+      32706
+    ],
+    "thermal": "Note: No thermal warning level has been recorded\nNote: No performance warning level has been recorded\nNote: No CPU power status has been recorded",
+    "timestamp": 1790023764.242826
+  },
+  "idle_evaluation_end": {
+    "idle": true,
+    "load1_end_informational": null,
+    "self_processes": [
+      {
+        "comm": "/opt/homebrew/Cellar/python@3.12/3.12.7/Frameworks/Python.framework/Versions/3.12/Resources/Python.app/Contents/MacOS/Python",
+        "name": "Python",
+        "pcpu": 64.8,
+        "pid": 32705,
+        "rss_mb": 2871.71875,
+        "user": "chrisraethke"
+      }
+    ],
+    "violations": []
+  },
+  "idle_evaluation_start": {
+    "idle": true,
+    "self_processes": [],
+    "violations": []
+  },
+  "interrupted": false,
+  "invocations": [
+    {
+      "autocast": false,
+      "cli_args": [
+        "/Users/chrisraethke/projects/laya-rs/benchmarks/baseline/.venv/bin/laya-bench",
+        "--profile",
+        "english",
+        "--device",
+        "cpu",
+        "--workload",
+        "distinct",
+        "--reps",
+        "20",
+        "--warmup",
+        "3",
+        "--run-id",
+        "l0-full-b",
+        "--label",
+        "idle-host L0 baseline rerun",
+        "--require-idle"
+      ],
+      "contended": false,
+      "contended_reason": null,
+      "device": "cpu",
+      "dtype": "float32",
+      "env": {
+        "executable": "/Users/chrisraethke/projects/laya-rs/benchmarks/baseline/.venv/bin/python",
+        "host": {
+          "chip": "Apple M3 Pro",
+          "cores": {
+            "efficiency": 6,
+            "logical": 11,
+            "performance": 5,
+            "physical": 11
+          },
+          "machine": "arm64",
+          "macos_version": "26.2",
+          "os": "Darwin",
+          "power_mode": {
+            "lowpowermode": 0,
+            "matching_lines": [
+              "lowpowermode         0"
+            ],
+            "raw_available": true
+          },
+          "ram_bytes": 19327352832
+        },
+        "laya": {
+          "expected_git_sha": "6a5819129eb220570792e417e49723d697efd76f",
+          "git_sha": "6a5819129eb220570792e417e49723d697efd76f",
+          "version": "0.3.3"
+        },
+        "timestamp": "2026-09-21T20:18:46.217789Z",
+        "torch": {
+          "interop_thread_count": 11,
+          "mps": {
+            "device_name": "Apple M3 Pro",
+            "is_available": true,
+            "is_built": true
+          },
+          "thread_count": 5
+        },
+        "versions": {
+          "huggingface_hub": "1.32.0",
+          "laya": "0.3.3",
+          "numpy": "2.5.3",
+          "python": "3.12.7",
+          "safetensors": "0.8.0",
+          "tokenizers": "0.23.2",
+          "torch": "2.14.0",
+          "transformers": "5.17.0"
+        }
+      },
+      "env_fingerprint": "load1-idle|none",
+      "finished_at": 1790023488.358613,
+      "host_end": {
+        "gui_apps": [
+          "Finder",
+          "iTerm2",
+          "Notes"
+        ],
+        "load1": 2.7080078125,
+        "load15": 2.43115234375,
+        "load5": 2.451171875,
+        "loadavg": {
+          "1": 2.7080078125,
+          "15": 2.43115234375,
+          "5": 2.451171875
+        },
+        "lowpowermode": 0,
+        "power": {
+          "battery_percent": 100,
+          "raw": "Now drawing from 'AC Power'\n -InternalBattery-0 (id=22282339)\t100%; charged; 0:00 remaining present: true",
+          "source": "AC Power"
+        },
+        "processes": [
+          {
+            "comm": "/opt/homebrew/Cellar/python@3.12/3.12.7/Frameworks/Python.framework/Versions/3.12/Resources/Python.app/Contents/MacOS/Python",
+            "name": "Python",
+            "pcpu": 52.1,
+            "pid": 31287,
+            "rss_mb": 4473.046875,
+            "user": "chrisraethke"
+          },
+          {
+            "comm": "/Applications/iTerm.app/Contents/MacOS/iTerm2",
+            "name": "iTerm2",
+            "pcpu": 0.7,
+            "pid": 31039,
+            "rss_mb": 204.53125,
+            "user": "chrisraethke"
+          },
+          {
+            "comm": "/Applications/Cloudflare WARP.app/Contents/Resources/CloudflareWARP",
+            "name": "CloudflareWARP",
+            "pcpu": 0.0,
+            "pid": 728,
+            "rss_mb": 302.28125,
+            "user": "root"
+          }
+        ],
+        "self_pid": 31287,
+        "self_tree": [
+          31287,
+          32372
+        ],
+        "thermal": "Note: No thermal warning level has been recorded\nNote: No performance warning level has been recorded\nNote: No CPU power status has been recorded",
+        "timestamp": 1790023488.633922
+      },
+      "host_policy": {
+        "path": "benchmarks/idle-policy.json",
+        "policy": {
+          "allow": [
+            "Terminal",
+            "iTerm2",
+            "Ghostty",
+            "Code",
+            "Cursor",
+            "Windsurf",
+            "Zed",
+            "pi",
+            "node",
+            "uv",
+            "python3.12"
+          ],
+          "allow_comm_patterns": [
+            ".*/Python\\.framework/.*Python$",
+            ".*/laya-rs/benchmarks/baseline/\\.venv/bin/[^/]+$"
+          ],
+          "load1_max": 3.0,
+          "notes": "allow lists terminal and editor processes that are expected while a developer runs a benchmark, plus the pi harness (pi), its node workers (node), uv, and the benchmark's Python 3.12 process; allow_comm_patterns matches the full comm for Homebrew Python framework executables and this repo's .venv/bin/ executables (and is also the old-record fallback for identifying the benchmark process); ctx is intentionally not allowed because it can contend for substantial CPU. system_prefixes identifies OS daemons and com.apple.* services that are excluded from the report. The benchmark process and descendants are recorded in self_tree and excluded from per-process contention checks.",
+          "process_cpu_percent_max": 15.0,
+          "process_rss_mb_report_min": 200,
+          "schema_version": 1,
+          "system_prefixes": [
+            "/System/",
+            "/usr/libexec/",
+            "/usr/sbin/",
+            "/sbin/",
+            "com.apple."
+          ]
+        }
+      },
+      "host_start": {
+        "gui_apps": [
+          "Finder",
+          "iTerm2"
+        ],
+        "load1": 2.138671875,
+        "load15": 2.72021484375,
+        "load5": 2.7841796875,
+        "loadavg": {
+          "1": 2.138671875,
+          "15": 2.72021484375,
+          "5": 2.7841796875
+        },
+        "lowpowermode": 0,
+        "power": {
+          "battery_percent": 100,
+          "raw": "Now drawing from 'Battery Power'\n -InternalBattery-0 (id=22282339)\t100%; discharging; 7:23 remaining present: true",
+          "source": "Battery Power"
+        },
+        "processes": [
+          {
+            "comm": "/Applications/iTerm.app/Contents/MacOS/iTerm2",
+            "name": "iTerm2",
+            "pcpu": 6.7,
+            "pid": 31039,
+            "rss_mb": 190.203125,
+            "user": "chrisraethke"
+          },
+          {
+            "comm": "/opt/homebrew/Cellar/python@3.12/3.12.7/Frameworks/Python.framework/Versions/3.12/Resources/Python.app/Contents/MacOS/Python",
+            "name": "Python",
+            "pcpu": 6.0,
+            "pid": 31287,
+            "rss_mb": 27.671875,
+            "user": "chrisraethke"
+          },
+          {
+            "comm": "/Users/chrisraethke/.local/bin/uv",
+            "name": "uv",
+            "pcpu": 3.0,
+            "pid": 31286,
+            "rss_mb": 29.421875,
+            "user": "chrisraethke"
+          },
+          {
+            "comm": "/Applications/Cloudflare WARP.app/Contents/Resources/CloudflareWARP",
+            "name": "CloudflareWARP",
+            "pcpu": 0.0,
+            "pid": 728,
+            "rss_mb": 301.796875,
+            "user": "root"
+          }
+        ],
+        "self_pid": 31287,
+        "self_tree": [
+          31287,
+          31288
+        ],
+        "thermal": "Note: No thermal warning level has been recorded\nNote: No performance warning level has been recorded\nNote: No CPU power status has been recorded",
+        "timestamp": 1790021924.262743
+      },
+      "idle_evaluation_end": {
+        "idle": true,
+        "load1_end_informational": null,
+        "self_processes": [
+          {
+            "comm": "/opt/homebrew/Cellar/python@3.12/3.12.7/Frameworks/Python.framework/Versions/3.12/Resources/Python.app/Contents/MacOS/Python",
+            "name": "Python",
+            "pcpu": 52.1,
+            "pid": 31287,
+            "rss_mb": 4473.046875,
+            "user": "chrisraethke"
+          }
+        ],
+        "violations": []
+      },
+      "idle_evaluation_start": {
+        "idle": true,
+        "self_processes": [
+          {
+            "comm": "/opt/homebrew/Cellar/python@3.12/3.12.7/Frameworks/Python.framework/Versions/3.12/Resources/Python.app/Contents/MacOS/Python",
+            "name": "Python",
+            "pcpu": 6.0,
+            "pid": 31287,
+            "rss_mb": 27.671875,
+            "user": "chrisraethke"
+          }
+        ],
+        "violations": []
+      },
+      "interrupted": false,
+      "label": "idle-host L0 baseline rerun",
+      "profile": "english",
+      "reps": 20,
+      "requested_threads": null,
+      "run_id": "l0-full-b",
+      "schema_version": 1,
+      "started_at": 1790021924.999976,
+      "torch_threads": 5,
+      "warmup": 3,
+      "workload": [
+        "distinct-ml-q1",
+        "distinct-ml-q10",
+        "distinct-en-q1",
+        "distinct-en-q10",
+        "distinct-en-q21",
+        "distinct-en-q50"
+      ]
+    },
+    {
+      "autocast": false,
+      "cli_args": [
+        "/Users/chrisraethke/projects/laya-rs/benchmarks/baseline/.venv/bin/laya-bench",
+        "--profile",
+        "english",
+        "--device",
+        "mps",
+        "--workload",
+        "published-latency-q5",
+        "--reps",
+        "20",
+        "--warmup",
+        "3",
+        "--run-id",
+        "l0-full-b",
+        "--label",
+        "idle-host L0 baseline rerun",
+        "--require-idle"
+      ],
+      "contended": false,
+      "contended_reason": null,
+      "device": "mps",
+      "dtype": "float32",
+      "env": {
+        "executable": "/Users/chrisraethke/projects/laya-rs/benchmarks/baseline/.venv/bin/python",
+        "host": {
+          "chip": "Apple M3 Pro",
+          "cores": {
+            "efficiency": 6,
+            "logical": 11,
+            "performance": 5,
+            "physical": 11
+          },
+          "machine": "arm64",
+          "macos_version": "26.2",
+          "os": "Darwin",
+          "power_mode": {
+            "lowpowermode": 0,
+            "matching_lines": [
+              "lowpowermode         0"
+            ],
+            "raw_available": true
+          },
+          "ram_bytes": 19327352832
+        },
+        "laya": {
+          "expected_git_sha": "6a5819129eb220570792e417e49723d697efd76f",
+          "git_sha": "6a5819129eb220570792e417e49723d697efd76f",
+          "version": "0.3.3"
+        },
+        "timestamp": "2026-09-21T20:44:50.882181Z",
+        "torch": {
+          "interop_thread_count": 11,
+          "mps": {
+            "device_name": "Apple M3 Pro",
+            "is_available": true,
+            "is_built": true
+          },
+          "thread_count": 5
+        },
+        "versions": {
+          "huggingface_hub": "1.32.0",
+          "laya": "0.3.3",
+          "numpy": "2.5.3",
+          "python": "3.12.7",
+          "safetensors": "0.8.0",
+          "tokenizers": "0.23.2",
+          "torch": "2.14.0",
+          "transformers": "5.17.0"
+        }
+      },
+      "env_fingerprint": "load1-idle|none",
+      "host_end": null,
+      "host_policy": {
+        "path": "benchmarks/idle-policy.json",
+        "policy": {
+          "allow": [
+            "Terminal",
+            "iTerm2",
+            "Ghostty",
+            "Code",
+            "Cursor",
+            "Windsurf",
+            "Zed",
+            "pi",
+            "node",
+            "uv",
+            "python3.12"
+          ],
+          "allow_comm_patterns": [
+            ".*/Python\\.framework/.*Python$",
+            ".*/laya-rs/benchmarks/baseline/\\.venv/bin/[^/]+$"
+          ],
+          "load1_max": 3.0,
+          "notes": "allow lists terminal and editor processes that are expected while a developer runs a benchmark, plus the pi harness (pi), its node workers (node), uv, and the benchmark's Python 3.12 process; allow_comm_patterns matches the full comm for Homebrew Python framework executables and this repo's .venv/bin/ executables (and is also the old-record fallback for identifying the benchmark process); ctx is intentionally not allowed because it can contend for substantial CPU. system_prefixes identifies OS daemons and com.apple.* services that are excluded from the report. The benchmark process and descendants are recorded in self_tree and excluded from per-process contention checks.",
+          "process_cpu_percent_max": 15.0,
+          "process_rss_mb_report_min": 200,
+          "schema_version": 1,
+          "system_prefixes": [
+            "/System/",
+            "/usr/libexec/",
+            "/usr/sbin/",
+            "/sbin/",
+            "com.apple."
+          ]
+        }
+      },
+      "host_start": {
+        "gui_apps": [
+          "Finder",
+          "iTerm2",
+          "Notes"
+        ],
+        "load1": 2.7080078125,
+        "load15": 2.43115234375,
+        "load5": 2.451171875,
+        "loadavg": {
+          "1": 2.7080078125,
+          "15": 2.43115234375,
+          "5": 2.451171875
+        },
+        "lowpowermode": 0,
+        "power": {
+          "battery_percent": 100,
+          "raw": "Now drawing from 'AC Power'\n -InternalBattery-0 (id=22282339)\t100%; charged; 0:00 remaining present: true",
+          "source": "AC Power"
+        },
+        "processes": [
+          {
+            "comm": "/opt/homebrew/Cellar/python@3.12/3.12.7/Frameworks/Python.framework/Versions/3.12/Resources/Python.app/Contents/MacOS/Python",
+            "name": "Python",
+            "pcpu": 16.9,
+            "pid": 32391,
+            "rss_mb": 27.640625,
+            "user": "chrisraethke"
+          },
+          {
+            "comm": "/Applications/iTerm.app/Contents/MacOS/iTerm2",
+            "name": "iTerm2",
+            "pcpu": 5.3,
+            "pid": 31039,
+            "rss_mb": 204.5625,
+            "user": "chrisraethke"
+          },
+          {
+            "comm": "/Users/chrisraethke/.local/bin/uv",
+            "name": "uv",
+            "pcpu": 3.3,
+            "pid": 32390,
+            "rss_mb": 29.4375,
+            "user": "chrisraethke"
+          },
+          {
+            "comm": "/Applications/Cloudflare WARP.app/Contents/Resources/CloudflareWARP",
+            "name": "CloudflareWARP",
+            "pcpu": 0.0,
+            "pid": 728,
+            "rss_mb": 302.28125,
+            "user": "root"
+          }
+        ],
+        "self_pid": 32391,
+        "self_tree": [
+          32391,
+          32392
+        ],
+        "thermal": "Note: No thermal warning level has been recorded\nNote: No performance warning level has been recorded\nNote: No CPU power status has been recorded",
+        "timestamp": 1790023489.5662458
+      },
+      "idle_evaluation_end": null,
+      "idle_evaluation_start": {
+        "idle": true,
+        "self_processes": [
+          {
+            "comm": "/opt/homebrew/Cellar/python@3.12/3.12.7/Frameworks/Python.framework/Versions/3.12/Resources/Python.app/Contents/MacOS/Python",
+            "name": "Python",
+            "pcpu": 16.9,
+            "pid": 32391,
+            "rss_mb": 27.640625,
+            "user": "chrisraethke"
+          }
+        ],
+        "violations": []
+      },
+      "interrupted": false,
+      "label": "idle-host L0 baseline rerun",
+      "profile": "english",
+      "reps": 20,
+      "requested_threads": null,
+      "run_id": "l0-full-b",
+      "schema_version": 1,
+      "started_at": 1790023490.102439,
+      "torch_threads": 5,
+      "warmup": 3,
+      "workload": [
+        "published-latency-q5"
+      ]
+    },
+    {
+      "autocast": false,
+      "cli_args": [
+        "/Users/chrisraethke/projects/laya-rs/benchmarks/baseline/.venv/bin/laya-bench",
+        "--profile",
+        "multilingual",
+        "--device",
+        "cpu",
+        "--workload",
+        "distinct-en-q1,distinct-en-q21,published-latency-q1,published-latency-q5",
+        "--reps",
+        "20",
+        "--warmup",
+        "3",
+        "--run-id",
+        "l0-full-b",
+        "--label",
+        "idle-host L0 baseline rerun",
+        "--require-idle"
+      ],
+      "contended": false,
+      "contended_reason": null,
+      "device": "cpu",
+      "dtype": "float32",
+      "env": {
+        "executable": "/Users/chrisraethke/projects/laya-rs/benchmarks/baseline/.venv/bin/python",
+        "host": {
+          "chip": "Apple M3 Pro",
+          "cores": {
+            "efficiency": 6,
+            "logical": 11,
+            "performance": 5,
+            "physical": 11
+          },
+          "machine": "arm64",
+          "macos_version": "26.2",
+          "os": "Darwin",
+          "power_mode": {
+            "lowpowermode": 0,
+            "matching_lines": [
+              "lowpowermode         0"
+            ],
+            "raw_available": true
+          },
+          "ram_bytes": 19327352832
+        },
+        "laya": {
+          "expected_git_sha": "6a5819129eb220570792e417e49723d697efd76f",
+          "git_sha": "6a5819129eb220570792e417e49723d697efd76f",
+          "version": "0.3.3"
+        },
+        "timestamp": "2026-09-21T20:45:36.984461Z",
+        "torch": {
+          "interop_thread_count": 11,
+          "mps": {
+            "device_name": "Apple M3 Pro",
+            "is_available": true,
+            "is_built": true
+          },
+          "thread_count": 5
+        },
+        "versions": {
+          "huggingface_hub": "1.32.0",
+          "laya": "0.3.3",
+          "numpy": "2.5.3",
+          "python": "3.12.7",
+          "safetensors": "0.8.0",
+          "tokenizers": "0.23.2",
+          "torch": "2.14.0",
+          "transformers": "5.17.0"
+        }
+      },
+      "env_fingerprint": "load1-idle|none",
+      "host_end": null,
+      "host_policy": {
+        "path": "benchmarks/idle-policy.json",
+        "policy": {
+          "allow": [
+            "Terminal",
+            "iTerm2",
+            "Ghostty",
+            "Code",
+            "Cursor",
+            "Windsurf",
+            "Zed",
+            "pi",
+            "node",
+            "uv",
+            "python3.12"
+          ],
+          "allow_comm_patterns": [
+            ".*/Python\\.framework/.*Python$",
+            ".*/laya-rs/benchmarks/baseline/\\.venv/bin/[^/]+$"
+          ],
+          "load1_max": 3.0,
+          "notes": "allow lists terminal and editor processes that are expected while a developer runs a benchmark, plus the pi harness (pi), its node workers (node), uv, and the benchmark's Python 3.12 process; allow_comm_patterns matches the full comm for Homebrew Python framework executables and this repo's .venv/bin/ executables (and is also the old-record fallback for identifying the benchmark process); ctx is intentionally not allowed because it can contend for substantial CPU. system_prefixes identifies OS daemons and com.apple.* services that are excluded from the report. The benchmark process and descendants are recorded in self_tree and excluded from per-process contention checks.",
+          "process_cpu_percent_max": 15.0,
+          "process_rss_mb_report_min": 200,
+          "schema_version": 1,
+          "system_prefixes": [
+            "/System/",
+            "/usr/libexec/",
+            "/usr/sbin/",
+            "/sbin/",
+            "com.apple."
+          ]
+        }
+      },
+      "host_start": {
+        "gui_apps": [
+          "Finder",
+          "iTerm2",
+          "Notes"
+        ],
+        "load1": 1.65673828125,
+        "load15": 2.34375,
+        "load5": 2.21337890625,
+        "loadavg": {
+          "1": 1.65673828125,
+          "15": 2.34375,
+          "5": 2.21337890625
+        },
+        "lowpowermode": 0,
+        "power": {
+          "battery_percent": 100,
+          "raw": "Now drawing from 'AC Power'\n -InternalBattery-0 (id=22282339)\t100%; charged; 0:00 remaining present: true",
+          "source": "AC Power"
+        },
+        "processes": [
+          {
+            "comm": "/opt/homebrew/Cellar/python@3.12/3.12.7/Frameworks/Python.framework/Versions/3.12/Resources/Python.app/Contents/MacOS/Python",
+            "name": "Python",
+            "pcpu": 17.2,
+            "pid": 32468,
+            "rss_mb": 27.59375,
+            "user": "chrisraethke"
+          },
+          {
+            "comm": "/Applications/iTerm.app/Contents/MacOS/iTerm2",
+            "name": "iTerm2",
+            "pcpu": 5.1,
+            "pid": 31039,
+            "rss_mb": 204.59375,
+            "user": "chrisraethke"
+          },
+          {
+            "comm": "/Users/chrisraethke/.local/bin/uv",
+            "name": "uv",
+            "pcpu": 3.3,
+            "pid": 32467,
+            "rss_mb": 29.453125,
+            "user": "chrisraethke"
+          },
+          {
+            "comm": "/Applications/Cloudflare WARP.app/Contents/Resources/CloudflareWARP",
+            "name": "CloudflareWARP",
+            "pcpu": 0.0,
+            "pid": 728,
+            "rss_mb": 494.265625,
+            "user": "root"
+          }
+        ],
+        "self_pid": 32468,
+        "self_tree": [
+          32468,
+          32469
+        ],
+        "thermal": "Note: No thermal warning level has been recorded\nNote: No performance warning level has been recorded\nNote: No CPU power status has been recorded",
+        "timestamp": 1790023535.899924
+      },
+      "idle_evaluation_end": null,
+      "idle_evaluation_start": {
+        "idle": true,
+        "self_processes": [
+          {
+            "comm": "/opt/homebrew/Cellar/python@3.12/3.12.7/Frameworks/Python.framework/Versions/3.12/Resources/Python.app/Contents/MacOS/Python",
+            "name": "Python",
+            "pcpu": 17.2,
+            "pid": 32468,
+            "rss_mb": 27.59375,
+            "user": "chrisraethke"
+          }
+        ],
+        "violations": []
+      },
+      "interrupted": false,
+      "label": "idle-host L0 baseline rerun",
+      "profile": "multilingual",
+      "reps": 20,
+      "requested_threads": null,
+      "run_id": "l0-full-b",
+      "schema_version": 1,
+      "started_at": 1790023536.4402812,
+      "torch_threads": 5,
+      "warmup": 3,
+      "workload": [
+        "distinct-en-q1",
+        "distinct-en-q21",
+        "published-latency-q1",
+        "published-latency-q5"
+      ]
+    },
+    {
+      "autocast": false,
+      "cli_args": [
+        "/Users/chrisraethke/projects/laya-rs/benchmarks/baseline/.venv/bin/laya-bench",
+        "--profile",
+        "typed-decisions",
+        "--device",
+        "cpu",
+        "--workload",
+        "bucket-choice-2,bucket-choice-20,edge-head-overflow,edge-long-state,ragged-q12",
+        "--reps",
+        "20",
+        "--warmup",
+        "3",
+        "--run-id",
+        "l0-full-b",
+        "--label",
+        "idle-host L0 baseline rerun",
+        "--require-idle"
+      ],
+      "contended": false,
+      "contended_reason": null,
+      "device": "cpu",
+      "dtype": "float32",
+      "env": {
+        "executable": "/Users/chrisraethke/projects/laya-rs/benchmarks/baseline/.venv/bin/python",
+        "host": {
+          "chip": "Apple M3 Pro",
+          "cores": {
+            "efficiency": 6,
+            "logical": 11,
+            "performance": 5,
+            "physical": 11
+          },
+          "machine": "arm64",
+          "macos_version": "26.2",
+          "os": "Darwin",
+          "power_mode": {
+            "lowpowermode": 0,
+            "matching_lines": [
+              "lowpowermode         0"
+            ],
+            "raw_available": true
+          },
+          "ram_bytes": 19327352832
+        },
+        "laya": {
+          "expected_git_sha": "6a5819129eb220570792e417e49723d697efd76f",
+          "git_sha": "6a5819129eb220570792e417e49723d697efd76f",
+          "version": "0.3.3"
+        },
+        "timestamp": "2026-09-21T20:49:25.556846Z",
+        "torch": {
+          "interop_thread_count": 11,
+          "mps": {
+            "device_name": "Apple M3 Pro",
+            "is_available": true,
+            "is_built": true
+          },
+          "thread_count": 5
+        },
+        "versions": {
+          "huggingface_hub": "1.32.0",
+          "laya": "0.3.3",
+          "numpy": "2.5.3",
+          "python": "3.12.7",
+          "safetensors": "0.8.0",
+          "tokenizers": "0.23.2",
+          "torch": "2.14.0",
+          "transformers": "5.17.0"
+        }
+      },
+      "env_fingerprint": "load1-idle|none",
+      "host_end": null,
+      "host_policy": {
+        "path": "benchmarks/idle-policy.json",
+        "policy": {
+          "allow": [
+            "Terminal",
+            "iTerm2",
+            "Ghostty",
+            "Code",
+            "Cursor",
+            "Windsurf",
+            "Zed",
+            "pi",
+            "node",
+            "uv",
+            "python3.12"
+          ],
+          "allow_comm_patterns": [
+            ".*/Python\\.framework/.*Python$",
+            ".*/laya-rs/benchmarks/baseline/\\.venv/bin/[^/]+$"
+          ],
+          "load1_max": 3.0,
+          "notes": "allow lists terminal and editor processes that are expected while a developer runs a benchmark, plus the pi harness (pi), its node workers (node), uv, and the benchmark's Python 3.12 process; allow_comm_patterns matches the full comm for Homebrew Python framework executables and this repo's .venv/bin/ executables (and is also the old-record fallback for identifying the benchmark process); ctx is intentionally not allowed because it can contend for substantial CPU. system_prefixes identifies OS daemons and com.apple.* services that are excluded from the report. The benchmark process and descendants are recorded in self_tree and excluded from per-process contention checks.",
+          "process_cpu_percent_max": 15.0,
+          "process_rss_mb_report_min": 200,
+          "schema_version": 1,
+          "system_prefixes": [
+            "/System/",
+            "/usr/libexec/",
+            "/usr/sbin/",
+            "/sbin/",
+            "com.apple."
+          ]
+        }
+      },
+      "host_start": {
+        "gui_apps": [
+          "Finder",
+          "iTerm2",
+          "Notes"
+        ],
+        "load1": 2.42578125,
+        "load15": 2.42138671875,
+        "load5": 2.4658203125,
+        "loadavg": {
+          "1": 2.42578125,
+          "15": 2.42138671875,
+          "5": 2.4658203125
+        },
+        "lowpowermode": 0,
+        "power": {
+          "battery_percent": 100,
+          "raw": "Now drawing from 'AC Power'\n -InternalBattery-0 (id=22282339)\t100%; charged; 0:00 remaining present: true",
+          "source": "AC Power"
+        },
+        "processes": [
+          {
+            "comm": "/Applications/iTerm.app/Contents/MacOS/iTerm2",
+            "name": "iTerm2",
+            "pcpu": 2.1,
+            "pid": 31039,
+            "rss_mb": 205.140625,
+            "user": "chrisraethke"
+          },
+          {
+            "comm": "/Applications/Cloudflare WARP.app/Contents/Resources/CloudflareWARP",
+            "name": "CloudflareWARP",
+            "pcpu": 0.1,
+            "pid": 728,
+            "rss_mb": 672.125,
+            "user": "root"
+          }
+        ],
+        "self_pid": 32705,
+        "self_tree": [
+          32705,
+          32706
+        ],
+        "thermal": "Note: No thermal warning level has been recorded\nNote: No performance warning level has been recorded\nNote: No CPU power status has been recorded",
+        "timestamp": 1790023764.242826
+      },
+      "idle_evaluation_end": null,
+      "idle_evaluation_start": {
+        "idle": true,
+        "self_processes": [],
+        "violations": []
+      },
+      "interrupted": false,
+      "label": "idle-host L0 baseline rerun",
+      "profile": "typed-decisions",
+      "reps": 20,
+      "requested_threads": null,
+      "run_id": "l0-full-b",
+      "schema_version": 1,
+      "started_at": 1790023764.780478,
+      "torch_threads": 5,
+      "warmup": 3,
+      "workload": [
+        "bucket-choice-2",
+        "bucket-choice-20",
+        "edge-head-overflow",
+        "edge-long-state",
+        "ragged-q12"
+      ]
+    }
+  ],
+  "label": "idle-host L0 baseline rerun",
+  "profile": "typed-decisions",
+  "reps": 20,
+  "requested_threads": null,
+  "run_id": "l0-full-b",
+  "schema_version": 1,
+  "started_at": 1790023764.780478,
+  "torch_threads": 5,
+  "warmup": 3,
+  "workload": [
+    "bucket-choice-2",
+    "bucket-choice-20",
+    "edge-head-overflow",
+    "edge-long-state",
+    "ragged-q12"
+  ]
+}
