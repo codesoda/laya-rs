@@ -1,0 +1,16 @@
+[package]
+name = "laya-tokenizer-parity"
+version = "0.1.0"
+edition = "2021"
+publish = false
+
+[workspace]
+
+[dependencies]
+ryu = "1.0"
+serde_json = { version = "1.0", features = ["preserve_order", "float_roundtrip"] }
+tokenizers = { version = "=0.23.2", default-features = false, features = ["fancy-regex"] }
+
+[[bin]]
+name = "parity"
+path = "src/bin/parity.rs"
