@@ -1,0 +1,54 @@
+=== english f32 ===
+MLX metallib: 
+MLX default device: Device(gpu, 0)
+backend: Metal GPU (kernel smoke PASS)
+label: spike, not acceptance
+profile=english fixture=plan-example dtype=f32 reps=10
+first_call_ms=429.141
+warm_p50_ms=171.378 warm_mean_ms=162.116
+mlx_active_bytes=1686498117 mlx_peak_bytes=2764817335
+=== english f16 ===
+MLX metallib: 
+MLX default device: Device(gpu, 0)
+backend: Metal GPU (kernel smoke PASS)
+label: spike, not acceptance
+profile=english fixture=plan-example dtype=f16 reps=10
+first_call_ms=715.969
+warm_p50_ms=317.361 warm_mean_ms=270.147
+mlx_active_bytes=844386127 mlx_peak_bytes=2530011111
+=== multilingual f32 ===
+MLX metallib: 
+MLX default device: Device(gpu, 0)
+backend: Metal GPU (kernel smoke PASS)
+label: spike, not acceptance
+profile=multilingual fixture=plan-example dtype=f32 reps=10
+first_call_ms=183.819
+warm_p50_ms=117.758 warm_mean_ms=117.803
+mlx_active_bytes=1288169224 mlx_peak_bytes=2111635727
+=== multilingual f16 ===
+MLX metallib: 
+MLX default device: Device(gpu, 0)
+backend: Metal GPU (kernel smoke PASS)
+label: spike, not acceptance
+profile=multilingual fixture=plan-example dtype=f16 reps=10
+first_call_ms=208.398
+warm_p50_ms=133.135 warm_mean_ms=131.244
+mlx_active_bytes=644328767 mlx_peak_bytes=1306487075
+=== typed-decisions f32 ===
+MLX metallib: 
+MLX default device: Device(gpu, 0)
+backend: Metal GPU (kernel smoke PASS)
+label: spike, not acceptance
+profile=typed-decisions fixture=plan-example dtype=f32 reps=10
+first_call_ms=290.663
+warm_p50_ms=126.635 warm_mean_ms=126.849
+mlx_active_bytes=1685973793 mlx_peak_bytes=2430374321
+=== typed-decisions f16 ===
+MLX metallib: 
+MLX default device: Device(gpu, 0)
+backend: Metal GPU (kernel smoke PASS)
+label: spike, not acceptance
+profile=typed-decisions fixture=plan-example dtype=f16 reps=10
+first_call_ms=127.500
+warm_p50_ms=177.149 warm_mean_ms=145.748
+mlx_active_bytes=844331839 mlx_peak_bytes=2246820369

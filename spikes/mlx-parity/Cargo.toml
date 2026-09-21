@@ -1,0 +1,20 @@
+[workspace]
+
+[package]
+name = "mlx-parity"
+version = "0.1.0"
+edition = "2021"
+publish = false
+
+[dependencies]
+anyhow = "1"
+clap = { version = "4.5", features = ["derive"] }
+half = "2"
+mlx-rs = { version = "=0.32.0", features = ["safetensors"] }
+ndarray = "0.16"
+ndarray-npy = "0.9"
+serde = { version = "1", features = ["derive"] }
+serde_json = { version = "1", features = ["preserve_order"] }
+
+[dev-dependencies]
+tempfile = "3"

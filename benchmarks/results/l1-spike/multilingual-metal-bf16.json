@@ -1,0 +1,143 @@
+{
+  "schema_version": 1,
+  "generated_unix_seconds": 1790030150,
+  "profile": "multilingual",
+  "device": "metal",
+  "device_name": "Apple M3 Pro",
+  "dtype": "bf16",
+  "tolerance_profile": "rust_metal_fp16_or_bf16",
+  "candle_versions": {
+    "candle-core": "0.11.0",
+    "candle-nn": "0.11.0"
+  },
+  "checkpoint": "/Users/chrisraethke/projects/laya-rs/.cache/laya/hub/convaiinnovations--laya/c5d78730f3493e4fe16d61507ef4b78eef7318cf/multilingual/model.safetensors",
+  "load_mmap_to_model_ready_ms": 103.60604099999999,
+  "peak_rss_bytes": 1958445056,
+  "metal_allocation_bytes": null,
+  "metal_allocation_note": "Candle 0.11.0 exposes synchronization and device residency but no public current/peak Metal allocation counter",
+  "all_outputs_finite": true,
+  "all_model_outputs_resident_on_requested_device": true,
+  "inference_ops_run_on_cpu": [],
+  "fixtures_skipped_upstream_error": [],
+  "fixtures": [
+    {
+      "fixture": "plan-example",
+      "metrics": {
+        "act_logits": {
+          "count": 6,
+          "max_abs": 7.9122314453125,
+          "mean_abs": 3.5576578776041665,
+          "rmse": 4.597614822373907
+        },
+        "act_probs": {
+          "count": 6,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "rmse": 0.0
+        },
+        "confidence_unrounded": {
+          "count": 3,
+          "max_abs": 0.0030531883239746094,
+          "mean_abs": 0.0016335646311442058,
+          "rmse": 0.002053469282584963
+        },
+        "expected_score_unrounded": {
+          "count": 1,
+          "max_abs": 0.004130721092224121,
+          "mean_abs": 0.004130721092224121,
+          "rmse": 0.004130721092224121
+        },
+        "hidden_cls": {
+          "count": 2304,
+          "max_abs": 1.711090087890625,
+          "mean_abs": 0.2646046614843524,
+          "rmse": 0.3636288077193625
+        },
+        "option_logits_masked_full": {
+          "count": 9,
+          "max_abs": 0.38846778869628906,
+          "mean_abs": 0.05100803242789374,
+          "rmse": 0.12990669031398824
+        },
+        "option_logits_raw": {
+          "count": 7,
+          "max_abs": 0.38846778869628906,
+          "mean_abs": 0.06558175597872053,
+          "rmse": 0.14730034123469835
+        },
+        "probs_unrounded": {
+          "count": 7,
+          "max_abs": 0.0025651156902313232,
+          "mean_abs": 0.0008322825453563253,
+          "rmse": 0.001211265384308892
+        }
+      },
+      "argmax_agree": 3,
+      "questions": 3,
+      "near_tie_disagreements": [],
+      "failures": [
+        "option_logits_raw.max_abs 3.884677887e-1 > 5.000000000e-2"
+      ],
+      "finite_outputs": true,
+      "outputs_on_requested_device": true,
+      "pass": false
+    }
+  ],
+  "aggregate": {
+    "act_logits": {
+      "count": 6,
+      "max_abs": 7.9122314453125,
+      "mean_abs": 3.5576578776041665,
+      "rmse": 4.597614822373907
+    },
+    "act_probs": {
+      "count": 6,
+      "max_abs": 0.0,
+      "mean_abs": 0.0,
+      "rmse": 0.0
+    },
+    "confidence_unrounded": {
+      "count": 3,
+      "max_abs": 0.0030531883239746094,
+      "mean_abs": 0.0016335646311442058,
+      "rmse": 0.002053469282584963
+    },
+    "expected_score_unrounded": {
+      "count": 1,
+      "max_abs": 0.004130721092224121,
+      "mean_abs": 0.004130721092224121,
+      "rmse": 0.004130721092224121
+    },
+    "hidden_cls": {
+      "count": 2304,
+      "max_abs": 1.711090087890625,
+      "mean_abs": 0.2646046614843524,
+      "rmse": 0.3636288077193625
+    },
+    "option_logits_masked_full": {
+      "count": 9,
+      "max_abs": 0.38846778869628906,
+      "mean_abs": 0.05100803242789374,
+      "rmse": 0.12990669031398824
+    },
+    "option_logits_raw": {
+      "count": 7,
+      "max_abs": 0.38846778869628906,
+      "mean_abs": 0.06558175597872053,
+      "rmse": 0.14730034123469835
+    },
+    "probs_unrounded": {
+      "count": 7,
+      "max_abs": 0.0025651156902313232,
+      "mean_abs": 0.0008322825453563253,
+      "rmse": 0.001211265384308892
+    }
+  },
+  "argmax_agree": 3,
+  "questions": 3,
+  "failures": [
+    "aggregate option_logits_raw.max_abs 3.884677887e-1 > 5.000000000e-2",
+    "one or more fixtures failed per-fixture tolerance checks"
+  ],
+  "pass": false
+}

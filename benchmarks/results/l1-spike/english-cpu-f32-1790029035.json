@@ -1,0 +1,136 @@
+{
+  "schema_version": 1,
+  "generated_unix_seconds": 1790029035,
+  "profile": "english",
+  "device": "cpu",
+  "device_name": "Apple M3 Pro",
+  "dtype": "f32",
+  "tolerance_profile": "rust_cpu_fp32",
+  "candle_versions": {
+    "candle-core": "0.11.0",
+    "candle-nn": "0.11.0"
+  },
+  "checkpoint": "/Users/chrisraethke/projects/laya-rs/.cache/laya/hub/convaiinnovations--laya/c5d78730f3493e4fe16d61507ef4b78eef7318cf/english/model.safetensors",
+  "load_mmap_to_model_ready_ms": 273.155667,
+  "peak_rss_bytes": 3546562560,
+  "metal_allocation_bytes": null,
+  "metal_allocation_note": "Candle 0.11.0 exposes synchronization and device residency but no public current/peak Metal allocation counter",
+  "all_model_outputs_resident_on_requested_device": true,
+  "inference_ops_run_on_cpu": [],
+  "fixtures_skipped_upstream_error": [],
+  "fixtures": [
+    {
+      "fixture": "plan-example",
+      "metrics": {
+        "act_logits": {
+          "count": 6,
+          "max_abs": 0.001953125,
+          "mean_abs": 0.0008951822916666666,
+          "rmse": 0.0011098780677885624
+        },
+        "act_probs": {
+          "count": 6,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "rmse": 0.0
+        },
+        "confidence_unrounded": {
+          "count": 3,
+          "max_abs": 1.1920928955078125e-6,
+          "mean_abs": 7.276733716328939e-7,
+          "rmse": 7.990436519645534e-7
+        },
+        "expected_score_unrounded": {
+          "count": 1,
+          "max_abs": 1.0728836059570312e-6,
+          "mean_abs": 1.0728836059570312e-6,
+          "rmse": 1.0728836059570312e-6
+        },
+        "hidden_cls": {
+          "count": 3072,
+          "max_abs": 0.001434326171875,
+          "mean_abs": 0.00019495227995018163,
+          "rmse": 0.0002972961529477844
+        },
+        "option_logits_masked_full": {
+          "count": 9,
+          "max_abs": 7.152557373046875e-6,
+          "mean_abs": 2.6242600546942817e-6,
+          "rmse": 3.6223991043630552e-6
+        },
+        "option_logits_raw": {
+          "count": 7,
+          "max_abs": 7.152557373046875e-6,
+          "mean_abs": 3.3740486417497906e-6,
+          "rmse": 4.107414505529037e-6
+        },
+        "probs_unrounded": {
+          "count": 7,
+          "max_abs": 8.344650268554688e-7,
+          "mean_abs": 3.6561063357761927e-7,
+          "rmse": 4.5891541720457157e-7
+        }
+      },
+      "argmax_agree": 3,
+      "questions": 3,
+      "near_tie_disagreements": [],
+      "failures": [],
+      "outputs_on_requested_device": true,
+      "pass": true
+    }
+  ],
+  "aggregate": {
+    "act_logits": {
+      "count": 6,
+      "max_abs": 0.001953125,
+      "mean_abs": 0.0008951822916666666,
+      "rmse": 0.0011098780677885624
+    },
+    "act_probs": {
+      "count": 6,
+      "max_abs": 0.0,
+      "mean_abs": 0.0,
+      "rmse": 0.0
+    },
+    "confidence_unrounded": {
+      "count": 3,
+      "max_abs": 1.1920928955078125e-6,
+      "mean_abs": 7.276733716328939e-7,
+      "rmse": 7.990436519645534e-7
+    },
+    "expected_score_unrounded": {
+      "count": 1,
+      "max_abs": 1.0728836059570312e-6,
+      "mean_abs": 1.0728836059570312e-6,
+      "rmse": 1.0728836059570312e-6
+    },
+    "hidden_cls": {
+      "count": 3072,
+      "max_abs": 0.001434326171875,
+      "mean_abs": 0.00019495227995018163,
+      "rmse": 0.0002972961529477844
+    },
+    "option_logits_masked_full": {
+      "count": 9,
+      "max_abs": 7.152557373046875e-6,
+      "mean_abs": 2.6242600546942817e-6,
+      "rmse": 3.6223991043630552e-6
+    },
+    "option_logits_raw": {
+      "count": 7,
+      "max_abs": 7.152557373046875e-6,
+      "mean_abs": 3.3740486417497906e-6,
+      "rmse": 4.107414505529037e-6
+    },
+    "probs_unrounded": {
+      "count": 7,
+      "max_abs": 8.344650268554688e-7,
+      "mean_abs": 3.6561063357761927e-7,
+      "rmse": 4.5891541720457157e-7
+    }
+  },
+  "argmax_agree": 3,
+  "questions": 3,
+  "failures": [],
+  "pass": true
+}

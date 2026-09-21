@@ -1,0 +1,4 @@
+/tmp/laya-mlx-packaging/mlx-parity 16015472
+/tmp/laya-mlx-packaging/mlx.metallib 182351120
+69a9f7b5c02523e1e7cc88ac68d6345cb5998ef80eef02394f72d9780ad84b5e  /tmp/laya-mlx-packaging/mlx-parity
+fec9fad1ba7722ddb061584869617a3999f8b782f1ba2a705fa5c1586538193a  /tmp/laya-mlx-packaging/mlx.metallib

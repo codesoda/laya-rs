@@ -1,0 +1,7 @@
+MLX default device: Device(gpu, 0)
+Error: enqueue Metal smoke operation
+
+Caused by:
+    "expected a non-empty mlx_array at /Users/chrisraethke/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/mlx-sys-0.6.0/src/mlx-c/mlx/c/ops.cpp:31" at /Users/chrisraethke/.rustup/toolchains/1.95.0-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/ops/function.rs:250:5
+
+exit_status=1

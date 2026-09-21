@@ -1,0 +1,3 @@
+binary_only_exit=1
+archive_device_exit=0
+archive_parity_exit=0

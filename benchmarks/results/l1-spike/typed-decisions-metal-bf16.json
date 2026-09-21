@@ -1,0 +1,138 @@
+{
+  "schema_version": 1,
+  "generated_unix_seconds": 1790030151,
+  "profile": "typed-decisions",
+  "device": "metal",
+  "device_name": "Apple M3 Pro",
+  "dtype": "bf16",
+  "tolerance_profile": "rust_metal_fp16_or_bf16",
+  "candle_versions": {
+    "candle-core": "0.11.0",
+    "candle-nn": "0.11.0"
+  },
+  "checkpoint": "/Users/chrisraethke/projects/laya-rs/.cache/laya/hub/convaiinnovations--laya/c5d78730f3493e4fe16d61507ef4b78eef7318cf/typed-decisions/model.safetensors",
+  "load_mmap_to_model_ready_ms": 135.704291,
+  "peak_rss_bytes": 2554822656,
+  "metal_allocation_bytes": null,
+  "metal_allocation_note": "Candle 0.11.0 exposes synchronization and device residency but no public current/peak Metal allocation counter",
+  "all_outputs_finite": true,
+  "all_model_outputs_resident_on_requested_device": true,
+  "inference_ops_run_on_cpu": [],
+  "fixtures_skipped_upstream_error": [],
+  "fixtures": [
+    {
+      "fixture": "plan-example",
+      "metrics": {
+        "act_logits": {
+          "count": 6,
+          "max_abs": 17.736328125,
+          "mean_abs": 7.401204427083333,
+          "rmse": 9.502198642487446
+        },
+        "act_probs": {
+          "count": 6,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "rmse": 0.0
+        },
+        "confidence_unrounded": {
+          "count": 3,
+          "max_abs": 0.0019202083349227905,
+          "mean_abs": 0.001192415754000346,
+          "rmse": 0.0013750108022663246
+        },
+        "expected_score_unrounded": {
+          "count": 1,
+          "max_abs": 0.0008815526962280273,
+          "mean_abs": 0.0008815526962280273,
+          "rmse": 0.0008815526962280273
+        },
+        "hidden_cls": {
+          "count": 3072,
+          "max_abs": 8.3199462890625,
+          "mean_abs": 0.7367819775051127,
+          "rmse": 1.1302589088597177
+        },
+        "option_logits_masked_full": {
+          "count": 9,
+          "max_abs": 0.014485597610473633,
+          "mean_abs": 0.003624015384250217,
+          "rmse": 0.005446007161478978
+        },
+        "option_logits_raw": {
+          "count": 7,
+          "max_abs": 0.014485597610473633,
+          "mean_abs": 0.004659448351178851,
+          "rmse": 0.006175191680378638
+        },
+        "probs_unrounded": {
+          "count": 7,
+          "max_abs": 0.001028597354888916,
+          "mean_abs": 0.0005280817193644387,
+          "rmse": 0.0006510782889244851
+        }
+      },
+      "argmax_agree": 3,
+      "questions": 3,
+      "near_tie_disagreements": [],
+      "failures": [],
+      "finite_outputs": true,
+      "outputs_on_requested_device": true,
+      "pass": true
+    }
+  ],
+  "aggregate": {
+    "act_logits": {
+      "count": 6,
+      "max_abs": 17.736328125,
+      "mean_abs": 7.401204427083333,
+      "rmse": 9.502198642487446
+    },
+    "act_probs": {
+      "count": 6,
+      "max_abs": 0.0,
+      "mean_abs": 0.0,
+      "rmse": 0.0
+    },
+    "confidence_unrounded": {
+      "count": 3,
+      "max_abs": 0.0019202083349227905,
+      "mean_abs": 0.001192415754000346,
+      "rmse": 0.0013750108022663246
+    },
+    "expected_score_unrounded": {
+      "count": 1,
+      "max_abs": 0.0008815526962280273,
+      "mean_abs": 0.0008815526962280273,
+      "rmse": 0.0008815526962280273
+    },
+    "hidden_cls": {
+      "count": 3072,
+      "max_abs": 8.3199462890625,
+      "mean_abs": 0.7367819775051127,
+      "rmse": 1.1302589088597177
+    },
+    "option_logits_masked_full": {
+      "count": 9,
+      "max_abs": 0.014485597610473633,
+      "mean_abs": 0.003624015384250217,
+      "rmse": 0.005446007161478978
+    },
+    "option_logits_raw": {
+      "count": 7,
+      "max_abs": 0.014485597610473633,
+      "mean_abs": 0.004659448351178851,
+      "rmse": 0.006175191680378638
+    },
+    "probs_unrounded": {
+      "count": 7,
+      "max_abs": 0.001028597354888916,
+      "mean_abs": 0.0005280817193644387,
+      "rmse": 0.0006510782889244851
+    }
+  },
+  "argmax_agree": 3,
+  "questions": 3,
+  "failures": [],
+  "pass": true
+}

@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "host": {
+    "hardware": "Apple M3 Pro (14 GPU cores)",
+    "os": "macOS 26.2 (25C56)",
+    "arch": "arm64"
+  },
+  "release_binary": {
+    "path_tested": "/tmp/laya-mlx-packaging/mlx-parity",
+    "size_bytes": 16015472,
+    "sha256": "69a9f7b5c02523e1e7cc88ac68d6345cb5998ef80eef02394f72d9780ad84b5e",
+    "mach_o_reported_minimum_macos": "11.0",
+    "sdk": "26.2",
+    "non_system_dylibs": []
+  },
+  "metallib": {
+    "embedded": false,
+    "required": true,
+    "archive_location": "mlx.metallib beside mlx-parity",
+    "size_bytes": 182351120,
+    "sha256": "fec9fad1ba7722ddb061584869617a3999f8b782f1ba2a705fa5c1586538193a",
+    "air_target_observed": "air64_v28-apple-macosx26.2.0",
+    "note": "The tested mlx-sys build inherited the host deployment target for the Metal library. Source supports a macOS 14.0 minimum, but a release must set and verify that target explicitly."
+  },
+  "tests": {
+    "binary_only_with_build_cache_metallib_hidden": {
+      "exit_status": 1,
+      "pass": true,
+      "meaning": "expected failure proves mlx.metallib is not embedded"
+    },
+    "colocated_archive_device_with_dyld_print_libraries": {
+      "exit_status": 0,
+      "pass": true
+    },
+    "colocated_archive_plan_example_f32_with_dyld_print_libraries": {
+      "exit_status": 0,
+      "pass": true
+    }
+  },
+  "conclusion": "Not a single self-contained executable. It is a Python-free, Xcode-free two-file platform archive (binary plus mlx.metallib) using only macOS system libraries at runtime. Model/tokenizer assets remain separate product data."
+}

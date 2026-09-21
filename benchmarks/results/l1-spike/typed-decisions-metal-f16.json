@@ -1,0 +1,138 @@
+{
+  "schema_version": 1,
+  "generated_unix_seconds": 1790030151,
+  "profile": "typed-decisions",
+  "device": "metal",
+  "device_name": "Apple M3 Pro",
+  "dtype": "f16",
+  "tolerance_profile": "rust_metal_fp16_or_bf16",
+  "candle_versions": {
+    "candle-core": "0.11.0",
+    "candle-nn": "0.11.0"
+  },
+  "checkpoint": "/Users/chrisraethke/projects/laya-rs/.cache/laya/hub/convaiinnovations--laya/c5d78730f3493e4fe16d61507ef4b78eef7318cf/typed-decisions/model.safetensors",
+  "load_mmap_to_model_ready_ms": 138.82274999999998,
+  "peak_rss_bytes": 2554249216,
+  "metal_allocation_bytes": null,
+  "metal_allocation_note": "Candle 0.11.0 exposes synchronization and device residency but no public current/peak Metal allocation counter",
+  "all_outputs_finite": true,
+  "all_model_outputs_resident_on_requested_device": true,
+  "inference_ops_run_on_cpu": [],
+  "fixtures_skipped_upstream_error": [],
+  "fixtures": [
+    {
+      "fixture": "plan-example",
+      "metrics": {
+        "act_logits": {
+          "count": 6,
+          "max_abs": 1.736328125,
+          "mean_abs": 0.9265950520833334,
+          "rmse": 1.0933548713128856
+        },
+        "act_probs": {
+          "count": 6,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "rmse": 0.0
+        },
+        "confidence_unrounded": {
+          "count": 3,
+          "max_abs": 0.00037610530853271484,
+          "mean_abs": 0.00023658076922098795,
+          "rmse": 0.0002627060394839487
+        },
+        "expected_score_unrounded": {
+          "count": 1,
+          "max_abs": 0.00014913082122802734,
+          "mean_abs": 0.00014913082122802734,
+          "rmse": 0.00014913082122802734
+        },
+        "hidden_cls": {
+          "count": 3072,
+          "max_abs": 1.145751953125,
+          "mean_abs": 0.11071069996493559,
+          "rmse": 0.1603085827585112
+        },
+        "option_logits_masked_full": {
+          "count": 9,
+          "max_abs": 0.0022742748260498047,
+          "mean_abs": 0.0005916489495171441,
+          "rmse": 0.000943044923347147
+        },
+        "option_logits_raw": {
+          "count": 7,
+          "max_abs": 0.0022742748260498047,
+          "mean_abs": 0.0007606915065220424,
+          "rmse": 0.0010693124324307945
+        },
+        "probs_unrounded": {
+          "count": 7,
+          "max_abs": 0.000148087739944458,
+          "mean_abs": 0.00009378311889512199,
+          "rmse": 0.0001054476460894749
+        }
+      },
+      "argmax_agree": 3,
+      "questions": 3,
+      "near_tie_disagreements": [],
+      "failures": [],
+      "finite_outputs": true,
+      "outputs_on_requested_device": true,
+      "pass": true
+    }
+  ],
+  "aggregate": {
+    "act_logits": {
+      "count": 6,
+      "max_abs": 1.736328125,
+      "mean_abs": 0.9265950520833334,
+      "rmse": 1.0933548713128856
+    },
+    "act_probs": {
+      "count": 6,
+      "max_abs": 0.0,
+      "mean_abs": 0.0,
+      "rmse": 0.0
+    },
+    "confidence_unrounded": {
+      "count": 3,
+      "max_abs": 0.00037610530853271484,
+      "mean_abs": 0.00023658076922098795,
+      "rmse": 0.0002627060394839487
+    },
+    "expected_score_unrounded": {
+      "count": 1,
+      "max_abs": 0.00014913082122802734,
+      "mean_abs": 0.00014913082122802734,
+      "rmse": 0.00014913082122802734
+    },
+    "hidden_cls": {
+      "count": 3072,
+      "max_abs": 1.145751953125,
+      "mean_abs": 0.11071069996493559,
+      "rmse": 0.1603085827585112
+    },
+    "option_logits_masked_full": {
+      "count": 9,
+      "max_abs": 0.0022742748260498047,
+      "mean_abs": 0.0005916489495171441,
+      "rmse": 0.000943044923347147
+    },
+    "option_logits_raw": {
+      "count": 7,
+      "max_abs": 0.0022742748260498047,
+      "mean_abs": 0.0007606915065220424,
+      "rmse": 0.0010693124324307945
+    },
+    "probs_unrounded": {
+      "count": 7,
+      "max_abs": 0.000148087739944458,
+      "mean_abs": 0.00009378311889512199,
+      "rmse": 0.0001054476460894749
+    }
+  },
+  "argmax_agree": 3,
+  "questions": 3,
+  "failures": [],
+  "pass": true
+}
