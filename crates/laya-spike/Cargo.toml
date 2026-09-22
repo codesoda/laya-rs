@@ -7,8 +7,8 @@ publish = false
 
 [dependencies]
 anyhow = "1.0.102"
-candle-core = { version = "0.11.0", features = ["metal"] }
-candle-nn = "0.11.0"
+candle-core = { version = "0.11.0", features = ["metal", "accelerate"] }
+candle-nn = { version = "0.11.0", features = ["accelerate"] }
 clap = { version = "4.5.60", features = ["derive"] }
 libc = "0.2.182"
 ndarray = "0.16.1"
