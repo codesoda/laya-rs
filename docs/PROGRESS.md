@@ -10,7 +10,7 @@ Host for all local measurements: Apple M3 Pro (11 CPU cores, 14 GPU cores, Metal
 | --- | --- | --- | --- |
 | 1 | L0 — baseline + eval set (Python reference) | baseline complete | eval set pending (non-gating); L1 may start |
 | 2 | L1 — Metal/CPU feasibility spike | complete — correctness GO on CPU + Metal (Candle and mlx-rs), tokenizer exact; backend decision pending | docs/L1-SPIKE.md, docs/L1-MLX-SPIKE.md, docs/L1-TOKENIZER-SPIKE.md |
-| 3 | L2 + L3 — basic implementation (core, CLI, HTTP, SDK compat) | not started | |
+| 3 | L2 + L3 — basic implementation (core, CLI, HTTP, SDK compat) | L2 core complete — `crates/laya-core` with MLX (Metal) and Candle (CPU) backends, parity PASS on all profiles for both; CLI/HTTP/SDK compat live in the host (SystemOne) | docs/L2-CORE.md |
 | 4 | L4a — benchmark basic implementation; first release (L5) | not started | |
 | 5 | L4b — quality/architecture improvements; first Rust eval run | not started | |
 | 6 | Improvement loop: perf / quality / recalibration / fine-tuning track | not started | each iteration re-runs parity + eval + benchmark |

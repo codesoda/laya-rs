@@ -8,5 +8,12 @@ edition = "2021"
 license = "Apache-2.0"
 repository = "https://github.com/codesoda/laya-rs"
 
+# mlx-sys 0.6.0 does not expose MLX_METAL_JIT or a deployment target; the
+# vendored copy adds both behind environment variables (see
+# https://github.com/codesoda/laya-rs/issues/3). Consumers of laya-core must
+# carry the same patch until it is upstreamed.
+[patch.crates-io]
+mlx-sys = { path = "spikes/vendor/mlx-sys" }
+
 [profile.release]
 debug = 1
