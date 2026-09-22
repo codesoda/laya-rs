@@ -1,0 +1,33 @@
+MLX default device: Device(gpu, 0)
+MLX metallib: /Users/chrisraethke/Library/Caches/laya-rs/44eb25db5205fbfc2f5c81f59cce9bb8c3c534d0b6707c03e43b057a497e618b/mlx.metallib
+backend: Metal GPU (kernel smoke PASS)
+bucket-choice-10: PASS raw max=7.033e-6 mean=2.664e-6 act max=2.930e-3 probs max=8.792e-7 argmax=1/1 1632.7ms
+bucket-choice-11: PASS raw max=6.318e-6 mean=2.677e-6 act max=0.000e0 probs max=1.062e-5 argmax=1/1 42.1ms
+bucket-choice-2: PASS raw max=8.702e-6 mean=5.424e-6 act max=1.953e-3 probs max=8.345e-7 argmax=1/1 19.1ms
+bucket-choice-20: PASS raw max=8.464e-6 mean=2.376e-6 act max=1.465e-3 probs max=6.631e-6 argmax=1/1 33.2ms
+bucket-choice-3: PASS raw max=5.484e-6 mean=4.749e-6 act max=1.709e-2 probs max=1.192e-6 argmax=1/1 20.7ms
+bucket-choice-5: PASS raw max=4.590e-6 mean=2.372e-6 act max=4.883e-4 probs max=4.172e-7 argmax=1/1 20.1ms
+bucket-choice-6: PASS raw max=5.007e-6 mean=2.926e-6 act max=9.766e-4 probs max=1.252e-6 argmax=1/1 20.2ms
+bucket-score-2: PASS raw max=3.427e-6 mean=2.787e-6 act max=1.953e-3 probs max=1.043e-6 argmax=1/1 145.9ms
+bucket-score-6: PASS raw max=5.245e-6 mean=2.844e-6 act max=9.277e-3 probs max=6.109e-7 argmax=1/1 20.8ms
+distinct-en-q1: PASS raw max=1.526e-5 mean=7.574e-6 act max=3.906e-3 probs max=6.557e-7 argmax=1/1 134.9ms
+distinct-en-q10: PASS raw max=2.754e-5 mean=7.828e-6 act max=7.812e-3 probs max=3.755e-6 argmax=10/10 1044.0ms
+distinct-en-q21: PASS raw max=3.743e-5 mean=8.208e-6 act max=1.025e-2 probs max=4.172e-6 argmax=21/21 2323.4ms
+distinct-en-q50: PASS raw max=5.770e-5 mean=7.993e-6 act max=1.074e-2 probs max=7.153e-6 argmax=50/50 5949.1ms
+distinct-ml-q1: PASS raw max=2.003e-5 mean=1.239e-5 act max=6.836e-3 probs max=2.444e-6 argmax=1/1 239.6ms
+distinct-ml-q10: PASS raw max=2.772e-5 mean=5.113e-6 act max=1.123e-2 probs max=3.070e-6 argmax=10/10 1143.6ms
+edge-empty-state: PASS raw max=8.464e-6 mean=4.090e-6 act max=4.883e-4 probs max=3.576e-7 argmax=2/2 170.9ms
+edge-head-overflow: PASS raw max=8.821e-6 mean=3.756e-6 act max=9.766e-4 probs max=2.423e-5 argmax=1/1 147.2ms
+edge-long-state: PASS raw max=1.001e-5 mean=3.375e-6 act max=9.766e-4 probs max=8.047e-7 argmax=2/2 1152.5ms
+edge-options-exceed: PASS raw max=1.466e-5 mean=4.043e-6 act max=1.514e-2 probs max=3.740e-6 argmax=1/1 622.7ms
+edge-serialization: PASS raw max=1.163e-4 mean=1.502e-5 act max=1.172e-2 probs max=4.858e-6 argmax=6/6 340.8ms
+edge-state-list: PASS raw max=1.121e-5 mean=4.423e-6 act max=4.395e-3 probs max=8.941e-7 argmax=2/2 55.4ms
+nonlatin-mixed-q6: PASS raw max=1.078e-4 mean=1.119e-5 act max=2.319e-2 probs max=4.627e-6 argmax=6/6 863.6ms
+plan-example: PASS raw max=1.192e-5 mean=3.785e-6 act max=3.906e-3 probs max=9.537e-7 argmax=3/3 56.7ms
+published-latency-q1: PASS raw max=7.868e-6 mean=7.053e-6 act max=4.883e-4 probs max=5.215e-8 argmax=1/1 80.2ms
+published-latency-q10: PASS raw max=8.285e-6 mean=5.901e-6 act max=1.953e-3 probs max=1.013e-6 argmax=10/10 758.2ms
+published-latency-q5: PASS raw max=8.285e-6 mean=6.121e-6 act max=1.953e-3 probs max=1.013e-6 argmax=5/5 314.1ms
+published-latency-q50: PASS raw max=8.285e-6 mean=5.782e-6 act max=1.465e-3 probs max=1.013e-6 argmax=50/50 3203.0ms
+ragged-q12: PASS raw max=2.539e-5 mean=5.813e-6 act max=1.025e-2 probs max=3.517e-6 argmax=12/12 2013.3ms
+aggregate: PASS raw max=1.163e-4 mean=6.388e-6 act max=2.319e-2 probs max=2.423e-5 argmax=203/203
+report: /Users/chrisraethke/projects/laya-rs/benchmarks/results/l1-spike-mlx/jit/parity/english-f32.json

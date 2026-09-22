@@ -1,0 +1,2 @@
+    Checking mlx-jit v0.1.0 (/Users/chrisraethke/projects/laya-rs/spikes/mlx-jit)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.59s

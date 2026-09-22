@@ -1,0 +1,6 @@
+MLX default device: Device(gpu, 0)
+Error: enqueue Metal smoke operation
+
+Caused by:
+    "expected a non-empty mlx_array at /Users/chrisraethke/projects/laya-rs/spikes/vendor/mlx-sys/src/mlx-c/mlx/c/ops.cpp:31" at /Users/chrisraethke/.rustup/toolchains/1.95.0-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/ops/function.rs:250:5
+exit_status=1

@@ -1,0 +1,133 @@
+{
+  "schema_version": 1,
+  "backend": "mlx-rs/Metal",
+  "mlx_rs": "0.32.0",
+  "mlx_native": "0.32.2",
+  "profile": "english",
+  "dtype": "f32",
+  "tolerance_profile": "rust_metal_fp32",
+  "model_dir": "/Users/chrisraethke/projects/laya-rs/.cache/laya/hub/convaiinnovations--laya/c5d78730f3493e4fe16d61507ef4b78eef7318cf/english",
+  "golden_dir": "/Users/chrisraethke/projects/laya-rs/benchmarks/goldens/english/cpu",
+  "skipped_upstream_errors": [],
+  "fixtures": [
+    {
+      "fixture": "plan-example",
+      "questions": 3,
+      "sequence_shape": [
+        3,
+        44
+      ],
+      "marker_slots": 3,
+      "elapsed_ms": 1696.558333,
+      "fields": {
+        "option_logits_masked_full": {
+          "count": 9,
+          "max_abs": 0.000011920928955078125,
+          "mean_abs": 2.943807178073459e-6,
+          "rmse": 4.553604583165742e-6
+        },
+        "option_logits_raw": {
+          "count": 7,
+          "max_abs": 0.000011920928955078125,
+          "mean_abs": 3.7848949432373047e-6,
+          "rmse": 5.163302269705924e-6
+        },
+        "act_logits": {
+          "count": 6,
+          "max_abs": 0.00390625,
+          "mean_abs": 0.00244140625,
+          "rmse": 0.0025798937962479424
+        },
+        "act_probs": {
+          "count": 6,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "rmse": 0.0
+        },
+        "probabilities": {
+          "count": 7,
+          "max_abs": 9.5367431640625e-7,
+          "mean_abs": 3.900911126976579e-7,
+          "rmse": 4.962033139313691e-7
+        },
+        "confidence": {
+          "count": 3,
+          "max_abs": 1.1920928955078125e-6,
+          "mean_abs": 7.152557373046875e-7,
+          "rmse": 7.90744969929552e-7
+        },
+        "expected_score": {
+          "count": 1,
+          "max_abs": 1.1324882507324219e-6,
+          "mean_abs": 1.1324882507324219e-6,
+          "rmse": 1.1324882507324219e-6
+        },
+        "hidden_cls": {
+          "count": 3072,
+          "max_abs": 0.00164794921875,
+          "mean_abs": 0.00018841074779629707,
+          "rmse": 0.00026630985719149715
+        }
+      },
+      "argmax_agree": 3,
+      "argmax_total": 3,
+      "finite": true,
+      "pass": true,
+      "failures": []
+    }
+  ],
+  "aggregate": {
+    "option_logits_masked_full": {
+      "count": 9,
+      "max_abs": 0.000011920928955078125,
+      "mean_abs": 2.943807178073459e-6,
+      "rmse": 4.553604583165742e-6
+    },
+    "option_logits_raw": {
+      "count": 7,
+      "max_abs": 0.000011920928955078125,
+      "mean_abs": 3.7848949432373047e-6,
+      "rmse": 5.163302269705924e-6
+    },
+    "act_logits": {
+      "count": 6,
+      "max_abs": 0.00390625,
+      "mean_abs": 0.00244140625,
+      "rmse": 0.0025798937962479424
+    },
+    "act_probs": {
+      "count": 6,
+      "max_abs": 0.0,
+      "mean_abs": 0.0,
+      "rmse": 0.0
+    },
+    "probabilities": {
+      "count": 7,
+      "max_abs": 9.5367431640625e-7,
+      "mean_abs": 3.900911126976579e-7,
+      "rmse": 4.962033139313691e-7
+    },
+    "confidence": {
+      "count": 3,
+      "max_abs": 1.1920928955078125e-6,
+      "mean_abs": 7.152557373046875e-7,
+      "rmse": 7.90744969929552e-7
+    },
+    "expected_score": {
+      "count": 1,
+      "max_abs": 1.1324882507324219e-6,
+      "mean_abs": 1.1324882507324219e-6,
+      "rmse": 1.1324882507324219e-6
+    },
+    "hidden_cls": {
+      "count": 3072,
+      "max_abs": 0.00164794921875,
+      "mean_abs": 0.00018841074779629707,
+      "rmse": 0.00026630985719149715
+    }
+  },
+  "aggregate_failures": [],
+  "argmax_agree": 3,
+  "argmax_total": 3,
+  "pass": true
+}

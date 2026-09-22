@@ -1,0 +1,14 @@
+cache_root=/var/folders/p3/bc0bjl054mscbz5115ld49qw0000gn/C/
+clear_command: rm -rf "/var/folders/p3/bc0bjl054mscbz5115ld49qw0000gn/C/com.apple.metal" "/var/folders/p3/bc0bjl054mscbz5115ld49qw0000gn/C/com.apple.metalfe"; killall MTLCompilerService 2>/dev/null || true
+english-f32 before_kib=575328 cleared=true
+english-f32 after_cold_kib=11340
+english-f16 before_kib=11516 cleared=true
+english-f16 after_cold_kib=12076
+multilingual-f32 before_kib=12368 cleared=true
+multilingual-f32 after_cold_kib=11340
+multilingual-f16 before_kib=11516 cleared=true
+multilingual-f16 after_cold_kib=12076
+typed-decisions-f32 before_kib=12368 cleared=true
+typed-decisions-f32 after_cold_kib=11340
+typed-decisions-f16 before_kib=11516 cleared=true
+typed-decisions-f16 after_cold_kib=12076

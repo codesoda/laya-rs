@@ -1,0 +1,27 @@
+--- /Users/chrisraethke/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/mlx-sys-0.6.0/build.rs	2006-07-24 11:21:28
++++ /Users/chrisraethke/projects/laya-rs/spikes/vendor/mlx-sys/build.rs	2026-09-22 12:17:54
+@@ -116,7 +116,15 @@
+     // Use Xcode's clang to ensure compatibility with the macOS SDK
+     config.define("CMAKE_C_COMPILER", "/usr/bin/cc");
+     config.define("CMAKE_CXX_COMPILER", "/usr/bin/c++");
++    config.define(
++        "CMAKE_OSX_DEPLOYMENT_TARGET",
++        env::var("MACOSX_DEPLOYMENT_TARGET").unwrap_or_else(|_| "14.0".to_owned()),
++    );
+ 
++    if env::var_os("MLX_RS_METAL_JIT").is_some_and(|value| value == "1") {
++        config.define("MLX_METAL_JIT", "ON");
++    }
++
+     #[cfg(debug_assertions)]
+     {
+         config.define("CMAKE_BUILD_TYPE", "Debug");
+@@ -189,6 +197,8 @@
+ 
+ fn main() {
+     println!("cargo:rerun-if-env-changed=MLX_RS_METAL_PATH");
++    println!("cargo:rerun-if-env-changed=MLX_RS_METAL_JIT");
++    println!("cargo:rerun-if-env-changed=MACOSX_DEPLOYMENT_TARGET");
+     build_and_link_mlx_c();
+ 
+     let mlx_c_root = PathBuf::from("src/mlx-c");

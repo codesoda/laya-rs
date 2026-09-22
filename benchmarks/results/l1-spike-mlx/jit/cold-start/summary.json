@@ -1,0 +1,54 @@
+{
+  "label": "spike, not acceptance",
+  "cache_clear_command": "CACHE=$(getconf DARWIN_USER_CACHE_DIR); rm -rf \"${CACHE}com.apple.metal\" \"${CACHE}com.apple.metalfe\"; killall MTLCompilerService 2>/dev/null || true",
+  "rows": [
+    {
+      "profile": "english",
+      "dtype": "f32",
+      "fixture": "plan-example",
+      "jit_cold_first_call_ms": 2184.73,
+      "jit_warm_cache_first_call_ms": 92.675,
+      "aot_first_call_ms": 406.638
+    },
+    {
+      "profile": "english",
+      "dtype": "f16",
+      "fixture": "plan-example",
+      "jit_cold_first_call_ms": 2897.598,
+      "jit_warm_cache_first_call_ms": 83.82,
+      "aot_first_call_ms": 592.621
+    },
+    {
+      "profile": "multilingual",
+      "dtype": "f32",
+      "fixture": "plan-example",
+      "jit_cold_first_call_ms": 2095.8,
+      "jit_warm_cache_first_call_ms": 89.814,
+      "aot_first_call_ms": 387.644
+    },
+    {
+      "profile": "multilingual",
+      "dtype": "f16",
+      "fixture": "plan-example",
+      "jit_cold_first_call_ms": 3149.585,
+      "jit_warm_cache_first_call_ms": 65.123,
+      "aot_first_call_ms": 608.628
+    },
+    {
+      "profile": "typed-decisions",
+      "dtype": "f32",
+      "fixture": "plan-example",
+      "jit_cold_first_call_ms": 2388.293,
+      "jit_warm_cache_first_call_ms": 97.943,
+      "aot_first_call_ms": 465.467
+    },
+    {
+      "profile": "typed-decisions",
+      "dtype": "f16",
+      "fixture": "plan-example",
+      "jit_cold_first_call_ms": 3144.414,
+      "jit_warm_cache_first_call_ms": 89.281,
+      "aot_first_call_ms": 669.09
+    }
+  ]
+}

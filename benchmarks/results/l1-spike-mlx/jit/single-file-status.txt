@@ -1,0 +1,7 @@
+binary_bytes=18017552
+binary_sha256=ab187ad20043cb82ef6ddd50a1f8d94894335831060873a2beb6a895125b3837
+extracted_metallib_bytes=1455256
+extracted_metallib_path=/tmp/laya-mlx-jit-final-cache/laya-rs/44eb25db5205fbfc2f5c81f59cce9bb8c3c534d0b6707c03e43b057a497e618b/mlx.metallib
+44eb25db5205fbfc2f5c81f59cce9bb8c3c534d0b6707c03e43b057a497e618b  /tmp/laya-mlx-jit-final-cache/laya-rs/44eb25db5205fbfc2f5c81f59cce9bb8c3c534d0b6707c03e43b057a497e618b/mlx.metallib
+device_status=0
+plan_status=0

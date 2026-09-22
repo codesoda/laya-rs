@@ -1,0 +1,24 @@
+MLX Metal JIT spike — label: spike, not acceptance
+
+Decision: MLX_METAL_JIT=ON reduces mlx.metallib from 182,351,120 bytes to 1,455,256 bytes. The residual metallib is still required. spikes/mlx-jit embeds it and extracts exact bytes to a content-addressed user cache, enabling one shipped executable with no sibling metallib.
+
+Final single-file binary: 18,017,552 bytes
+Binary SHA-256: ab187ad20043cb82ef6ddd50a1f8d94894335831060873a2beb6a895125b3837
+JIT metallib SHA-256: 44eb25db5205fbfc2f5c81f59cce9bb8c3c534d0b6707c03e43b057a497e618b
+AOT binary + metallib: 198,366,592 bytes
+Distribution reduction: 90.917%
+Residual kernel symbols (metal-nm): 164
+
+Single-file /tmp device: PASS
+Single-file /tmp English plan-example FP32: PASS
+Full FP32 parity all fixtures: PASS for English, multilingual, typed-decisions; selected report keys and aggregate metrics exactly equal AOT reports.
+
+JIT-cold plan-example first calls: 2,095.800–3,149.585 ms.
+JIT warm-cache first calls: 65.123–97.943 ms.
+Cache deletion was confirmed and recreated 11,340 KiB (FP32) / 12,076 KiB (FP16).
+
+cargo fmt --check: PASS
+cargo clippy -- -D warnings: PASS
+cargo test: PASS
+
+See summary.json, cold-start/summary.json, steady-state/summary.json, and docs/L1-MLX-JIT.md.

@@ -1,0 +1,3 @@
+/Users/chrisraethke/projects/laya-rs/spikes/mlx-jit/target/release/mlx-jit 18017552
+/Users/chrisraethke/projects/laya-rs/benchmarks/results/l1-spike-mlx/jit/native/mlx.metallib 1455256
+/tmp/mlx-aot.metallib 182351120

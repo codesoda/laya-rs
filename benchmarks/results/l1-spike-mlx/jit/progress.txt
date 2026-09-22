@@ -1,0 +1,9 @@
+Started MLX Metal JIT follow-up.
+AOT metallib preserved: /tmp/mlx-aot.metallib
+AOT bytes: 182351120
+AOT sha256: fec9fad1ba7722ddb061584869617a3999f8b782f1ba2a705fa5c1586538193a
+JIT build path: benchmarks/results/l1-spike-mlx/jit/native
+
+clone=1f8e74e3f12f31365464a6867c6579f0e9b29d85
+
+Source findings: JIT embeds preprocessed Metal source strings in libmlx; no source files needed at runtime. Residual AOT kernels: arg_reduce, conv, dot, layer_norm, random, rms_norm, rope, scaled_dot_product_attention, fence. CMAKE_OSX_DEPLOYMENT_TARGET=14.0 disables Metal-4 NAX kernels.

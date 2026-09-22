@@ -1,0 +1,78 @@
+{
+  "label": "spike, not acceptance",
+  "host": "Apple M3 Pro, macOS 26.2 (25C56)",
+  "versions": {
+    "mlx_rs": "0.32.0",
+    "mlx_sys": "0.6.0",
+    "mlx_native": "0.32.2"
+  },
+  "build": {
+    "mlx_metal_jit": true,
+    "cmake_osx_deployment_target": "14.0",
+    "nax_enabled": false,
+    "observed_initial_release_build_seconds": 176,
+    "note": "Cargo dependencies and git source were already cached"
+  },
+  "artifacts": {
+    "aot_binary_bytes": 16015472,
+    "aot_metallib_bytes": 182351120,
+    "aot_archive_bytes": 198366592,
+    "jit_binary_before_embedding_bytes": 16547536,
+    "jit_residual_metallib_bytes": 1455256,
+    "jit_single_file_binary_bytes": 18017552,
+    "single_file_reduction_vs_aot_archive_percent": 90.917,
+    "jit_binary_sha256": "ab187ad20043cb82ef6ddd50a1f8d94894335831060873a2beb6a895125b3837",
+    "jit_metallib_sha256": "44eb25db5205fbfc2f5c81f59cce9bb8c3c534d0b6707c03e43b057a497e618b",
+    "aot_metallib_sha256": "fec9fad1ba7722ddb061584869617a3999f8b782f1ba2a705fa5c1586538193a"
+  },
+  "residual_metallib": {
+    "required_at_runtime": true,
+    "metal_nm_kernel_symbols": 164,
+    "aot_source_groups": [
+      "arg_reduce",
+      "conv",
+      "dot",
+      "layer_norm",
+      "random",
+      "rms_norm",
+      "rope",
+      "scaled_dot_product_attention",
+      "fence"
+    ],
+    "jit_kernel_sources": "CMake preprocesses Metal headers into C++ string-returning functions linked into libmlx; no source files are needed at runtime"
+  },
+  "packaging": {
+    "external_metallib_absent_status": 1,
+    "single_file_device_status": 0,
+    "single_file_english_plan_example_f32_status": 0,
+    "extraction_example": "/tmp/laya-mlx-jit-cache/laya-rs/44eb25db5205fbfc2f5c81f59cce9bb8c3c534d0b6707c03e43b057a497e618b/mlx.metallib"
+  },
+  "parity": {
+    "dtype": "f32",
+    "profiles": [
+      "english",
+      "multilingual",
+      "typed-decisions"
+    ],
+    "all_pass": true,
+    "exact_match_to_aot_report_keys": [
+      "pass",
+      "fixture_count",
+      "question_count",
+      "argmax_agree",
+      "argmax_total",
+      "aggregate"
+    ]
+  },
+  "verification": {
+    "cargo_fmt_check": "PASS",
+    "cargo_clippy_deny_warnings": "PASS",
+    "cargo_test": "PASS"
+  },
+  "details": {
+    "cold_start": "cold-start/summary.json",
+    "steady_state": "steady-state/summary.json",
+    "patch": "mlx-sys-build.patch",
+    "kernel_symbols": "metallib-nm.txt"
+  }
+}

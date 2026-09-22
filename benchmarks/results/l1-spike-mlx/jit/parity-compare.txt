@@ -1,0 +1,3 @@
+english: pass=True exact_keys=True differences=[] golden_dir=/Users/chrisraethke/projects/laya-rs/benchmarks/goldens/english/cpu
+multilingual: pass=True exact_keys=True differences=[] golden_dir=/Users/chrisraethke/projects/laya-rs/benchmarks/goldens/multilingual/cpu
+typed-decisions: pass=True exact_keys=True differences=[] golden_dir=/Users/chrisraethke/projects/laya-rs/benchmarks/goldens/typed-decisions/cpu

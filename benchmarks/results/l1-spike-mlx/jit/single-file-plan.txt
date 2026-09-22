@@ -1,0 +1,6 @@
+MLX default device: Device(gpu, 0)
+MLX metallib: /tmp/laya-mlx-jit-final-cache/laya-rs/44eb25db5205fbfc2f5c81f59cce9bb8c3c534d0b6707c03e43b057a497e618b/mlx.metallib
+backend: Metal GPU (kernel smoke PASS)
+plan-example: PASS raw max=1.192e-5 mean=3.785e-6 act max=3.906e-3 probs max=9.537e-7 argmax=3/3 1696.6ms
+aggregate: PASS raw max=1.192e-5 mean=3.785e-6 act max=3.906e-3 probs max=9.537e-7 argmax=3/3
+report: /Users/chrisraethke/projects/laya-rs/benchmarks/results/l1-spike-mlx/jit/single-file-plan/english-f32.json

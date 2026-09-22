@@ -1,0 +1,8 @@
+MLX default device: Device(gpu, 0)
+MLX metallib: /tmp/laya-mlx-aot-bench/mlx.metallib
+backend: Metal GPU (kernel smoke PASS)
+label: spike, not acceptance
+profile=multilingual fixture=distinct-ml-q1 dtype=f32 reps=20
+first_call_ms=118.450
+warm_p50_ms=31.170 warm_mean_ms=31.194
+mlx_active_bytes=1287649432 mlx_peak_bytes=2325049541
